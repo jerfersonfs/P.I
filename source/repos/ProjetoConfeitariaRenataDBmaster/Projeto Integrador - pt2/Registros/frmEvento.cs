@@ -1,0 +1,116 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Projeto_Integrador___pt2.Formulários
+{
+    public partial class frmEvento: Form
+    {
+        Conection cntn =  new Conection();
+        public frmEvento()
+        {
+            InitializeComponent();
+            this.Size = base.Size;
+            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void eventosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.eventosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+
+        }
+
+        private void frmEvento_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.
+            this.clienteTableAdapter.Fill(this.renataDBDataSet.cliente);
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.eventos'. Você pode movê-la ou removê-la conforme necessário.
+            this.eventosTableAdapter.Fill(this.renataDBDataSet.eventos);
+
+        }
+
+        private void eventosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void data_eventoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbmFiltrar.Text == "Código")
+                {
+                    string sql = "SELECT * FROM Eventos WHERE id_evento = " + txtPesquisar.Text + "";
+                    SqlCommand cmd = new SqlCommand(sql);
+                    cntn.Open();
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable evento = new DataTable();
+                    adapter.Fill(evento);
+                    eventosDataGridView.DataSource = evento;
+                }
+                if (cbmFiltrar.Text == "Eventos")
+                {
+                    string sql = "SELECT * FROM Eventos WHERE tipo_evento LIKE '%" + txtPesquisar.Text + "%'";
+                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable evento = new DataTable();
+                    adapter.Fill(evento);
+                    eventosDataGridView.DataSource = evento;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cntn.Close();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void id_clienteTextBox_TextChanged(object sender, EventArgs e)
+        {
+            SqlTransaction transaction = cntn.Connection.BeginTransaction();
+            try
+            {
+                using (SqlConnection cntn = new SqlConnection())
+                {
+                    cntn.Open();
+                    string query = "INSERT INTO Evento(FKid_cliente) WHERE nome_usu = nome_cliente AND celular_usu = celular_cliente VALUES Cliente(id_cliente)";
+                    using (SqlCommand cmd = new SqlCommand(query, cntn, transaction))
+                    {
+                        cmd.Parameters.AddWithValue("id_cliente", id_clienteTextBox.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                transaction.Commit();
+                MessageBox.Show("ID do cliente inserido com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                MessageBox.Show("Erro ao inserir ID do cliente: " + ex.Message);
+            }
+        }
+    }
+}
