@@ -147,32 +147,8 @@ namespace Projeto_Integrador___pt2.Formulários
         {
 
         }
-       /* public int GetCustomerId( string cellUsu, string nomeUsu, string nomeCli , string cellCli)
+        private void fKid_clienteTextBox_TextChanged(object sender, EventArgs e)
         {
-            int id = -1;
-            using (SqlConnection connection = new SqlConnection())
-            {
-                connection.Open();
-                string query = "SELECT id_cliente FROM Cliente WHERE nome_usu = nome_cliente AND celular_usu = celular_cliente";
-                using (SqlCommand cmd = new SqlCommand(query, connection))
-                {
-                    cmd.Parameters.AddWithValue("nome_usu", nomeUsu);
-                    cmd.Parameters.AddWithValue("nome_cliente", nomeCli);
-                    cmd.Parameters.AddWithValue("celular_usu", cellUsu);
-                    cmd.Parameters.AddWithValue("celular_cliente", cellCli);
-                    var result = cmd.ExecuteScalar();
-                    if (result != null) 
-                    { 
-                        id = Convert.ToInt32(result);
-                    }
-                }
-            }
-            return id;
-        }*/
-        private void fKid_clienteTextBox_TextChanged(object sender, EventArgs e/*, string cellUsu, string nomeUsu, string nomeCli, string cellCli*/)
-        {
-            /*int id = GetCustomerId(nomeUsu, nomeCli, cellCli,cellUsu);
-            if (id != -1)*/
             SqlTransaction transaction = cntn.Connection.BeginTransaction();
             try
             {
@@ -203,20 +179,7 @@ namespace Projeto_Integrador___pt2.Formulários
 
         private void id_clienteTextBox_TextChanged(object sender, EventArgs e)
         {
-           /* try
-            {
-                using (var context = new RenataDBDataSet())
-                {
-                    var query = from id_cliente in context.cliente
-                                select new
-                                { };
-                }
-            }
-            catch (Exception ex)
-            { 
-            
-            
-            }*/
+
         }
 
         private void id_clienteLabel_Click(object sender, EventArgs e)

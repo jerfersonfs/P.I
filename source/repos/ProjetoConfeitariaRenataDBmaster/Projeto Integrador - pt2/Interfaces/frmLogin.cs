@@ -46,55 +46,61 @@ namespace Projeto_Integrador___pt2.Interfaces
 
         }
 
+        KeyEventArgs esc = new KeyEventArgs(Keys.Escape);
+        KeyEventArgs enter = new KeyEventArgs(Keys.Enter);
         private void btn_Sair_Click(object sender, EventArgs e)
         {
-            Close();
+                Close();
         }
 
+       
+            
         private void btn_Entrar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if ((email_usuTextBox.Text != "") && (senha_usuTextBox.Text != ""))
+
+          
+                try
                 {
-                    SqlCommand connection = new SqlCommand("SELECT * FROM usuario WHERE email_usu = @email AND senha_usu = @senha", conn);
-                    connection.Parameters.Add("@usuario", SqlDbType.VarChar).Value = email_usuTextBox.Text;
-                    connection.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha_usuTextBox.Text;
-
-                    conn.Open();
-                    SqlDataReader reader = null;
-                    reader = connection.ExecuteReader();
-                    if (reader.Read())
+                    if ((email_usuTextBox.Text != "") && (senha_usuTextBox.Text != ""))
                     {
-                        usuarioLogado = email_usuTextBox.Text;
+                        SqlCommand connection = new SqlCommand("SELECT * FROM usuario WHERE email_usu = @email AND senha_usu = @senha", conn);
+                        connection.Parameters.Add("@usuario", SqlDbType.VarChar).Value = email_usuTextBox.Text;
+                        connection.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha_usuTextBox.Text;
 
-                        MenuPrincipal menu = new MenuPrincipal();
+                        conn.Open();
+                        SqlDataReader reader = null;
+                        reader = connection.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            usuarioLogado = email_usuTextBox.Text;
 
-                        this.Hide();
+                            MenuPrincipal menu = new MenuPrincipal();
 
-                        menu.Show();
+                            this.Hide();
+
+                            menu.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Usuário ou senha inválidos!", "Aviso", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Usuário ou senha inválidos!", "Aviso", MessageBoxButtons.OK,
+                        MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
-
                     }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                    MessageBox.Show(ex.Message);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+                finally
+                {
+                    conn.Close();
+                }
         }
 
         private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)

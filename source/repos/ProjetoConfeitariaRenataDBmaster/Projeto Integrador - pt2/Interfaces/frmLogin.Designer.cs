@@ -94,32 +94,35 @@
             // 
             // btn_Entrar
             // 
+            this.btn_Entrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_Entrar.Location = new System.Drawing.Point(206, 245);
             this.btn_Entrar.Name = "btn_Entrar";
             this.btn_Entrar.Size = new System.Drawing.Size(130, 40);
             this.btn_Entrar.TabIndex = 5;
             this.btn_Entrar.Text = "Entrar";
-            this.btn_Entrar.UseVisualStyleBackColor = true;
+            this.btn_Entrar.UseVisualStyleBackColor = false;
             this.btn_Entrar.Click += new System.EventHandler(this.btn_Entrar_Click);
             // 
             // btn_Sair
             // 
+            this.btn_Sair.BackColor = System.Drawing.Color.Brown;
             this.btn_Sair.Location = new System.Drawing.Point(12, 395);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Size = new System.Drawing.Size(86, 28);
             this.btn_Sair.TabIndex = 6;
             this.btn_Sair.Text = "Sair";
-            this.btn_Sair.UseVisualStyleBackColor = true;
+            this.btn_Sair.UseVisualStyleBackColor = false;
             this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // btm_Cadastro
             // 
+            this.btm_Cadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btm_Cadastro.Location = new System.Drawing.Point(231, 300);
             this.btm_Cadastro.Name = "btm_Cadastro";
             this.btm_Cadastro.Size = new System.Drawing.Size(80, 25);
             this.btm_Cadastro.TabIndex = 7;
             this.btm_Cadastro.Text = "Cadastrar";
-            this.btm_Cadastro.UseVisualStyleBackColor = true;
+            this.btm_Cadastro.UseVisualStyleBackColor = false;
             this.btm_Cadastro.Click += new System.EventHandler(this.btm_Cadastro_Click);
             // 
             // usuarioTableAdapter
