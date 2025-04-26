@@ -18,7 +18,7 @@ namespace Projeto_Integrador___pt2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmUsuario());
+            Application.Run(new frmLogin());
         }
     }
 }

@@ -4,6 +4,10 @@
 
     partial class RenataDBDataSet
     {
+        partial class clienteDataTable
+        {
+        }
+
         partial class categoriaDataTable
         {
         }

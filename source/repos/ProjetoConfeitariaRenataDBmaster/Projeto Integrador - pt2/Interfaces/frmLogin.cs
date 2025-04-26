@@ -45,16 +45,12 @@ namespace Projeto_Integrador___pt2.Interfaces
             this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
 
         }
-
-        KeyEventArgs esc = new KeyEventArgs(Keys.Escape);
-        KeyEventArgs enter = new KeyEventArgs(Keys.Enter);
         private void btn_Sair_Click(object sender, EventArgs e)
         {
                 Close();
         }
 
-       
-            
+        
         private void btn_Entrar_Click(object sender, EventArgs e)
         {
 
@@ -112,6 +108,57 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             frmUsuario usu = new frmUsuario();
             usu.Show();
+        }
+
+        private void btn_Sair_KeyDown(object sender, KeyEventArgs e)
+        {
+        }
+
+        private void senha_usuTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                btn_Sair_Click(sender, e);
+            }
+        }
+
+        private void frmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+          
+        }
+
+        private void email_usuTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void email_usuTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                btn_Sair_Click(sender, e);
+            }
+        }
+
+        private void btn_Entrar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                MessageBox.Show("Sucesso ao entrar no sistema!","Bem-vindo",MessageBoxButtons.OK);
+                btn_Entrar_Click(sender, e);
+            }
+        }
+
+        private void senha_usuTextBox_TextChanged(object sender, EventArgs e)
+        {
+            senha_usuTextBox.UseSystemPasswordChar = true;
+            senha_usuTextBox.Text = "";
+        }
+
+        private void senha_usuTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            senha_usuTextBox.UseSystemPasswordChar = true;
+            senha_usuTextBox.Text = "";
         }
     }
 }
