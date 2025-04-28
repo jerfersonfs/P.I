@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -111,6 +114,52 @@ namespace Projeto_Integrador___pt2.Formulários
                 transaction.Rollback();
                 MessageBox.Show("Erro ao inserir ID do cliente: " + ex.Message);
             }
+        }
+
+        public async Task BuscarCep()
+        {
+            if (cep_evento.MaxInputLength == 9)
+            {
+                try
+                {
+                    using (HttpClient cliente = new HttpClient())
+                    {
+                        string url = $"https://viacep.com.br/ws/{cep_evento}/json/";
+                        HttpResponseMessage response = await cliente.GetAsync(url);
+
+                        if (response.IsSuccessStatusCode)
+                        {
+                            string json = await response.Content.ReadAsStringAsync();
+                            dynamic dados = JsonConvert.DeserializeObject(json);
+
+                            if (dados.erro == null) // Verifica se o CEP existe
+                            {
+                                rua_eventoTextBox.Text = dados.rua;
+                                bairr_eventoTextBox.Text = dados.bairro;
+                                cidade_eventoTextBox.Text = dados.cidade;
+                                estado_eventoTextBox.Text = dados.estado;
+                            }
+                            else
+                            {
+                                MessageBox.Show("CEP não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro ao buscar o CEP. Tente novamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("CEP inválido! Digite um CEP com 8 dígitos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
     }
 }

@@ -2191,9 +2191,19 @@ namespace Projeto_Integrador___pt2 {
             
             private global::System.Data.DataColumn columnnum_convidados;
             
-            private global::System.Data.DataColumn columnlocal_evento;
-            
             private global::System.Data.DataColumn columnvalor_evento;
+            
+            private global::System.Data.DataColumn columncep_evento;
+            
+            private global::System.Data.DataColumn columnrua_evento;
+            
+            private global::System.Data.DataColumn columnnum_residencia_evento;
+            
+            private global::System.Data.DataColumn columnbairr_evento;
+            
+            private global::System.Data.DataColumn columncidade_evento;
+            
+            private global::System.Data.DataColumn columnestado_evento;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2278,17 +2288,57 @@ namespace Projeto_Integrador___pt2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn local_eventoColumn {
+            public global::System.Data.DataColumn valor_eventoColumn {
                 get {
-                    return this.columnlocal_evento;
+                    return this.columnvalor_evento;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn valor_eventoColumn {
+            public global::System.Data.DataColumn cep_eventoColumn {
                 get {
-                    return this.columnvalor_evento;
+                    return this.columncep_evento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn rua_eventoColumn {
+                get {
+                    return this.columnrua_evento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn num_residencia_eventoColumn {
+                get {
+                    return this.columnnum_residencia_evento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn bairr_eventoColumn {
+                get {
+                    return this.columnbairr_evento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn cidade_eventoColumn {
+                get {
+                    return this.columncidade_evento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn estado_eventoColumn {
+                get {
+                    return this.columnestado_evento;
                 }
             }
             
@@ -2329,7 +2379,7 @@ namespace Projeto_Integrador___pt2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public eventosRow AddeventosRow(int id_evento, clienteRow parentclienteRowByFK__eventos__FKid_cl__52593CB8, string tipo_evento, System.DateTime data_evento, System.TimeSpan horário_evento, int num_convidados, string local_evento, decimal valor_evento) {
+            public eventosRow AddeventosRow(int id_evento, clienteRow parentclienteRowByFK__eventos__FKid_cl__52593CB8, string tipo_evento, System.DateTime data_evento, System.TimeSpan horário_evento, int num_convidados, decimal valor_evento, string cep_evento, string rua_evento, string num_residencia_evento, string bairr_evento, string cidade_evento, string estado_evento) {
                 eventosRow roweventosRow = ((eventosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_evento,
@@ -2338,8 +2388,13 @@ namespace Projeto_Integrador___pt2 {
                         data_evento,
                         horário_evento,
                         num_convidados,
-                        local_evento,
-                        valor_evento};
+                        valor_evento,
+                        cep_evento,
+                        rua_evento,
+                        num_residencia_evento,
+                        bairr_evento,
+                        cidade_evento,
+                        estado_evento};
                 if ((parentclienteRowByFK__eventos__FKid_cl__52593CB8 != null)) {
                     columnValuesArray[1] = parentclienteRowByFK__eventos__FKid_cl__52593CB8[0];
                 }
@@ -2378,8 +2433,13 @@ namespace Projeto_Integrador___pt2 {
                 this.columndata_evento = base.Columns["data_evento"];
                 this.columnhorário_evento = base.Columns["horário_evento"];
                 this.columnnum_convidados = base.Columns["num_convidados"];
-                this.columnlocal_evento = base.Columns["local_evento"];
                 this.columnvalor_evento = base.Columns["valor_evento"];
+                this.columncep_evento = base.Columns["cep_evento"];
+                this.columnrua_evento = base.Columns["rua_evento"];
+                this.columnnum_residencia_evento = base.Columns["num_residencia_evento"];
+                this.columnbairr_evento = base.Columns["bairr_evento"];
+                this.columncidade_evento = base.Columns["cidade_evento"];
+                this.columnestado_evento = base.Columns["estado_evento"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2397,16 +2457,37 @@ namespace Projeto_Integrador___pt2 {
                 base.Columns.Add(this.columnhorário_evento);
                 this.columnnum_convidados = new global::System.Data.DataColumn("num_convidados", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnum_convidados);
-                this.columnlocal_evento = new global::System.Data.DataColumn("local_evento", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlocal_evento);
                 this.columnvalor_evento = new global::System.Data.DataColumn("valor_evento", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnvalor_evento);
+                this.columncep_evento = new global::System.Data.DataColumn("cep_evento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncep_evento);
+                this.columnrua_evento = new global::System.Data.DataColumn("rua_evento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrua_evento);
+                this.columnnum_residencia_evento = new global::System.Data.DataColumn("num_residencia_evento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnum_residencia_evento);
+                this.columnbairr_evento = new global::System.Data.DataColumn("bairr_evento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbairr_evento);
+                this.columncidade_evento = new global::System.Data.DataColumn("cidade_evento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncidade_evento);
+                this.columnestado_evento = new global::System.Data.DataColumn("estado_evento", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnestado_evento);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_evento}, true));
                 this.columnid_evento.AllowDBNull = false;
                 this.columnid_evento.Unique = true;
                 this.columntipo_evento.MaxLength = 100;
-                this.columnlocal_evento.MaxLength = 2147483647;
+                this.columncep_evento.AllowDBNull = false;
+                this.columncep_evento.MaxLength = 9;
+                this.columnrua_evento.AllowDBNull = false;
+                this.columnrua_evento.MaxLength = 100;
+                this.columnnum_residencia_evento.AllowDBNull = false;
+                this.columnnum_residencia_evento.MaxLength = 5;
+                this.columnbairr_evento.AllowDBNull = false;
+                this.columnbairr_evento.MaxLength = 100;
+                this.columncidade_evento.AllowDBNull = false;
+                this.columncidade_evento.MaxLength = 50;
+                this.columnestado_evento.AllowDBNull = false;
+                this.columnestado_evento.MaxLength = 2;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5733,22 +5814,6 @@ namespace Projeto_Integrador___pt2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string local_evento {
-                get {
-                    try {
-                        return ((string)(this[this.tableeventos.local_eventoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'local_evento\' na tabela \'eventos\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableeventos.local_eventoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public decimal valor_evento {
                 get {
                     try {
@@ -5760,6 +5825,72 @@ namespace Projeto_Integrador___pt2 {
                 }
                 set {
                     this[this.tableeventos.valor_eventoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cep_evento {
+                get {
+                    return ((string)(this[this.tableeventos.cep_eventoColumn]));
+                }
+                set {
+                    this[this.tableeventos.cep_eventoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string rua_evento {
+                get {
+                    return ((string)(this[this.tableeventos.rua_eventoColumn]));
+                }
+                set {
+                    this[this.tableeventos.rua_eventoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string num_residencia_evento {
+                get {
+                    return ((string)(this[this.tableeventos.num_residencia_eventoColumn]));
+                }
+                set {
+                    this[this.tableeventos.num_residencia_eventoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string bairr_evento {
+                get {
+                    return ((string)(this[this.tableeventos.bairr_eventoColumn]));
+                }
+                set {
+                    this[this.tableeventos.bairr_eventoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string cidade_evento {
+                get {
+                    return ((string)(this[this.tableeventos.cidade_eventoColumn]));
+                }
+                set {
+                    this[this.tableeventos.cidade_eventoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string estado_evento {
+                get {
+                    return ((string)(this[this.tableeventos.estado_eventoColumn]));
+                }
+                set {
+                    this[this.tableeventos.estado_eventoColumn] = value;
                 }
             }
             
@@ -5832,18 +5963,6 @@ namespace Projeto_Integrador___pt2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setnum_convidadosNull() {
                 this[this.tableeventos.num_convidadosColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool Islocal_eventoNull() {
-                return this.IsNull(this.tableeventos.local_eventoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Setlocal_eventoNull() {
-                this[this.tableeventos.local_eventoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9602,12 +9721,17 @@ SELECT id_estoque, cat_estoque, nome_estoque, FKid_ingrediente, data_movimentaca
             tableMapping.ColumnMappings.Add("data_evento", "data_evento");
             tableMapping.ColumnMappings.Add("horário_evento", "horário_evento");
             tableMapping.ColumnMappings.Add("num_convidados", "num_convidados");
-            tableMapping.ColumnMappings.Add("local_evento", "local_evento");
             tableMapping.ColumnMappings.Add("valor_evento", "valor_evento");
+            tableMapping.ColumnMappings.Add("cep_evento", "cep_evento");
+            tableMapping.ColumnMappings.Add("rua_evento", "rua_evento");
+            tableMapping.ColumnMappings.Add("num_residencia_evento", "num_residencia_evento");
+            tableMapping.ColumnMappings.Add("bairr_evento", "bairr_evento");
+            tableMapping.ColumnMappings.Add("cidade_evento", "cidade_evento");
+            tableMapping.ColumnMappings.Add("estado_evento", "estado_evento");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[eventos] WHERE (([id_evento] = @Original_id_evento) AND ((@IsNull_FKid_cliente = 1 AND [FKid_cliente] IS NULL) OR ([FKid_cliente] = @Original_FKid_cliente)) AND ((@IsNull_tipo_evento = 1 AND [tipo_evento] IS NULL) OR ([tipo_evento] = @Original_tipo_evento)) AND ((@IsNull_data_evento = 1 AND [data_evento] IS NULL) OR ([data_evento] = @Original_data_evento)) AND ((@IsNull_horário_evento = 1 AND [horário_evento] IS NULL) OR ([horário_evento] = @Original_horário_evento)) AND ((@IsNull_num_convidados = 1 AND [num_convidados] IS NULL) OR ([num_convidados] = @Original_num_convidados)) AND ((@IsNull_valor_evento = 1 AND [valor_evento] IS NULL) OR ([valor_evento] = @Original_valor_evento)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [eventos] WHERE (([id_evento] = @Original_id_evento) AND ((@IsNull_FKid_cliente = 1 AND [FKid_cliente] IS NULL) OR ([FKid_cliente] = @Original_FKid_cliente)) AND ((@IsNull_tipo_evento = 1 AND [tipo_evento] IS NULL) OR ([tipo_evento] = @Original_tipo_evento)) AND ((@IsNull_data_evento = 1 AND [data_evento] IS NULL) OR ([data_evento] = @Original_data_evento)) AND ((@IsNull_horário_evento = 1 AND [horário_evento] IS NULL) OR ([horário_evento] = @Original_horário_evento)) AND ([num_convidados] = @Original_num_convidados) AND ((@IsNull_valor_evento = 1 AND [valor_evento] IS NULL) OR ([valor_evento] = @Original_valor_evento)) AND ([bairr_evento] = @Original_bairr_evento) AND ([cep_evento] = @Original_cep_evento) AND ([cidade_evento] = @Original_cidade_evento) AND ([estado_evento] = @Original_estado_evento) AND ([num_residencia_evento] = @Original_num_residencia_evento) AND ([rua_evento] = @Original_rua_evento))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_evento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -9618,14 +9742,19 @@ SELECT id_estoque, cat_estoque, nome_estoque, FKid_ingrediente, data_movimentaca
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_evento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_horário_evento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horário_evento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_horário_evento", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horário_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_num_convidados", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "num_convidados", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_num_convidados", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "num_convidados", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_valor_evento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valor_evento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_valor_evento", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "valor_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bairr_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bairr_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cep_evento", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cep_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cidade_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cidade_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_estado_evento", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_num_residencia_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "num_residencia_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rua_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rua_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[eventos] ([id_evento], [FKid_cliente], [tipo_evento], [data_evento], [horário_evento], [num_convidados], [local_evento], [valor_evento]) VALUES (@id_evento, @FKid_cliente, @tipo_evento, @data_evento, @horário_evento, @num_convidados, @local_evento, @valor_evento);
-SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_convidados, local_evento, valor_evento FROM eventos WHERE (id_evento = @id_evento)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [eventos] ([id_evento], [FKid_cliente], [tipo_evento], [data_evento], [horário_evento], [num_convidados], [valor_evento], [bairr_evento], [cep_evento], [cidade_evento], [estado_evento], [num_residencia_evento], [rua_evento]) VALUES (@id_evento, @FKid_cliente, @tipo_evento, @data_evento, @horário_evento, @num_convidados, @valor_evento, @bairr_evento, @cep_evento, @cidade_evento, @estado_evento, @num_residencia_evento, @rua_evento);
+SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_convidados, valor_evento, bairr_evento, cep_evento, cidade_evento, estado_evento, num_residencia_evento, rua_evento FROM eventos WHERE (id_evento = @id_evento)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_evento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9633,12 +9762,35 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_evento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@horário_evento", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horário_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@num_convidados", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "num_convidados", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@local_evento", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "local_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valor_evento", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "valor_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bairr_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bairr_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cep_evento", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cep_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cidade_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cidade_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado_evento", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@num_residencia_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "num_residencia_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rua_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rua_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[eventos] SET [id_evento] = @id_evento, [FKid_cliente] = @FKid_cliente, [tipo_evento] = @tipo_evento, [data_evento] = @data_evento, [horário_evento] = @horário_evento, [num_convidados] = @num_convidados, [local_evento] = @local_evento, [valor_evento] = @valor_evento WHERE (([id_evento] = @Original_id_evento) AND ((@IsNull_FKid_cliente = 1 AND [FKid_cliente] IS NULL) OR ([FKid_cliente] = @Original_FKid_cliente)) AND ((@IsNull_tipo_evento = 1 AND [tipo_evento] IS NULL) OR ([tipo_evento] = @Original_tipo_evento)) AND ((@IsNull_data_evento = 1 AND [data_evento] IS NULL) OR ([data_evento] = @Original_data_evento)) AND ((@IsNull_horário_evento = 1 AND [horário_evento] IS NULL) OR ([horário_evento] = @Original_horário_evento)) AND ((@IsNull_num_convidados = 1 AND [num_convidados] IS NULL) OR ([num_convidados] = @Original_num_convidados)) AND ((@IsNull_valor_evento = 1 AND [valor_evento] IS NULL) OR ([valor_evento] = @Original_valor_evento)));
-SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_convidados, local_evento, valor_evento FROM eventos WHERE (id_evento = @id_evento)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [eventos] SET [id_evento] = @id_evento, [FKid_cliente] = @FKid_cliente, [t" +
+                "ipo_evento] = @tipo_evento, [data_evento] = @data_evento, [horário_evento] = @ho" +
+                "rário_evento, [num_convidados] = @num_convidados, [valor_evento] = @valor_evento" +
+                ", [bairr_evento] = @bairr_evento, [cep_evento] = @cep_evento, [cidade_evento] = " +
+                "@cidade_evento, [estado_evento] = @estado_evento, [num_residencia_evento] = @num" +
+                "_residencia_evento, [rua_evento] = @rua_evento WHERE (([id_evento] = @Original_i" +
+                "d_evento) AND ((@IsNull_FKid_cliente = 1 AND [FKid_cliente] IS NULL) OR ([FKid_c" +
+                "liente] = @Original_FKid_cliente)) AND ((@IsNull_tipo_evento = 1 AND [tipo_event" +
+                "o] IS NULL) OR ([tipo_evento] = @Original_tipo_evento)) AND ((@IsNull_data_event" +
+                "o = 1 AND [data_evento] IS NULL) OR ([data_evento] = @Original_data_evento)) AND" +
+                " ((@IsNull_horário_evento = 1 AND [horário_evento] IS NULL) OR ([horário_evento]" +
+                " = @Original_horário_evento)) AND ([num_convidados] = @Original_num_convidados) " +
+                "AND ((@IsNull_valor_evento = 1 AND [valor_evento] IS NULL) OR ([valor_evento] = " +
+                "@Original_valor_evento)) AND ([bairr_evento] = @Original_bairr_evento) AND ([cep" +
+                "_evento] = @Original_cep_evento) AND ([cidade_evento] = @Original_cidade_evento)" +
+                " AND ([estado_evento] = @Original_estado_evento) AND ([num_residencia_evento] = " +
+                "@Original_num_residencia_evento) AND ([rua_evento] = @Original_rua_evento));\r\nSE" +
+                "LECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_conv" +
+                "idados, valor_evento, bairr_evento, cep_evento, cidade_evento, estado_evento, nu" +
+                "m_residencia_evento, rua_evento FROM eventos WHERE (id_evento = @id_evento)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_evento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9646,8 +9798,13 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_evento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@horário_evento", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horário_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@num_convidados", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "num_convidados", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@local_evento", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "local_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valor_evento", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "valor_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@bairr_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bairr_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cep_evento", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cep_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cidade_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cidade_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estado_evento", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@num_residencia_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "num_residencia_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rua_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rua_evento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_evento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -9657,10 +9814,15 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_evento", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_horário_evento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horário_evento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_horário_evento", global::System.Data.SqlDbType.Time, 0, global::System.Data.ParameterDirection.Input, 0, 0, "horário_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_num_convidados", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "num_convidados", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_num_convidados", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "num_convidados", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_valor_evento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valor_evento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_valor_evento", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "valor_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_bairr_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "bairr_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cep_evento", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cep_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cidade_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cidade_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_estado_evento", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estado_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_num_residencia_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "num_residencia_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rua_evento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rua_evento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9677,7 +9839,8 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_con" +
-                "vidados, local_evento, valor_evento FROM dbo.eventos";
+                "vidados, valor_evento, bairr_evento, cep_evento, cidade_evento, estado_evento, n" +
+                "um_residencia_evento, rua_evento FROM eventos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9738,7 +9901,7 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_evento, global::System.Nullable<int> Original_FKid_cliente, string Original_tipo_evento, global::System.Nullable<global::System.DateTime> Original_data_evento, global::System.Nullable<global::System.TimeSpan> Original_horário_evento, global::System.Nullable<int> Original_num_convidados, global::System.Nullable<decimal> Original_valor_evento) {
+        public virtual int Delete(int Original_id_evento, global::System.Nullable<int> Original_FKid_cliente, string Original_tipo_evento, global::System.Nullable<global::System.DateTime> Original_data_evento, global::System.Nullable<global::System.TimeSpan> Original_horário_evento, int Original_num_convidados, global::System.Nullable<decimal> Original_valor_evento, string Original_bairr_evento, string Original_cep_evento, string Original_cidade_evento, string Original_estado_evento, string Original_num_residencia_evento, string Original_rua_evento) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_evento));
             if ((Original_FKid_cliente.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -9772,21 +9935,50 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_num_convidados.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_num_convidados.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_num_convidados));
             if ((Original_valor_evento.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_valor_evento.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((decimal)(Original_valor_evento.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_bairr_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_bairr_evento");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_bairr_evento));
+            }
+            if ((Original_cep_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_cep_evento");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_cep_evento));
+            }
+            if ((Original_cidade_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_cidade_evento");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_cidade_evento));
+            }
+            if ((Original_estado_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_estado_evento");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_estado_evento));
+            }
+            if ((Original_num_residencia_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_num_residencia_evento");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_num_residencia_evento));
+            }
+            if ((Original_rua_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_rua_evento");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((string)(Original_rua_evento));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9808,7 +10000,7 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_evento, global::System.Nullable<int> FKid_cliente, string tipo_evento, global::System.Nullable<global::System.DateTime> data_evento, global::System.Nullable<global::System.TimeSpan> horário_evento, global::System.Nullable<int> num_convidados, string local_evento, global::System.Nullable<decimal> valor_evento) {
+        public virtual int Insert(int id_evento, global::System.Nullable<int> FKid_cliente, string tipo_evento, global::System.Nullable<global::System.DateTime> data_evento, global::System.Nullable<global::System.TimeSpan> horário_evento, int num_convidados, global::System.Nullable<decimal> valor_evento, string bairr_evento, string cep_evento, string cidade_evento, string estado_evento, string num_residencia_evento, string rua_evento) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_evento));
             if ((FKid_cliente.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(FKid_cliente.Value));
@@ -9834,23 +10026,48 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((num_convidados.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(num_convidados.Value));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(num_convidados));
+            if ((valor_evento.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(valor_evento.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((local_evento == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(local_evento));
-            }
-            if ((valor_evento.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(valor_evento.Value));
+            if ((bairr_evento == null)) {
+                throw new global::System.ArgumentNullException("bairr_evento");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(bairr_evento));
+            }
+            if ((cep_evento == null)) {
+                throw new global::System.ArgumentNullException("cep_evento");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(cep_evento));
+            }
+            if ((cidade_evento == null)) {
+                throw new global::System.ArgumentNullException("cidade_evento");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(cidade_evento));
+            }
+            if ((estado_evento == null)) {
+                throw new global::System.ArgumentNullException("estado_evento");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(estado_evento));
+            }
+            if ((num_residencia_evento == null)) {
+                throw new global::System.ArgumentNullException("num_residencia_evento");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(num_residencia_evento));
+            }
+            if ((rua_evento == null)) {
+                throw new global::System.ArgumentNullException("rua_evento");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(rua_evento));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9872,7 +10089,33 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_evento, global::System.Nullable<int> FKid_cliente, string tipo_evento, global::System.Nullable<global::System.DateTime> data_evento, global::System.Nullable<global::System.TimeSpan> horário_evento, global::System.Nullable<int> num_convidados, string local_evento, global::System.Nullable<decimal> valor_evento, int Original_id_evento, global::System.Nullable<int> Original_FKid_cliente, string Original_tipo_evento, global::System.Nullable<global::System.DateTime> Original_data_evento, global::System.Nullable<global::System.TimeSpan> Original_horário_evento, global::System.Nullable<int> Original_num_convidados, global::System.Nullable<decimal> Original_valor_evento) {
+        public virtual int Update(
+                    int id_evento, 
+                    global::System.Nullable<int> FKid_cliente, 
+                    string tipo_evento, 
+                    global::System.Nullable<global::System.DateTime> data_evento, 
+                    global::System.Nullable<global::System.TimeSpan> horário_evento, 
+                    int num_convidados, 
+                    global::System.Nullable<decimal> valor_evento, 
+                    string bairr_evento, 
+                    string cep_evento, 
+                    string cidade_evento, 
+                    string estado_evento, 
+                    string num_residencia_evento, 
+                    string rua_evento, 
+                    int Original_id_evento, 
+                    global::System.Nullable<int> Original_FKid_cliente, 
+                    string Original_tipo_evento, 
+                    global::System.Nullable<global::System.DateTime> Original_data_evento, 
+                    global::System.Nullable<global::System.TimeSpan> Original_horário_evento, 
+                    int Original_num_convidados, 
+                    global::System.Nullable<decimal> Original_valor_evento, 
+                    string Original_bairr_evento, 
+                    string Original_cep_evento, 
+                    string Original_cidade_evento, 
+                    string Original_estado_evento, 
+                    string Original_num_residencia_evento, 
+                    string Original_rua_evento) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_evento));
             if ((FKid_cliente.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(FKid_cliente.Value));
@@ -9898,72 +10141,126 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((num_convidados.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(num_convidados.Value));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(num_convidados));
+            if ((valor_evento.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(valor_evento.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((local_evento == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(local_evento));
-            }
-            if ((valor_evento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(valor_evento.Value));
+            if ((bairr_evento == null)) {
+                throw new global::System.ArgumentNullException("bairr_evento");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(bairr_evento));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_id_evento));
+            if ((cep_evento == null)) {
+                throw new global::System.ArgumentNullException("cep_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(cep_evento));
+            }
+            if ((cidade_evento == null)) {
+                throw new global::System.ArgumentNullException("cidade_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(cidade_evento));
+            }
+            if ((estado_evento == null)) {
+                throw new global::System.ArgumentNullException("estado_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(estado_evento));
+            }
+            if ((num_residencia_evento == null)) {
+                throw new global::System.ArgumentNullException("num_residencia_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(num_residencia_evento));
+            }
+            if ((rua_evento == null)) {
+                throw new global::System.ArgumentNullException("rua_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(rua_evento));
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_id_evento));
             if ((Original_FKid_cliente.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_FKid_cliente.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_FKid_cliente.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_tipo_evento == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_tipo_evento));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_tipo_evento));
             }
             if ((Original_data_evento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_data_evento.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((System.DateTime)(Original_data_evento.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             if ((Original_horário_evento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.TimeSpan)(Original_horário_evento.Value));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((System.TimeSpan)(Original_horário_evento.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
-            if ((Original_num_convidados.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_num_convidados.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_num_convidados));
             if ((Original_valor_evento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(Original_valor_evento.Value));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((decimal)(Original_valor_evento.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
+            if ((Original_bairr_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_bairr_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_bairr_evento));
+            }
+            if ((Original_cep_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_cep_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_cep_evento));
+            }
+            if ((Original_cidade_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_cidade_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_cidade_evento));
+            }
+            if ((Original_estado_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_estado_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_estado_evento));
+            }
+            if ((Original_num_residencia_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_num_residencia_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_num_residencia_evento));
+            }
+            if ((Original_rua_evento == null)) {
+                throw new global::System.ArgumentNullException("Original_rua_evento");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_rua_evento));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9985,8 +10282,33 @@ SELECT id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> FKid_cliente, string tipo_evento, global::System.Nullable<global::System.DateTime> data_evento, global::System.Nullable<global::System.TimeSpan> horário_evento, global::System.Nullable<int> num_convidados, string local_evento, global::System.Nullable<decimal> valor_evento, int Original_id_evento, global::System.Nullable<int> Original_FKid_cliente, string Original_tipo_evento, global::System.Nullable<global::System.DateTime> Original_data_evento, global::System.Nullable<global::System.TimeSpan> Original_horário_evento, global::System.Nullable<int> Original_num_convidados, global::System.Nullable<decimal> Original_valor_evento) {
-            return this.Update(Original_id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_convidados, local_evento, valor_evento, Original_id_evento, Original_FKid_cliente, Original_tipo_evento, Original_data_evento, Original_horário_evento, Original_num_convidados, Original_valor_evento);
+        public virtual int Update(
+                    global::System.Nullable<int> FKid_cliente, 
+                    string tipo_evento, 
+                    global::System.Nullable<global::System.DateTime> data_evento, 
+                    global::System.Nullable<global::System.TimeSpan> horário_evento, 
+                    int num_convidados, 
+                    global::System.Nullable<decimal> valor_evento, 
+                    string bairr_evento, 
+                    string cep_evento, 
+                    string cidade_evento, 
+                    string estado_evento, 
+                    string num_residencia_evento, 
+                    string rua_evento, 
+                    int Original_id_evento, 
+                    global::System.Nullable<int> Original_FKid_cliente, 
+                    string Original_tipo_evento, 
+                    global::System.Nullable<global::System.DateTime> Original_data_evento, 
+                    global::System.Nullable<global::System.TimeSpan> Original_horário_evento, 
+                    int Original_num_convidados, 
+                    global::System.Nullable<decimal> Original_valor_evento, 
+                    string Original_bairr_evento, 
+                    string Original_cep_evento, 
+                    string Original_cidade_evento, 
+                    string Original_estado_evento, 
+                    string Original_num_residencia_evento, 
+                    string Original_rua_evento) {
+            return this.Update(Original_id_evento, FKid_cliente, tipo_evento, data_evento, horário_evento, num_convidados, valor_evento, bairr_evento, cep_evento, cidade_evento, estado_evento, num_residencia_evento, rua_evento, Original_id_evento, Original_FKid_cliente, Original_tipo_evento, Original_data_evento, Original_horário_evento, Original_num_convidados, Original_valor_evento, Original_bairr_evento, Original_cep_evento, Original_cidade_evento, Original_estado_evento, Original_num_residencia_evento, Original_rua_evento);
         }
     }
     

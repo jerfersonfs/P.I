@@ -41,10 +41,12 @@
             System.Windows.Forms.Label bairro_clienteLabel;
             System.Windows.Forms.Label cidade_clienteLabel;
             System.Windows.Forms.Label estado_clienteLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             System.Windows.Forms.Label cepLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.clienteBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -74,8 +76,6 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.clienteTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.clienteTableAdapter();
             this.tableAdapterManager = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
             this.cepTextBox = new System.Windows.Forms.TextBox();
@@ -108,9 +108,9 @@
             cepLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingNavigator)).BeginInit();
             this.clienteBindingNavigator.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,7 +188,7 @@
             // 
             rua_clienteLabel.AutoSize = true;
             rua_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rua_clienteLabel.Location = new System.Drawing.Point(39, 330);
+            rua_clienteLabel.Location = new System.Drawing.Point(39, 356);
             rua_clienteLabel.Name = "rua_clienteLabel";
             rua_clienteLabel.Size = new System.Drawing.Size(34, 13);
             rua_clienteLabel.TabIndex = 16;
@@ -198,7 +198,7 @@
             // 
             numero_da_residencia_clienteLabel.AutoSize = true;
             numero_da_residencia_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            numero_da_residencia_clienteLabel.Location = new System.Drawing.Point(39, 356);
+            numero_da_residencia_clienteLabel.Location = new System.Drawing.Point(39, 382);
             numero_da_residencia_clienteLabel.Name = "numero_da_residencia_clienteLabel";
             numero_da_residencia_clienteLabel.Size = new System.Drawing.Size(134, 13);
             numero_da_residencia_clienteLabel.TabIndex = 18;
@@ -208,7 +208,7 @@
             // 
             bairro_clienteLabel.AutoSize = true;
             bairro_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bairro_clienteLabel.Location = new System.Drawing.Point(39, 382);
+            bairro_clienteLabel.Location = new System.Drawing.Point(39, 408);
             bairro_clienteLabel.Name = "bairro_clienteLabel";
             bairro_clienteLabel.Size = new System.Drawing.Size(44, 13);
             bairro_clienteLabel.TabIndex = 20;
@@ -218,7 +218,7 @@
             // 
             cidade_clienteLabel.AutoSize = true;
             cidade_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cidade_clienteLabel.Location = new System.Drawing.Point(39, 408);
+            cidade_clienteLabel.Location = new System.Drawing.Point(39, 434);
             cidade_clienteLabel.Name = "cidade_clienteLabel";
             cidade_clienteLabel.Size = new System.Drawing.Size(50, 13);
             cidade_clienteLabel.TabIndex = 22;
@@ -228,11 +228,21 @@
             // 
             estado_clienteLabel.AutoSize = true;
             estado_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            estado_clienteLabel.Location = new System.Drawing.Point(39, 434);
+            estado_clienteLabel.Location = new System.Drawing.Point(39, 460);
             estado_clienteLabel.Name = "estado_clienteLabel";
             estado_clienteLabel.Size = new System.Drawing.Size(50, 13);
             estado_clienteLabel.TabIndex = 24;
             estado_clienteLabel.Text = "Estado:";
+            // 
+            // cepLabel
+            // 
+            cepLabel.AutoSize = true;
+            cepLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cepLabel.Location = new System.Drawing.Point(39, 333);
+            cepLabel.Name = "cepLabel";
+            cepLabel.Size = new System.Drawing.Size(35, 13);
+            cepLabel.TabIndex = 28;
+            cepLabel.Text = "CEP:";
             // 
             // clienteBindingNavigator
             // 
@@ -260,7 +270,7 @@
             this.clienteBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.clienteBindingNavigator.Name = "clienteBindingNavigator";
             this.clienteBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.clienteBindingNavigator.Size = new System.Drawing.Size(1287, 25);
+            this.clienteBindingNavigator.Size = new System.Drawing.Size(1270, 25);
             this.clienteBindingNavigator.TabIndex = 0;
             this.clienteBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -272,6 +282,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "cliente";
+            this.clienteBindingSource.DataSource = this.renataDBDataSet;
+            // 
+            // renataDBDataSet
+            // 
+            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
+            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -418,7 +438,7 @@
             // rua_clienteTextBox
             // 
             this.rua_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "rua_cliente", true));
-            this.rua_clienteTextBox.Location = new System.Drawing.Point(192, 330);
+            this.rua_clienteTextBox.Location = new System.Drawing.Point(192, 356);
             this.rua_clienteTextBox.Name = "rua_clienteTextBox";
             this.rua_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.rua_clienteTextBox.TabIndex = 17;
@@ -426,7 +446,7 @@
             // numero_da_residencia_clienteTextBox
             // 
             this.numero_da_residencia_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "numero_da_residencia_cliente", true));
-            this.numero_da_residencia_clienteTextBox.Location = new System.Drawing.Point(192, 356);
+            this.numero_da_residencia_clienteTextBox.Location = new System.Drawing.Point(192, 382);
             this.numero_da_residencia_clienteTextBox.Name = "numero_da_residencia_clienteTextBox";
             this.numero_da_residencia_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.numero_da_residencia_clienteTextBox.TabIndex = 19;
@@ -434,7 +454,7 @@
             // bairro_clienteTextBox
             // 
             this.bairro_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "bairro_cliente", true));
-            this.bairro_clienteTextBox.Location = new System.Drawing.Point(192, 382);
+            this.bairro_clienteTextBox.Location = new System.Drawing.Point(192, 408);
             this.bairro_clienteTextBox.Name = "bairro_clienteTextBox";
             this.bairro_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.bairro_clienteTextBox.TabIndex = 21;
@@ -442,7 +462,7 @@
             // cidade_clienteTextBox
             // 
             this.cidade_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cidade_cliente", true));
-            this.cidade_clienteTextBox.Location = new System.Drawing.Point(192, 408);
+            this.cidade_clienteTextBox.Location = new System.Drawing.Point(192, 434);
             this.cidade_clienteTextBox.Name = "cidade_clienteTextBox";
             this.cidade_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.cidade_clienteTextBox.TabIndex = 23;
@@ -450,7 +470,7 @@
             // estado_clienteTextBox
             // 
             this.estado_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "estado_cliente", true));
-            this.estado_clienteTextBox.Location = new System.Drawing.Point(192, 434);
+            this.estado_clienteTextBox.Location = new System.Drawing.Point(192, 460);
             this.estado_clienteTextBox.Name = "estado_clienteTextBox";
             this.estado_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.estado_clienteTextBox.TabIndex = 25;
@@ -518,16 +538,6 @@
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.renataDBDataSet;
-            // 
-            // renataDBDataSet
-            // 
-            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
-            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // clienteTableAdapter
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
@@ -549,21 +559,12 @@
             this.tableAdapterManager.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuarioTableAdapter = null;
             // 
-            // cepLabel
-            // 
-            cepLabel.AutoSize = true;
-            cepLabel.Location = new System.Drawing.Point(39, 460);
-            cepLabel.Name = "cepLabel";
-            cepLabel.Size = new System.Drawing.Size(31, 13);
-            cepLabel.TabIndex = 28;
-            cepLabel.Text = "CEP:";
-            // 
             // cepTextBox
             // 
             this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cep", true));
-            this.cepTextBox.Location = new System.Drawing.Point(192, 460);
+            this.cepTextBox.Location = new System.Drawing.Point(192, 330);
             this.cepTextBox.Name = "cepTextBox";
-            this.cepTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cepTextBox.Size = new System.Drawing.Size(200, 20);
             this.cepTextBox.TabIndex = 29;
             // 
             // clienteDataGridView
@@ -676,7 +677,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1287, 830);
+            this.ClientSize = new System.Drawing.Size(1287, 749);
             this.Controls.Add(cepLabel);
             this.Controls.Add(this.cepTextBox);
             this.Controls.Add(this.textBox1);
@@ -713,10 +714,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingNavigator)).EndInit();
             this.clienteBindingNavigator.ResumeLayout(false);
             this.clienteBindingNavigator.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

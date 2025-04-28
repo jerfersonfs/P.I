@@ -116,10 +116,10 @@ namespace Projeto_Integrador___pt2.Formulários
 
                             if (dados.erro == null) // Verifica se o CEP existe
                             {
-                                rua_clienteTextBox.Text = dados.logradouro;
+                                rua_clienteTextBox.Text = dados.rua;
                                 bairro_clienteTextBox.Text = dados.bairro;
-                                cidade_clienteTextBox.Text = dados.localidade;
-                                estado_clienteTextBox.Text = dados.uf;
+                                cidade_clienteTextBox.Text = dados.cidade;
+                                estado_clienteTextBox.Text = dados.estado;
                             }
                             else
                             {

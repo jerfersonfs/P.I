@@ -34,10 +34,15 @@
             System.Windows.Forms.Label data_eventoLabel;
             System.Windows.Forms.Label horário_eventoLabel;
             System.Windows.Forms.Label num_convidadosLabel;
-            System.Windows.Forms.Label local_eventoLabel;
             System.Windows.Forms.Label valor_eventoLabel;
             System.Windows.Forms.Label id_clienteLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvento));
+            System.Windows.Forms.Label cep_eventoLabel;
+            System.Windows.Forms.Label rua_eventoLabel;
+            System.Windows.Forms.Label num_residencia_eventoLabel;
+            System.Windows.Forms.Label bairr_eventoLabel;
+            System.Windows.Forms.Label cidade_eventoLabel;
+            System.Windows.Forms.Label estado_eventoLabel;
             this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.eventosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventosTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.eventosTableAdapter();
@@ -62,14 +67,12 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_eventoTextBox = new System.Windows.Forms.TextBox();
             this.tipo_eventoTextBox = new System.Windows.Forms.TextBox();
             this.data_eventoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.horário_eventoTextBox = new System.Windows.Forms.TextBox();
             this.num_convidadosTextBox = new System.Windows.Forms.TextBox();
-            this.local_eventoTextBox = new System.Windows.Forms.TextBox();
             this.valor_eventoTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,14 +83,31 @@
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.clienteTableAdapter();
             this.id_clienteTextBox = new System.Windows.Forms.TextBox();
+            this.cep_eventoTextBox = new System.Windows.Forms.TextBox();
+            this.rua_eventoTextBox = new System.Windows.Forms.TextBox();
+            this.num_residencia_eventoTextBox = new System.Windows.Forms.TextBox();
+            this.bairr_eventoTextBox = new System.Windows.Forms.TextBox();
+            this.cidade_eventoTextBox = new System.Windows.Forms.TextBox();
+            this.estado_eventoTextBox = new System.Windows.Forms.TextBox();
+            this.cep_evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rua_evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num_residencia_evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bairr_evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidade_evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado_evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             id_eventoLabel = new System.Windows.Forms.Label();
             tipo_eventoLabel = new System.Windows.Forms.Label();
             data_eventoLabel = new System.Windows.Forms.Label();
             horário_eventoLabel = new System.Windows.Forms.Label();
             num_convidadosLabel = new System.Windows.Forms.Label();
-            local_eventoLabel = new System.Windows.Forms.Label();
             valor_eventoLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
+            cep_eventoLabel = new System.Windows.Forms.Label();
+            rua_eventoLabel = new System.Windows.Forms.Label();
+            num_residencia_eventoLabel = new System.Windows.Forms.Label();
+            bairr_eventoLabel = new System.Windows.Forms.Label();
+            cidade_eventoLabel = new System.Windows.Forms.Label();
+            estado_eventoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosBindingNavigator)).BeginInit();
@@ -101,7 +121,7 @@
             // 
             id_eventoLabel.AutoSize = true;
             id_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_eventoLabel.Location = new System.Drawing.Point(16, 221);
+            id_eventoLabel.Location = new System.Drawing.Point(16, 137);
             id_eventoLabel.Name = "id_eventoLabel";
             id_eventoLabel.Size = new System.Drawing.Size(50, 13);
             id_eventoLabel.TabIndex = 2;
@@ -111,7 +131,7 @@
             // 
             tipo_eventoLabel.AutoSize = true;
             tipo_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipo_eventoLabel.Location = new System.Drawing.Point(14, 273);
+            tipo_eventoLabel.Location = new System.Drawing.Point(14, 189);
             tipo_eventoLabel.Name = "tipo_eventoLabel";
             tipo_eventoLabel.Size = new System.Drawing.Size(97, 13);
             tipo_eventoLabel.TabIndex = 6;
@@ -121,7 +141,7 @@
             // 
             data_eventoLabel.AutoSize = true;
             data_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            data_eventoLabel.Location = new System.Drawing.Point(16, 298);
+            data_eventoLabel.Location = new System.Drawing.Point(16, 214);
             data_eventoLabel.Name = "data_eventoLabel";
             data_eventoLabel.Size = new System.Drawing.Size(99, 13);
             data_eventoLabel.TabIndex = 8;
@@ -132,7 +152,7 @@
             // 
             horário_eventoLabel.AutoSize = true;
             horário_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            horário_eventoLabel.Location = new System.Drawing.Point(14, 325);
+            horário_eventoLabel.Location = new System.Drawing.Point(14, 241);
             horário_eventoLabel.Name = "horário_eventoLabel";
             horário_eventoLabel.Size = new System.Drawing.Size(113, 13);
             horário_eventoLabel.TabIndex = 10;
@@ -142,27 +162,17 @@
             // 
             num_convidadosLabel.AutoSize = true;
             num_convidadosLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            num_convidadosLabel.Location = new System.Drawing.Point(14, 347);
+            num_convidadosLabel.Location = new System.Drawing.Point(14, 263);
             num_convidadosLabel.Name = "num_convidadosLabel";
             num_convidadosLabel.Size = new System.Drawing.Size(141, 13);
             num_convidadosLabel.TabIndex = 12;
             num_convidadosLabel.Text = "Número de convidados:";
             // 
-            // local_eventoLabel
-            // 
-            local_eventoLabel.AutoSize = true;
-            local_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            local_eventoLabel.Location = new System.Drawing.Point(14, 373);
-            local_eventoLabel.Name = "local_eventoLabel";
-            local_eventoLabel.Size = new System.Drawing.Size(42, 13);
-            local_eventoLabel.TabIndex = 14;
-            local_eventoLabel.Text = "Local:";
-            // 
             // valor_eventoLabel
             // 
             valor_eventoLabel.AutoSize = true;
             valor_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            valor_eventoLabel.Location = new System.Drawing.Point(16, 399);
+            valor_eventoLabel.Location = new System.Drawing.Point(16, 444);
             valor_eventoLabel.Name = "valor_eventoLabel";
             valor_eventoLabel.Size = new System.Drawing.Size(40, 13);
             valor_eventoLabel.TabIndex = 16;
@@ -172,7 +182,7 @@
             // 
             id_clienteLabel.AutoSize = true;
             id_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_clienteLabel.Location = new System.Drawing.Point(16, 247);
+            id_clienteLabel.Location = new System.Drawing.Point(16, 163);
             id_clienteLabel.Name = "id_clienteLabel";
             id_clienteLabel.Size = new System.Drawing.Size(67, 13);
             id_clienteLabel.TabIndex = 22;
@@ -235,7 +245,7 @@
             this.eventosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.eventosBindingNavigator.Name = "eventosBindingNavigator";
             this.eventosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.eventosBindingNavigator.Size = new System.Drawing.Size(874, 25);
+            this.eventosBindingNavigator.Size = new System.Drawing.Size(976, 25);
             this.eventosBindingNavigator.TabIndex = 0;
             this.eventosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -346,12 +356,17 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
+            this.dataGridViewTextBoxColumn8,
+            this.cep_evento,
+            this.rua_evento,
+            this.num_residencia_evento,
+            this.bairr_evento,
+            this.cidade_evento,
+            this.estado_evento});
             this.eventosDataGridView.DataSource = this.eventosBindingSource;
-            this.eventosDataGridView.Location = new System.Drawing.Point(12, 433);
+            this.eventosDataGridView.Location = new System.Drawing.Point(19, 483);
             this.eventosDataGridView.Name = "eventosDataGridView";
-            this.eventosDataGridView.Size = new System.Drawing.Size(842, 400);
+            this.eventosDataGridView.Size = new System.Drawing.Size(932, 400);
             this.eventosDataGridView.TabIndex = 1;
             this.eventosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.eventosDataGridView_CellContentClick);
             // 
@@ -391,12 +406,6 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "num_convidados";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "local_evento";
-            this.dataGridViewTextBoxColumn7.HeaderText = "local_evento";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "valor_evento";
@@ -406,7 +415,7 @@
             // id_eventoTextBox
             // 
             this.id_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "id_evento", true));
-            this.id_eventoTextBox.Location = new System.Drawing.Point(156, 214);
+            this.id_eventoTextBox.Location = new System.Drawing.Point(156, 130);
             this.id_eventoTextBox.Name = "id_eventoTextBox";
             this.id_eventoTextBox.Size = new System.Drawing.Size(200, 20);
             this.id_eventoTextBox.TabIndex = 3;
@@ -414,7 +423,7 @@
             // tipo_eventoTextBox
             // 
             this.tipo_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "tipo_evento", true));
-            this.tipo_eventoTextBox.Location = new System.Drawing.Point(156, 266);
+            this.tipo_eventoTextBox.Location = new System.Drawing.Point(156, 182);
             this.tipo_eventoTextBox.Name = "tipo_eventoTextBox";
             this.tipo_eventoTextBox.Size = new System.Drawing.Size(200, 20);
             this.tipo_eventoTextBox.TabIndex = 7;
@@ -422,7 +431,7 @@
             // data_eventoDateTimePicker
             // 
             this.data_eventoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.eventosBindingSource, "data_evento", true));
-            this.data_eventoDateTimePicker.Location = new System.Drawing.Point(156, 292);
+            this.data_eventoDateTimePicker.Location = new System.Drawing.Point(156, 208);
             this.data_eventoDateTimePicker.Name = "data_eventoDateTimePicker";
             this.data_eventoDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.data_eventoDateTimePicker.TabIndex = 9;
@@ -430,7 +439,7 @@
             // horário_eventoTextBox
             // 
             this.horário_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "horário_evento", true));
-            this.horário_eventoTextBox.Location = new System.Drawing.Point(156, 318);
+            this.horário_eventoTextBox.Location = new System.Drawing.Point(156, 234);
             this.horário_eventoTextBox.Name = "horário_eventoTextBox";
             this.horário_eventoTextBox.Size = new System.Drawing.Size(200, 20);
             this.horário_eventoTextBox.TabIndex = 11;
@@ -438,23 +447,15 @@
             // num_convidadosTextBox
             // 
             this.num_convidadosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "num_convidados", true));
-            this.num_convidadosTextBox.Location = new System.Drawing.Point(156, 344);
+            this.num_convidadosTextBox.Location = new System.Drawing.Point(156, 260);
             this.num_convidadosTextBox.Name = "num_convidadosTextBox";
             this.num_convidadosTextBox.Size = new System.Drawing.Size(200, 20);
             this.num_convidadosTextBox.TabIndex = 13;
             // 
-            // local_eventoTextBox
-            // 
-            this.local_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "local_evento", true));
-            this.local_eventoTextBox.Location = new System.Drawing.Point(156, 370);
-            this.local_eventoTextBox.Name = "local_eventoTextBox";
-            this.local_eventoTextBox.Size = new System.Drawing.Size(200, 20);
-            this.local_eventoTextBox.TabIndex = 15;
-            // 
             // valor_eventoTextBox
             // 
             this.valor_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "valor_evento", true));
-            this.valor_eventoTextBox.Location = new System.Drawing.Point(156, 396);
+            this.valor_eventoTextBox.Location = new System.Drawing.Point(156, 441);
             this.valor_eventoTextBox.Name = "valor_eventoTextBox";
             this.valor_eventoTextBox.Size = new System.Drawing.Size(200, 20);
             this.valor_eventoTextBox.TabIndex = 17;
@@ -467,7 +468,7 @@
             this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Controls.Add(this.cbmFiltrar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(459, 240);
+            this.groupBox1.Location = new System.Drawing.Point(494, 237);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(395, 129);
             this.groupBox1.TabIndex = 19;
@@ -514,7 +515,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Plum;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(266, 88);
+            this.textBox1.Location = new System.Drawing.Point(333, 48);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(333, 62);
             this.textBox1.TabIndex = 22;
@@ -534,11 +535,155 @@
             // id_clienteTextBox
             // 
             this.id_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "id_cliente", true));
-            this.id_clienteTextBox.Location = new System.Drawing.Point(156, 240);
+            this.id_clienteTextBox.Location = new System.Drawing.Point(156, 156);
             this.id_clienteTextBox.Name = "id_clienteTextBox";
             this.id_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.id_clienteTextBox.TabIndex = 23;
             this.id_clienteTextBox.TextChanged += new System.EventHandler(this.id_clienteTextBox_TextChanged);
+            // 
+            // cep_eventoLabel
+            // 
+            cep_eventoLabel.AutoSize = true;
+            cep_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cep_eventoLabel.Location = new System.Drawing.Point(16, 289);
+            cep_eventoLabel.Name = "cep_eventoLabel";
+            cep_eventoLabel.Size = new System.Drawing.Size(35, 13);
+            cep_eventoLabel.TabIndex = 23;
+            cep_eventoLabel.Text = "CEP:";
+            // 
+            // cep_eventoTextBox
+            // 
+            this.cep_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "cep_evento", true));
+            this.cep_eventoTextBox.Location = new System.Drawing.Point(156, 286);
+            this.cep_eventoTextBox.Name = "cep_eventoTextBox";
+            this.cep_eventoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.cep_eventoTextBox.TabIndex = 24;
+            // 
+            // rua_eventoLabel
+            // 
+            rua_eventoLabel.AutoSize = true;
+            rua_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            rua_eventoLabel.Location = new System.Drawing.Point(16, 312);
+            rua_eventoLabel.Name = "rua_eventoLabel";
+            rua_eventoLabel.Size = new System.Drawing.Size(34, 13);
+            rua_eventoLabel.TabIndex = 24;
+            rua_eventoLabel.Text = "Rua:";
+            // 
+            // rua_eventoTextBox
+            // 
+            this.rua_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "rua_evento", true));
+            this.rua_eventoTextBox.Location = new System.Drawing.Point(156, 312);
+            this.rua_eventoTextBox.Name = "rua_eventoTextBox";
+            this.rua_eventoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.rua_eventoTextBox.TabIndex = 25;
+            // 
+            // num_residencia_eventoLabel
+            // 
+            num_residencia_eventoLabel.AutoSize = true;
+            num_residencia_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            num_residencia_eventoLabel.Location = new System.Drawing.Point(16, 338);
+            num_residencia_eventoLabel.Name = "num_residencia_eventoLabel";
+            num_residencia_eventoLabel.Size = new System.Drawing.Size(134, 13);
+            num_residencia_eventoLabel.TabIndex = 25;
+            num_residencia_eventoLabel.Text = "Número de residência:";
+            // 
+            // num_residencia_eventoTextBox
+            // 
+            this.num_residencia_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "num_residencia_evento", true));
+            this.num_residencia_eventoTextBox.Location = new System.Drawing.Point(156, 338);
+            this.num_residencia_eventoTextBox.Name = "num_residencia_eventoTextBox";
+            this.num_residencia_eventoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.num_residencia_eventoTextBox.TabIndex = 26;
+            // 
+            // bairr_eventoLabel
+            // 
+            bairr_eventoLabel.AutoSize = true;
+            bairr_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            bairr_eventoLabel.Location = new System.Drawing.Point(16, 364);
+            bairr_eventoLabel.Name = "bairr_eventoLabel";
+            bairr_eventoLabel.Size = new System.Drawing.Size(44, 13);
+            bairr_eventoLabel.TabIndex = 26;
+            bairr_eventoLabel.Text = "Bairro:";
+            // 
+            // bairr_eventoTextBox
+            // 
+            this.bairr_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "bairr_evento", true));
+            this.bairr_eventoTextBox.Location = new System.Drawing.Point(156, 364);
+            this.bairr_eventoTextBox.Name = "bairr_eventoTextBox";
+            this.bairr_eventoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.bairr_eventoTextBox.TabIndex = 27;
+            // 
+            // cidade_eventoLabel
+            // 
+            cidade_eventoLabel.AutoSize = true;
+            cidade_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cidade_eventoLabel.Location = new System.Drawing.Point(16, 389);
+            cidade_eventoLabel.Name = "cidade_eventoLabel";
+            cidade_eventoLabel.Size = new System.Drawing.Size(50, 13);
+            cidade_eventoLabel.TabIndex = 27;
+            cidade_eventoLabel.Text = "Cidade:";
+            // 
+            // cidade_eventoTextBox
+            // 
+            this.cidade_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "cidade_evento", true));
+            this.cidade_eventoTextBox.Location = new System.Drawing.Point(156, 389);
+            this.cidade_eventoTextBox.Name = "cidade_eventoTextBox";
+            this.cidade_eventoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.cidade_eventoTextBox.TabIndex = 28;
+            // 
+            // estado_eventoLabel
+            // 
+            estado_eventoLabel.AutoSize = true;
+            estado_eventoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            estado_eventoLabel.Location = new System.Drawing.Point(16, 415);
+            estado_eventoLabel.Name = "estado_eventoLabel";
+            estado_eventoLabel.Size = new System.Drawing.Size(50, 13);
+            estado_eventoLabel.TabIndex = 28;
+            estado_eventoLabel.Text = "Estado:";
+            // 
+            // estado_eventoTextBox
+            // 
+            this.estado_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "estado_evento", true));
+            this.estado_eventoTextBox.Location = new System.Drawing.Point(156, 415);
+            this.estado_eventoTextBox.Name = "estado_eventoTextBox";
+            this.estado_eventoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.estado_eventoTextBox.TabIndex = 29;
+            // 
+            // cep_evento
+            // 
+            this.cep_evento.DataPropertyName = "cep_evento";
+            this.cep_evento.HeaderText = "cep_evento";
+            this.cep_evento.Name = "cep_evento";
+            // 
+            // rua_evento
+            // 
+            this.rua_evento.DataPropertyName = "rua_evento";
+            this.rua_evento.HeaderText = "rua_evento";
+            this.rua_evento.Name = "rua_evento";
+            // 
+            // num_residencia_evento
+            // 
+            this.num_residencia_evento.DataPropertyName = "num_residencia_evento";
+            this.num_residencia_evento.HeaderText = "num_residencia_evento";
+            this.num_residencia_evento.Name = "num_residencia_evento";
+            // 
+            // bairr_evento
+            // 
+            this.bairr_evento.DataPropertyName = "bairr_evento";
+            this.bairr_evento.HeaderText = "bairr_evento";
+            this.bairr_evento.Name = "bairr_evento";
+            // 
+            // cidade_evento
+            // 
+            this.cidade_evento.DataPropertyName = "cidade_evento";
+            this.cidade_evento.HeaderText = "cidade_evento";
+            this.cidade_evento.Name = "cidade_evento";
+            // 
+            // estado_evento
+            // 
+            this.estado_evento.DataPropertyName = "estado_evento";
+            this.estado_evento.HeaderText = "estado_evento";
+            this.estado_evento.Name = "estado_evento";
             // 
             // frmEvento
             // 
@@ -546,7 +691,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(874, 853);
+            this.ClientSize = new System.Drawing.Size(993, 749);
+            this.Controls.Add(estado_eventoLabel);
+            this.Controls.Add(this.estado_eventoTextBox);
+            this.Controls.Add(cidade_eventoLabel);
+            this.Controls.Add(this.cidade_eventoTextBox);
+            this.Controls.Add(bairr_eventoLabel);
+            this.Controls.Add(this.bairr_eventoTextBox);
+            this.Controls.Add(num_residencia_eventoLabel);
+            this.Controls.Add(this.num_residencia_eventoTextBox);
+            this.Controls.Add(rua_eventoLabel);
+            this.Controls.Add(this.rua_eventoTextBox);
+            this.Controls.Add(cep_eventoLabel);
+            this.Controls.Add(this.cep_eventoTextBox);
             this.Controls.Add(id_clienteLabel);
             this.Controls.Add(this.id_clienteTextBox);
             this.Controls.Add(this.textBox1);
@@ -561,8 +718,6 @@
             this.Controls.Add(this.horário_eventoTextBox);
             this.Controls.Add(num_convidadosLabel);
             this.Controls.Add(this.num_convidadosTextBox);
-            this.Controls.Add(local_eventoLabel);
-            this.Controls.Add(this.local_eventoTextBox);
             this.Controls.Add(valor_eventoLabel);
             this.Controls.Add(this.valor_eventoTextBox);
             this.Controls.Add(this.eventosDataGridView);
@@ -617,7 +772,6 @@
         private System.Windows.Forms.DateTimePicker data_eventoDateTimePicker;
         private System.Windows.Forms.TextBox horário_eventoTextBox;
         private System.Windows.Forms.TextBox num_convidadosTextBox;
-        private System.Windows.Forms.TextBox local_eventoTextBox;
         private System.Windows.Forms.TextBox valor_eventoTextBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
@@ -628,5 +782,17 @@
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private RenataDBDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
         private System.Windows.Forms.TextBox id_clienteTextBox;
+        private System.Windows.Forms.TextBox cep_eventoTextBox;
+        private System.Windows.Forms.TextBox rua_eventoTextBox;
+        private System.Windows.Forms.TextBox num_residencia_eventoTextBox;
+        private System.Windows.Forms.TextBox bairr_eventoTextBox;
+        private System.Windows.Forms.TextBox cidade_eventoTextBox;
+        private System.Windows.Forms.TextBox estado_eventoTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cep_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rua_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num_residencia_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bairr_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidade_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado_evento;
     }
 }
