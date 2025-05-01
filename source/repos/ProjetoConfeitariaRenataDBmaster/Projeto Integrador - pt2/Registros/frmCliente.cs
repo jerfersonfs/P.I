@@ -54,40 +54,6 @@ namespace Projeto_Integrador___pt2.Formulários
 
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cbmFiltrar.Text == "Código")
-                {
-                    string sql = "SELECT * FROM Cliente WHERE id_cliente = " + txtPesquisar.Text + "";
-                    SqlCommand cmd = new SqlCommand(sql);
-                    cntn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable cliente = new DataTable();
-                    adapter.Fill(cliente);
-                    clienteDataGridView.DataSource = cliente;
-                }
-                if (cbmFiltrar.Text == "Cliente")
-                {
-                    string sql = "SELECT * FROM Cliente WHERE nome_cliente LIKE '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable cliente = new DataTable();
-                    adapter.Fill(cliente);
-                    clienteDataGridView.DataSource = cliente;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                cntn.Close();
-            }
-        }
 
         private void clienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -100,7 +66,7 @@ namespace Projeto_Integrador___pt2.Formulários
         }
         public async Task BuscarCep()
         {
-            if (cep.MaxInputLength == 9)
+            if (cep.MaxInputLenght == 9)
             {
                 try
                 {
@@ -117,7 +83,7 @@ namespace Projeto_Integrador___pt2.Formulários
                             if (dados.erro == null) // Verifica se o CEP existe
                             {
                                 rua_clienteTextBox.Text = dados.rua;
-                                bairro_clienteTextBox.Text = dados.bairro;
+                                bairro_clienteTextBox.Text = dados.bairro; 
                                 cidade_clienteTextBox.Text = dados.cidade;
                                 estado_clienteTextBox.Text = dados.estado;
                             }
@@ -144,6 +110,14 @@ namespace Projeto_Integrador___pt2.Formulários
 
         }
 
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

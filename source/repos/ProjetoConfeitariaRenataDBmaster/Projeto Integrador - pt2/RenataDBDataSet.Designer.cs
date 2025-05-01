@@ -70,8 +70,6 @@ namespace Projeto_Integrador___pt2 {
         
         private global::System.Data.DataRelation relationFK__produto__FKid_ca__46E78A0C;
         
-        private global::System.Data.DataRelation relationFK__usuario__FKid_cl__4222D4EF;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -493,7 +491,6 @@ namespace Projeto_Integrador___pt2 {
             this.relationFK__pedido__FKid_cli__4AB81AF0 = this.Relations["FK__pedido__FKid_cli__4AB81AF0"];
             this.relationFK__pedido__FKid_pro__4BAC3F29 = this.Relations["FK__pedido__FKid_pro__4BAC3F29"];
             this.relationFK__produto__FKid_ca__46E78A0C = this.Relations["FK__produto__FKid_ca__46E78A0C"];
-            this.relationFK__usuario__FKid_cl__4222D4EF = this.Relations["FK__usuario__FKid_cl__4222D4EF"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -572,10 +569,6 @@ namespace Projeto_Integrador___pt2 {
                         this.tablecategoria.id_categoriaColumn}, new global::System.Data.DataColumn[] {
                         this.tableproduto.FKid_categoriaColumn}, false);
             this.Relations.Add(this.relationFK__produto__FKid_ca__46E78A0C);
-            this.relationFK__usuario__FKid_cl__4222D4EF = new global::System.Data.DataRelation("FK__usuario__FKid_cl__4222D4EF", new global::System.Data.DataColumn[] {
-                        this.tablecliente.id_clienteColumn}, new global::System.Data.DataColumn[] {
-                        this.tableusuario.FKid_clienteColumn}, false);
-            this.Relations.Add(this.relationFK__usuario__FKid_cl__4222D4EF);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4575,8 +4568,6 @@ namespace Projeto_Integrador___pt2 {
             
             private global::System.Data.DataColumn columndata_cadastro;
             
-            private global::System.Data.DataColumn columnFKid_cliente;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public usuarioDataTable() {
@@ -4668,14 +4659,6 @@ namespace Projeto_Integrador___pt2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FKid_clienteColumn {
-                get {
-                    return this.columnFKid_cliente;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -4711,7 +4694,7 @@ namespace Projeto_Integrador___pt2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usuarioRow AddusuarioRow(int id_usu, string nome_usu, string senha_usu, string celular_usu, string telefone_usu, string email_usu, System.DateTime data_cadastro, clienteRow parentclienteRowByFK__usuario__FKid_cl__4222D4EF) {
+            public usuarioRow AddusuarioRow(int id_usu, string nome_usu, string senha_usu, string celular_usu, string telefone_usu, string email_usu, System.DateTime data_cadastro) {
                 usuarioRow rowusuarioRow = ((usuarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_usu,
@@ -4720,11 +4703,7 @@ namespace Projeto_Integrador___pt2 {
                         celular_usu,
                         telefone_usu,
                         email_usu,
-                        data_cadastro,
-                        null};
-                if ((parentclienteRowByFK__usuario__FKid_cl__4222D4EF != null)) {
-                    columnValuesArray[7] = parentclienteRowByFK__usuario__FKid_cl__4222D4EF[0];
-                }
+                        data_cadastro};
                 rowusuarioRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowusuarioRow);
                 return rowusuarioRow;
@@ -4761,7 +4740,6 @@ namespace Projeto_Integrador___pt2 {
                 this.columntelefone_usu = base.Columns["telefone_usu"];
                 this.columnemail_usu = base.Columns["email_usu"];
                 this.columndata_cadastro = base.Columns["data_cadastro"];
-                this.columnFKid_cliente = base.Columns["FKid_cliente"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4781,8 +4759,6 @@ namespace Projeto_Integrador___pt2 {
                 base.Columns.Add(this.columnemail_usu);
                 this.columndata_cadastro = new global::System.Data.DataColumn("data_cadastro", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndata_cadastro);
-                this.columnFKid_cliente = new global::System.Data.DataColumn("FKid_cliente", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFKid_cliente);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_usu}, true));
                 this.columnid_usu.AllowDBNull = false;
@@ -5487,17 +5463,6 @@ namespace Projeto_Integrador___pt2 {
                 }
                 else {
                     return ((pedidoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__pedido__FKid_cli__4AB81AF0"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public usuarioRow[] GetusuarioRows() {
-                if ((this.Table.ChildRelations["FK__usuario__FKid_cl__4222D4EF"] == null)) {
-                    return new usuarioRow[0];
-                }
-                else {
-                    return ((usuarioRow[])(base.GetChildRows(this.Table.ChildRelations["FK__usuario__FKid_cl__4222D4EF"])));
                 }
             }
         }
@@ -7098,33 +7063,6 @@ namespace Projeto_Integrador___pt2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int FKid_cliente {
-                get {
-                    try {
-                        return ((int)(this[this.tableusuario.FKid_clienteColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'FKid_cliente\' na tabela \'usuario\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableusuario.FKid_clienteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public clienteRow clienteRow {
-                get {
-                    return ((clienteRow)(this.GetParentRow(this.Table.ParentRelations["FK__usuario__FKid_cl__4222D4EF"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__usuario__FKid_cl__4222D4EF"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Istelefone_usuNull() {
                 return this.IsNull(this.tableusuario.telefone_usuColumn);
             }
@@ -7133,18 +7071,6 @@ namespace Projeto_Integrador___pt2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Settelefone_usuNull() {
                 this[this.tableusuario.telefone_usuColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFKid_clienteNull() {
-                return this.IsNull(this.tableusuario.FKid_clienteColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFKid_clienteNull() {
-                this[this.tableusuario.FKid_clienteColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -13046,11 +12972,10 @@ SELECT id_receita, nome_receita, instrucoes_receitas FROM receita WHERE (id_rece
             tableMapping.ColumnMappings.Add("telefone_usu", "telefone_usu");
             tableMapping.ColumnMappings.Add("email_usu", "email_usu");
             tableMapping.ColumnMappings.Add("data_cadastro", "data_cadastro");
-            tableMapping.ColumnMappings.Add("FKid_cliente", "FKid_cliente");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[usuario] WHERE (([id_usu] = @Original_id_usu) AND ([nome_usu] = @Original_nome_usu) AND ([senha_usu] = @Original_senha_usu) AND ([celular_usu] = @Original_celular_usu) AND ((@IsNull_telefone_usu = 1 AND [telefone_usu] IS NULL) OR ([telefone_usu] = @Original_telefone_usu)) AND ([email_usu] = @Original_email_usu) AND ([data_cadastro] = @Original_data_cadastro) AND ((@IsNull_FKid_cliente = 1 AND [FKid_cliente] IS NULL) OR ([FKid_cliente] = @Original_FKid_cliente)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [usuario] WHERE (([id_usu] = @Original_id_usu) AND ([nome_usu] = @Original_nome_usu) AND ([senha_usu] = @Original_senha_usu) AND ([celular_usu] = @Original_celular_usu) AND ((@IsNull_telefone_usu = 1 AND [telefone_usu] IS NULL) OR ([telefone_usu] = @Original_telefone_usu)) AND ([email_usu] = @Original_email_usu) AND ([data_cadastro] = @Original_data_cadastro))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_usu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nome_usu", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -13060,12 +12985,10 @@ SELECT id_receita, nome_receita, instrucoes_receitas FROM receita WHERE (id_rece
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefone_usu", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefone_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email_usu", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_cadastro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_cadastro", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[usuario] ([id_usu], [nome_usu], [senha_usu], [celular_usu], [telefone_usu], [email_usu], [data_cadastro], [FKid_cliente]) VALUES (@id_usu, @nome_usu, @senha_usu, @celular_usu, @telefone_usu, @email_usu, @data_cadastro, @FKid_cliente);
-SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_cadastro, FKid_cliente FROM usuario WHERE (id_usu = @id_usu)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [usuario] ([id_usu], [nome_usu], [senha_usu], [celular_usu], [telefone_usu], [email_usu], [data_cadastro]) VALUES (@id_usu, @nome_usu, @senha_usu, @celular_usu, @telefone_usu, @email_usu, @data_cadastro);
+SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_cadastro FROM usuario WHERE (id_usu = @id_usu)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_usu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome_usu", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome_usu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13074,11 +12997,10 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefone_usu", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefone_usu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email_usu", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_usu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_cadastro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_cadastro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[usuario] SET [id_usu] = @id_usu, [nome_usu] = @nome_usu, [senha_usu] = @senha_usu, [celular_usu] = @celular_usu, [telefone_usu] = @telefone_usu, [email_usu] = @email_usu, [data_cadastro] = @data_cadastro, [FKid_cliente] = @FKid_cliente WHERE (([id_usu] = @Original_id_usu) AND ([nome_usu] = @Original_nome_usu) AND ([senha_usu] = @Original_senha_usu) AND ([celular_usu] = @Original_celular_usu) AND ((@IsNull_telefone_usu = 1 AND [telefone_usu] IS NULL) OR ([telefone_usu] = @Original_telefone_usu)) AND ([email_usu] = @Original_email_usu) AND ([data_cadastro] = @Original_data_cadastro) AND ((@IsNull_FKid_cliente = 1 AND [FKid_cliente] IS NULL) OR ([FKid_cliente] = @Original_FKid_cliente)));
-SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_cadastro, FKid_cliente FROM usuario WHERE (id_usu = @id_usu)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [usuario] SET [id_usu] = @id_usu, [nome_usu] = @nome_usu, [senha_usu] = @senha_usu, [celular_usu] = @celular_usu, [telefone_usu] = @telefone_usu, [email_usu] = @email_usu, [data_cadastro] = @data_cadastro WHERE (([id_usu] = @Original_id_usu) AND ([nome_usu] = @Original_nome_usu) AND ([senha_usu] = @Original_senha_usu) AND ([celular_usu] = @Original_celular_usu) AND ((@IsNull_telefone_usu = 1 AND [telefone_usu] IS NULL) OR ([telefone_usu] = @Original_telefone_usu)) AND ([email_usu] = @Original_email_usu) AND ([data_cadastro] = @Original_data_cadastro));
+SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_cadastro FROM usuario WHERE (id_usu = @id_usu)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_usu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nome_usu", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome_usu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13087,7 +13009,6 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefone_usu", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefone_usu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email_usu", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_usu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_cadastro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_cadastro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_usu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nome_usu", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nome_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_senha_usu", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "senha_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -13096,8 +13017,6 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefone_usu", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefone_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email_usu", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email_usu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_cadastro", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_cadastro", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13114,7 +13033,7 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_ca" +
-                "dastro, FKid_cliente FROM dbo.usuario";
+                "dastro FROM usuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13175,7 +13094,7 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_usu, string Original_nome_usu, string Original_senha_usu, string Original_celular_usu, string Original_telefone_usu, string Original_email_usu, System.DateTime Original_data_cadastro, global::System.Nullable<int> Original_FKid_cliente) {
+        public virtual int Delete(int Original_id_usu, string Original_nome_usu, string Original_senha_usu, string Original_celular_usu, string Original_telefone_usu, string Original_email_usu, System.DateTime Original_data_cadastro) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_usu));
             if ((Original_nome_usu == null)) {
                 throw new global::System.ArgumentNullException("Original_nome_usu");
@@ -13210,14 +13129,6 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_email_usu));
             }
             this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_data_cadastro));
-            if ((Original_FKid_cliente.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_FKid_cliente.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13238,7 +13149,7 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_usu, string nome_usu, string senha_usu, string celular_usu, string telefone_usu, string email_usu, System.DateTime data_cadastro, global::System.Nullable<int> FKid_cliente) {
+        public virtual int Insert(int id_usu, string nome_usu, string senha_usu, string celular_usu, string telefone_usu, string email_usu, System.DateTime data_cadastro) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_usu));
             if ((nome_usu == null)) {
                 throw new global::System.ArgumentNullException("nome_usu");
@@ -13271,12 +13182,6 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(email_usu));
             }
             this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(data_cadastro));
-            if ((FKid_cliente.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(FKid_cliente.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13297,23 +13202,7 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int id_usu, 
-                    string nome_usu, 
-                    string senha_usu, 
-                    string celular_usu, 
-                    string telefone_usu, 
-                    string email_usu, 
-                    System.DateTime data_cadastro, 
-                    global::System.Nullable<int> FKid_cliente, 
-                    int Original_id_usu, 
-                    string Original_nome_usu, 
-                    string Original_senha_usu, 
-                    string Original_celular_usu, 
-                    string Original_telefone_usu, 
-                    string Original_email_usu, 
-                    System.DateTime Original_data_cadastro, 
-                    global::System.Nullable<int> Original_FKid_cliente) {
+        public virtual int Update(int id_usu, string nome_usu, string senha_usu, string celular_usu, string telefone_usu, string email_usu, System.DateTime data_cadastro, int Original_id_usu, string Original_nome_usu, string Original_senha_usu, string Original_celular_usu, string Original_telefone_usu, string Original_email_usu, System.DateTime Original_data_cadastro) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_usu));
             if ((nome_usu == null)) {
                 throw new global::System.ArgumentNullException("nome_usu");
@@ -13346,54 +13235,40 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(email_usu));
             }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(data_cadastro));
-            if ((FKid_cliente.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(FKid_cliente.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_id_usu));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_id_usu));
             if ((Original_nome_usu == null)) {
                 throw new global::System.ArgumentNullException("Original_nome_usu");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_nome_usu));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_nome_usu));
             }
             if ((Original_senha_usu == null)) {
                 throw new global::System.ArgumentNullException("Original_senha_usu");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_senha_usu));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_senha_usu));
             }
             if ((Original_celular_usu == null)) {
                 throw new global::System.ArgumentNullException("Original_celular_usu");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_celular_usu));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_celular_usu));
             }
             if ((Original_telefone_usu == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_telefone_usu));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_telefone_usu));
             }
             if ((Original_email_usu == null)) {
                 throw new global::System.ArgumentNullException("Original_email_usu");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_email_usu));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_email_usu));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_data_cadastro));
-            if ((Original_FKid_cliente.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_FKid_cliente.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_data_cadastro));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -13414,8 +13289,8 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string nome_usu, string senha_usu, string celular_usu, string telefone_usu, string email_usu, System.DateTime data_cadastro, global::System.Nullable<int> FKid_cliente, int Original_id_usu, string Original_nome_usu, string Original_senha_usu, string Original_celular_usu, string Original_telefone_usu, string Original_email_usu, System.DateTime Original_data_cadastro, global::System.Nullable<int> Original_FKid_cliente) {
-            return this.Update(Original_id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_cadastro, FKid_cliente, Original_id_usu, Original_nome_usu, Original_senha_usu, Original_celular_usu, Original_telefone_usu, Original_email_usu, Original_data_cadastro, Original_FKid_cliente);
+        public virtual int Update(string nome_usu, string senha_usu, string celular_usu, string telefone_usu, string email_usu, System.DateTime data_cadastro, int Original_id_usu, string Original_nome_usu, string Original_senha_usu, string Original_celular_usu, string Original_telefone_usu, string Original_email_usu, System.DateTime Original_data_cadastro) {
+            return this.Update(Original_id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_cadastro, Original_id_usu, Original_nome_usu, Original_senha_usu, Original_celular_usu, Original_telefone_usu, Original_email_usu, Original_data_cadastro);
         }
     }
     

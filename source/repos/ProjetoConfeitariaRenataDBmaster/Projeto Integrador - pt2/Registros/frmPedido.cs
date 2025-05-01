@@ -31,6 +31,8 @@ namespace Projeto_Integrador___pt2.Formulários
 
         private void frmPedido_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.item_pedido'. Você pode movê-la ou removê-la conforme necessário.
+            this.item_pedidoTableAdapter.Fill(this.renataDBDataSet.item_pedido);
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.produto'. Você pode movê-la ou removê-la conforme necessário.
             this.produtoTableAdapter.Fill(this.renataDBDataSet.produto);
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.

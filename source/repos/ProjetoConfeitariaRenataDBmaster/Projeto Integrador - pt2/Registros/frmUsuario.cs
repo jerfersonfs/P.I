@@ -26,7 +26,6 @@ namespace Projeto_Integrador___pt2.Formulários
             telefone_usuTextBox.Text = "";
             senha_usuTextBox.Text = "";
             repitasenhatxtBox.Text = "";
-            id_clienteTextBox.Text = "";
         }
         public frmUsuario()
         {
@@ -103,40 +102,7 @@ namespace Projeto_Integrador___pt2.Formulários
 
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if(cbmFiltrar.Text == "Código") 
-                {
-                    string sql = "SELECT * FROM Usuario WHERE id_usu = " + txtPesquisar.Text + "";
-                    SqlCommand cmd = new SqlCommand(sql);
-                    cntn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable usu = new DataTable();
-                    adapter.Fill(usu);
-                    usuarioDataGridView.DataSource = usu;
-                }
-                if(cbmFiltrar.Text == "Usuário") 
-                {
-                    string sql = "SELECT * FROM Usuario WHERE nome_usu LIKE '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable usu = new DataTable();
-                    adapter.Fill(usu);
-                    usuarioDataGridView.DataSource = usu;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally 
-            { 
-                cntn.Close();
-            }
-        }
+       
 
         private void usuarioDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -147,30 +113,7 @@ namespace Projeto_Integrador___pt2.Formulários
         {
 
         }
-        private void fKid_clienteTextBox_TextChanged(object sender, EventArgs e)
-        {
-            SqlTransaction transaction = cntn.Connection.BeginTransaction();
-            try
-            {
-                using (SqlConnection cntn = new SqlConnection())
-                {
-                    cntn.Open();
-                    string query = "INSERT INTO Usuario(FKid_cliente) WHERE nome_usu = nome_cliente AND celular_usu = celular_cliente VALUES Cliente(id_cliente) ";
-                    using (SqlCommand cmd = new SqlCommand(query, cntn, transaction))
-                    {
-                        cmd.Parameters.AddWithValue("id_cliente", id_clienteTextBox.Text);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                transaction.Commit();
-                MessageBox.Show("ID do cliente inserido com sucesso!");
-            }
-            catch (Exception ex) 
-            { 
-                transaction.Rollback();
-                MessageBox.Show("Erro ao inserir ID do cliente: " + ex.Message);
-            }
-        }
+       
 
         private void telefone_usuTextBox_TextChanged(object sender, EventArgs e)
         {

@@ -52,12 +52,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.item_pedidoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.item_pedidoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_item_pedidoTextBox = new System.Windows.Forms.TextBox();
             this.quantidade_item_pedidoTextBox = new System.Windows.Forms.TextBox();
             this.valor_total_pedidoTextBox = new System.Windows.Forms.TextBox();
@@ -82,7 +76,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.item_pedidoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item_pedidoBindingNavigator)).BeginInit();
             this.item_pedidoBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item_pedidoDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource)).BeginInit();
@@ -295,53 +288,6 @@
             this.item_pedidoBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.item_pedidoBindingNavigatorSaveItem.Click += new System.EventHandler(this.item_pedidoBindingNavigatorSaveItem_Click);
             // 
-            // item_pedidoDataGridView
-            // 
-            this.item_pedidoDataGridView.AutoGenerateColumns = false;
-            this.item_pedidoDataGridView.BackgroundColor = System.Drawing.Color.Plum;
-            this.item_pedidoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.item_pedidoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.item_pedidoDataGridView.DataSource = this.item_pedidoBindingSource;
-            this.item_pedidoDataGridView.Location = new System.Drawing.Point(98, 402);
-            this.item_pedidoDataGridView.Name = "item_pedidoDataGridView";
-            this.item_pedidoDataGridView.Size = new System.Drawing.Size(542, 472);
-            this.item_pedidoDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_item_pedido";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_item_pedido";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FKid_pedido";
-            this.dataGridViewTextBoxColumn2.HeaderText = "FKid_pedido";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "FKid_produto";
-            this.dataGridViewTextBoxColumn3.HeaderText = "FKid_produto";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "quantidade_item_pedido";
-            this.dataGridViewTextBoxColumn4.HeaderText = "quantidade_item_pedido";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "valor_total_pedido";
-            this.dataGridViewTextBoxColumn5.HeaderText = "valor_total_pedido";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
             // id_item_pedidoTextBox
             // 
             this.id_item_pedidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.item_pedidoBindingSource, "id_item_pedido", true));
@@ -469,7 +415,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(755, 894);
+            this.ClientSize = new System.Drawing.Size(755, 749);
             this.Controls.Add(id_pedidoLabel);
             this.Controls.Add(this.id_pedidoTextBox);
             this.Controls.Add(id_produtoLabel);
@@ -482,7 +428,6 @@
             this.Controls.Add(this.quantidade_item_pedidoTextBox);
             this.Controls.Add(valor_total_pedidoLabel);
             this.Controls.Add(this.valor_total_pedidoTextBox);
-            this.Controls.Add(this.item_pedidoDataGridView);
             this.Controls.Add(this.item_pedidoBindingNavigator);
             this.Name = "frmItemPedido";
             this.Text = "frmItemPedido";
@@ -492,7 +437,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.item_pedidoBindingNavigator)).EndInit();
             this.item_pedidoBindingNavigator.ResumeLayout(false);
             this.item_pedidoBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item_pedidoDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
@@ -521,12 +465,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton item_pedidoBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView item_pedidoDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.TextBox id_item_pedidoTextBox;
         private System.Windows.Forms.TextBox quantidade_item_pedidoTextBox;
         private System.Windows.Forms.TextBox valor_total_pedidoTextBox;
