@@ -35,12 +35,10 @@
             System.Windows.Forms.Label status_pedidoLabel;
             System.Windows.Forms.Label id_clienteLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPedido));
-            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
-            this.pedidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pedidoTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.pedidoTableAdapter();
-            this.tableAdapterManager = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
             this.pedidoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.pedidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -57,32 +55,35 @@
             this.data_entregaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.status_pedidoTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.clienteTableAdapter();
             this.id_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.produtoTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.produtoTableAdapter();
-            this.item_pedidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.item_pedidoTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.item_pedidoTableAdapter();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.item_pedidoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.item_pedidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pedidoTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.pedidoTableAdapter();
+            this.tableAdapterManager = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
+            this.clienteTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.clienteTableAdapter();
+            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.produtoTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.produtoTableAdapter();
+            this.item_pedidoTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.item_pedidoTableAdapter();
+            this.btn_consultaP = new System.Windows.Forms.Button();
             id_pedidoLabel = new System.Windows.Forms.Label();
             data_pedidoLabel = new System.Windows.Forms.Label();
             data_entregaLabel = new System.Windows.Forms.Label();
             status_pedidoLabel = new System.Windows.Forms.Label();
             id_clienteLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingNavigator)).BeginInit();
             this.pedidoBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item_pedidoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.item_pedidoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item_pedidoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // id_pedidoLabel
@@ -135,37 +136,6 @@
             id_clienteLabel.TabIndex = 22;
             id_clienteLabel.Text = "ID Cliente:";
             // 
-            // renataDBDataSet
-            // 
-            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
-            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pedidoBindingSource
-            // 
-            this.pedidoBindingSource.DataMember = "pedido";
-            this.pedidoBindingSource.DataSource = this.renataDBDataSet;
-            // 
-            // pedidoTableAdapter
-            // 
-            this.pedidoTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.avaliacaoTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.categoriaTableAdapter = null;
-            this.tableAdapterManager.clienteTableAdapter = null;
-            this.tableAdapterManager.estoqueTableAdapter = null;
-            this.tableAdapterManager.eventosTableAdapter = null;
-            this.tableAdapterManager.ingredientesTableAdapter = null;
-            this.tableAdapterManager.item_pedidoTableAdapter = null;
-            this.tableAdapterManager.pagamentoTableAdapter = null;
-            this.tableAdapterManager.pedidoTableAdapter = this.pedidoTableAdapter;
-            this.tableAdapterManager.produtoTableAdapter = null;
-            this.tableAdapterManager.receitaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usuarioTableAdapter = null;
-            // 
             // pedidoBindingNavigator
             // 
             this.pedidoBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -204,6 +174,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // pedidoBindingSource
+            // 
+            this.pedidoBindingSource.DataMember = "pedido";
+            this.pedidoBindingSource.DataSource = this.renataDBDataSet;
+            // 
+            // renataDBDataSet
+            // 
+            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
+            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -334,15 +314,6 @@
             this.textBox1.Text = "Pedido";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.renataDBDataSet;
-            // 
-            // clienteTableAdapter
-            // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
-            // 
             // id_clienteTextBox
             // 
             this.id_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "id_cliente", true));
@@ -352,23 +323,10 @@
             this.id_clienteTextBox.TabIndex = 23;
             this.id_clienteTextBox.TextChanged += new System.EventHandler(this.id_clienteTextBox_TextChanged);
             // 
-            // produtoBindingSource
+            // clienteBindingSource
             // 
-            this.produtoBindingSource.DataMember = "produto";
-            this.produtoBindingSource.DataSource = this.renataDBDataSet;
-            // 
-            // produtoTableAdapter
-            // 
-            this.produtoTableAdapter.ClearBeforeFill = true;
-            // 
-            // item_pedidoBindingSource
-            // 
-            this.item_pedidoBindingSource.DataMember = "item_pedido";
-            this.item_pedidoBindingSource.DataSource = this.renataDBDataSet;
-            // 
-            // item_pedidoTableAdapter
-            // 
-            this.item_pedidoTableAdapter.ClearBeforeFill = true;
+            this.clienteBindingSource.DataMember = "cliente";
+            this.clienteBindingSource.DataSource = this.renataDBDataSet;
             // 
             // item_pedidoDataGridView
             // 
@@ -381,9 +339,9 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.item_pedidoDataGridView.DataSource = this.item_pedidoBindingSource;
-            this.item_pedidoDataGridView.Location = new System.Drawing.Point(67, 379);
+            this.item_pedidoDataGridView.Location = new System.Drawing.Point(118, 341);
             this.item_pedidoDataGridView.Name = "item_pedidoDataGridView";
-            this.item_pedidoDataGridView.Size = new System.Drawing.Size(618, 220);
+            this.item_pedidoDataGridView.Size = new System.Drawing.Size(540, 220);
             this.item_pedidoDataGridView.TabIndex = 23;
             // 
             // dataGridViewTextBoxColumn1
@@ -416,12 +374,66 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "valor_total_pedido";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // item_pedidoBindingSource
+            // 
+            this.item_pedidoBindingSource.DataMember = "item_pedido";
+            this.item_pedidoBindingSource.DataSource = this.renataDBDataSet;
+            // 
+            // pedidoTableAdapter
+            // 
+            this.pedidoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.avaliacaoTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.categoriaTableAdapter = null;
+            this.tableAdapterManager.clienteTableAdapter = null;
+            this.tableAdapterManager.estoqueTableAdapter = null;
+            this.tableAdapterManager.eventosTableAdapter = null;
+            this.tableAdapterManager.ingredientesTableAdapter = null;
+            this.tableAdapterManager.item_pedidoTableAdapter = null;
+            this.tableAdapterManager.pagamentoTableAdapter = null;
+            this.tableAdapterManager.pedidoTableAdapter = this.pedidoTableAdapter;
+            this.tableAdapterManager.produtoTableAdapter = null;
+            this.tableAdapterManager.receitaTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usuarioTableAdapter = null;
+            // 
+            // clienteTableAdapter
+            // 
+            this.clienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // produtoBindingSource
+            // 
+            this.produtoBindingSource.DataMember = "produto";
+            this.produtoBindingSource.DataSource = this.renataDBDataSet;
+            // 
+            // produtoTableAdapter
+            // 
+            this.produtoTableAdapter.ClearBeforeFill = true;
+            // 
+            // item_pedidoTableAdapter
+            // 
+            this.item_pedidoTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_consultaP
+            // 
+            this.btn_consultaP.Location = new System.Drawing.Point(12, 288);
+            this.btn_consultaP.Name = "btn_consultaP";
+            this.btn_consultaP.Size = new System.Drawing.Size(100, 28);
+            this.btn_consultaP.TabIndex = 24;
+            this.btn_consultaP.Text = "Consutar";
+            this.btn_consultaP.UseVisualStyleBackColor = true;
+            this.btn_consultaP.Click += new System.EventHandler(this.btn_consultaP_Click);
+            // 
             // frmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(779, 749);
+            this.Controls.Add(this.btn_consultaP);
             this.Controls.Add(this.item_pedidoDataGridView);
             this.Controls.Add(id_clienteLabel);
             this.Controls.Add(this.id_clienteTextBox);
@@ -438,15 +450,15 @@
             this.Name = "frmPedido";
             this.Text = "frmPedido";
             this.Load += new System.EventHandler(this.frmPedido_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingNavigator)).EndInit();
             this.pedidoBindingNavigator.ResumeLayout(false);
             this.pedidoBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.item_pedidoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.item_pedidoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item_pedidoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,5 +501,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button btn_consultaP;
     }
 }

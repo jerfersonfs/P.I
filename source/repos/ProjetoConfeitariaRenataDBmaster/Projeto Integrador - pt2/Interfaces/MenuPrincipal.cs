@@ -123,31 +123,7 @@ namespace Projeto_Integrador___pt2.Interfaces
                 MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
             }
         }
-        public void exibeFrmItemPedido()
-        {
-            try
-            {
-                frmItemPedido itp = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmItemPedido)
-                    {
-                        itp = (frmItemPedido)frm;
-                        break;
-                    }
-                }
-                if (itp == null)
-                {
-                    itp = new frmItemPedido();
-                    itp.MdiParent = this;
-                    itp.Show();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
-            }
-        }
+       
         public void exibeFrmEventos()
         {
             try
@@ -298,31 +274,7 @@ namespace Projeto_Integrador___pt2.Interfaces
                 MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
             }
         }
-        public void exibeFrmAvaliacao()
-        {
-            try
-            {
-                frmAvaliacao avl = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmAvaliacao)
-                    {
-                        avl = (frmAvaliacao)frm;
-                        break;
-                    }
-                }
-                if (avl == null)
-                {
-                    avl = new frmAvaliacao();
-                    avl.MdiParent = this;
-                    avl.Show();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
-            }
-        }
+        
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -351,7 +303,7 @@ namespace Projeto_Integrador___pt2.Interfaces
 
         private void itemPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            exibeFrmItemPedido();
+            
         }
 
         private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -376,7 +328,7 @@ namespace Projeto_Integrador___pt2.Interfaces
 
         private void avaliaçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            exibeFrmAvaliacao();
+           
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)

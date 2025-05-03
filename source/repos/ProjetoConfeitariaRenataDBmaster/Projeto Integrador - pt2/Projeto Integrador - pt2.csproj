@@ -86,11 +86,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conection.cs" />
+    <Compile Include="Consultas\CSTavalicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\CSTavalicao.Designer.cs">
+      <DependentUpon>CSTavalicao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\CSTcliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\CSTcliente.Designer.cs">
       <DependentUpon>CSTcliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CSTpedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\CSTpedido.Designer.cs">
+      <DependentUpon>CSTpedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\CSTusuario.cs">
       <SubType>Form</SubType>
@@ -122,12 +134,6 @@
     <Compile Include="Registros\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registros\frmAvaliacao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Registros\frmAvaliacao.Designer.cs">
-      <DependentUpon>frmAvaliacao.cs</DependentUpon>
-    </Compile>
     <Compile Include="Registros\frmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,12 +163,6 @@
     </Compile>
     <Compile Include="Registros\frmIngrediente.Designer.cs">
       <DependentUpon>frmIngrediente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Registros\frmItemPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Registros\frmItemPedido.Designer.cs">
-      <DependentUpon>frmItemPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmPagamento.cs">
       <SubType>Form</SubType>
@@ -211,8 +211,14 @@
       <DependentUpon>RenataDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Consultas\CSTavalicao.resx">
+      <DependentUpon>CSTavalicao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTcliente.resx">
       <DependentUpon>CSTcliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\CSTpedido.resx">
+      <DependentUpon>CSTpedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTusuario.resx">
       <DependentUpon>CSTusuario.cs</DependentUpon>
@@ -229,9 +235,6 @@
     <EmbeddedResource Include="Registros\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registros\frmAvaliacao.resx">
-      <DependentUpon>frmAvaliacao.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,9 +249,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmIngrediente.resx">
       <DependentUpon>frmIngrediente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Registros\frmItemPedido.resx">
-      <DependentUpon>frmItemPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmPagamento.resx">
       <DependentUpon>frmPagamento.cs</DependentUpon>
@@ -301,28 +301,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagens\Gemini_Generated_Image_h8pjszh8pjszh8pj.jpg" />
+    <None Include="Resource\Gemini_Generated_Image_h8pjszh8pjszh8pj.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagens\Gemini_Generated_Image_opo6ayopo6ayopo6.jpg" />
+    <None Include="Resource\Gemini_Generated_Image_opo6ayopo6ayopo6.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagens\Gemini_Generated_Image_4no6fn4no6fn4no6.jpg" />
+    <None Include="Resource\Gemini_Generated_Image_4no6fn4no6fn4no6.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagens\Gemini_Generated_Image_zf2so3zf2so3zf2s.jpg" />
+    <None Include="Resource\Gemini_Generated_Image_zf2so3zf2so3zf2s.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagens\Gemini_Generated_Image_w5y6c4w5y6c4w5y6.jpg" />
+    <None Include="Resource\Gemini_Generated_Image_w5y6c4w5y6c4w5y6.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagens\Gemini_Generated_Image_8znrfl8znrfl8znr.jpg" />
+    <None Include="Resource\Gemini_Generated_Image_8znrfl8znrfl8znr.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagens\Gemini_Generated_Image_jygf82jygf82jygf.jpg" />
+    <None Include="Resource\Gemini_Generated_Image_jygf82jygf82jygf.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagens\Gemini_Generated_Image_gq1fsdgq1fsdgq1f.jpg" />
+    <None Include="Resource\Gemini_Generated_Image_gq1fsdgq1fsdgq1f.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />

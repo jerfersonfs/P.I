@@ -66,8 +66,6 @@ namespace Projeto_Integrador___pt2 {
         
         private global::System.Data.DataRelation relationFK__pedido__FKid_cli__4AB81AF0;
         
-        private global::System.Data.DataRelation relationFK__pedido__FKid_pro__4BAC3F29;
-        
         private global::System.Data.DataRelation relationFK__produto__FKid_ca__46E78A0C;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -489,7 +487,6 @@ namespace Projeto_Integrador___pt2 {
             this.relationFK__pagamento__FKid___5535A963 = this.Relations["FK__pagamento__FKid___5535A963"];
             this.relationFK__pagamento__FKid___5629CD9C = this.Relations["FK__pagamento__FKid___5629CD9C"];
             this.relationFK__pedido__FKid_cli__4AB81AF0 = this.Relations["FK__pedido__FKid_cli__4AB81AF0"];
-            this.relationFK__pedido__FKid_pro__4BAC3F29 = this.Relations["FK__pedido__FKid_pro__4BAC3F29"];
             this.relationFK__produto__FKid_ca__46E78A0C = this.Relations["FK__produto__FKid_ca__46E78A0C"];
         }
         
@@ -561,10 +558,6 @@ namespace Projeto_Integrador___pt2 {
                         this.tablecliente.id_clienteColumn}, new global::System.Data.DataColumn[] {
                         this.tablepedido.FKid_clienteColumn}, false);
             this.Relations.Add(this.relationFK__pedido__FKid_cli__4AB81AF0);
-            this.relationFK__pedido__FKid_pro__4BAC3F29 = new global::System.Data.DataRelation("FK__pedido__FKid_pro__4BAC3F29", new global::System.Data.DataColumn[] {
-                        this.tableproduto.id_produtoColumn}, new global::System.Data.DataColumn[] {
-                        this.tablepedido.FKid_produtoColumn}, false);
-            this.Relations.Add(this.relationFK__pedido__FKid_pro__4BAC3F29);
             this.relationFK__produto__FKid_ca__46E78A0C = new global::System.Data.DataRelation("FK__produto__FKid_ca__46E78A0C", new global::System.Data.DataColumn[] {
                         this.tablecategoria.id_categoriaColumn}, new global::System.Data.DataColumn[] {
                         this.tableproduto.FKid_categoriaColumn}, false);
@@ -3589,8 +3582,6 @@ namespace Projeto_Integrador___pt2 {
             
             private global::System.Data.DataColumn columnFKid_cliente;
             
-            private global::System.Data.DataColumn columnFKid_produto;
-            
             private global::System.Data.DataColumn columndata_pedido;
             
             private global::System.Data.DataColumn columndata_entrega;
@@ -3643,14 +3634,6 @@ namespace Projeto_Integrador___pt2 {
             public global::System.Data.DataColumn FKid_clienteColumn {
                 get {
                     return this.columnFKid_cliente;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FKid_produtoColumn {
-                get {
-                    return this.columnFKid_produto;
                 }
             }
             
@@ -3715,20 +3698,16 @@ namespace Projeto_Integrador___pt2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public pedidoRow AddpedidoRow(int id_pedido, clienteRow parentclienteRowByFK__pedido__FKid_cli__4AB81AF0, produtoRow parentprodutoRowByFK__pedido__FKid_pro__4BAC3F29, System.DateTime data_pedido, System.DateTime data_entrega, string status_pedido) {
+            public pedidoRow AddpedidoRow(int id_pedido, clienteRow parentclienteRowByFK__pedido__FKid_cli__4AB81AF0, System.DateTime data_pedido, System.DateTime data_entrega, string status_pedido) {
                 pedidoRow rowpedidoRow = ((pedidoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_pedido,
-                        null,
                         null,
                         data_pedido,
                         data_entrega,
                         status_pedido};
                 if ((parentclienteRowByFK__pedido__FKid_cli__4AB81AF0 != null)) {
                     columnValuesArray[1] = parentclienteRowByFK__pedido__FKid_cli__4AB81AF0[0];
-                }
-                if ((parentprodutoRowByFK__pedido__FKid_pro__4BAC3F29 != null)) {
-                    columnValuesArray[2] = parentprodutoRowByFK__pedido__FKid_pro__4BAC3F29[0];
                 }
                 rowpedidoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowpedidoRow);
@@ -3761,7 +3740,6 @@ namespace Projeto_Integrador___pt2 {
             internal void InitVars() {
                 this.columnid_pedido = base.Columns["id_pedido"];
                 this.columnFKid_cliente = base.Columns["FKid_cliente"];
-                this.columnFKid_produto = base.Columns["FKid_produto"];
                 this.columndata_pedido = base.Columns["data_pedido"];
                 this.columndata_entrega = base.Columns["data_entrega"];
                 this.columnstatus_pedido = base.Columns["status_pedido"];
@@ -3774,8 +3752,6 @@ namespace Projeto_Integrador___pt2 {
                 base.Columns.Add(this.columnid_pedido);
                 this.columnFKid_cliente = new global::System.Data.DataColumn("FKid_cliente", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFKid_cliente);
-                this.columnFKid_produto = new global::System.Data.DataColumn("FKid_produto", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFKid_produto);
                 this.columndata_pedido = new global::System.Data.DataColumn("data_pedido", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndata_pedido);
                 this.columndata_entrega = new global::System.Data.DataColumn("data_entrega", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -6489,22 +6465,6 @@ namespace Projeto_Integrador___pt2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int FKid_produto {
-                get {
-                    try {
-                        return ((int)(this[this.tablepedido.FKid_produtoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'FKid_produto\' na tabela \'pedido\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablepedido.FKid_produtoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime data_pedido {
                 get {
                     try {
@@ -6564,17 +6524,6 @@ namespace Projeto_Integrador___pt2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public produtoRow produtoRow {
-                get {
-                    return ((produtoRow)(this.GetParentRow(this.Table.ParentRelations["FK__pedido__FKid_pro__4BAC3F29"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__pedido__FKid_pro__4BAC3F29"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsFKid_clienteNull() {
                 return this.IsNull(this.tablepedido.FKid_clienteColumn);
             }
@@ -6583,18 +6532,6 @@ namespace Projeto_Integrador___pt2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetFKid_clienteNull() {
                 this[this.tablepedido.FKid_clienteColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFKid_produtoNull() {
-                return this.IsNull(this.tablepedido.FKid_produtoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFKid_produtoNull() {
-                this[this.tablepedido.FKid_produtoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6868,17 +6805,6 @@ namespace Projeto_Integrador___pt2 {
                 }
                 else {
                     return ((item_pedidoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__item_pedi__FKid___4F7CD00D"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public pedidoRow[] GetpedidoRows() {
-                if ((this.Table.ChildRelations["FK__pedido__FKid_pro__4BAC3F29"] == null)) {
-                    return new pedidoRow[0];
-                }
-                else {
-                    return ((pedidoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__pedido__FKid_pro__4BAC3F29"])));
                 }
             }
         }
@@ -11660,20 +11586,17 @@ SELECT id_pagamento, FKid_item_pedido, data_pagamento, valor_pagamento, forma_pa
             tableMapping.DataSetTable = "pedido";
             tableMapping.ColumnMappings.Add("id_pedido", "id_pedido");
             tableMapping.ColumnMappings.Add("FKid_cliente", "FKid_cliente");
-            tableMapping.ColumnMappings.Add("FKid_produto", "FKid_produto");
             tableMapping.ColumnMappings.Add("data_pedido", "data_pedido");
             tableMapping.ColumnMappings.Add("data_entrega", "data_entrega");
             tableMapping.ColumnMappings.Add("status_pedido", "status_pedido");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[pedido] WHERE (([id_pedido] = @Original_id_pedido) AND ((@IsNull_FKid_cliente = 1 AND [FKid_cliente] IS NULL) OR ([FKid_cliente] = @Original_FKid_cliente)) AND ((@IsNull_FKid_produto = 1 AND [FKid_produto] IS NULL) OR ([FKid_produto] = @Original_FKid_produto)) AND ((@IsNull_data_pedido = 1 AND [data_pedido] IS NULL) OR ([data_pedido] = @Original_data_pedido)) AND ((@IsNull_data_entrega = 1 AND [data_entrega] IS NULL) OR ([data_entrega] = @Original_data_entrega)) AND ((@IsNull_status_pedido = 1 AND [status_pedido] IS NULL) OR ([status_pedido] = @Original_status_pedido)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [pedido] WHERE (([id_pedido] = @Original_id_pedido) AND ((@IsNull_FKid_cliente = 1 AND [FKid_cliente] IS NULL) OR ([FKid_cliente] = @Original_FKid_cliente)) AND ((@IsNull_data_pedido = 1 AND [data_pedido] IS NULL) OR ([data_pedido] = @Original_data_pedido)) AND ((@IsNull_data_entrega = 1 AND [data_entrega] IS NULL) OR ([data_entrega] = @Original_data_entrega)) AND ((@IsNull_status_pedido = 1 AND [status_pedido] IS NULL) OR ([status_pedido] = @Original_status_pedido)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_pedido", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_pedido", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FKid_produto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_produto", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FKid_produto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_produto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_pedido", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_pedido", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_pedido", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_pedido", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_entrega", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrega", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -11682,31 +11605,27 @@ SELECT id_pagamento, FKid_item_pedido, data_pagamento, valor_pagamento, forma_pa
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status_pedido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status_pedido", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[pedido] ([id_pedido], [FKid_cliente], [FKid_produto], [data_pedido], [data_entrega], [status_pedido]) VALUES (@id_pedido, @FKid_cliente, @FKid_produto, @data_pedido, @data_entrega, @status_pedido);
-SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_pedido FROM pedido WHERE (id_pedido = @id_pedido)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [pedido] ([id_pedido], [FKid_cliente], [data_pedido], [data_entrega], [status_pedido]) VALUES (@id_pedido, @FKid_cliente, @data_pedido, @data_entrega, @status_pedido);
+SELECT id_pedido, FKid_cliente, data_pedido, data_entrega, status_pedido FROM pedido WHERE (id_pedido = @id_pedido)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_pedido", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_pedido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FKid_produto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_produto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_pedido", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_pedido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_entrega", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrega", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status_pedido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status_pedido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[pedido] SET [id_pedido] = @id_pedido, [FKid_cliente] = @FKid_cliente, [FKid_produto] = @FKid_produto, [data_pedido] = @data_pedido, [data_entrega] = @data_entrega, [status_pedido] = @status_pedido WHERE (([id_pedido] = @Original_id_pedido) AND ((@IsNull_FKid_cliente = 1 AND [FKid_cliente] IS NULL) OR ([FKid_cliente] = @Original_FKid_cliente)) AND ((@IsNull_FKid_produto = 1 AND [FKid_produto] IS NULL) OR ([FKid_produto] = @Original_FKid_produto)) AND ((@IsNull_data_pedido = 1 AND [data_pedido] IS NULL) OR ([data_pedido] = @Original_data_pedido)) AND ((@IsNull_data_entrega = 1 AND [data_entrega] IS NULL) OR ([data_entrega] = @Original_data_entrega)) AND ((@IsNull_status_pedido = 1 AND [status_pedido] IS NULL) OR ([status_pedido] = @Original_status_pedido)));
-SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_pedido FROM pedido WHERE (id_pedido = @id_pedido)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [pedido] SET [id_pedido] = @id_pedido, [FKid_cliente] = @FKid_cliente, [data_pedido] = @data_pedido, [data_entrega] = @data_entrega, [status_pedido] = @status_pedido WHERE (([id_pedido] = @Original_id_pedido) AND ((@IsNull_FKid_cliente = 1 AND [FKid_cliente] IS NULL) OR ([FKid_cliente] = @Original_FKid_cliente)) AND ((@IsNull_data_pedido = 1 AND [data_pedido] IS NULL) OR ([data_pedido] = @Original_data_pedido)) AND ((@IsNull_data_entrega = 1 AND [data_entrega] IS NULL) OR ([data_entrega] = @Original_data_entrega)) AND ((@IsNull_status_pedido = 1 AND [status_pedido] IS NULL) OR ([status_pedido] = @Original_status_pedido)));
+SELECT id_pedido, FKid_cliente, data_pedido, data_entrega, status_pedido FROM pedido WHERE (id_pedido = @id_pedido)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_pedido", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_pedido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FKid_produto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_produto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_pedido", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_pedido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@data_entrega", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrega", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status_pedido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status_pedido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_pedido", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_pedido", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FKid_cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FKid_produto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_produto", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FKid_produto", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FKid_produto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_pedido", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_pedido", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_data_pedido", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_pedido", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_data_entrega", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "data_entrega", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -11728,8 +11647,8 @@ SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_p" +
-                "edido FROM dbo.pedido";
+            this._commandCollection[0].CommandText = "SELECT id_pedido, FKid_cliente, data_pedido, data_entrega, status_pedido FROM ped" +
+                "ido";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11790,7 +11709,7 @@ SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_pedido, global::System.Nullable<int> Original_FKid_cliente, global::System.Nullable<int> Original_FKid_produto, global::System.Nullable<global::System.DateTime> Original_data_pedido, global::System.Nullable<global::System.DateTime> Original_data_entrega, string Original_status_pedido) {
+        public virtual int Delete(int Original_id_pedido, global::System.Nullable<int> Original_FKid_cliente, global::System.Nullable<global::System.DateTime> Original_data_pedido, global::System.Nullable<global::System.DateTime> Original_data_entrega, string Original_status_pedido) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_pedido));
             if ((Original_FKid_cliente.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -11800,37 +11719,29 @@ SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_FKid_produto.HasValue == true)) {
+            if ((Original_data_pedido.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_FKid_produto.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_data_pedido.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_data_pedido.HasValue == true)) {
+            if ((Original_data_entrega.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_data_pedido.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_data_entrega.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_data_entrega.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_data_entrega.Value));
-            }
-            else {
+            if ((Original_status_pedido == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_status_pedido == null)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_status_pedido));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_status_pedido));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11852,7 +11763,7 @@ SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int id_pedido, global::System.Nullable<int> FKid_cliente, global::System.Nullable<int> FKid_produto, global::System.Nullable<global::System.DateTime> data_pedido, global::System.Nullable<global::System.DateTime> data_entrega, string status_pedido) {
+        public virtual int Insert(int id_pedido, global::System.Nullable<int> FKid_cliente, global::System.Nullable<global::System.DateTime> data_pedido, global::System.Nullable<global::System.DateTime> data_entrega, string status_pedido) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id_pedido));
             if ((FKid_cliente.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(FKid_cliente.Value));
@@ -11860,29 +11771,23 @@ SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((FKid_produto.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(FKid_produto.Value));
+            if ((data_pedido.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(data_pedido.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((data_pedido.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(data_pedido.Value));
+            if ((data_entrega.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(data_entrega.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((data_entrega.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(data_entrega.Value));
-            }
-            else {
+            if ((status_pedido == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((status_pedido == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(status_pedido));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(status_pedido));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11904,7 +11809,7 @@ SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int id_pedido, global::System.Nullable<int> FKid_cliente, global::System.Nullable<int> FKid_produto, global::System.Nullable<global::System.DateTime> data_pedido, global::System.Nullable<global::System.DateTime> data_entrega, string status_pedido, int Original_id_pedido, global::System.Nullable<int> Original_FKid_cliente, global::System.Nullable<int> Original_FKid_produto, global::System.Nullable<global::System.DateTime> Original_data_pedido, global::System.Nullable<global::System.DateTime> Original_data_entrega, string Original_status_pedido) {
+        public virtual int Update(int id_pedido, global::System.Nullable<int> FKid_cliente, global::System.Nullable<global::System.DateTime> data_pedido, global::System.Nullable<global::System.DateTime> data_entrega, string status_pedido, int Original_id_pedido, global::System.Nullable<int> Original_FKid_cliente, global::System.Nullable<global::System.DateTime> Original_data_pedido, global::System.Nullable<global::System.DateTime> Original_data_entrega, string Original_status_pedido) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_pedido));
             if ((FKid_cliente.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(FKid_cliente.Value));
@@ -11912,70 +11817,56 @@ SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((FKid_produto.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(FKid_produto.Value));
+            if ((data_pedido.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(data_pedido.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((data_pedido.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(data_pedido.Value));
+            if ((data_entrega.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(data_entrega.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((data_entrega.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(data_entrega.Value));
-            }
-            else {
+            if ((status_pedido == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((status_pedido == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(status_pedido));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(status_pedido));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_id_pedido));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_pedido));
             if ((Original_FKid_cliente.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_FKid_cliente.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_FKid_cliente.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((Original_FKid_produto.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_FKid_produto.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             if ((Original_data_pedido.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(Original_data_pedido.Value));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_data_pedido.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             if ((Original_data_entrega.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_data_entrega.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(Original_data_entrega.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((Original_status_pedido == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_status_pedido));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_status_pedido));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11997,8 +11888,8 @@ SELECT id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> FKid_cliente, global::System.Nullable<int> FKid_produto, global::System.Nullable<global::System.DateTime> data_pedido, global::System.Nullable<global::System.DateTime> data_entrega, string status_pedido, int Original_id_pedido, global::System.Nullable<int> Original_FKid_cliente, global::System.Nullable<int> Original_FKid_produto, global::System.Nullable<global::System.DateTime> Original_data_pedido, global::System.Nullable<global::System.DateTime> Original_data_entrega, string Original_status_pedido) {
-            return this.Update(Original_id_pedido, FKid_cliente, FKid_produto, data_pedido, data_entrega, status_pedido, Original_id_pedido, Original_FKid_cliente, Original_FKid_produto, Original_data_pedido, Original_data_entrega, Original_status_pedido);
+        public virtual int Update(global::System.Nullable<int> FKid_cliente, global::System.Nullable<global::System.DateTime> data_pedido, global::System.Nullable<global::System.DateTime> data_entrega, string status_pedido, int Original_id_pedido, global::System.Nullable<int> Original_FKid_cliente, global::System.Nullable<global::System.DateTime> Original_data_pedido, global::System.Nullable<global::System.DateTime> Original_data_entrega, string Original_status_pedido) {
+            return this.Update(Original_id_pedido, FKid_cliente, data_pedido, data_entrega, status_pedido, Original_id_pedido, Original_FKid_cliente, Original_data_pedido, Original_data_entrega, Original_status_pedido);
         }
     }
     
@@ -13658,21 +13549,21 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._produtoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.produto.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._produtoTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._pedidoTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.pedido.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._pedidoTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._produtoTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.produto.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._produtoTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -13774,19 +13665,19 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._produtoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.produto.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._produtoTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._pedidoTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.pedido.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._pedidoTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._produtoTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.produto.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._produtoTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -13928,19 +13819,19 @@ SELECT id_usu, nome_usu, senha_usu, celular_usu, telefone_usu, email_usu, data_c
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._pedidoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.pedido.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._pedidoTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._produtoTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.produto.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._produtoTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._pedidoTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.pedido.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._pedidoTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

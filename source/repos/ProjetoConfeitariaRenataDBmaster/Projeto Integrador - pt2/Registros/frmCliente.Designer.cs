@@ -74,20 +74,6 @@
             this.clienteTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.clienteTableAdapter();
             this.tableAdapterManager = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
             this.cepTextBox = new System.Windows.Forms.TextBox();
-            this.clienteDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             id_clienteLabel = new System.Windows.Forms.Label();
             nome_clienteLabel = new System.Windows.Forms.Label();
             cpfLabel = new System.Windows.Forms.Label();
@@ -105,14 +91,13 @@
             this.clienteBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // id_clienteLabel
             // 
             id_clienteLabel.AutoSize = true;
             id_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_clienteLabel.Location = new System.Drawing.Point(164, 129);
+            id_clienteLabel.Location = new System.Drawing.Point(120, 129);
             id_clienteLabel.Name = "id_clienteLabel";
             id_clienteLabel.Size = new System.Drawing.Size(50, 13);
             id_clienteLabel.TabIndex = 2;
@@ -122,7 +107,7 @@
             // 
             nome_clienteLabel.AutoSize = true;
             nome_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nome_clienteLabel.Location = new System.Drawing.Point(164, 155);
+            nome_clienteLabel.Location = new System.Drawing.Point(120, 155);
             nome_clienteLabel.Name = "nome_clienteLabel";
             nome_clienteLabel.Size = new System.Drawing.Size(43, 13);
             nome_clienteLabel.TabIndex = 4;
@@ -132,7 +117,7 @@
             // 
             cpfLabel.AutoSize = true;
             cpfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cpfLabel.Location = new System.Drawing.Point(164, 181);
+            cpfLabel.Location = new System.Drawing.Point(120, 181);
             cpfLabel.Name = "cpfLabel";
             cpfLabel.Size = new System.Drawing.Size(34, 13);
             cpfLabel.TabIndex = 6;
@@ -142,7 +127,7 @@
             // 
             cnpjLabel.AutoSize = true;
             cnpjLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cnpjLabel.Location = new System.Drawing.Point(164, 207);
+            cnpjLabel.Location = new System.Drawing.Point(120, 207);
             cnpjLabel.Name = "cnpjLabel";
             cnpjLabel.Size = new System.Drawing.Size(42, 13);
             cnpjLabel.TabIndex = 8;
@@ -152,7 +137,7 @@
             // 
             celular_clienteLabel.AutoSize = true;
             celular_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            celular_clienteLabel.Location = new System.Drawing.Point(164, 233);
+            celular_clienteLabel.Location = new System.Drawing.Point(120, 233);
             celular_clienteLabel.Name = "celular_clienteLabel";
             celular_clienteLabel.Size = new System.Drawing.Size(50, 13);
             celular_clienteLabel.TabIndex = 10;
@@ -162,7 +147,7 @@
             // 
             email_clienteLabel.AutoSize = true;
             email_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            email_clienteLabel.Location = new System.Drawing.Point(164, 259);
+            email_clienteLabel.Location = new System.Drawing.Point(120, 259);
             email_clienteLabel.Name = "email_clienteLabel";
             email_clienteLabel.Size = new System.Drawing.Size(41, 13);
             email_clienteLabel.TabIndex = 12;
@@ -172,7 +157,7 @@
             // 
             data_nascimentoLabel.AutoSize = true;
             data_nascimentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            data_nascimentoLabel.Location = new System.Drawing.Point(164, 286);
+            data_nascimentoLabel.Location = new System.Drawing.Point(120, 286);
             data_nascimentoLabel.Name = "data_nascimentoLabel";
             data_nascimentoLabel.Size = new System.Drawing.Size(108, 13);
             data_nascimentoLabel.TabIndex = 14;
@@ -182,7 +167,7 @@
             // 
             rua_clienteLabel.AutoSize = true;
             rua_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            rua_clienteLabel.Location = new System.Drawing.Point(164, 337);
+            rua_clienteLabel.Location = new System.Drawing.Point(120, 337);
             rua_clienteLabel.Name = "rua_clienteLabel";
             rua_clienteLabel.Size = new System.Drawing.Size(34, 13);
             rua_clienteLabel.TabIndex = 16;
@@ -192,7 +177,7 @@
             // 
             numero_da_residencia_clienteLabel.AutoSize = true;
             numero_da_residencia_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            numero_da_residencia_clienteLabel.Location = new System.Drawing.Point(164, 363);
+            numero_da_residencia_clienteLabel.Location = new System.Drawing.Point(120, 363);
             numero_da_residencia_clienteLabel.Name = "numero_da_residencia_clienteLabel";
             numero_da_residencia_clienteLabel.Size = new System.Drawing.Size(134, 13);
             numero_da_residencia_clienteLabel.TabIndex = 18;
@@ -202,7 +187,7 @@
             // 
             bairro_clienteLabel.AutoSize = true;
             bairro_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            bairro_clienteLabel.Location = new System.Drawing.Point(164, 389);
+            bairro_clienteLabel.Location = new System.Drawing.Point(120, 389);
             bairro_clienteLabel.Name = "bairro_clienteLabel";
             bairro_clienteLabel.Size = new System.Drawing.Size(44, 13);
             bairro_clienteLabel.TabIndex = 20;
@@ -212,7 +197,7 @@
             // 
             cidade_clienteLabel.AutoSize = true;
             cidade_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cidade_clienteLabel.Location = new System.Drawing.Point(164, 415);
+            cidade_clienteLabel.Location = new System.Drawing.Point(120, 415);
             cidade_clienteLabel.Name = "cidade_clienteLabel";
             cidade_clienteLabel.Size = new System.Drawing.Size(50, 13);
             cidade_clienteLabel.TabIndex = 22;
@@ -222,7 +207,7 @@
             // 
             estado_clienteLabel.AutoSize = true;
             estado_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            estado_clienteLabel.Location = new System.Drawing.Point(164, 441);
+            estado_clienteLabel.Location = new System.Drawing.Point(120, 441);
             estado_clienteLabel.Name = "estado_clienteLabel";
             estado_clienteLabel.Size = new System.Drawing.Size(50, 13);
             estado_clienteLabel.TabIndex = 24;
@@ -232,7 +217,7 @@
             // 
             cepLabel.AutoSize = true;
             cepLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cepLabel.Location = new System.Drawing.Point(164, 314);
+            cepLabel.Location = new System.Drawing.Point(120, 314);
             cepLabel.Name = "cepLabel";
             cepLabel.Size = new System.Drawing.Size(35, 13);
             cepLabel.TabIndex = 28;
@@ -378,7 +363,7 @@
             // id_clienteTextBox
             // 
             this.id_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "id_cliente", true));
-            this.id_clienteTextBox.Location = new System.Drawing.Point(317, 129);
+            this.id_clienteTextBox.Location = new System.Drawing.Point(273, 129);
             this.id_clienteTextBox.Name = "id_clienteTextBox";
             this.id_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.id_clienteTextBox.TabIndex = 3;
@@ -386,7 +371,7 @@
             // nome_clienteTextBox
             // 
             this.nome_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "nome_cliente", true));
-            this.nome_clienteTextBox.Location = new System.Drawing.Point(317, 155);
+            this.nome_clienteTextBox.Location = new System.Drawing.Point(273, 155);
             this.nome_clienteTextBox.Name = "nome_clienteTextBox";
             this.nome_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.nome_clienteTextBox.TabIndex = 5;
@@ -394,7 +379,7 @@
             // cpfTextBox
             // 
             this.cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cpf", true));
-            this.cpfTextBox.Location = new System.Drawing.Point(317, 181);
+            this.cpfTextBox.Location = new System.Drawing.Point(273, 181);
             this.cpfTextBox.Name = "cpfTextBox";
             this.cpfTextBox.Size = new System.Drawing.Size(200, 20);
             this.cpfTextBox.TabIndex = 7;
@@ -402,7 +387,7 @@
             // cnpjTextBox
             // 
             this.cnpjTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cnpj", true));
-            this.cnpjTextBox.Location = new System.Drawing.Point(317, 207);
+            this.cnpjTextBox.Location = new System.Drawing.Point(273, 207);
             this.cnpjTextBox.Name = "cnpjTextBox";
             this.cnpjTextBox.Size = new System.Drawing.Size(200, 20);
             this.cnpjTextBox.TabIndex = 9;
@@ -410,7 +395,7 @@
             // celular_clienteTextBox
             // 
             this.celular_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "celular_cliente", true));
-            this.celular_clienteTextBox.Location = new System.Drawing.Point(317, 233);
+            this.celular_clienteTextBox.Location = new System.Drawing.Point(273, 233);
             this.celular_clienteTextBox.Name = "celular_clienteTextBox";
             this.celular_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.celular_clienteTextBox.TabIndex = 11;
@@ -418,7 +403,7 @@
             // email_clienteTextBox
             // 
             this.email_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "email_cliente", true));
-            this.email_clienteTextBox.Location = new System.Drawing.Point(317, 259);
+            this.email_clienteTextBox.Location = new System.Drawing.Point(273, 259);
             this.email_clienteTextBox.Name = "email_clienteTextBox";
             this.email_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.email_clienteTextBox.TabIndex = 13;
@@ -426,7 +411,7 @@
             // data_nascimentoDateTimePicker
             // 
             this.data_nascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clienteBindingSource, "data_nascimento", true));
-            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(317, 285);
+            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(273, 285);
             this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
             this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.data_nascimentoDateTimePicker.TabIndex = 15;
@@ -434,7 +419,7 @@
             // rua_clienteTextBox
             // 
             this.rua_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "rua_cliente", true));
-            this.rua_clienteTextBox.Location = new System.Drawing.Point(317, 337);
+            this.rua_clienteTextBox.Location = new System.Drawing.Point(273, 337);
             this.rua_clienteTextBox.Name = "rua_clienteTextBox";
             this.rua_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.rua_clienteTextBox.TabIndex = 17;
@@ -442,7 +427,7 @@
             // numero_da_residencia_clienteTextBox
             // 
             this.numero_da_residencia_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "numero_da_residencia_cliente", true));
-            this.numero_da_residencia_clienteTextBox.Location = new System.Drawing.Point(317, 363);
+            this.numero_da_residencia_clienteTextBox.Location = new System.Drawing.Point(273, 363);
             this.numero_da_residencia_clienteTextBox.Name = "numero_da_residencia_clienteTextBox";
             this.numero_da_residencia_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.numero_da_residencia_clienteTextBox.TabIndex = 19;
@@ -450,7 +435,7 @@
             // bairro_clienteTextBox
             // 
             this.bairro_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "bairro_cliente", true));
-            this.bairro_clienteTextBox.Location = new System.Drawing.Point(317, 389);
+            this.bairro_clienteTextBox.Location = new System.Drawing.Point(273, 389);
             this.bairro_clienteTextBox.Name = "bairro_clienteTextBox";
             this.bairro_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.bairro_clienteTextBox.TabIndex = 21;
@@ -458,7 +443,7 @@
             // cidade_clienteTextBox
             // 
             this.cidade_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cidade_cliente", true));
-            this.cidade_clienteTextBox.Location = new System.Drawing.Point(317, 415);
+            this.cidade_clienteTextBox.Location = new System.Drawing.Point(273, 415);
             this.cidade_clienteTextBox.Name = "cidade_clienteTextBox";
             this.cidade_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.cidade_clienteTextBox.TabIndex = 23;
@@ -466,7 +451,7 @@
             // estado_clienteTextBox
             // 
             this.estado_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "estado_cliente", true));
-            this.estado_clienteTextBox.Location = new System.Drawing.Point(317, 441);
+            this.estado_clienteTextBox.Location = new System.Drawing.Point(273, 441);
             this.estado_clienteTextBox.Name = "estado_clienteTextBox";
             this.estado_clienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.estado_clienteTextBox.TabIndex = 25;
@@ -475,7 +460,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Plum;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(184, 42);
+            this.textBox1.Location = new System.Drawing.Point(140, 42);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(333, 62);
             this.textBox1.TabIndex = 27;
@@ -507,113 +492,10 @@
             // cepTextBox
             // 
             this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cep", true));
-            this.cepTextBox.Location = new System.Drawing.Point(317, 311);
+            this.cepTextBox.Location = new System.Drawing.Point(273, 311);
             this.cepTextBox.Name = "cepTextBox";
             this.cepTextBox.Size = new System.Drawing.Size(200, 20);
             this.cepTextBox.TabIndex = 29;
-            // 
-            // clienteDataGridView
-            // 
-            this.clienteDataGridView.AutoGenerateColumns = false;
-            this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
-            this.clienteDataGridView.DataSource = this.clienteBindingSource;
-            this.clienteDataGridView.Location = new System.Drawing.Point(12, 181);
-            this.clienteDataGridView.Name = "clienteDataGridView";
-            this.clienteDataGridView.Size = new System.Drawing.Size(43, 87);
-            this.clienteDataGridView.TabIndex = 29;
-            this.clienteDataGridView.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_cliente";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_cliente";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome_cliente";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nome_cliente";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "cpf";
-            this.dataGridViewTextBoxColumn3.HeaderText = "cpf";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "cnpj";
-            this.dataGridViewTextBoxColumn4.HeaderText = "cnpj";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "celular_cliente";
-            this.dataGridViewTextBoxColumn5.HeaderText = "celular_cliente";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "email_cliente";
-            this.dataGridViewTextBoxColumn6.HeaderText = "email_cliente";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "data_nascimento";
-            this.dataGridViewTextBoxColumn7.HeaderText = "data_nascimento";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "rua_cliente";
-            this.dataGridViewTextBoxColumn8.HeaderText = "rua_cliente";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "numero_da_residencia_cliente";
-            this.dataGridViewTextBoxColumn9.HeaderText = "numero_da_residencia_cliente";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "bairro_cliente";
-            this.dataGridViewTextBoxColumn10.HeaderText = "bairro_cliente";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "cidade_cliente";
-            this.dataGridViewTextBoxColumn11.HeaderText = "cidade_cliente";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "estado_cliente";
-            this.dataGridViewTextBoxColumn12.HeaderText = "estado_cliente";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "cep";
-            this.dataGridViewTextBoxColumn13.HeaderText = "cep";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
             // frmCliente
             // 
@@ -622,7 +504,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(606, 481);
-            this.Controls.Add(this.clienteDataGridView);
             this.Controls.Add(cepLabel);
             this.Controls.Add(this.cepTextBox);
             this.Controls.Add(this.textBox1);
@@ -659,7 +540,6 @@
             this.clienteBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -698,19 +578,5 @@
         private System.Windows.Forms.TextBox estado_clienteTextBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox cepTextBox;
-        private System.Windows.Forms.DataGridView clienteDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
     }
 }
