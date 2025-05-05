@@ -33,42 +33,6 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.receita'. Você pode movê-la ou removê-la conforme necessário.
             this.receitaTableAdapter.Fill(this.renataDBDataSet.receita);
-
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cbmFiltrar.Text == "Código")
-                {
-                    string sql = "SELECT * FROM Receita WHERE id_receita = " + txtPesquisar.Text + "";
-                    SqlCommand cmd = new SqlCommand(sql);
-                    cntn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable receita = new DataTable();
-                    adapter.Fill(receita);
-                    receitaDataGridView.DataSource = receita;
-                }
-                if (cbmFiltrar.Text == "Receita")
-                {
-                    string sql = "SELECT * FROM Receita WHERE nome_receita LIKE '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable receita = new DataTable();
-                    adapter.Fill(receita);
-                    receitaDataGridView.DataSource = receita;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                cntn.Close();
-            }
         }
     }
 }

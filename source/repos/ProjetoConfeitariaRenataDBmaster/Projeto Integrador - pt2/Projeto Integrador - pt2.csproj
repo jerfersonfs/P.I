@@ -98,11 +98,35 @@
     <Compile Include="Consultas\CSTcliente.Designer.cs">
       <DependentUpon>CSTcliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\CSTingrediente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\CSTingrediente.Designer.cs">
+      <DependentUpon>CSTingrediente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CSTpagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\CSTpagamento.Designer.cs">
+      <DependentUpon>CSTpagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\CSTpedido.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\CSTpedido.Designer.cs">
       <DependentUpon>CSTpedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CSTproduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\CSTproduto.Designer.cs">
+      <DependentUpon>CSTproduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\CSTreceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\CSTreceita.Designer.cs">
+      <DependentUpon>CSTreceita.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\CSTusuario.cs">
       <SubType>Form</SubType>
@@ -217,8 +241,20 @@
     <EmbeddedResource Include="Consultas\CSTcliente.resx">
       <DependentUpon>CSTcliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\CSTingrediente.resx">
+      <DependentUpon>CSTingrediente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\CSTpagamento.resx">
+      <DependentUpon>CSTpagamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTpedido.resx">
       <DependentUpon>CSTpedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\CSTproduto.resx">
+      <DependentUpon>CSTproduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\CSTreceita.resx">
+      <DependentUpon>CSTreceita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTusuario.resx">
       <DependentUpon>CSTusuario.cs</DependentUpon>

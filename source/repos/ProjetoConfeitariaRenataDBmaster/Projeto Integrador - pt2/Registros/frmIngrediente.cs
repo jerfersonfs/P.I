@@ -36,40 +36,6 @@ namespace Projeto_Integrador___pt2.Formulários
 
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cbmFiltrar.Text == "Código")
-                {
-                    string sql = "SELECT * FROM Ingredientes WHERE id_ingrediente = " + txtPesquisar.Text + "";
-                    SqlCommand cmd = new SqlCommand(sql);
-                    cntn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable ingrediente = new DataTable();
-                    adapter.Fill(ingrediente);
-                    ingredientesDataGridView.DataSource = ingrediente;
-                }
-                if (cbmFiltrar.Text == "Usuário")
-                {
-                    string sql = "SELECT * FROM Ingredientes WHERE nome_ingrediente LIKE '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable ingrediente = new DataTable();
-                    adapter.Fill(ingrediente);
-                    ingredientesDataGridView.DataSource = ingrediente;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                cntn.Close();
-            }
-
-        }
+       
     }
 }

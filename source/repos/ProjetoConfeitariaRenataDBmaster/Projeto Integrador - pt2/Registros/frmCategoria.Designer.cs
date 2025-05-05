@@ -52,10 +52,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.categoriaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.categoriaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_categoriaTextBox = new System.Windows.Forms.TextBox();
             this.nome_categoriaTextBox = new System.Windows.Forms.TextBox();
             this.personalizacaoTextBox = new System.Windows.Forms.TextBox();
@@ -66,6 +62,10 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             id_categoriaLabel = new System.Windows.Forms.Label();
             nome_categoriaLabel = new System.Windows.Forms.Label();
             personalizacaoLabel = new System.Windows.Forms.Label();
@@ -285,34 +285,10 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.categoriaDataGridView.DataSource = this.categoriaBindingSource;
-            this.categoriaDataGridView.Location = new System.Drawing.Point(135, 298);
+            this.categoriaDataGridView.Location = new System.Drawing.Point(80, 335);
             this.categoriaDataGridView.Name = "categoriaDataGridView";
-            this.categoriaDataGridView.Size = new System.Drawing.Size(443, 530);
+            this.categoriaDataGridView.Size = new System.Drawing.Size(621, 530);
             this.categoriaDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_categoria";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_categoria";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome_categoria";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nome_categoria";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "personalizacao";
-            this.dataGridViewTextBoxColumn3.HeaderText = "personalizacao";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "status_cat";
-            this.dataGridViewTextBoxColumn4.HeaderText = "status_cat";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // id_categoriaTextBox
             // 
@@ -402,19 +378,46 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Plum;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(186, 63);
+            this.textBox1.Location = new System.Drawing.Point(206, 63);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(333, 62);
             this.textBox1.TabIndex = 21;
             this.textBox1.Text = "Categoria";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_categoria";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_categoria";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome_categoria";
+            this.dataGridViewTextBoxColumn2.HeaderText = "nome_categoria";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "personalizacao";
+            this.dataGridViewTextBoxColumn3.HeaderText = "personalizacao";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 140;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "status_cat";
+            this.dataGridViewTextBoxColumn4.HeaderText = "status_cat";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 180;
+            // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(754, 830);
+            this.ClientSize = new System.Drawing.Size(754, 749);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(id_categoriaLabel);
@@ -463,10 +466,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton categoriaBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView categoriaDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.TextBox id_categoriaTextBox;
         private System.Windows.Forms.TextBox nome_categoriaTextBox;
         private System.Windows.Forms.TextBox personalizacaoTextBox;
@@ -477,5 +476,9 @@
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.ComboBox cbmFiltrar;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

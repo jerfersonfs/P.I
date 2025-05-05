@@ -419,7 +419,7 @@
             // 
             // btn_consultaP
             // 
-            this.btn_consultaP.Location = new System.Drawing.Point(12, 288);
+            this.btn_consultaP.Location = new System.Drawing.Point(12, 275);
             this.btn_consultaP.Name = "btn_consultaP";
             this.btn_consultaP.Size = new System.Drawing.Size(100, 28);
             this.btn_consultaP.TabIndex = 24;

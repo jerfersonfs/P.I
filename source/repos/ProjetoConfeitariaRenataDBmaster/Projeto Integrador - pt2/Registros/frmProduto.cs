@@ -40,37 +40,7 @@ namespace Projeto_Integrador___pt2.Formulários
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (cbmFiltrar.Text == "Código")
-                {
-                    string sql = "SELECT * FROM Produto WHERE id_produto = " + txtPesquisar.Text + "";
-                    SqlCommand cmd = new SqlCommand(sql);
-                    cntn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable produto = new DataTable();
-                    adapter.Fill(produto);
-                    produtoDataGridView.DataSource = produto;
-                }
-                if (cbmFiltrar.Text == "Produto")
-                {
-                    string sql = "SELECT * FROM Produto WHERE nome_produto LIKE '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable produto = new DataTable();
-                    adapter.Fill(produto);
-                    produtoDataGridView.DataSource = produto;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                cntn.Close();
-            }
+           
         }
 
         private void id_categoriaTextBox_TextChanged(object sender, EventArgs e)
