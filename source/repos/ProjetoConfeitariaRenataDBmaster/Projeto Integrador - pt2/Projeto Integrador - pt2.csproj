@@ -146,11 +146,11 @@
     <Compile Include="Interfaces\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\MenuPrincipal.cs">
+    <Compile Include="Interfaces\TelaDoSistema.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaces\MenuPrincipal.Designer.cs">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <Compile Include="Interfaces\TelaDoSistema.Designer.cs">
+      <DependentUpon>TelaDoSistema.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\Form1.cs">
       <SubType>Form</SubType>
@@ -265,8 +265,8 @@
     <EmbeddedResource Include="Interfaces\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces\MenuPrincipal.resx">
-      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="Interfaces\TelaDoSistema.resx">
+      <DependentUpon>TelaDoSistema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

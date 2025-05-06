@@ -448,7 +448,8 @@
             this.Controls.Add(this.status_pedidoTextBox);
             this.Controls.Add(this.pedidoBindingNavigator);
             this.Name = "frmPedido";
-            this.Text = "frmPedido";
+            this.ShowIcon = false;
+            this.Text = "Administração de pedidos";
             this.Load += new System.EventHandler(this.frmPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingNavigator)).EndInit();
             this.pedidoBindingNavigator.ResumeLayout(false);
