@@ -52,6 +52,10 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.categoriaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.categoriaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_categoriaTextBox = new System.Windows.Forms.TextBox();
             this.nome_categoriaTextBox = new System.Windows.Forms.TextBox();
             this.personalizacaoTextBox = new System.Windows.Forms.TextBox();
@@ -62,10 +66,6 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             id_categoriaLabel = new System.Windows.Forms.Label();
             nome_categoriaLabel = new System.Windows.Forms.Label();
             personalizacaoLabel = new System.Windows.Forms.Label();
@@ -290,6 +290,33 @@
             this.categoriaDataGridView.Size = new System.Drawing.Size(621, 530);
             this.categoriaDataGridView.TabIndex = 1;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_categoria";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_categoria";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome_categoria";
+            this.dataGridViewTextBoxColumn2.HeaderText = "nome_categoria";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 160;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "personalizacao";
+            this.dataGridViewTextBoxColumn3.HeaderText = "personalizacao";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 140;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "status_cat";
+            this.dataGridViewTextBoxColumn4.HeaderText = "status_cat";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 180;
+            // 
             // id_categoriaTextBox
             // 
             this.id_categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "id_categoria", true));
@@ -385,33 +412,6 @@
             this.textBox1.Text = "Categoria";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_categoria";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_categoria";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome_categoria";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nome_categoria";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 160;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "personalizacao";
-            this.dataGridViewTextBoxColumn3.HeaderText = "personalizacao";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 140;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "status_cat";
-            this.dataGridViewTextBoxColumn4.HeaderText = "status_cat";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 180;
-            // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,7 +431,8 @@
             this.Controls.Add(this.categoriaDataGridView);
             this.Controls.Add(this.categoriaBindingNavigator);
             this.Name = "frmCategoria";
-            this.Text = "frmCategoria";
+            this.ShowIcon = false;
+            this.Text = "Categorias de produtos";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();

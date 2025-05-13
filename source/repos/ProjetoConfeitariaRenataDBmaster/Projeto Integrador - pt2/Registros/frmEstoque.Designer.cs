@@ -55,13 +55,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.estoqueBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.estoqueDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_estoqueTextBox = new System.Windows.Forms.TextBox();
             this.cat_estoqueTextBox = new System.Windows.Forms.TextBox();
             this.nome_estoqueTextBox = new System.Windows.Forms.TextBox();
@@ -77,6 +70,13 @@
             this.ingredientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ingredientesTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.ingredientesTableAdapter();
             this.id_ingredienteTextBox = new System.Windows.Forms.TextBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             id_estoqueLabel = new System.Windows.Forms.Label();
             cat_estoqueLabel = new System.Windows.Forms.Label();
             nome_estoqueLabel = new System.Windows.Forms.Label();
@@ -333,52 +333,10 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.estoqueDataGridView.DataSource = this.estoqueBindingSource;
-            this.estoqueDataGridView.Location = new System.Drawing.Point(150, 517);
+            this.estoqueDataGridView.Location = new System.Drawing.Point(97, 512);
             this.estoqueDataGridView.Name = "estoqueDataGridView";
-            this.estoqueDataGridView.Size = new System.Drawing.Size(745, 471);
+            this.estoqueDataGridView.Size = new System.Drawing.Size(861, 435);
             this.estoqueDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_estoque";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_estoque";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "cat_estoque";
-            this.dataGridViewTextBoxColumn2.HeaderText = "cat_estoque";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome_estoque";
-            this.dataGridViewTextBoxColumn3.HeaderText = "nome_estoque";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "FKid_ingrediente";
-            this.dataGridViewTextBoxColumn4.HeaderText = "FKid_ingrediente";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "data_movimentacao";
-            this.dataGridViewTextBoxColumn5.HeaderText = "data_movimentacao";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "quantidade_movimentada";
-            this.dataGridViewTextBoxColumn6.HeaderText = "quantidade_movimentada";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "tipo_movimentacao";
-            this.dataGridViewTextBoxColumn7.HeaderText = "tipo_movimentacao";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // id_estoqueTextBox
             // 
@@ -436,9 +394,9 @@
             this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Controls.Add(this.cbmFiltrar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(150, 409);
+            this.groupBox1.Location = new System.Drawing.Point(97, 409);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(745, 83);
+            this.groupBox1.Size = new System.Drawing.Size(861, 83);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
@@ -509,6 +467,54 @@
             this.id_ingredienteTextBox.TabIndex = 23;
             this.id_ingredienteTextBox.TextChanged += new System.EventHandler(this.id_ingredienteTextBox_TextChanged);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_estoque";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_estoque";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "cat_estoque";
+            this.dataGridViewTextBoxColumn2.HeaderText = "cat_estoque";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "nome_estoque";
+            this.dataGridViewTextBoxColumn3.HeaderText = "nome_estoque";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "FKid_ingrediente";
+            this.dataGridViewTextBoxColumn4.HeaderText = "FKid_ingrediente";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "data_movimentacao";
+            this.dataGridViewTextBoxColumn5.HeaderText = "data_movimentacao";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 135;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "quantidade_movimentada";
+            this.dataGridViewTextBoxColumn6.HeaderText = "quantidade_movimentada";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 135;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "tipo_movimentacao";
+            this.dataGridViewTextBoxColumn7.HeaderText = "tipo_movimentacao";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 120;
+            // 
             // frmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -534,7 +540,7 @@
             this.Controls.Add(this.estoqueDataGridView);
             this.Controls.Add(this.estoqueBindingNavigator);
             this.Name = "frmEstoque";
-            this.Text = "frmEstoque";
+            this.Text = "Administração de estoque";
             this.Load += new System.EventHandler(this.frmEstoque_Load);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).EndInit();
@@ -570,13 +576,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton estoqueBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView estoqueDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.TextBox id_estoqueTextBox;
         private System.Windows.Forms.TextBox cat_estoqueTextBox;
         private System.Windows.Forms.TextBox nome_estoqueTextBox;
@@ -592,5 +591,12 @@
         private System.Windows.Forms.BindingSource ingredientesBindingSource;
         private RenataDBDataSetTableAdapters.ingredientesTableAdapter ingredientesTableAdapter;
         private System.Windows.Forms.TextBox id_ingredienteTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

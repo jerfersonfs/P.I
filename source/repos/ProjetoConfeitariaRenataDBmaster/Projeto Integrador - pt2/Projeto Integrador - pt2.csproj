@@ -98,6 +98,12 @@
     <Compile Include="Consultas\CSTcliente.Designer.cs">
       <DependentUpon>CSTcliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\CSTestoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\CSTestoque.Designer.cs">
+      <DependentUpon>CSTestoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\CSTingrediente.cs">
       <SubType>Form</SubType>
     </Compile>
