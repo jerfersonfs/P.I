@@ -139,9 +139,13 @@
             // pedidoBindingNavigator
             // 
             this.pedidoBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.pedidoBindingNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pedidoBindingNavigator.BindingSource = this.pedidoBindingSource;
             this.pedidoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.pedidoBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.pedidoBindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
             this.pedidoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -155,14 +159,16 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.pedidoBindingNavigatorSaveItem});
-            this.pedidoBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.pedidoBindingNavigator.Location = new System.Drawing.Point(3, 9);
             this.pedidoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.pedidoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.pedidoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.pedidoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.pedidoBindingNavigator.Name = "pedidoBindingNavigator";
+            this.pedidoBindingNavigator.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.pedidoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.pedidoBindingNavigator.Size = new System.Drawing.Size(779, 25);
+            this.pedidoBindingNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.pedidoBindingNavigator.Size = new System.Drawing.Size(282, 25);
             this.pedidoBindingNavigator.TabIndex = 0;
             this.pedidoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -266,6 +272,7 @@
             // 
             this.pedidoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.pedidoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pedidoBindingNavigatorSaveItem.Image")));
+            this.pedidoBindingNavigatorSaveItem.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.pedidoBindingNavigatorSaveItem.Name = "pedidoBindingNavigatorSaveItem";
             this.pedidoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.pedidoBindingNavigatorSaveItem.Text = "Salvar Dados";
@@ -419,9 +426,9 @@
             // 
             // btn_consultaP
             // 
-            this.btn_consultaP.Location = new System.Drawing.Point(12, 275);
+            this.btn_consultaP.Location = new System.Drawing.Point(530, 186);
             this.btn_consultaP.Name = "btn_consultaP";
-            this.btn_consultaP.Size = new System.Drawing.Size(100, 28);
+            this.btn_consultaP.Size = new System.Drawing.Size(65, 20);
             this.btn_consultaP.TabIndex = 24;
             this.btn_consultaP.Text = "Consutar";
             this.btn_consultaP.UseVisualStyleBackColor = true;

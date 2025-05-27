@@ -70,7 +70,7 @@ namespace Projeto_Integrador___pt2.Interfaces
                         {
                             usuarioLogado = email_usuTextBox.Text;
 
-                            MenuPrincipal menu = new MenuPrincipal();
+                            TelaDoSistema menu = new TelaDoSistema();
 
                             this.Hide();
 
@@ -104,11 +104,6 @@ namespace Projeto_Integrador___pt2.Interfaces
             Application.Exit();
         }
 
-        private void btm_Cadastro_Click(object sender, EventArgs e)
-        {
-            frmUsuario usu = new frmUsuario();
-            usu.Show();
-        }
 
         private void btn_Sair_KeyDown(object sender, KeyEventArgs e)
         {

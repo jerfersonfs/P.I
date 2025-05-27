@@ -506,12 +506,42 @@ namespace Projeto_Integrador___pt2.Interfaces
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            tsslData.Text = DateTime.Now.ToString("dd/MM/yyyy ");
-        }
+            tsslData.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }//Data
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             tsslHora.Text = DateTime.Now.ToString("HH:mm:ss");
+        }//Hora
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           exibeFrmCli();
+        }
+
+        private void produtoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            exibeFrmProd();
+        }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            exibeFrmCategoria();
+        }
+
+        private void pedidoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            exibeFrmEstoque();//Esqueci de trocar o nome
+        }
+
+        private void ingredientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            exibeFrmIngredi();
+        }
+
+        private void receitasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            exibeFrmReceita();
         }
     }
 }
