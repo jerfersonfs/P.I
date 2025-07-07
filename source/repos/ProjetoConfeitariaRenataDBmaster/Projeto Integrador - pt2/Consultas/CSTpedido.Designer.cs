@@ -36,20 +36,20 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.pedidoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.pedidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.pedidoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.pedidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.pedidoTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.pedidoTableAdapter();
             this.tableAdapterManager = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
             this.pedidoDataGridView = new System.Windows.Forms.DataGridView();
@@ -58,6 +58,8 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnIncluir = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingNavigator)).BeginInit();
             this.pedidoBindingNavigator.SuspendLayout();
@@ -74,9 +76,9 @@
             this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Controls.Add(this.cbmFiltrar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(124, 43);
+            this.groupBox1.Location = new System.Drawing.Point(109, 102);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(436, 72);
+            this.groupBox1.Size = new System.Drawing.Size(375, 52);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
@@ -84,7 +86,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 35);
+            this.label1.Location = new System.Drawing.Point(112, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 13);
             this.label1.TabIndex = 3;
@@ -93,7 +95,7 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Location = new System.Drawing.Point(359, 30);
+            this.btnPesquisar.Location = new System.Drawing.Point(278, 19);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(71, 24);
             this.btnPesquisar.TabIndex = 2;
@@ -103,7 +105,7 @@
             // 
             // txtPesquisar
             // 
-            this.txtPesquisar.Location = new System.Drawing.Point(139, 32);
+            this.txtPesquisar.Location = new System.Drawing.Point(132, 20);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(131, 20);
             this.txtPesquisar.TabIndex = 1;
@@ -112,9 +114,9 @@
             // 
             this.cbmFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmFiltrar.FormattingEnabled = true;
-            this.cbmFiltrar.Location = new System.Drawing.Point(33, 32);
+            this.cbmFiltrar.Location = new System.Drawing.Point(10, 19);
             this.cbmFiltrar.Name = "cbmFiltrar";
-            this.cbmFiltrar.Size = new System.Drawing.Size(80, 21);
+            this.cbmFiltrar.Size = new System.Drawing.Size(100, 21);
             this.cbmFiltrar.TabIndex = 0;
             // 
             // pedidoBindingNavigator
@@ -146,6 +148,42 @@
             this.pedidoBindingNavigator.Size = new System.Drawing.Size(701, 25);
             this.pedidoBindingNavigator.TabIndex = 21;
             this.pedidoBindingNavigator.Text = "bindingNavigator1";
+            this.pedidoBindingNavigator.Visible = false;
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // pedidoBindingSource
+            // 
+            this.pedidoBindingSource.DataMember = "pedido";
+            this.pedidoBindingSource.DataSource = this.renataDBDataSet;
+            // 
+            // renataDBDataSet
+            // 
+            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
+            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -180,16 +218,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -212,26 +243,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
             // 
             // pedidoBindingNavigatorSaveItem
             // 
@@ -241,16 +254,6 @@
             this.pedidoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.pedidoBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.pedidoBindingNavigatorSaveItem.Click += new System.EventHandler(this.pedidoBindingNavigatorSaveItem_Click);
-            // 
-            // pedidoBindingSource
-            // 
-            this.pedidoBindingSource.DataMember = "pedido";
-            this.pedidoBindingSource.DataSource = this.renataDBDataSet;
-            // 
-            // renataDBDataSet
-            // 
-            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
-            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pedidoTableAdapter
             // 
@@ -276,6 +279,7 @@
             // pedidoDataGridView
             // 
             this.pedidoDataGridView.AutoGenerateColumns = false;
+            this.pedidoDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pedidoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pedidoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -284,9 +288,10 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.pedidoDataGridView.DataSource = this.pedidoBindingSource;
-            this.pedidoDataGridView.Location = new System.Drawing.Point(54, 146);
+            this.pedidoDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pedidoDataGridView.Location = new System.Drawing.Point(0, 160);
             this.pedidoDataGridView.Name = "pedidoDataGridView";
-            this.pedidoDataGridView.Size = new System.Drawing.Size(540, 302);
+            this.pedidoDataGridView.Size = new System.Drawing.Size(543, 302);
             this.pedidoDataGridView.TabIndex = 21;
             // 
             // dataGridViewTextBoxColumn1
@@ -319,14 +324,40 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "status_pedido";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Plum;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(543, 49);
+            this.textBox1.TabIndex = 25;
+            this.textBox1.Text = "Pedidos de vendas";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnIncluir
+            // 
+            this.btnIncluir.Location = new System.Drawing.Point(12, 115);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(82, 30);
+            this.btnIncluir.TabIndex = 26;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
+            // 
             // CSTpedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 462);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(543, 462);
+            this.Controls.Add(this.btnIncluir);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pedidoDataGridView);
             this.Controls.Add(this.pedidoBindingNavigator);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CSTpedido";
             this.ShowIcon = false;
             this.Text = "Consulta de pedidos";
@@ -374,5 +405,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnIncluir;
     }
 }

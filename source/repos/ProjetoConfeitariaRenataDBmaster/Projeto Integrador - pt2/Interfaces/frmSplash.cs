@@ -20,7 +20,7 @@ namespace Projeto_Integrador___pt2.Interfaces
         private void timerSplash_Tick(object sender, EventArgs e)
         {
             prb_TelaSplash.Increment(1);
-            if(prb_TelaSplash.Value > 100)
+            if(prb_TelaSplash.Value > 101)
             {
                 timerSplash.Stop();
             }

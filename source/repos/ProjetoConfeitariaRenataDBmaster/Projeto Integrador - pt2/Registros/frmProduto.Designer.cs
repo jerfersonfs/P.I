@@ -64,6 +64,9 @@
             this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriaTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.categoriaTableAdapter();
             this.id_categoriaTextBox = new System.Windows.Forms.TextBox();
+            this.btnIncluir = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             id_produtoLabel = new System.Windows.Forms.Label();
             nome_produtoLabel = new System.Windows.Forms.Label();
             preco_produtoLabel = new System.Windows.Forms.Label();
@@ -82,7 +85,7 @@
             // 
             id_produtoLabel.AutoSize = true;
             id_produtoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_produtoLabel.Location = new System.Drawing.Point(117, 202);
+            id_produtoLabel.Location = new System.Drawing.Point(109, 150);
             id_produtoLabel.Name = "id_produtoLabel";
             id_produtoLabel.Size = new System.Drawing.Size(50, 13);
             id_produtoLabel.TabIndex = 2;
@@ -92,7 +95,7 @@
             // 
             nome_produtoLabel.AutoSize = true;
             nome_produtoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nome_produtoLabel.Location = new System.Drawing.Point(117, 228);
+            nome_produtoLabel.Location = new System.Drawing.Point(109, 176);
             nome_produtoLabel.Name = "nome_produtoLabel";
             nome_produtoLabel.Size = new System.Drawing.Size(55, 13);
             nome_produtoLabel.TabIndex = 4;
@@ -102,7 +105,7 @@
             // 
             preco_produtoLabel.AutoSize = true;
             preco_produtoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            preco_produtoLabel.Location = new System.Drawing.Point(117, 254);
+            preco_produtoLabel.Location = new System.Drawing.Point(109, 202);
             preco_produtoLabel.Name = "preco_produtoLabel";
             preco_produtoLabel.Size = new System.Drawing.Size(44, 13);
             preco_produtoLabel.TabIndex = 6;
@@ -112,7 +115,7 @@
             // 
             promocaoLabel.AutoSize = true;
             promocaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            promocaoLabel.Location = new System.Drawing.Point(117, 306);
+            promocaoLabel.Location = new System.Drawing.Point(109, 254);
             promocaoLabel.Name = "promocaoLabel";
             promocaoLabel.Size = new System.Drawing.Size(67, 13);
             promocaoLabel.TabIndex = 10;
@@ -122,7 +125,7 @@
             // 
             data_inicio_promocaoLabel.AutoSize = true;
             data_inicio_promocaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            data_inicio_promocaoLabel.Location = new System.Drawing.Point(117, 332);
+            data_inicio_promocaoLabel.Location = new System.Drawing.Point(109, 280);
             data_inicio_promocaoLabel.Name = "data_inicio_promocaoLabel";
             data_inicio_promocaoLabel.Size = new System.Drawing.Size(169, 13);
             data_inicio_promocaoLabel.TabIndex = 12;
@@ -132,7 +135,7 @@
             // 
             data_fim_promocaoLabel.AutoSize = true;
             data_fim_promocaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            data_fim_promocaoLabel.Location = new System.Drawing.Point(117, 359);
+            data_fim_promocaoLabel.Location = new System.Drawing.Point(109, 307);
             data_fim_promocaoLabel.Name = "data_fim_promocaoLabel";
             data_fim_promocaoLabel.Size = new System.Drawing.Size(153, 13);
             data_fim_promocaoLabel.TabIndex = 14;
@@ -142,7 +145,7 @@
             // 
             id_categoriaLabel.AutoSize = true;
             id_categoriaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_categoriaLabel.Location = new System.Drawing.Point(117, 283);
+            id_categoriaLabel.Location = new System.Drawing.Point(109, 231);
             id_categoriaLabel.Name = "id_categoriaLabel";
             id_categoriaLabel.Size = new System.Drawing.Size(82, 13);
             id_categoriaLabel.TabIndex = 22;
@@ -208,6 +211,7 @@
             this.produtoBindingNavigator.Size = new System.Drawing.Size(594, 25);
             this.produtoBindingNavigator.TabIndex = 0;
             this.produtoBindingNavigator.Text = "bindingNavigator1";
+            this.produtoBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -307,7 +311,7 @@
             // id_produtoTextBox
             // 
             this.id_produtoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "id_produto", true));
-            this.id_produtoTextBox.Location = new System.Drawing.Point(292, 202);
+            this.id_produtoTextBox.Location = new System.Drawing.Point(284, 150);
             this.id_produtoTextBox.Name = "id_produtoTextBox";
             this.id_produtoTextBox.Size = new System.Drawing.Size(200, 20);
             this.id_produtoTextBox.TabIndex = 3;
@@ -315,7 +319,7 @@
             // nome_produtoTextBox
             // 
             this.nome_produtoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "nome_produto", true));
-            this.nome_produtoTextBox.Location = new System.Drawing.Point(292, 228);
+            this.nome_produtoTextBox.Location = new System.Drawing.Point(284, 176);
             this.nome_produtoTextBox.Name = "nome_produtoTextBox";
             this.nome_produtoTextBox.Size = new System.Drawing.Size(200, 20);
             this.nome_produtoTextBox.TabIndex = 5;
@@ -323,7 +327,7 @@
             // preco_produtoTextBox
             // 
             this.preco_produtoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "preco_produto", true));
-            this.preco_produtoTextBox.Location = new System.Drawing.Point(292, 254);
+            this.preco_produtoTextBox.Location = new System.Drawing.Point(284, 202);
             this.preco_produtoTextBox.Name = "preco_produtoTextBox";
             this.preco_produtoTextBox.Size = new System.Drawing.Size(200, 20);
             this.preco_produtoTextBox.TabIndex = 7;
@@ -331,7 +335,7 @@
             // promocaoTextBox
             // 
             this.promocaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "promocao", true));
-            this.promocaoTextBox.Location = new System.Drawing.Point(292, 306);
+            this.promocaoTextBox.Location = new System.Drawing.Point(284, 254);
             this.promocaoTextBox.Name = "promocaoTextBox";
             this.promocaoTextBox.Size = new System.Drawing.Size(200, 20);
             this.promocaoTextBox.TabIndex = 11;
@@ -339,7 +343,7 @@
             // data_inicio_promocaoDateTimePicker
             // 
             this.data_inicio_promocaoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.produtoBindingSource, "data_inicio_promocao", true));
-            this.data_inicio_promocaoDateTimePicker.Location = new System.Drawing.Point(292, 332);
+            this.data_inicio_promocaoDateTimePicker.Location = new System.Drawing.Point(284, 280);
             this.data_inicio_promocaoDateTimePicker.Name = "data_inicio_promocaoDateTimePicker";
             this.data_inicio_promocaoDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.data_inicio_promocaoDateTimePicker.TabIndex = 13;
@@ -347,7 +351,7 @@
             // data_fim_promocaoDateTimePicker
             // 
             this.data_fim_promocaoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.produtoBindingSource, "data_fim_promocao", true));
-            this.data_fim_promocaoDateTimePicker.Location = new System.Drawing.Point(292, 358);
+            this.data_fim_promocaoDateTimePicker.Location = new System.Drawing.Point(284, 306);
             this.data_fim_promocaoDateTimePicker.Name = "data_fim_promocaoDateTimePicker";
             this.data_fim_promocaoDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.data_fim_promocaoDateTimePicker.TabIndex = 15;
@@ -355,12 +359,13 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Plum;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(138, 74);
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(333, 62);
+            this.textBox1.Size = new System.Drawing.Size(594, 49);
             this.textBox1.TabIndex = 22;
-            this.textBox1.Text = "Produto";
+            this.textBox1.Text = "Produtos ";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // categoriaBindingSource
@@ -375,11 +380,41 @@
             // id_categoriaTextBox
             // 
             this.id_categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "id_categoria", true));
-            this.id_categoriaTextBox.Location = new System.Drawing.Point(292, 280);
+            this.id_categoriaTextBox.Location = new System.Drawing.Point(284, 228);
             this.id_categoriaTextBox.Name = "id_categoriaTextBox";
             this.id_categoriaTextBox.Size = new System.Drawing.Size(200, 20);
             this.id_categoriaTextBox.TabIndex = 23;
             this.id_categoriaTextBox.TextChanged += new System.EventHandler(this.id_categoriaTextBox_TextChanged);
+            // 
+            // btnIncluir
+            // 
+            this.btnIncluir.Location = new System.Drawing.Point(172, 97);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(90, 27);
+            this.btnIncluir.TabIndex = 24;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Location = new System.Drawing.Point(272, 97);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(90, 27);
+            this.btnDeletar.TabIndex = 25;
+            this.btnDeletar.Text = "Excluir";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(368, 97);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(90, 27);
+            this.btnSalvar.TabIndex = 26;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // frmProduto
             // 
@@ -387,6 +422,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(594, 419);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnDeletar);
+            this.Controls.Add(this.btnIncluir);
             this.Controls.Add(id_categoriaLabel);
             this.Controls.Add(this.id_categoriaTextBox);
             this.Controls.Add(this.textBox1);
@@ -403,8 +441,9 @@
             this.Controls.Add(data_fim_promocaoLabel);
             this.Controls.Add(this.data_fim_promocaoDateTimePicker);
             this.Controls.Add(this.produtoBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmProduto";
-            this.Text = "frmProduto";
+            this.Text = "Registrar produtos";
             this.Load += new System.EventHandler(this.frmProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
@@ -446,5 +485,8 @@
         private System.Windows.Forms.BindingSource categoriaBindingSource;
         private RenataDBDataSetTableAdapters.categoriaTableAdapter categoriaTableAdapter;
         private System.Windows.Forms.TextBox id_categoriaTextBox;
+        private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

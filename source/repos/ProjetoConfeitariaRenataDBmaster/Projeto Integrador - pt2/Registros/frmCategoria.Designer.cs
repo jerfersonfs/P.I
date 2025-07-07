@@ -51,11 +51,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.categoriaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.categoriaDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_categoriaTextBox = new System.Windows.Forms.TextBox();
             this.nome_categoriaTextBox = new System.Windows.Forms.TextBox();
             this.personalizacaoTextBox = new System.Windows.Forms.TextBox();
@@ -66,6 +61,15 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.cbmFiltrar = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cabecalhoBox = new System.Windows.Forms.GroupBox();
+            this.categoriaDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_excluir = new System.Windows.Forms.Button();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.btnIncluir = new System.Windows.Forms.Button();
             id_categoriaLabel = new System.Windows.Forms.Label();
             nome_categoriaLabel = new System.Windows.Forms.Label();
             personalizacaoLabel = new System.Windows.Forms.Label();
@@ -74,15 +78,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingNavigator)).BeginInit();
             this.categoriaBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.cabecalhoBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // id_categoriaLabel
             // 
             id_categoriaLabel.AutoSize = true;
             id_categoriaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_categoriaLabel.Location = new System.Drawing.Point(12, 169);
+            id_categoriaLabel.Location = new System.Drawing.Point(19, 27);
             id_categoriaLabel.Name = "id_categoriaLabel";
             id_categoriaLabel.Size = new System.Drawing.Size(50, 13);
             id_categoriaLabel.TabIndex = 2;
@@ -92,7 +97,7 @@
             // 
             nome_categoriaLabel.AutoSize = true;
             nome_categoriaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nome_categoriaLabel.Location = new System.Drawing.Point(12, 195);
+            nome_categoriaLabel.Location = new System.Drawing.Point(19, 53);
             nome_categoriaLabel.Name = "nome_categoriaLabel";
             nome_categoriaLabel.Size = new System.Drawing.Size(43, 13);
             nome_categoriaLabel.TabIndex = 4;
@@ -102,7 +107,7 @@
             // 
             personalizacaoLabel.AutoSize = true;
             personalizacaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            personalizacaoLabel.Location = new System.Drawing.Point(12, 221);
+            personalizacaoLabel.Location = new System.Drawing.Point(19, 79);
             personalizacaoLabel.Name = "personalizacaoLabel";
             personalizacaoLabel.Size = new System.Drawing.Size(97, 13);
             personalizacaoLabel.TabIndex = 6;
@@ -112,7 +117,7 @@
             // 
             status_catLabel.AutoSize = true;
             status_catLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            status_catLabel.Location = new System.Drawing.Point(15, 247);
+            status_catLabel.Location = new System.Drawing.Point(22, 105);
             status_catLabel.Name = "status_catLabel";
             status_catLabel.Size = new System.Drawing.Size(47, 13);
             status_catLabel.TabIndex = 8;
@@ -175,9 +180,10 @@
             this.categoriaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.categoriaBindingNavigator.Name = "categoriaBindingNavigator";
             this.categoriaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.categoriaBindingNavigator.Size = new System.Drawing.Size(754, 25);
+            this.categoriaBindingNavigator.Size = new System.Drawing.Size(911, 25);
             this.categoriaBindingNavigator.TabIndex = 0;
             this.categoriaBindingNavigator.Text = "bindingNavigator1";
+            this.categoriaBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -274,10 +280,131 @@
             this.categoriaBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.categoriaBindingNavigatorSaveItem.Click += new System.EventHandler(this.categoriaBindingNavigatorSaveItem_Click);
             // 
+            // id_categoriaTextBox
+            // 
+            this.id_categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "id_categoria", true));
+            this.id_categoriaTextBox.Location = new System.Drawing.Point(119, 24);
+            this.id_categoriaTextBox.Name = "id_categoriaTextBox";
+            this.id_categoriaTextBox.Size = new System.Drawing.Size(197, 20);
+            this.id_categoriaTextBox.TabIndex = 3;
+            // 
+            // nome_categoriaTextBox
+            // 
+            this.nome_categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "nome_categoria", true));
+            this.nome_categoriaTextBox.Location = new System.Drawing.Point(119, 50);
+            this.nome_categoriaTextBox.Name = "nome_categoriaTextBox";
+            this.nome_categoriaTextBox.Size = new System.Drawing.Size(197, 20);
+            this.nome_categoriaTextBox.TabIndex = 5;
+            // 
+            // personalizacaoTextBox
+            // 
+            this.personalizacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "personalizacao", true));
+            this.personalizacaoTextBox.Location = new System.Drawing.Point(119, 76);
+            this.personalizacaoTextBox.Name = "personalizacaoTextBox";
+            this.personalizacaoTextBox.Size = new System.Drawing.Size(197, 20);
+            this.personalizacaoTextBox.TabIndex = 7;
+            // 
+            // status_catTextBox
+            // 
+            this.status_catTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "status_cat", true));
+            this.status_catTextBox.Location = new System.Drawing.Point(119, 102);
+            this.status_catTextBox.Name = "status_catTextBox";
+            this.status_catTextBox.Size = new System.Drawing.Size(197, 20);
+            this.status_catTextBox.TabIndex = 9;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Plum;
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnPesquisar);
+            this.groupBox1.Controls.Add(this.txtPesquisar);
+            this.groupBox1.Controls.Add(this.cbmFiltrar);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(370, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(488, 54);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtrar";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(153, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(14, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "=";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Location = new System.Drawing.Point(340, 18);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(126, 23);
+            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Location = new System.Drawing.Point(173, 19);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(152, 20);
+            this.txtPesquisar.TabIndex = 1;
+            // 
+            // cbmFiltrar
+            // 
+            this.cbmFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmFiltrar.FormattingEnabled = true;
+            this.cbmFiltrar.Location = new System.Drawing.Point(16, 19);
+            this.cbmFiltrar.Name = "cbmFiltrar";
+            this.cbmFiltrar.Size = new System.Drawing.Size(130, 21);
+            this.cbmFiltrar.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Plum;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(872, 62);
+            this.textBox1.TabIndex = 21;
+            this.textBox1.Text = "Categoria";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // cabecalhoBox
+            // 
+            this.cabecalhoBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.cabecalhoBox.Controls.Add(this.categoriaDataGridView);
+            this.cabecalhoBox.Controls.Add(this.groupBox1);
+            this.cabecalhoBox.Controls.Add(this.btn_excluir);
+            this.cabecalhoBox.Controls.Add(this.btn_Salvar);
+            this.cabecalhoBox.Controls.Add(this.btnIncluir);
+            this.cabecalhoBox.Controls.Add(id_categoriaLabel);
+            this.cabecalhoBox.Controls.Add(this.status_catTextBox);
+            this.cabecalhoBox.Controls.Add(status_catLabel);
+            this.cabecalhoBox.Controls.Add(this.personalizacaoTextBox);
+            this.cabecalhoBox.Controls.Add(this.id_categoriaTextBox);
+            this.cabecalhoBox.Controls.Add(personalizacaoLabel);
+            this.cabecalhoBox.Controls.Add(nome_categoriaLabel);
+            this.cabecalhoBox.Controls.Add(this.nome_categoriaTextBox);
+            this.cabecalhoBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cabecalhoBox.Location = new System.Drawing.Point(0, 62);
+            this.cabecalhoBox.Name = "cabecalhoBox";
+            this.cabecalhoBox.Size = new System.Drawing.Size(872, 478);
+            this.cabecalhoBox.TabIndex = 22;
+            this.cabecalhoBox.TabStop = false;
+            // 
             // categoriaDataGridView
             // 
             this.categoriaDataGridView.AutoGenerateColumns = false;
-            this.categoriaDataGridView.BackgroundColor = System.Drawing.Color.Plum;
+            this.categoriaDataGridView.BackgroundColor = System.Drawing.Color.Thistle;
+            this.categoriaDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.categoriaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.categoriaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -285,10 +412,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.categoriaDataGridView.DataSource = this.categoriaBindingSource;
-            this.categoriaDataGridView.Location = new System.Drawing.Point(80, 335);
+            this.categoriaDataGridView.GridColor = System.Drawing.Color.Gray;
+            this.categoriaDataGridView.Location = new System.Drawing.Point(95, 152);
             this.categoriaDataGridView.Name = "categoriaDataGridView";
-            this.categoriaDataGridView.Size = new System.Drawing.Size(621, 530);
+            this.categoriaDataGridView.Size = new System.Drawing.Size(619, 277);
             this.categoriaDataGridView.TabIndex = 1;
+            this.categoriaDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoriaDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -317,131 +446,59 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 180;
             // 
-            // id_categoriaTextBox
+            // btn_excluir
             // 
-            this.id_categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "id_categoria", true));
-            this.id_categoriaTextBox.Location = new System.Drawing.Point(112, 166);
-            this.id_categoriaTextBox.Name = "id_categoriaTextBox";
-            this.id_categoriaTextBox.Size = new System.Drawing.Size(197, 20);
-            this.id_categoriaTextBox.TabIndex = 3;
+            this.btn_excluir.Location = new System.Drawing.Point(440, 24);
+            this.btn_excluir.Name = "btn_excluir";
+            this.btn_excluir.Size = new System.Drawing.Size(73, 23);
+            this.btn_excluir.TabIndex = 24;
+            this.btn_excluir.Text = "Excluir";
+            this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
-            // nome_categoriaTextBox
+            // btn_Salvar
             // 
-            this.nome_categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "nome_categoria", true));
-            this.nome_categoriaTextBox.Location = new System.Drawing.Point(112, 192);
-            this.nome_categoriaTextBox.Name = "nome_categoriaTextBox";
-            this.nome_categoriaTextBox.Size = new System.Drawing.Size(197, 20);
-            this.nome_categoriaTextBox.TabIndex = 5;
+            this.btn_Salvar.Location = new System.Drawing.Point(534, 24);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(73, 23);
+            this.btn_Salvar.TabIndex = 11;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
-            // personalizacaoTextBox
+            // btnIncluir
             // 
-            this.personalizacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "personalizacao", true));
-            this.personalizacaoTextBox.Location = new System.Drawing.Point(112, 218);
-            this.personalizacaoTextBox.Name = "personalizacaoTextBox";
-            this.personalizacaoTextBox.Size = new System.Drawing.Size(197, 20);
-            this.personalizacaoTextBox.TabIndex = 7;
-            // 
-            // status_catTextBox
-            // 
-            this.status_catTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "status_cat", true));
-            this.status_catTextBox.Location = new System.Drawing.Point(112, 244);
-            this.status_catTextBox.Name = "status_catTextBox";
-            this.status_catTextBox.Size = new System.Drawing.Size(197, 20);
-            this.status_catTextBox.TabIndex = 9;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Plum;
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnPesquisar);
-            this.groupBox1.Controls.Add(this.txtPesquisar);
-            this.groupBox1.Controls.Add(this.cbmFiltrar);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(347, 153);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(395, 129);
-            this.groupBox1.TabIndex = 19;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filtrar";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(178, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "=";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Location = new System.Drawing.Point(42, 75);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(312, 29);
-            this.btnPesquisar.TabIndex = 2;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Location = new System.Drawing.Point(197, 35);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(152, 20);
-            this.txtPesquisar.TabIndex = 1;
-            // 
-            // cbmFiltrar
-            // 
-            this.cbmFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmFiltrar.FormattingEnabled = true;
-            this.cbmFiltrar.Location = new System.Drawing.Point(42, 32);
-            this.cbmFiltrar.Name = "cbmFiltrar";
-            this.cbmFiltrar.Size = new System.Drawing.Size(130, 21);
-            this.cbmFiltrar.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Plum;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(206, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(333, 62);
-            this.textBox1.TabIndex = 21;
-            this.textBox1.Text = "Categoria";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnIncluir.Location = new System.Drawing.Point(370, 24);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(64, 23);
+            this.btnIncluir.TabIndex = 10;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(754, 749);
+            this.ClientSize = new System.Drawing.Size(872, 540);
+            this.Controls.Add(this.cabecalhoBox);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(id_categoriaLabel);
-            this.Controls.Add(this.id_categoriaTextBox);
-            this.Controls.Add(nome_categoriaLabel);
-            this.Controls.Add(this.nome_categoriaTextBox);
-            this.Controls.Add(personalizacaoLabel);
-            this.Controls.Add(this.personalizacaoTextBox);
-            this.Controls.Add(status_catLabel);
-            this.Controls.Add(this.status_catTextBox);
-            this.Controls.Add(this.categoriaDataGridView);
             this.Controls.Add(this.categoriaBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCategoria";
             this.ShowIcon = false;
-            this.Text = "Categorias de produtos";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingNavigator)).EndInit();
             this.categoriaBindingNavigator.ResumeLayout(false);
             this.categoriaBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.cabecalhoBox.ResumeLayout(false);
+            this.cabecalhoBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,7 +523,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton categoriaBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView categoriaDataGridView;
         private System.Windows.Forms.TextBox id_categoriaTextBox;
         private System.Windows.Forms.TextBox nome_categoriaTextBox;
         private System.Windows.Forms.TextBox personalizacaoTextBox;
@@ -477,6 +533,11 @@
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.ComboBox cbmFiltrar;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox cabecalhoBox;
+        private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.Button btn_excluir;
+        private System.Windows.Forms.DataGridView categoriaDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

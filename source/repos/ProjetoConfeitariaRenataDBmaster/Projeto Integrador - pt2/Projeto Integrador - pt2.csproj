@@ -74,6 +74,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,10 +105,10 @@
     <Compile Include="Consultas\CSTestoque.Designer.cs">
       <DependentUpon>CSTestoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\CSTingrediente.cs">
+    <Compile Include="Futuras implemetações\CSTingrediente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\CSTingrediente.Designer.cs">
+    <Compile Include="Futuras implemetações\CSTingrediente.Designer.cs">
       <DependentUpon>CSTingrediente.cs</DependentUpon>
     </Compile>
     <Compile Include="Futuras implemetações\CSTpagamento.cs">
@@ -128,10 +129,10 @@
     <Compile Include="Consultas\CSTproduto.Designer.cs">
       <DependentUpon>CSTproduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\CSTreceita.cs">
+    <Compile Include="Futuras implemetações\CSTreceita.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\CSTreceita.Designer.cs">
+    <Compile Include="Futuras implemetações\CSTreceita.Designer.cs">
       <DependentUpon>CSTreceita.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\CSTusuario.cs">
@@ -140,11 +141,23 @@
     <Compile Include="Consultas\CSTusuario.Designer.cs">
       <DependentUpon>CSTusuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\frmAtalhos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmAtalhos.Designer.cs">
+      <DependentUpon>frmAtalhos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interfaces\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\frmPerfilUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmPerfilUsu.Designer.cs">
+      <DependentUpon>frmPerfilUsu.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\frmSplash.cs">
       <SubType>Form</SubType>
@@ -158,11 +171,10 @@
     <Compile Include="Interfaces\TelaDoSistema.Designer.cs">
       <DependentUpon>TelaDoSistema.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registros\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Registros\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmCategoria.cs">
       <SubType>Form</SubType>
@@ -241,13 +253,16 @@
       <DependentUpon>RenataDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Consultas\CSTestoque.resx">
+      <DependentUpon>CSTestoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Futuras implemetações\CSTavalicao.resx">
       <DependentUpon>CSTavalicao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTcliente.resx">
       <DependentUpon>CSTcliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\CSTingrediente.resx">
+    <EmbeddedResource Include="Futuras implemetações\CSTingrediente.resx">
       <DependentUpon>CSTingrediente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Futuras implemetações\CSTpagamento.resx">
@@ -259,23 +274,26 @@
     <EmbeddedResource Include="Consultas\CSTproduto.resx">
       <DependentUpon>CSTproduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\CSTreceita.resx">
+    <EmbeddedResource Include="Futuras implemetações\CSTreceita.resx">
       <DependentUpon>CSTreceita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTusuario.resx">
       <DependentUpon>CSTusuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmAtalhos.resx">
+      <DependentUpon>frmAtalhos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmPerfilUsu.resx">
+      <DependentUpon>frmPerfilUsu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\TelaDoSistema.resx">
       <DependentUpon>TelaDoSistema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Registros\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
@@ -309,14 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -341,30 +354,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\Gemini_Generated_Image_h8pjszh8pjszh8pj.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\Gemini_Generated_Image_opo6ayopo6ayopo6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\Gemini_Generated_Image_4no6fn4no6fn4no6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\Gemini_Generated_Image_zf2so3zf2so3zf2s.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\Gemini_Generated_Image_w5y6c4w5y6c4w5y6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\Gemini_Generated_Image_8znrfl8znrfl8znr.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\Gemini_Generated_Image_jygf82jygf82jygf.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resource\Gemini_Generated_Image_gq1fsdgq1fsdgq1f.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />

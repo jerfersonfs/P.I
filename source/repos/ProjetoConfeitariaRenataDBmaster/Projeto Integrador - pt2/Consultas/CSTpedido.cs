@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Integrador___pt2.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,6 +68,16 @@ namespace Projeto_Integrador___pt2.Consultas
             {
                 cntn.Close();
             }
+        }
+
+        public void showfrmPedido()
+        {
+            frmPedido frm = new frmPedido();
+            frm.ShowDialog();
+        }
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            showfrmPedido();
         }
     }
 }

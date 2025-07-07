@@ -102,5 +102,20 @@ namespace Projeto_Integrador___pt2.Formulários
                 MessageBox.Show("Erro ao inserir ID do ingrediente: " + ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorAddNewItem.PerformClick();
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorDeleteItem.PerformClick();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.estoqueBindingNavigatorSaveItem.PerformClick();
+        }
     }
 }

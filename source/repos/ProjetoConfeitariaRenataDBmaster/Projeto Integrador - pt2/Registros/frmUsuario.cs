@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Integrador___pt2.Consultas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -128,6 +129,32 @@ namespace Projeto_Integrador___pt2.Formulários
         private void id_clienteLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorAddNewItem.PerformClick();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorDeleteItem.PerformClick();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            this.usuarioBindingNavigatorSaveItem.PerformClick();
+            frmUsuario usu = new frmUsuario();
+            usu.Close();
+        }
+        public void exibirConsulta() 
+        {
+            CSTusuario cst = new CSTusuario();
+            cst.ShowDialog();
+        }
+        private void btnVisualizar_Click(object sender, EventArgs e)
+        {
+            exibirConsulta();
         }
     }
 }

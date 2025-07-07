@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.btn_Entrar = new System.Windows.Forms.Button();
@@ -101,11 +102,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 33.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(3, 30);
+            this.label1.Location = new System.Drawing.Point(32, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(543, 54);
+            this.label1.Size = new System.Drawing.Size(458, 45);
             this.label1.TabIndex = 8;
             this.label1.Text = "Renata - Confeitaria Artesanal";
             // 
@@ -120,7 +121,7 @@
             // senha_usuTextBox
             // 
             this.senha_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "senha_usu", true));
-            this.senha_usuTextBox.Location = new System.Drawing.Point(213, 216);
+            this.senha_usuTextBox.Location = new System.Drawing.Point(212, 210);
             this.senha_usuTextBox.Name = "senha_usuTextBox";
             this.senha_usuTextBox.Size = new System.Drawing.Size(100, 20);
             this.senha_usuTextBox.TabIndex = 10;
@@ -129,8 +130,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(566, 443);
+            this.ClientSize = new System.Drawing.Size(546, 389);
             this.Controls.Add(this.senha_usuTextBox);
             this.Controls.Add(this.email_usuTextBox);
             this.Controls.Add(this.label1);

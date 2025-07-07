@@ -20,13 +20,20 @@ namespace Projeto_Integrador___pt2.Formulários
             this.Size = base.Size;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
-
+        public void LimparCampos()
+        {
+            id_produtoTextBox.Clear();
+            nome_produtoTextBox.Clear();
+            preco_produtoTextBox.Clear();
+            id_categoriaTextBox.Clear();
+            promocaoTextBox.Clear();
+        }
         private void produtoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.produtoBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
-
+            this.LimparCampos();
         }
 
         private void frmProduto_Load(object sender, EventArgs e)
@@ -66,6 +73,23 @@ namespace Projeto_Integrador___pt2.Formulários
                 transaction.Rollback();
                 MessageBox.Show("Erro ao inserir ID da categoria: " + ex.Message);
             }
+        }
+
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorAddNewItem.PerformClick();
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorDeleteItem.PerformClick();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            this.produtoBindingNavigatorSaveItem.PerformClick();
+            frmProduto produto = new frmProduto();
+            produto.Close();
         }
     }
 }

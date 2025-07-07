@@ -75,5 +75,30 @@ namespace Projeto_Integrador___pt2.Formulários
         {
 
         }
+
+        private void categoriaDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorAddNewItem.PerformClick();
+        }
+
+        private void btn_Salvar_Click(object sender, EventArgs e)
+        {
+            this.categoriaBindingNavigatorSaveItem.PerformClick();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorDeleteItem.PerformClick();
+        }
     }
 }

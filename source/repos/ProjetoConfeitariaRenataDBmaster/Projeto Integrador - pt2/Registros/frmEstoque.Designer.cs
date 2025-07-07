@@ -54,7 +54,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.estoqueBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.estoqueDataGridView = new System.Windows.Forms.DataGridView();
             this.id_estoqueTextBox = new System.Windows.Forms.TextBox();
             this.cat_estoqueTextBox = new System.Windows.Forms.TextBox();
             this.nome_estoqueTextBox = new System.Windows.Forms.TextBox();
@@ -70,6 +69,8 @@
             this.ingredientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ingredientesTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.ingredientesTableAdapter();
             this.id_ingredienteTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.estoqueDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +78,9 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btn_excluir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             id_estoqueLabel = new System.Windows.Forms.Label();
             cat_estoqueLabel = new System.Windows.Forms.Label();
             nome_estoqueLabel = new System.Windows.Forms.Label();
@@ -88,16 +92,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingNavigator)).BeginInit();
             this.estoqueBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.estoqueDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientesBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.estoqueDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // id_estoqueLabel
             // 
             id_estoqueLabel.AutoSize = true;
             id_estoqueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_estoqueLabel.Location = new System.Drawing.Point(301, 198);
+            id_estoqueLabel.Location = new System.Drawing.Point(56, 23);
             id_estoqueLabel.Name = "id_estoqueLabel";
             id_estoqueLabel.Size = new System.Drawing.Size(50, 13);
             id_estoqueLabel.TabIndex = 2;
@@ -107,7 +112,7 @@
             // 
             cat_estoqueLabel.AutoSize = true;
             cat_estoqueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cat_estoqueLabel.Location = new System.Drawing.Point(301, 224);
+            cat_estoqueLabel.Location = new System.Drawing.Point(56, 49);
             cat_estoqueLabel.Name = "cat_estoqueLabel";
             cat_estoqueLabel.Size = new System.Drawing.Size(65, 13);
             cat_estoqueLabel.TabIndex = 4;
@@ -117,7 +122,7 @@
             // 
             nome_estoqueLabel.AutoSize = true;
             nome_estoqueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nome_estoqueLabel.Location = new System.Drawing.Point(301, 250);
+            nome_estoqueLabel.Location = new System.Drawing.Point(56, 75);
             nome_estoqueLabel.Name = "nome_estoqueLabel";
             nome_estoqueLabel.Size = new System.Drawing.Size(57, 13);
             nome_estoqueLabel.TabIndex = 6;
@@ -127,7 +132,7 @@
             // 
             data_movimentacaoLabel.AutoSize = true;
             data_movimentacaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            data_movimentacaoLabel.Location = new System.Drawing.Point(301, 303);
+            data_movimentacaoLabel.Location = new System.Drawing.Point(56, 128);
             data_movimentacaoLabel.Name = "data_movimentacaoLabel";
             data_movimentacaoLabel.Size = new System.Drawing.Size(141, 13);
             data_movimentacaoLabel.TabIndex = 10;
@@ -137,7 +142,7 @@
             // 
             quantidade_movimentadaLabel.AutoSize = true;
             quantidade_movimentadaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            quantidade_movimentadaLabel.Location = new System.Drawing.Point(301, 328);
+            quantidade_movimentadaLabel.Location = new System.Drawing.Point(56, 153);
             quantidade_movimentadaLabel.Name = "quantidade_movimentadaLabel";
             quantidade_movimentadaLabel.Size = new System.Drawing.Size(154, 13);
             quantidade_movimentadaLabel.TabIndex = 12;
@@ -147,7 +152,7 @@
             // 
             tipo_movimentacaoLabel.AutoSize = true;
             tipo_movimentacaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipo_movimentacaoLabel.Location = new System.Drawing.Point(301, 354);
+            tipo_movimentacaoLabel.Location = new System.Drawing.Point(56, 179);
             tipo_movimentacaoLabel.Name = "tipo_movimentacaoLabel";
             tipo_movimentacaoLabel.Size = new System.Drawing.Size(139, 13);
             tipo_movimentacaoLabel.TabIndex = 14;
@@ -157,7 +162,7 @@
             // 
             id_ingredienteLabel.AutoSize = true;
             id_ingredienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_ingredienteLabel.Location = new System.Drawing.Point(301, 279);
+            id_ingredienteLabel.Location = new System.Drawing.Point(56, 104);
             id_ingredienteLabel.Name = "id_ingredienteLabel";
             id_ingredienteLabel.Size = new System.Drawing.Size(92, 13);
             id_ingredienteLabel.TabIndex = 22;
@@ -223,6 +228,7 @@
             this.estoqueBindingNavigator.Size = new System.Drawing.Size(1025, 25);
             this.estoqueBindingNavigator.TabIndex = 0;
             this.estoqueBindingNavigator.Text = "bindingNavigator1";
+            this.estoqueBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -319,29 +325,10 @@
             this.estoqueBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.estoqueBindingNavigatorSaveItem.Click += new System.EventHandler(this.estoqueBindingNavigatorSaveItem_Click);
             // 
-            // estoqueDataGridView
-            // 
-            this.estoqueDataGridView.AutoGenerateColumns = false;
-            this.estoqueDataGridView.BackgroundColor = System.Drawing.Color.Plum;
-            this.estoqueDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.estoqueDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.estoqueDataGridView.DataSource = this.estoqueBindingSource;
-            this.estoqueDataGridView.Location = new System.Drawing.Point(97, 512);
-            this.estoqueDataGridView.Name = "estoqueDataGridView";
-            this.estoqueDataGridView.Size = new System.Drawing.Size(861, 435);
-            this.estoqueDataGridView.TabIndex = 1;
-            // 
             // id_estoqueTextBox
             // 
             this.id_estoqueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.estoqueBindingSource, "id_estoque", true));
-            this.id_estoqueTextBox.Location = new System.Drawing.Point(464, 194);
+            this.id_estoqueTextBox.Location = new System.Drawing.Point(219, 19);
             this.id_estoqueTextBox.Name = "id_estoqueTextBox";
             this.id_estoqueTextBox.Size = new System.Drawing.Size(200, 20);
             this.id_estoqueTextBox.TabIndex = 3;
@@ -349,7 +336,7 @@
             // cat_estoqueTextBox
             // 
             this.cat_estoqueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.estoqueBindingSource, "cat_estoque", true));
-            this.cat_estoqueTextBox.Location = new System.Drawing.Point(464, 220);
+            this.cat_estoqueTextBox.Location = new System.Drawing.Point(219, 45);
             this.cat_estoqueTextBox.Name = "cat_estoqueTextBox";
             this.cat_estoqueTextBox.Size = new System.Drawing.Size(200, 20);
             this.cat_estoqueTextBox.TabIndex = 5;
@@ -357,7 +344,7 @@
             // nome_estoqueTextBox
             // 
             this.nome_estoqueTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.estoqueBindingSource, "nome_estoque", true));
-            this.nome_estoqueTextBox.Location = new System.Drawing.Point(464, 246);
+            this.nome_estoqueTextBox.Location = new System.Drawing.Point(219, 71);
             this.nome_estoqueTextBox.Name = "nome_estoqueTextBox";
             this.nome_estoqueTextBox.Size = new System.Drawing.Size(200, 20);
             this.nome_estoqueTextBox.TabIndex = 7;
@@ -365,7 +352,7 @@
             // data_movimentacaoDateTimePicker
             // 
             this.data_movimentacaoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.estoqueBindingSource, "data_movimentacao", true));
-            this.data_movimentacaoDateTimePicker.Location = new System.Drawing.Point(464, 298);
+            this.data_movimentacaoDateTimePicker.Location = new System.Drawing.Point(219, 123);
             this.data_movimentacaoDateTimePicker.Name = "data_movimentacaoDateTimePicker";
             this.data_movimentacaoDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.data_movimentacaoDateTimePicker.TabIndex = 11;
@@ -373,7 +360,7 @@
             // quantidade_movimentadaTextBox
             // 
             this.quantidade_movimentadaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.estoqueBindingSource, "quantidade_movimentada", true));
-            this.quantidade_movimentadaTextBox.Location = new System.Drawing.Point(464, 324);
+            this.quantidade_movimentadaTextBox.Location = new System.Drawing.Point(219, 149);
             this.quantidade_movimentadaTextBox.Name = "quantidade_movimentadaTextBox";
             this.quantidade_movimentadaTextBox.Size = new System.Drawing.Size(200, 20);
             this.quantidade_movimentadaTextBox.TabIndex = 13;
@@ -381,7 +368,7 @@
             // tipo_movimentacaoTextBox
             // 
             this.tipo_movimentacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.estoqueBindingSource, "tipo_movimentacao", true));
-            this.tipo_movimentacaoTextBox.Location = new System.Drawing.Point(464, 350);
+            this.tipo_movimentacaoTextBox.Location = new System.Drawing.Point(219, 175);
             this.tipo_movimentacaoTextBox.Name = "tipo_movimentacaoTextBox";
             this.tipo_movimentacaoTextBox.Size = new System.Drawing.Size(200, 20);
             this.tipo_movimentacaoTextBox.TabIndex = 15;
@@ -394,9 +381,9 @@
             this.groupBox1.Controls.Add(this.txtPesquisar);
             this.groupBox1.Controls.Add(this.cbmFiltrar);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(97, 409);
+            this.groupBox1.Location = new System.Drawing.Point(456, 135);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(861, 83);
+            this.groupBox1.Size = new System.Drawing.Size(514, 60);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar";
@@ -404,7 +391,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(153, 37);
+            this.label1.Location = new System.Drawing.Point(152, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 13);
             this.label1.TabIndex = 3;
@@ -413,9 +400,9 @@
             // btnPesquisar
             // 
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Location = new System.Drawing.Point(438, 30);
+            this.btnPesquisar.Location = new System.Drawing.Point(346, 19);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(262, 29);
+            this.btnPesquisar.Size = new System.Drawing.Size(149, 26);
             this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
@@ -423,7 +410,7 @@
             // 
             // txtPesquisar
             // 
-            this.txtPesquisar.Location = new System.Drawing.Point(193, 35);
+            this.txtPesquisar.Location = new System.Drawing.Point(172, 22);
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(152, 20);
             this.txtPesquisar.TabIndex = 1;
@@ -432,7 +419,7 @@
             // 
             this.cbmFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbmFiltrar.FormattingEnabled = true;
-            this.cbmFiltrar.Location = new System.Drawing.Point(17, 34);
+            this.cbmFiltrar.Location = new System.Drawing.Point(15, 22);
             this.cbmFiltrar.Name = "cbmFiltrar";
             this.cbmFiltrar.Size = new System.Drawing.Size(130, 21);
             this.cbmFiltrar.TabIndex = 0;
@@ -440,10 +427,11 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Plum;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(316, 64);
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(333, 62);
+            this.textBox1.Size = new System.Drawing.Size(1025, 62);
             this.textBox1.TabIndex = 22;
             this.textBox1.Text = "Estoque";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -461,11 +449,58 @@
             // id_ingredienteTextBox
             // 
             this.id_ingredienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientesBindingSource, "id_ingrediente", true));
-            this.id_ingredienteTextBox.Location = new System.Drawing.Point(464, 272);
+            this.id_ingredienteTextBox.Location = new System.Drawing.Point(219, 97);
             this.id_ingredienteTextBox.Name = "id_ingredienteTextBox";
             this.id_ingredienteTextBox.Size = new System.Drawing.Size(200, 20);
             this.id_ingredienteTextBox.TabIndex = 23;
             this.id_ingredienteTextBox.TextChanged += new System.EventHandler(this.id_ingredienteTextBox_TextChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.estoqueDataGridView);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btn_excluir);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(id_estoqueLabel);
+            this.groupBox2.Controls.Add(id_ingredienteLabel);
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Controls.Add(this.tipo_movimentacaoTextBox);
+            this.groupBox2.Controls.Add(this.id_ingredienteTextBox);
+            this.groupBox2.Controls.Add(tipo_movimentacaoLabel);
+            this.groupBox2.Controls.Add(this.quantidade_movimentadaTextBox);
+            this.groupBox2.Controls.Add(quantidade_movimentadaLabel);
+            this.groupBox2.Controls.Add(this.data_movimentacaoDateTimePicker);
+            this.groupBox2.Controls.Add(this.id_estoqueTextBox);
+            this.groupBox2.Controls.Add(data_movimentacaoLabel);
+            this.groupBox2.Controls.Add(cat_estoqueLabel);
+            this.groupBox2.Controls.Add(this.nome_estoqueTextBox);
+            this.groupBox2.Controls.Add(this.cat_estoqueTextBox);
+            this.groupBox2.Controls.Add(nome_estoqueLabel);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 62);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1025, 687);
+            this.groupBox2.TabIndex = 24;
+            this.groupBox2.TabStop = false;
+            // 
+            // estoqueDataGridView
+            // 
+            this.estoqueDataGridView.AutoGenerateColumns = false;
+            this.estoqueDataGridView.BackgroundColor = System.Drawing.Color.Plum;
+            this.estoqueDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.estoqueDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.estoqueDataGridView.DataSource = this.estoqueBindingSource;
+            this.estoqueDataGridView.Location = new System.Drawing.Point(75, 227);
+            this.estoqueDataGridView.Name = "estoqueDataGridView";
+            this.estoqueDataGridView.Size = new System.Drawing.Size(861, 435);
+            this.estoqueDataGridView.TabIndex = 27;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -515,30 +550,47 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Width = 120;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(641, 23);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 26;
+            this.button3.Text = "Salvar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btn_excluir
+            // 
+            this.btn_excluir.Location = new System.Drawing.Point(560, 23);
+            this.btn_excluir.Name = "btn_excluir";
+            this.btn_excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn_excluir.TabIndex = 25;
+            this.btn_excluir.Text = "Excluir";
+            this.btn_excluir.UseVisualStyleBackColor = true;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(456, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Incluir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1025, 749);
-            this.Controls.Add(id_ingredienteLabel);
-            this.Controls.Add(this.id_ingredienteTextBox);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(id_estoqueLabel);
-            this.Controls.Add(this.id_estoqueTextBox);
-            this.Controls.Add(cat_estoqueLabel);
-            this.Controls.Add(this.cat_estoqueTextBox);
-            this.Controls.Add(nome_estoqueLabel);
-            this.Controls.Add(this.nome_estoqueTextBox);
-            this.Controls.Add(data_movimentacaoLabel);
-            this.Controls.Add(this.data_movimentacaoDateTimePicker);
-            this.Controls.Add(quantidade_movimentadaLabel);
-            this.Controls.Add(this.quantidade_movimentadaTextBox);
-            this.Controls.Add(tipo_movimentacaoLabel);
-            this.Controls.Add(this.tipo_movimentacaoTextBox);
-            this.Controls.Add(this.estoqueDataGridView);
             this.Controls.Add(this.estoqueBindingNavigator);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmEstoque";
             this.Text = "Administração de estoque";
             this.Load += new System.EventHandler(this.frmEstoque_Load);
@@ -547,10 +599,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingNavigator)).EndInit();
             this.estoqueBindingNavigator.ResumeLayout(false);
             this.estoqueBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.estoqueDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ingredientesBindingSource)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.estoqueDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,7 +629,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton estoqueBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView estoqueDataGridView;
         private System.Windows.Forms.TextBox id_estoqueTextBox;
         private System.Windows.Forms.TextBox cat_estoqueTextBox;
         private System.Windows.Forms.TextBox nome_estoqueTextBox;
@@ -591,6 +644,11 @@
         private System.Windows.Forms.BindingSource ingredientesBindingSource;
         private RenataDBDataSetTableAdapters.ingredientesTableAdapter ingredientesTableAdapter;
         private System.Windows.Forms.TextBox id_ingredienteTextBox;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_excluir;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView estoqueDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

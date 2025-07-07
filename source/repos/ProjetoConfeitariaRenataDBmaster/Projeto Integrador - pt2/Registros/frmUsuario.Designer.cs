@@ -40,6 +40,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
             this.usuarioBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -60,12 +62,15 @@
             this.data_cadastroDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.repitasenhatxtBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.usuarioTableAdapter();
             this.tableAdapterManager = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
             this.clienteTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.clienteTableAdapter();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnVisualizar = new System.Windows.Forms.Button();
             id_usuLabel = new System.Windows.Forms.Label();
             nome_usuLabel = new System.Windows.Forms.Label();
             senha_usuLabel = new System.Windows.Forms.Label();
@@ -79,13 +84,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // id_usuLabel
             // 
             id_usuLabel.AutoSize = true;
             id_usuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_usuLabel.Location = new System.Drawing.Point(180, 233);
+            id_usuLabel.Location = new System.Drawing.Point(37, 81);
             id_usuLabel.Name = "id_usuLabel";
             id_usuLabel.Size = new System.Drawing.Size(50, 13);
             id_usuLabel.TabIndex = 1;
@@ -96,7 +102,7 @@
             // 
             nome_usuLabel.AutoSize = true;
             nome_usuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nome_usuLabel.Location = new System.Drawing.Point(180, 259);
+            nome_usuLabel.Location = new System.Drawing.Point(37, 107);
             nome_usuLabel.Name = "nome_usuLabel";
             nome_usuLabel.Size = new System.Drawing.Size(43, 13);
             nome_usuLabel.TabIndex = 3;
@@ -106,7 +112,7 @@
             // 
             senha_usuLabel.AutoSize = true;
             senha_usuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            senha_usuLabel.Location = new System.Drawing.Point(490, 232);
+            senha_usuLabel.Location = new System.Drawing.Point(347, 80);
             senha_usuLabel.Name = "senha_usuLabel";
             senha_usuLabel.Size = new System.Drawing.Size(47, 13);
             senha_usuLabel.TabIndex = 5;
@@ -116,7 +122,7 @@
             // 
             celular_usuLabel.AutoSize = true;
             celular_usuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            celular_usuLabel.Location = new System.Drawing.Point(310, 353);
+            celular_usuLabel.Location = new System.Drawing.Point(171, 147);
             celular_usuLabel.Name = "celular_usuLabel";
             celular_usuLabel.Size = new System.Drawing.Size(50, 13);
             celular_usuLabel.TabIndex = 7;
@@ -126,7 +132,7 @@
             // 
             telefone_usuLabel.AutoSize = true;
             telefone_usuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telefone_usuLabel.Location = new System.Drawing.Point(310, 379);
+            telefone_usuLabel.Location = new System.Drawing.Point(171, 173);
             telefone_usuLabel.Name = "telefone_usuLabel";
             telefone_usuLabel.Size = new System.Drawing.Size(61, 13);
             telefone_usuLabel.TabIndex = 9;
@@ -136,7 +142,7 @@
             // 
             email_usuLabel.AutoSize = true;
             email_usuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            email_usuLabel.Location = new System.Drawing.Point(310, 405);
+            email_usuLabel.Location = new System.Drawing.Point(171, 199);
             email_usuLabel.Name = "email_usuLabel";
             email_usuLabel.Size = new System.Drawing.Size(41, 13);
             email_usuLabel.TabIndex = 11;
@@ -146,7 +152,7 @@
             // 
             data_cadastroLabel.AutoSize = true;
             data_cadastroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            data_cadastroLabel.Location = new System.Drawing.Point(384, 126);
+            data_cadastroLabel.Location = new System.Drawing.Point(245, 23);
             data_cadastroLabel.Name = "data_cadastroLabel";
             data_cadastroLabel.Size = new System.Drawing.Size(110, 13);
             data_cadastroLabel.TabIndex = 13;
@@ -156,7 +162,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.Location = new System.Drawing.Point(490, 258);
+            label2.Location = new System.Drawing.Point(347, 106);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(86, 13);
             label2.TabIndex = 19;
@@ -192,6 +198,7 @@
             this.usuarioBindingNavigator.Size = new System.Drawing.Size(942, 25);
             this.usuarioBindingNavigator.TabIndex = 0;
             this.usuarioBindingNavigator.Text = "bindingNavigator1";
+            this.usuarioBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -201,6 +208,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "usuario";
+            this.usuarioBindingSource.DataSource = this.renataDBDataSet;
+            // 
+            // renataDBDataSet
+            // 
+            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
+            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -291,7 +308,7 @@
             // id_usuTextBox
             // 
             this.id_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "id_usu", true));
-            this.id_usuTextBox.Location = new System.Drawing.Point(247, 230);
+            this.id_usuTextBox.Location = new System.Drawing.Point(104, 78);
             this.id_usuTextBox.Name = "id_usuTextBox";
             this.id_usuTextBox.Size = new System.Drawing.Size(56, 20);
             this.id_usuTextBox.TabIndex = 2;
@@ -299,7 +316,7 @@
             // nome_usuTextBox
             // 
             this.nome_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "nome_usu", true));
-            this.nome_usuTextBox.Location = new System.Drawing.Point(247, 256);
+            this.nome_usuTextBox.Location = new System.Drawing.Point(104, 104);
             this.nome_usuTextBox.Name = "nome_usuTextBox";
             this.nome_usuTextBox.Size = new System.Drawing.Size(183, 20);
             this.nome_usuTextBox.TabIndex = 4;
@@ -307,7 +324,7 @@
             // senha_usuTextBox
             // 
             this.senha_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "senha_usu", true));
-            this.senha_usuTextBox.Location = new System.Drawing.Point(582, 229);
+            this.senha_usuTextBox.Location = new System.Drawing.Point(439, 77);
             this.senha_usuTextBox.Name = "senha_usuTextBox";
             this.senha_usuTextBox.Size = new System.Drawing.Size(123, 20);
             this.senha_usuTextBox.TabIndex = 6;
@@ -316,7 +333,7 @@
             // celular_usuTextBox
             // 
             this.celular_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "celular_usu", true));
-            this.celular_usuTextBox.Location = new System.Drawing.Point(377, 350);
+            this.celular_usuTextBox.Location = new System.Drawing.Point(238, 144);
             this.celular_usuTextBox.Name = "celular_usuTextBox";
             this.celular_usuTextBox.Size = new System.Drawing.Size(183, 20);
             this.celular_usuTextBox.TabIndex = 8;
@@ -324,7 +341,7 @@
             // telefone_usuTextBox
             // 
             this.telefone_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "telefone_usu", true));
-            this.telefone_usuTextBox.Location = new System.Drawing.Point(377, 376);
+            this.telefone_usuTextBox.Location = new System.Drawing.Point(238, 170);
             this.telefone_usuTextBox.Name = "telefone_usuTextBox";
             this.telefone_usuTextBox.Size = new System.Drawing.Size(183, 20);
             this.telefone_usuTextBox.TabIndex = 10;
@@ -333,7 +350,7 @@
             // email_usuTextBox
             // 
             this.email_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "email_usu", true));
-            this.email_usuTextBox.Location = new System.Drawing.Point(377, 402);
+            this.email_usuTextBox.Location = new System.Drawing.Point(238, 196);
             this.email_usuTextBox.Name = "email_usuTextBox";
             this.email_usuTextBox.Size = new System.Drawing.Size(183, 20);
             this.email_usuTextBox.TabIndex = 12;
@@ -342,7 +359,7 @@
             // 
             this.data_cadastroDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuarioBindingSource, "data_cadastro", true));
             this.data_cadastroDateTimePicker.Enabled = false;
-            this.data_cadastroDateTimePicker.Location = new System.Drawing.Point(344, 152);
+            this.data_cadastroDateTimePicker.Location = new System.Drawing.Point(205, 41);
             this.data_cadastroDateTimePicker.Name = "data_cadastroDateTimePicker";
             this.data_cadastroDateTimePicker.Size = new System.Drawing.Size(216, 20);
             this.data_cadastroDateTimePicker.TabIndex = 14;
@@ -350,7 +367,7 @@
             // repitasenhatxtBox
             // 
             this.repitasenhatxtBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "senha_usu", true));
-            this.repitasenhatxtBox.Location = new System.Drawing.Point(582, 255);
+            this.repitasenhatxtBox.Location = new System.Drawing.Point(439, 103);
             this.repitasenhatxtBox.Name = "repitasenhatxtBox";
             this.repitasenhatxtBox.Size = new System.Drawing.Size(123, 20);
             this.repitasenhatxtBox.TabIndex = 20;
@@ -359,23 +376,14 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Plum;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(216, 40);
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.MaxLength = 456754;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(452, 62);
+            this.textBox1.Size = new System.Drawing.Size(833, 49);
             this.textBox1.TabIndex = 21;
             this.textBox1.Text = "Cadastro de Usuário";
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "usuario";
-            this.usuarioBindingSource.DataSource = this.renataDBDataSet;
-            // 
-            // renataDBDataSet
-            // 
-            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
-            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clienteBindingSource
             // 
@@ -407,33 +415,85 @@
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.id_usuTextBox);
+            this.groupBox1.Controls.Add(this.email_usuTextBox);
+            this.groupBox1.Controls.Add(data_cadastroLabel);
+            this.groupBox1.Controls.Add(this.data_cadastroDateTimePicker);
+            this.groupBox1.Controls.Add(label2);
+            this.groupBox1.Controls.Add(email_usuLabel);
+            this.groupBox1.Controls.Add(this.repitasenhatxtBox);
+            this.groupBox1.Controls.Add(this.telefone_usuTextBox);
+            this.groupBox1.Controls.Add(id_usuLabel);
+            this.groupBox1.Controls.Add(telefone_usuLabel);
+            this.groupBox1.Controls.Add(this.celular_usuTextBox);
+            this.groupBox1.Controls.Add(nome_usuLabel);
+            this.groupBox1.Controls.Add(celular_usuLabel);
+            this.groupBox1.Controls.Add(this.nome_usuTextBox);
+            this.groupBox1.Controls.Add(this.senha_usuTextBox);
+            this.groupBox1.Controls.Add(senha_usuLabel);
+            this.groupBox1.Location = new System.Drawing.Point(69, 79);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(637, 244);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(475, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Incluir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(567, 12);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 25);
+            this.btnExcluir.TabIndex = 24;
+            this.btnExcluir.Text = "Deletar";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(659, 12);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 25);
+            this.btnSalvar.TabIndex = 25;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnVisualizar
+            // 
+            this.btnVisualizar.Location = new System.Drawing.Point(746, 12);
+            this.btnVisualizar.Name = "btnVisualizar";
+            this.btnVisualizar.Size = new System.Drawing.Size(75, 25);
+            this.btnVisualizar.TabIndex = 26;
+            this.btnVisualizar.Text = "Vizualizar";
+            this.btnVisualizar.UseVisualStyleBackColor = true;
+            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(942, 491);
+            this.ClientSize = new System.Drawing.Size(833, 375);
+            this.Controls.Add(this.btnVisualizar);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(label2);
-            this.Controls.Add(this.repitasenhatxtBox);
-            this.Controls.Add(id_usuLabel);
-            this.Controls.Add(this.id_usuTextBox);
-            this.Controls.Add(nome_usuLabel);
-            this.Controls.Add(this.nome_usuTextBox);
-            this.Controls.Add(senha_usuLabel);
-            this.Controls.Add(this.senha_usuTextBox);
-            this.Controls.Add(celular_usuLabel);
-            this.Controls.Add(this.celular_usuTextBox);
-            this.Controls.Add(telefone_usuLabel);
-            this.Controls.Add(this.telefone_usuTextBox);
-            this.Controls.Add(email_usuLabel);
-            this.Controls.Add(this.email_usuTextBox);
-            this.Controls.Add(data_cadastroLabel);
-            this.Controls.Add(this.data_cadastroDateTimePicker);
             this.Controls.Add(this.usuarioBindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmUsuario";
-            this.Text = "Cadastro de usuário";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingNavigator)).EndInit();
             this.usuarioBindingNavigator.ResumeLayout(false);
@@ -441,6 +501,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -476,5 +538,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private RenataDBDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnVisualizar;
     }
 }

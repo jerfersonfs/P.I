@@ -95,5 +95,16 @@ namespace Projeto_Integrador___pt2.Consultas
                 (sender, e);
             }
         }
+
+        public void showFrmCliente()
+        {
+            Registros.frmCliente frm = new Registros.frmCliente();
+            frm.ShowDialog();
+        }
+
+        private void bntIncluir_Click(object sender, EventArgs e)
+        {
+           this.showFrmCliente();
+        }
     }
 }

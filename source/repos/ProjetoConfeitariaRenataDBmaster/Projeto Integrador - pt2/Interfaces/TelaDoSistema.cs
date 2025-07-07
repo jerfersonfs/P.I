@@ -1,6 +1,7 @@
 ﻿using Microsoft.ReportingServices.RdlExpressions.ExpressionHostObjectModel;
 using Projeto_Integrador___pt2.Consultas;
 using Projeto_Integrador___pt2.Formulários;
+using Projeto_Integrador___pt2.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -542,6 +543,66 @@ namespace Projeto_Integrador___pt2.Interfaces
         private void receitasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             exibeFrmReceita();
+        }
+
+        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsslUsu_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        // ---> Parte em que o usuário reloga no sistema <---
+        public void exibeLogin()
+        {
+            try
+            {
+                frmLogin login = null;
+                foreach (Form frm in this.MdiChildren)
+                {
+                    if (frm is frmLogin)
+                    {
+                        login = (frmLogin)frm;
+                        break;
+                    }
+                }
+                if (login == null)
+                {
+                    login = new frmLogin();
+                    login.MdiParent = this;
+                    login.Show();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
+            }
+        }
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair do sistema?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+                exibeLogin();
+            }
+        }
+
+        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //adicionar código para visualizar perfil do usuário
+        }
+
+        private void atalhosDoSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //adicionar código para viusalizar atalhos do sistema
+            
         }
     }
 }

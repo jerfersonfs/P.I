@@ -161,5 +161,20 @@ namespace Projeto_Integrador___pt2.Formulários
             }
 
         }
+
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorAddNewItem.PerformClick();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorDeleteItem.PerformClick();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            this.eventosBindingNavigatorSaveItem.PerformClick();
+        }
     }
 }
