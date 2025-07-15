@@ -35,8 +35,8 @@
             System.Windows.Forms.Label promocaoLabel;
             System.Windows.Forms.Label data_inicio_promocaoLabel;
             System.Windows.Forms.Label data_fim_promocaoLabel;
-            System.Windows.Forms.Label id_categoriaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProduto));
+            System.Windows.Forms.Label fKid_categoriaLabel;
             this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.produtoTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.produtoTableAdapter();
@@ -63,17 +63,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.categoriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriaTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.categoriaTableAdapter();
-            this.id_categoriaTextBox = new System.Windows.Forms.TextBox();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.fKid_categoriaTextBox = new System.Windows.Forms.TextBox();
             id_produtoLabel = new System.Windows.Forms.Label();
             nome_produtoLabel = new System.Windows.Forms.Label();
             preco_produtoLabel = new System.Windows.Forms.Label();
             promocaoLabel = new System.Windows.Forms.Label();
             data_inicio_promocaoLabel = new System.Windows.Forms.Label();
             data_fim_promocaoLabel = new System.Windows.Forms.Label();
-            id_categoriaLabel = new System.Windows.Forms.Label();
+            fKid_categoriaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingNavigator)).BeginInit();
@@ -140,16 +140,6 @@
             data_fim_promocaoLabel.Size = new System.Drawing.Size(153, 13);
             data_fim_promocaoLabel.TabIndex = 14;
             data_fim_promocaoLabel.Text = "Data do fim da promoção:";
-            // 
-            // id_categoriaLabel
-            // 
-            id_categoriaLabel.AutoSize = true;
-            id_categoriaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_categoriaLabel.Location = new System.Drawing.Point(109, 231);
-            id_categoriaLabel.Name = "id_categoriaLabel";
-            id_categoriaLabel.Size = new System.Drawing.Size(82, 13);
-            id_categoriaLabel.TabIndex = 22;
-            id_categoriaLabel.Text = "ID Categoria:";
             // 
             // renataDBDataSet
             // 
@@ -377,15 +367,6 @@
             // 
             this.categoriaTableAdapter.ClearBeforeFill = true;
             // 
-            // id_categoriaTextBox
-            // 
-            this.id_categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource, "id_categoria", true));
-            this.id_categoriaTextBox.Location = new System.Drawing.Point(284, 228);
-            this.id_categoriaTextBox.Name = "id_categoriaTextBox";
-            this.id_categoriaTextBox.Size = new System.Drawing.Size(200, 20);
-            this.id_categoriaTextBox.TabIndex = 23;
-            this.id_categoriaTextBox.TextChanged += new System.EventHandler(this.id_categoriaTextBox_TextChanged);
-            // 
             // btnIncluir
             // 
             this.btnIncluir.Location = new System.Drawing.Point(172, 97);
@@ -416,17 +397,35 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // fKid_categoriaLabel
+            // 
+            fKid_categoriaLabel.AutoSize = true;
+            fKid_categoriaLabel.Location = new System.Drawing.Point(109, 231);
+            fKid_categoriaLabel.Name = "fKid_categoriaLabel";
+            fKid_categoriaLabel.Size = new System.Drawing.Size(78, 13);
+            fKid_categoriaLabel.TabIndex = 26;
+            fKid_categoriaLabel.Text = "FKid categoria:";
+            // 
+            // fKid_categoriaTextBox
+            // 
+            this.fKid_categoriaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource, "FKid_categoria", true));
+            this.fKid_categoriaTextBox.Location = new System.Drawing.Point(284, 228);
+            this.fKid_categoriaTextBox.Name = "fKid_categoriaTextBox";
+            this.fKid_categoriaTextBox.Size = new System.Drawing.Size(200, 20);
+            this.fKid_categoriaTextBox.TabIndex = 27;
+            this.fKid_categoriaTextBox.TextChanged += new System.EventHandler(this.fKid_categoriaTextBox_TextChanged);
+            // 
             // frmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(594, 419);
+            this.Controls.Add(fKid_categoriaLabel);
+            this.Controls.Add(this.fKid_categoriaTextBox);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnIncluir);
-            this.Controls.Add(id_categoriaLabel);
-            this.Controls.Add(this.id_categoriaTextBox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(id_produtoLabel);
             this.Controls.Add(this.id_produtoTextBox);
@@ -484,9 +483,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource categoriaBindingSource;
         private RenataDBDataSetTableAdapters.categoriaTableAdapter categoriaTableAdapter;
-        private System.Windows.Forms.TextBox id_categoriaTextBox;
         private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.TextBox fKid_categoriaTextBox;
     }
 }

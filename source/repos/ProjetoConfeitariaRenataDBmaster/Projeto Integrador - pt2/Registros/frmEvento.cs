@@ -91,31 +91,6 @@ namespace Projeto_Integrador___pt2.Formulários
 
         }
 
-        private void id_clienteTextBox_TextChanged(object sender, EventArgs e)
-        {
-            SqlTransaction transaction = cntn.Connection.BeginTransaction();
-            try
-            {
-                using (SqlConnection cntn = new SqlConnection())
-                {
-                    cntn.Open();
-                    string query = "INSERT INTO Evento(FKid_cliente) WHERE nome_usu = nome_cliente AND celular_usu = celular_cliente VALUES Cliente(id_cliente)";
-                    using (SqlCommand cmd = new SqlCommand(query, cntn, transaction))
-                    {
-                        cmd.Parameters.AddWithValue("id_cliente", id_clienteTextBox.Text);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                transaction.Commit();
-                MessageBox.Show("ID do cliente inserido com sucesso!");
-            }
-            catch (Exception ex)
-            {
-                transaction.Rollback();
-                MessageBox.Show("Erro ao inserir ID do cliente: " + ex.Message);
-            }
-        }
-
         public async Task BuscarCep()
         {
             if (cep_evento.MaxInputLength == 9)
@@ -175,6 +150,11 @@ namespace Projeto_Integrador___pt2.Formulários
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             this.eventosBindingNavigatorSaveItem.PerformClick();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

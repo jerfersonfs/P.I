@@ -32,7 +32,7 @@ namespace Projeto_Integrador___pt2.Interfaces
         }
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            email_usuTextBox.Text = "";
+            nome_usuTextBox.Text = "";
             this.usuarioTableAdapter.Fill(this.renataDBDataSet.usuario);
             this.usuarioTableAdapter.Fill(this.renataDBDataSet.usuario);
             this.usuarioTableAdapter.Fill(this.renataDBDataSet.usuario);
@@ -57,10 +57,10 @@ namespace Projeto_Integrador___pt2.Interfaces
           
                 try
                 {
-                    if ((email_usuTextBox.Text != "") && (senha_usuTextBox.Text != ""))
+                    if ((nome_usuTextBox.Text != "") && (senha_usuTextBox.Text != ""))
                     {
-                        SqlCommand connection = new SqlCommand("SELECT * FROM usuario WHERE email_usu = @email AND senha_usu = @senha", conn);
-                        connection.Parameters.Add("@usuario", SqlDbType.VarChar).Value = email_usuTextBox.Text;
+                        SqlCommand connection = new SqlCommand("SELECT * FROM usuario WHERE nome_usu = @usuario AND senha_usu = @senha", conn);
+                        connection.Parameters.Add("@usuario", SqlDbType.VarChar).Value = nome_usuTextBox.Text;
                         connection.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha_usuTextBox.Text;
 
                         conn.Open();
@@ -68,7 +68,7 @@ namespace Projeto_Integrador___pt2.Interfaces
                         reader = connection.ExecuteReader();
                         if (reader.Read())
                         {
-                            usuarioLogado = email_usuTextBox.Text;
+                            usuarioLogado = nome_usuTextBox.Text;
 
                             TelaDoSistema menu = new TelaDoSistema();
 

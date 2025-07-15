@@ -37,8 +37,8 @@
             this.usuarioTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.usuarioTableAdapter();
             this.tableAdapterManager = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
             this.label1 = new System.Windows.Forms.Label();
-            this.email_usuTextBox = new System.Windows.Forms.TextBox();
             this.senha_usuTextBox = new System.Windows.Forms.TextBox();
+            this.nome_usuTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
             this.SuspendLayout();
@@ -110,21 +110,21 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Renata - Confeitaria Artesanal";
             // 
-            // email_usuTextBox
-            // 
-            this.email_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "email_usu", true));
-            this.email_usuTextBox.Location = new System.Drawing.Point(165, 175);
-            this.email_usuTextBox.Name = "email_usuTextBox";
-            this.email_usuTextBox.Size = new System.Drawing.Size(199, 20);
-            this.email_usuTextBox.TabIndex = 9;
-            // 
             // senha_usuTextBox
             // 
             this.senha_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "senha_usu", true));
-            this.senha_usuTextBox.Location = new System.Drawing.Point(212, 210);
+            this.senha_usuTextBox.Location = new System.Drawing.Point(212, 216);
             this.senha_usuTextBox.Name = "senha_usuTextBox";
             this.senha_usuTextBox.Size = new System.Drawing.Size(100, 20);
             this.senha_usuTextBox.TabIndex = 10;
+            // 
+            // nome_usuTextBox
+            // 
+            this.nome_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "nome_usu", true));
+            this.nome_usuTextBox.Location = new System.Drawing.Point(184, 181);
+            this.nome_usuTextBox.Name = "nome_usuTextBox";
+            this.nome_usuTextBox.Size = new System.Drawing.Size(159, 20);
+            this.nome_usuTextBox.TabIndex = 11;
             // 
             // frmLogin
             // 
@@ -133,8 +133,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(546, 389);
+            this.Controls.Add(this.nome_usuTextBox);
             this.Controls.Add(this.senha_usuTextBox);
-            this.Controls.Add(this.email_usuTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Sair);
             this.Controls.Add(this.btn_Entrar);
@@ -161,7 +161,7 @@
         private System.Windows.Forms.Button btn_Entrar;
         private System.Windows.Forms.Button btn_Sair;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox email_usuTextBox;
         private System.Windows.Forms.TextBox senha_usuTextBox;
+        private System.Windows.Forms.TextBox nome_usuTextBox;
     }
 }

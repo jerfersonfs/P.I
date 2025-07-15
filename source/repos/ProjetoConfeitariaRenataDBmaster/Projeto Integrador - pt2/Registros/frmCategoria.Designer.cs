@@ -399,6 +399,7 @@
             this.cabecalhoBox.Size = new System.Drawing.Size(872, 478);
             this.cabecalhoBox.TabIndex = 22;
             this.cabecalhoBox.TabStop = false;
+            this.cabecalhoBox.Enter += new System.EventHandler(this.cabecalhoBox_Enter);
             // 
             // categoriaDataGridView
             // 

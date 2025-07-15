@@ -22,11 +22,11 @@ namespace Projeto_Integrador___pt2.Formulários
         }
         public void LimparCampos()
         {
-            id_produtoTextBox.Clear();
-            nome_produtoTextBox.Clear();
-            preco_produtoTextBox.Clear();
-            id_categoriaTextBox.Clear();
-            promocaoTextBox.Clear();
+            id_produtoTextBox.Text="";
+            nome_produtoTextBox.Text = "";
+            preco_produtoTextBox.Text = "";
+            fKid_categoriaTextBox.Text = "";
+            promocaoTextBox.Text = "";
         }
         private void produtoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -49,32 +49,8 @@ namespace Projeto_Integrador___pt2.Formulários
         {
            
         }
-
-        private void id_categoriaTextBox_TextChanged(object sender, EventArgs e)
-        {
-            SqlTransaction transaction = cntn.Connection.BeginTransaction();
-            try
-            {
-                using (SqlConnection cntn = new SqlConnection())
-                {
-                    cntn.Open();
-                    string query = "INSERT INTO Produto(FKid_categoria) WHERE VALUES Categoria(id_categoria) ";
-                    using (SqlCommand cmd = new SqlCommand(query, cntn, transaction))
-                    {
-                        cmd.Parameters.AddWithValue("id_cliente", id_categoriaTextBox);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                transaction.Commit();
-                MessageBox.Show("ID da categoria inserido com sucesso!");
-            }
-            catch (Exception ex)
-            {
-                transaction.Rollback();
-                MessageBox.Show("Erro ao inserir ID da categoria: " + ex.Message);
-            }
-        }
-
+        
+ 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
             this.bindingNavigatorAddNewItem.PerformClick();
@@ -90,6 +66,34 @@ namespace Projeto_Integrador___pt2.Formulários
             this.produtoBindingNavigatorSaveItem.PerformClick();
             frmProduto produto = new frmProduto();
             produto.Close();
+        }
+
+        private void fKid_categoriaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try 
+            { 
+                using (SqlConnection conn = new SqlConnection(cntn.connectionString))
+                {
+                    conn.Open();
+                    string query = @"
+                        INSERT INTO Produto (nome_produto, preco_produto, FKid_categoria, promocao)
+                        SELECT @nome_produto, @preco_produto, c.id_categoria, @promocao
+                        FROM Categoria c
+                        WHERE c.id_categoria = @id_categoria";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@nome_produto", nome_produtoTextBox.Text);
+                        cmd.Parameters.AddWithValue("@preco_produto", preco_produtoTextBox.Text);
+                        cmd.Parameters.AddWithValue("@id_categoria", fKid_categoriaTextBox.Text);
+                        cmd.Parameters.AddWithValue("@promocao", promocaoTextBox.Text);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível inserir valor da categoria" + ex);
+            }
         }
     }
 }

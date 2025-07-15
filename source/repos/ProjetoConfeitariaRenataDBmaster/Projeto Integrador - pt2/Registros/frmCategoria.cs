@@ -100,5 +100,10 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             this.bindingNavigatorDeleteItem.PerformClick();
         }
+
+        private void cabecalhoBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

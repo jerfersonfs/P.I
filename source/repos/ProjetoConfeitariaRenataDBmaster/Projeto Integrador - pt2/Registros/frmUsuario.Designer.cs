@@ -195,7 +195,7 @@
             this.usuarioBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.usuarioBindingNavigator.Name = "usuarioBindingNavigator";
             this.usuarioBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.usuarioBindingNavigator.Size = new System.Drawing.Size(942, 25);
+            this.usuarioBindingNavigator.Size = new System.Drawing.Size(833, 25);
             this.usuarioBindingNavigator.TabIndex = 0;
             this.usuarioBindingNavigator.Text = "bindingNavigator1";
             this.usuarioBindingNavigator.Visible = false;
@@ -358,7 +358,6 @@
             // data_cadastroDateTimePicker
             // 
             this.data_cadastroDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.usuarioBindingSource, "data_cadastro", true));
-            this.data_cadastroDateTimePicker.Enabled = false;
             this.data_cadastroDateTimePicker.Location = new System.Drawing.Point(205, 41);
             this.data_cadastroDateTimePicker.Name = "data_cadastroDateTimePicker";
             this.data_cadastroDateTimePicker.Size = new System.Drawing.Size(216, 20);
@@ -377,6 +376,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.Plum;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.MaxLength = 456754;

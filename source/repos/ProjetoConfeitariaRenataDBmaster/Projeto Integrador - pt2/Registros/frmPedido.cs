@@ -127,5 +127,10 @@ namespace Projeto_Integrador___pt2.Registros
         {
             this.Close();
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -402,7 +402,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(1370, 62);
             this.textBox1.TabIndex = 29;
-            this.textBox1.Text = "Cosultar clientes";
+            this.textBox1.Text = "Consultar clientes";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // bntIncluir

@@ -292,6 +292,7 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados de pedidos";
             this.groupBox2.Visible = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // item_pedidoDataGridView
             // 

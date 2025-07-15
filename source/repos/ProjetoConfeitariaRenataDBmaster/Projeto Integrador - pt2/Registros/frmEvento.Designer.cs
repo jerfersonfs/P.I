@@ -35,7 +35,6 @@
             System.Windows.Forms.Label horário_eventoLabel;
             System.Windows.Forms.Label num_convidadosLabel;
             System.Windows.Forms.Label valor_eventoLabel;
-            System.Windows.Forms.Label id_clienteLabel;
             System.Windows.Forms.Label cep_eventoLabel;
             System.Windows.Forms.Label rua_eventoLabel;
             System.Windows.Forms.Label num_residencia_eventoLabel;
@@ -43,6 +42,7 @@
             System.Windows.Forms.Label cidade_eventoLabel;
             System.Windows.Forms.Label estado_eventoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvento));
+            System.Windows.Forms.Label fKid_clienteLabel;
             this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.eventosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventosTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.eventosTableAdapter();
@@ -74,7 +74,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.clienteTableAdapter();
-            this.id_clienteTextBox = new System.Windows.Forms.TextBox();
             this.cep_eventoTextBox = new System.Windows.Forms.TextBox();
             this.rua_eventoTextBox = new System.Windows.Forms.TextBox();
             this.num_residencia_eventoTextBox = new System.Windows.Forms.TextBox();
@@ -82,9 +81,6 @@
             this.cidade_eventoTextBox = new System.Windows.Forms.TextBox();
             this.estado_eventoTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnIncluir = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.eventosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,19 +95,23 @@
             this.bairr_evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidade_evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado_evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnIncluir = new System.Windows.Forms.Button();
+            this.fKid_clienteTextBox = new System.Windows.Forms.TextBox();
             id_eventoLabel = new System.Windows.Forms.Label();
             tipo_eventoLabel = new System.Windows.Forms.Label();
             data_eventoLabel = new System.Windows.Forms.Label();
             horário_eventoLabel = new System.Windows.Forms.Label();
             num_convidadosLabel = new System.Windows.Forms.Label();
             valor_eventoLabel = new System.Windows.Forms.Label();
-            id_clienteLabel = new System.Windows.Forms.Label();
             cep_eventoLabel = new System.Windows.Forms.Label();
             rua_eventoLabel = new System.Windows.Forms.Label();
             num_residencia_eventoLabel = new System.Windows.Forms.Label();
             bairr_eventoLabel = new System.Windows.Forms.Label();
             cidade_eventoLabel = new System.Windows.Forms.Label();
             estado_eventoLabel = new System.Windows.Forms.Label();
+            fKid_clienteLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosBindingNavigator)).BeginInit();
@@ -182,16 +182,6 @@
             valor_eventoLabel.Size = new System.Drawing.Size(40, 13);
             valor_eventoLabel.TabIndex = 16;
             valor_eventoLabel.Text = "Valor:";
-            // 
-            // id_clienteLabel
-            // 
-            id_clienteLabel.AutoSize = true;
-            id_clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_clienteLabel.Location = new System.Drawing.Point(443, 86);
-            id_clienteLabel.Name = "id_clienteLabel";
-            id_clienteLabel.Size = new System.Drawing.Size(67, 13);
-            id_clienteLabel.TabIndex = 22;
-            id_clienteLabel.Text = "ID Cliente:";
             // 
             // cep_eventoLabel
             // 
@@ -531,15 +521,6 @@
             // 
             this.clienteTableAdapter.ClearBeforeFill = true;
             // 
-            // id_clienteTextBox
-            // 
-            this.id_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "id_cliente", true));
-            this.id_clienteTextBox.Location = new System.Drawing.Point(583, 79);
-            this.id_clienteTextBox.Name = "id_clienteTextBox";
-            this.id_clienteTextBox.Size = new System.Drawing.Size(200, 20);
-            this.id_clienteTextBox.TabIndex = 23;
-            this.id_clienteTextBox.TextChanged += new System.EventHandler(this.id_clienteTextBox_TextChanged);
-            // 
             // cep_eventoTextBox
             // 
             this.cep_eventoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "cep_evento", true));
@@ -590,6 +571,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(fKid_clienteLabel);
+            this.groupBox2.Controls.Add(this.fKid_clienteTextBox);
             this.groupBox2.Controls.Add(this.eventosDataGridView);
             this.groupBox2.Controls.Add(this.btnSalvar);
             this.groupBox2.Controls.Add(this.btnExcluir);
@@ -619,44 +602,13 @@
             this.groupBox2.Controls.Add(cep_eventoLabel);
             this.groupBox2.Controls.Add(this.id_eventoTextBox);
             this.groupBox2.Controls.Add(this.cep_eventoTextBox);
-            this.groupBox2.Controls.Add(this.id_clienteTextBox);
-            this.groupBox2.Controls.Add(id_clienteLabel);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 62);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(986, 654);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
-            // 
-            // btnIncluir
-            // 
-            this.btnIncluir.Location = new System.Drawing.Point(28, 43);
-            this.btnIncluir.Name = "btnIncluir";
-            this.btnIncluir.Size = new System.Drawing.Size(75, 23);
-            this.btnIncluir.TabIndex = 30;
-            this.btnIncluir.Text = "Incluir";
-            this.btnIncluir.UseVisualStyleBackColor = true;
-            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(118, 43);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 31;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Location = new System.Drawing.Point(211, 43);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 32;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // eventosDataGridView
             // 
@@ -761,6 +713,53 @@
             this.estado_evento.HeaderText = "estado_evento";
             this.estado_evento.Name = "estado_evento";
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Location = new System.Drawing.Point(211, 43);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 32;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(118, 43);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 31;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnIncluir
+            // 
+            this.btnIncluir.Location = new System.Drawing.Point(28, 43);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(75, 23);
+            this.btnIncluir.TabIndex = 30;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
+            // 
+            // fKid_clienteLabel
+            // 
+            fKid_clienteLabel.AutoSize = true;
+            fKid_clienteLabel.Location = new System.Drawing.Point(444, 88);
+            fKid_clienteLabel.Name = "fKid_clienteLabel";
+            fKid_clienteLabel.Size = new System.Drawing.Size(65, 13);
+            fKid_clienteLabel.TabIndex = 33;
+            fKid_clienteLabel.Text = "FKid cliente:";
+            // 
+            // fKid_clienteTextBox
+            // 
+            this.fKid_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventosBindingSource, "FKid_cliente", true));
+            this.fKid_clienteTextBox.Location = new System.Drawing.Point(583, 85);
+            this.fKid_clienteTextBox.Name = "fKid_clienteTextBox";
+            this.fKid_clienteTextBox.Size = new System.Drawing.Size(100, 20);
+            this.fKid_clienteTextBox.TabIndex = 34;
+            // 
             // frmEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -824,7 +823,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private RenataDBDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
-        private System.Windows.Forms.TextBox id_clienteTextBox;
         private System.Windows.Forms.TextBox cep_eventoTextBox;
         private System.Windows.Forms.TextBox rua_eventoTextBox;
         private System.Windows.Forms.TextBox num_residencia_eventoTextBox;
@@ -849,5 +847,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bairr_evento;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidade_evento;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado_evento;
+        private System.Windows.Forms.TextBox fKid_clienteTextBox;
     }
 }

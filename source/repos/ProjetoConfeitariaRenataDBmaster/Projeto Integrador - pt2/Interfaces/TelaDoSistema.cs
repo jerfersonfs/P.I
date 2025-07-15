@@ -585,24 +585,21 @@ namespace Projeto_Integrador___pt2.Interfaces
                 MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
             }
         }
-        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        private void TelaDoSistema_Load(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja realmente sair do sistema?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                this.Close();
-                exibeLogin();
-            }
+
         }
 
-        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void configuraçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //adicionar código para visualizar perfil do usuário
+
         }
 
-        private void atalhosDoSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            //adicionar código para viusalizar atalhos do sistema
-            
+
         }
     }
 }
