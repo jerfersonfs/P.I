@@ -25,19 +25,22 @@ namespace Projeto_Integrador___pt2.Interfaces
             Thread.Sleep(5000);
             thread.Abort();
             InitializeComponent();
+
+            // Sincronize placeholder logo após inicialização
+            SetPlaceholder(nome_usuTextBox1, "Usuário");
+            SetPlaceholder(senha_usuTextBox1, "Senha");
+            senha_usuTextBox1.UseSystemPasswordChar = false;
+
+            nome_usuTextBox1.Enter += (s, e) => RemovePlaceholder(nome_usuTextBox1);
+            nome_usuTextBox1.Leave += (s, e) => RestorePlaceholder(nome_usuTextBox1);
+
+            senha_usuTextBox1.Enter += (s, e) => RemovePlaceholder(senha_usuTextBox1);
+            senha_usuTextBox1.Leave += (s, e) => RestorePlaceholder(senha_usuTextBox1);
         }
         public void ShowSplash()
         {
             Application.Run(new frmSplash());
         }
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            nome_usuTextBox.Text = "";
-            this.usuarioTableAdapter.Fill(this.renataDBDataSet.usuario);
-            this.usuarioTableAdapter.Fill(this.renataDBDataSet.usuario);
-            this.usuarioTableAdapter.Fill(this.renataDBDataSet.usuario);
-        }
-
         private void usuarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -45,115 +48,107 @@ namespace Projeto_Integrador___pt2.Interfaces
             this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
 
         }
-        private void btn_Sair_Click(object sender, EventArgs e)
-        {
-                Close();
-        }
-
-        
-        private void btn_Entrar_Click(object sender, EventArgs e)
-        {
-
-          
-                try
-                {
-                    if ((nome_usuTextBox.Text != "") && (senha_usuTextBox.Text != ""))
-                    {
-                        SqlCommand connection = new SqlCommand("SELECT * FROM usuario WHERE nome_usu = @usuario AND senha_usu = @senha", conn);
-                        connection.Parameters.Add("@usuario", SqlDbType.VarChar).Value = nome_usuTextBox.Text;
-                        connection.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha_usuTextBox.Text;
-
-                        conn.Open();
-                        SqlDataReader reader = null;
-                        reader = connection.ExecuteReader();
-                        if (reader.Read())
-                        {
-                            usuarioLogado = nome_usuTextBox.Text;
-
-                            TelaDoSistema menu = new TelaDoSistema();
-
-                            this.Hide();
-
-                            menu.Show();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Usuário ou senha inválidos!", "Aviso", MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
-
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    conn.Close();
-                }
-        }
-
-        private void frmLogin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-
-        private void btn_Sair_KeyDown(object sender, KeyEventArgs e)
-        {
-        }
-
-        private void senha_usuTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                btn_Sair_Click(sender, e);
-            }
-        }
-
-        private void frmLogin_KeyDown(object sender, KeyEventArgs e)
-        {
-          
-        }
-
-        private void email_usuTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void email_usuTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                btn_Sair_Click(sender, e);
-            }
-        }
-
         private void btn_Entrar_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 MessageBox.Show("Sucesso ao entrar no sistema!","Bem-vindo",MessageBoxButtons.OK);
-                btn_Entrar_Click(sender, e);
+                btn_Entrarr_Click(sender, e);
+            }
+        }
+        private void SetPlaceholder(TextBox textBox, string placeholder)
+        {
+            textBox.ForeColor = Color.Gray;
+            textBox.Text = placeholder;
+            textBox.Tag = placeholder;
+        }
+
+        private void RemovePlaceholder(TextBox textBox)
+        {
+            if (textBox.Text == (string)textBox.Tag)
+            {
+                textBox.Text = "";
+                textBox.ForeColor = Color.Black;
+                if (textBox == senha_usuTextBox1)
+                    senha_usuTextBox1.UseSystemPasswordChar = true;
             }
         }
 
-        private void senha_usuTextBox_TextChanged(object sender, EventArgs e)
+        private void RestorePlaceholder(TextBox textBox)
         {
-            senha_usuTextBox.UseSystemPasswordChar = true;
-            senha_usuTextBox.Text = "";
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.ForeColor = Color.Gray;
+                textBox.Text = (string)textBox.Tag;
+                if (textBox == senha_usuTextBox1)
+                    senha_usuTextBox1.UseSystemPasswordChar = false;
+            }
         }
 
-        private void senha_usuTextBox_MouseClick(object sender, MouseEventArgs e)
+        private void frmLogin_Load_1(object sender, EventArgs e)
         {
-            senha_usuTextBox.UseSystemPasswordChar = true;
-            senha_usuTextBox.Text = "";
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.usuario'. Você pode movê-la ou removê-la conforme necessário.
+            this.usuarioTableAdapter1.Fill(this.renataDBDataSet1.usuario);
+
+        }
+
+        private void usuarioBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuarioBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+
+        }
+
+        private void btn_Entrarr_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if ((nome_usuTextBox1.Text != "") && (senha_usuTextBox1.Text != ""))
+                {
+                    SqlCommand connection = new SqlCommand("SELECT * FROM usuario WHERE nome_usu = @usuario AND senha_usu = @senha", conn);
+                    connection.Parameters.Add("@usuario", SqlDbType.VarChar).Value = nome_usuTextBox1.Text;
+                    connection.Parameters.Add("@senha", SqlDbType.VarChar).Value = senha_usuTextBox1.Text;
+
+                    conn.Open();
+                    SqlDataReader reader = null;
+                    reader = connection.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        usuarioLogado = nome_usuTextBox1.Text;
+
+                        TelaDoSistema menu = new TelaDoSistema();
+
+                        this.Hide();
+
+                        menu.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuário ou senha inválidos!", "Aviso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

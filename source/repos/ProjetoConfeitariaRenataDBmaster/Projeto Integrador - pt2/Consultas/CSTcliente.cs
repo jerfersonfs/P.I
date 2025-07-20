@@ -36,55 +36,7 @@ namespace Projeto_Integrador___pt2.Consultas
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (cbmFiltrar.Text == "Código")
-                {
-                    string sql = "SELECT * FROM cliente WHERE id_cliente = " + txtPesquisar.Text + "";
-                    SqlCommand cmd = new SqlCommand(sql);
-                    cntn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable cliente = new DataTable();
-                    adapter.Fill(cliente);
-                    clienteDataGridView.DataSource = cliente;
-                }
-                if (cbmFiltrar.Text == "Cliente")
-                {
-                    string sql = "SELECT * FROM cliente WHERE nome_cliente LIKE '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable cliente = new DataTable();
-                    adapter.Fill(cliente);
-                    clienteDataGridView.DataSource = cliente;
-                }
-                if (cbmFiltrar.Text == "CPF")
-                {
-                    string sql = "SELECT * FROM cliente WHERE cpf LIKE '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable cliente = new DataTable();
-                    adapter.Fill(cliente);
-                    clienteDataGridView.DataSource = cliente;
-                }
-                if (cbmFiltrar.Text == "CNPJ")
-                {
-                    string sql = "SELECT * FROM cliente WHERE cnpj LIKE '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable cliente = new DataTable();
-                    adapter.Fill(cliente);
-                    clienteDataGridView.DataSource = cliente;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                cntn.Close();
-            }
+           
         }
 
         private void btnPesquisar_KeyDown(object sender, KeyEventArgs e)
@@ -105,6 +57,74 @@ namespace Projeto_Integrador___pt2.Consultas
         private void bntIncluir_Click(object sender, EventArgs e)
         {
            this.showFrmCliente();
+        }
+
+        private void clienteBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.clienteBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+
+        }
+
+        private void CSTcliente_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.cliente'. Você pode movê-la ou removê-la conforme necessário.
+            this.clienteTableAdapter1.Fill(this.renataDBDataSet1.cliente);
+
+        }
+
+        private void btn_Pesquisar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbm_Filtrar.Text == "Código")
+                {
+                    string sql = "SELECT * FROM cliente WHERE id_cliente = " + txt_Pesquisar.Text + "";
+                    SqlCommand cmd = new SqlCommand(sql);
+                    cntn.Open();
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable cliente = new DataTable();
+                    adapter.Fill(cliente);
+                    clienteDataGridView.DataSource = cliente;
+                }
+                if (cbm_Filtrar.Text == "Cliente")
+                {
+                    string sql = "SELECT * FROM cliente WHERE nome_cliente LIKE '%" + txt_Pesquisar.Text + "%'";
+                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable cliente = new DataTable();
+                    adapter.Fill(cliente);
+                    clienteDataGridView.DataSource = cliente;
+                }
+                if (cbm_Filtrar.Text == "CPF")
+                {
+                    string sql = "SELECT * FROM cliente WHERE cpf LIKE '%" + txt_Pesquisar.Text + "%'";
+                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable cliente = new DataTable();
+                    adapter.Fill(cliente);
+                    clienteDataGridView.DataSource = cliente;
+                }
+                if (cbm_Filtrar.Text == "CNPJ")
+                {
+                    string sql = "SELECT * FROM cliente WHERE cnpj LIKE '%" + txt_Pesquisar.Text + "%'";
+                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable cliente = new DataTable();
+                    adapter.Fill(cliente);
+                    clienteDataGridView.DataSource = cliente;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cntn.Close();
+            }
         }
     }
 }

@@ -111,11 +111,11 @@
     <Compile Include="-Futuras implemetações\CSTingrediente.Designer.cs">
       <DependentUpon>CSTingrediente.cs</DependentUpon>
     </Compile>
-    <Compile Include="-Futuras implemetações\CSTpagamento.cs">
+    <Compile Include="Consultas\CSTfornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="-Futuras implemetações\CSTpagamento.Designer.cs">
-      <DependentUpon>CSTpagamento.cs</DependentUpon>
+    <Compile Include="Consultas\CSTfornecedor.Designer.cs">
+      <DependentUpon>CSTfornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\CSTpedido.cs">
       <SubType>Form</SubType>
@@ -128,12 +128,6 @@
     </Compile>
     <Compile Include="Consultas\CSTproduto.Designer.cs">
       <DependentUpon>CSTproduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="-Futuras implemetações\CSTreceita.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="-Futuras implemetações\CSTreceita.Designer.cs">
-      <DependentUpon>CSTreceita.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\CSTusuario.cs">
       <SubType>Form</SubType>
@@ -194,10 +188,10 @@
     <Compile Include="Registros\frmEstoque.Designer.cs">
       <DependentUpon>frmEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registros\frmEvento.cs">
+    <Compile Include="Consultas\frmEvento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registros\frmEvento.Designer.cs">
+    <Compile Include="Consultas\frmEvento.Designer.cs">
       <DependentUpon>frmEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="-Futuras implemetações\frmIngrediente.cs">
@@ -206,11 +200,11 @@
     <Compile Include="-Futuras implemetações\frmIngrediente.Designer.cs">
       <DependentUpon>frmIngrediente.cs</DependentUpon>
     </Compile>
-    <Compile Include="-Futuras implemetações\frmPagamento.cs">
+    <Compile Include="Registros\frmFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="-Futuras implemetações\frmPagamento.Designer.cs">
-      <DependentUpon>frmPagamento.cs</DependentUpon>
+    <Compile Include="Registros\frmFornecedor.Designer.cs">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmPedido.cs">
       <SubType>Form</SubType>
@@ -223,12 +217,6 @@
     </Compile>
     <Compile Include="Registros\frmProduto.Designer.cs">
       <DependentUpon>frmProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="-Futuras implemetações\frmReceita.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="-Futuras implemetações\frmReceita.Designer.cs">
-      <DependentUpon>frmReceita.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmUsuario.cs">
       <SubType>Form</SubType>
@@ -265,17 +253,14 @@
     <EmbeddedResource Include="-Futuras implemetações\CSTingrediente.resx">
       <DependentUpon>CSTingrediente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="-Futuras implemetações\CSTpagamento.resx">
-      <DependentUpon>CSTpagamento.cs</DependentUpon>
+    <EmbeddedResource Include="Consultas\CSTfornecedor.resx">
+      <DependentUpon>CSTfornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTpedido.resx">
       <DependentUpon>CSTpedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTproduto.resx">
       <DependentUpon>CSTproduto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="-Futuras implemetações\CSTreceita.resx">
-      <DependentUpon>CSTreceita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTusuario.resx">
       <DependentUpon>CSTusuario.cs</DependentUpon>
@@ -304,23 +289,20 @@
     <EmbeddedResource Include="Registros\frmEstoque.resx">
       <DependentUpon>frmEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registros\frmEvento.resx">
+    <EmbeddedResource Include="Consultas\frmEvento.resx">
       <DependentUpon>frmEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="-Futuras implemetações\frmIngrediente.resx">
       <DependentUpon>frmIngrediente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="-Futuras implemetações\frmPagamento.resx">
-      <DependentUpon>frmPagamento.cs</DependentUpon>
+    <EmbeddedResource Include="Registros\frmFornecedor.resx">
+      <DependentUpon>frmFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmPedido.resx">
       <DependentUpon>frmPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmProduto.resx">
       <DependentUpon>frmProduto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="-Futuras implemetações\frmReceita.resx">
-      <DependentUpon>frmReceita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>

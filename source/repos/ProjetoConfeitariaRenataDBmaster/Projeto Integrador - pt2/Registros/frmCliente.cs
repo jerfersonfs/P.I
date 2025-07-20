@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Projeto_Integrador___pt2.Consultas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,26 +52,6 @@ namespace Projeto_Integrador___pt2.Registros
             this.clienteTableAdapter.Fill(this.renataDBDataSet.cliente);
 
         }
-
-        private void btnIncluir_Click(object sender, EventArgs e)
-        {
-            this.bindingNavigatorAddNewItem.PerformClick();
-        }
-
-        private void clienteDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            this.bindingNavigatorDeleteItem.PerformClick();
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            this.clienteBindingNavigatorSaveItem_Click(sender, e);
-        }
         public async Task BuscarCep()
         {
             if (cepTextBox.MaxLength == 9)
@@ -115,6 +96,46 @@ namespace Projeto_Integrador___pt2.Registros
                 MessageBox.Show("CEP inválido! Digite um CEP com 8 dígitos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+        }
+
+        private void clienteBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.clienteBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+
+        }
+
+        private void frmCliente_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.cliente'. Você pode movê-la ou removê-la conforme necessário.
+            this.clienteTableAdapter1.Fill(this.renataDBDataSet1.cliente);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorAddNewItem.PerformClick();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorDeleteItem.PerformClick();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.clienteBindingNavigatorSaveItem_Click(sender, e);
+        }
+        public void exibirConsulta() 
+        {
+            CSTcliente cst = new CSTcliente();
+            cst.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            exibirConsulta();
         }
     }
 }

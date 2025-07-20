@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Integrador___pt2.Consultas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,50 +73,66 @@ namespace Projeto_Integrador___pt2.Formulários
                 cntn.Close();
             }
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void id_ingredienteTextBox_TextChanged(object sender, EventArgs e)
         {
-            SqlTransaction transaction = cntn.Connection.BeginTransaction();
             try
             {
-                using (SqlConnection cntn = new SqlConnection())
-                {
-                    cntn.Open();
-                    string query = "INSERT INTO Estoque(FKid_ingrediente) WHERE nome_estoque = nome_ingrediente VALUES Ingredientes(id_ingrediente) ";
-                    using (SqlCommand cmd = new SqlCommand(query, cntn, transaction))
-                    {
-                        cmd.Parameters.AddWithValue("id_ingrediente", id_ingredienteTextBox.Text);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                transaction.Commit();
-                MessageBox.Show("ID do ingrediente inserido com sucesso!");
+                string sql = "SELECT*FROM ingrediente WHERE id_ingrediente = @id_ingrediente";
+                SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
+                cmd.Parameters.AddWithValue("@id_ingrediente", fKid_ingredienteTextBox.Text);
+                cntn.Open();
             }
             catch (Exception ex)
             {
-                transaction.Rollback();
-                MessageBox.Show("Erro ao inserir ID do ingrediente: " + ex.Message);
+                MessageBox.Show("Erro ao buscar o nome do ingrediente: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                cntn.Close();
             }
         }
+        private void frmEstoque_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.estoque'. Você pode movê-la ou removê-la conforme necessário.
+            this.estoqueTableAdapter1.Fill(this.renataDBDataSet1.estoque);
 
-        private void button1_Click(object sender, EventArgs e)
+        }
+
+        private void estoqueBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.estoqueBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+
+        }
+
+        private void estoqueDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             this.bindingNavigatorAddNewItem.PerformClick();
         }
 
-        private void btn_excluir_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             this.bindingNavigatorDeleteItem.PerformClick();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            this.estoqueBindingNavigatorSaveItem.PerformClick();
+            this.estoqueBindingNavigatorSaveItem_Click(sender, e);
+        }
+        public void exibirConsulta()
+        {
+            CSTestoque cst = new CSTestoque();
+            cst.ShowDialog();
+        }   
+        private void button6_Click(object sender, EventArgs e)
+        {
+           this.exibirConsulta();
         }
     }
 }

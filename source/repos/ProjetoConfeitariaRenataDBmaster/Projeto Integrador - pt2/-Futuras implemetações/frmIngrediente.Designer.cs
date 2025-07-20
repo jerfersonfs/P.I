@@ -133,7 +133,6 @@
             this.tableAdapterManager.pagamentoTableAdapter = null;
             this.tableAdapterManager.pedidoTableAdapter = null;
             this.tableAdapterManager.produtoTableAdapter = null;
-            this.tableAdapterManager.receitaTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuarioTableAdapter = null;
             // 

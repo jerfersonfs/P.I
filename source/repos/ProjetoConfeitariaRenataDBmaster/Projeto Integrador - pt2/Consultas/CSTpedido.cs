@@ -35,13 +35,38 @@ namespace Projeto_Integrador___pt2.Consultas
 
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        public void showfrmPedido()
+        {
+            frmPedido frm = new frmPedido();
+            frm.ShowDialog();
+        }
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            showfrmPedido();
+        }
+
+        private void pedidoBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.pedidoBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+
+        }
+
+        private void CSTpedido_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.pedido'. Você pode movê-la ou removê-la conforme necessário.
+            this.pedidoTableAdapter1.Fill(this.renataDBDataSet1.pedido);
+
+        }
+
+        private void btn_Pesquisar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (cbmFiltrar.Text == "Código")
+                if (cbm_Filtrar.Text == "Código")
                 {
-                    string sql = "SELECT * FROM pedido WHERE id_pedido = " + txtPesquisar.Text + "";
+                    string sql = "SELECT * FROM pedido WHERE id_pedido = " + txt_Pesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql);
                     cntn.Open();
                     cmd.CommandType = CommandType.Text;
@@ -50,9 +75,9 @@ namespace Projeto_Integrador___pt2.Consultas
                     adapter.Fill(pedido);
                     pedidoDataGridView.DataSource = pedido;
                 }
-                if (cbmFiltrar.Text == "Pedido")
+                if (cbm_Filtrar.Text == "Pedido")
                 {
-                    string sql = "SELECT * FROM pedido WHERE FKid_produto LIKE '%" + txtPesquisar.Text + "%'";
+                    string sql = "SELECT * FROM pedido WHERE FKid_produto LIKE '%" + txt_Pesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable pedido = new DataTable();
@@ -68,16 +93,6 @@ namespace Projeto_Integrador___pt2.Consultas
             {
                 cntn.Close();
             }
-        }
-
-        public void showfrmPedido()
-        {
-            frmPedido frm = new frmPedido();
-            frm.ShowDialog();
-        }
-        private void btnIncluir_Click(object sender, EventArgs e)
-        {
-            showfrmPedido();
         }
     }
 }

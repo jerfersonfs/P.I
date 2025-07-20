@@ -34,19 +34,36 @@ namespace Projeto_Integrador___pt2.Consultas
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnPesquisar_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.btn_Pesquisar_Click(sender, e);
+            }
+        }
+
+        private void usuarioBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuarioBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
 
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        private void CSTusuario_Load_1(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.usuario'. Você pode movê-la ou removê-la conforme necessário.
+            this.usuarioTableAdapter1.Fill(this.renataDBDataSet1.usuario);
 
+        }
+
+        private void btn_Pesquisar_Click(object sender, EventArgs e)
+        {
             try
             {
-                if (cbmFiltrar.Text == "Código")
+                if (cbm_Filtrar.Text == "Código")
                 {
-                    string sql = "SELECT * FROM usuario WHERE id_usu = " + txtPesquisar.Text + "";
+                    string sql = "SELECT * FROM usuario WHERE id_usu = " + txt_Pesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql);
                     cntn.Open();
                     cmd.CommandType = CommandType.Text;
@@ -55,9 +72,9 @@ namespace Projeto_Integrador___pt2.Consultas
                     adapter.Fill(usuario);
                     usuarioDataGridView.DataSource = usuario;
                 }
-                if (cbmFiltrar.Text == "Usuario")
+                if (cbm_Filtrar.Text == "Usuario")
                 {
-                    string sql = "SELECT * FROM usuario WHERE nome_usu LIKE '%" + txtPesquisar.Text + "%'";
+                    string sql = "SELECT * FROM usuario WHERE nome_usu LIKE '%" + txt_Pesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable usuario = new DataTable();
@@ -72,14 +89,6 @@ namespace Projeto_Integrador___pt2.Consultas
             finally
             {
                 cntn.Close();
-            }
-        }
-
-        private void btnPesquisar_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnPesquisar_Click(sender, e);
             }
         }
     }

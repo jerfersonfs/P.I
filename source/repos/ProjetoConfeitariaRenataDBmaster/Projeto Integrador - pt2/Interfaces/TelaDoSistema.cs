@@ -129,33 +129,6 @@ namespace Projeto_Integrador___pt2.Interfaces
                 MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
             }
         }
-        public void showcsltpagamento()
-        {
-            try
-            {
-                CSTpagamento pag = null;
-
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is CSTpagamento)
-                    {
-                        pag = (CSTpagamento)frm;
-                        break;
-                    }
-                }
-                if (pag == null)
-                {
-                    pag = new CSTpagamento();
-                    pag.MdiParent = this;
-                    pag.Show();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
-            }
-        }
         public void showcsltavaliacao()
         {
             try
@@ -210,34 +183,6 @@ namespace Projeto_Integrador___pt2.Interfaces
                 MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
             }
         }
-        public void showcsltreceita()
-        {
-            try
-            {
-                CSTreceita rec = null;
-
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is CSTreceita)
-                    {
-                        rec = (CSTreceita)frm;
-                        break;
-                    }
-                }
-                if (rec == null)
-                {
-                    rec = new CSTreceita();
-                    rec.MdiParent = this;
-                    rec.Show();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
-            }
-        }
-
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showcsltcliente();
@@ -252,7 +197,7 @@ namespace Projeto_Integrador___pt2.Interfaces
         }
         private void receitasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            showcsltreceita();
+          
         }
         private void ingredientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -260,7 +205,7 @@ namespace Projeto_Integrador___pt2.Interfaces
         }
         private void pagamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            showcsltpagamento();
+            
         }
         private void avaliaçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -343,31 +288,6 @@ namespace Projeto_Integrador___pt2.Interfaces
             }
 
         }
-        public void exibeFrmPagamento()
-        {
-            try
-            {
-                frmPagamento pagamento = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmPagamento)
-                    {
-                        pagamento = (frmPagamento)frm;
-                        break;
-                    }
-                }
-                if (pagamento == null)
-                {
-                    pagamento = new frmPagamento();
-                    pagamento.MdiParent = this;
-                    pagamento.Show();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
-            }
-        }
         public void exibeFrmEventos()
         {
             try
@@ -436,31 +356,6 @@ namespace Projeto_Integrador___pt2.Interfaces
                     estq = new frmEstoque();
                     estq.MdiParent = this;
                     estq.Show();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
-            }
-        }
-        public void exibeFrmReceita()
-        {
-            try
-            {
-                frmReceita rec = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmReceita)
-                    {
-                        rec = (frmReceita)frm;
-                        break;
-                    }
-                }
-                if (rec == null)
-                {
-                    rec = new frmReceita();
-                    rec.MdiParent = this;
-                    rec.Show();
                 }
             }
             catch (Exception ex)
@@ -542,7 +437,7 @@ namespace Projeto_Integrador___pt2.Interfaces
 
         private void receitasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            exibeFrmReceita();
+
         }
 
         private void consultasToolStripMenuItem_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
-﻿namespace Projeto_Integrador___pt2.Consultas
+﻿namespace Projeto_Integrador___pt2.Formulários
 {
-    partial class CSTcliente
+    partial class frmEvento
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CSTcliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvento));
             this.renataDBDataSet1 = new Projeto_Integrador___pt2.RenataDBDataSet();
-            this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter1 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.clienteTableAdapter();
+            this.eventosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.eventosTableAdapter1 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.eventosTableAdapter();
             this.tableAdapterManager1 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
-            this.clienteBindingSource1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.eventosBindingSource1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
@@ -46,8 +46,13 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.clienteBindingSource1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.clienteDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.eventosBindingSource1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.eventosDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,22 +61,15 @@
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Pesquisar = new System.Windows.Forms.Button();
             this.txt_Pesquisar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbm_Filtrar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1BindingNavigator)).BeginInit();
-            this.clienteBindingSource1BindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource1BindingNavigator)).BeginInit();
+            this.eventosBindingSource1BindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // renataDBDataSet1
@@ -79,23 +77,23 @@
             this.renataDBDataSet1.DataSetName = "RenataDBDataSet";
             this.renataDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // clienteBindingSource1
+            // eventosBindingSource1
             // 
-            this.clienteBindingSource1.DataMember = "cliente";
-            this.clienteBindingSource1.DataSource = this.renataDBDataSet1;
+            this.eventosBindingSource1.DataMember = "eventos";
+            this.eventosBindingSource1.DataSource = this.renataDBDataSet1;
             // 
-            // clienteTableAdapter1
+            // eventosTableAdapter1
             // 
-            this.clienteTableAdapter1.ClearBeforeFill = true;
+            this.eventosTableAdapter1.ClearBeforeFill = true;
             // 
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.avaliacaoTableAdapter = null;
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.categoriaTableAdapter = null;
-            this.tableAdapterManager1.clienteTableAdapter = this.clienteTableAdapter1;
+            this.tableAdapterManager1.clienteTableAdapter = null;
             this.tableAdapterManager1.estoqueTableAdapter = null;
-            this.tableAdapterManager1.eventosTableAdapter = null;
+            this.tableAdapterManager1.eventosTableAdapter = this.eventosTableAdapter1;
             this.tableAdapterManager1.fornecedoresTableAdapter = null;
             this.tableAdapterManager1.ingredientesTableAdapter = null;
             this.tableAdapterManager1.item_pedidoTableAdapter = null;
@@ -105,13 +103,13 @@
             this.tableAdapterManager1.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.usuarioTableAdapter = null;
             // 
-            // clienteBindingSource1BindingNavigator
+            // eventosBindingSource1BindingNavigator
             // 
-            this.clienteBindingSource1BindingNavigator.AddNewItem = this.toolStripButton5;
-            this.clienteBindingSource1BindingNavigator.BindingSource = this.clienteBindingSource1;
-            this.clienteBindingSource1BindingNavigator.CountItem = this.toolStripLabel1;
-            this.clienteBindingSource1BindingNavigator.DeleteItem = this.toolStripButton6;
-            this.clienteBindingSource1BindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eventosBindingSource1BindingNavigator.AddNewItem = this.toolStripButton5;
+            this.eventosBindingSource1BindingNavigator.BindingSource = this.eventosBindingSource1;
+            this.eventosBindingSource1BindingNavigator.CountItem = this.toolStripLabel1;
+            this.eventosBindingSource1BindingNavigator.DeleteItem = this.toolStripButton6;
+            this.eventosBindingSource1BindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
             this.toolStripSeparator1,
@@ -123,18 +121,18 @@
             this.toolStripSeparator3,
             this.toolStripButton5,
             this.toolStripButton6,
-            this.clienteBindingSource1BindingNavigatorSaveItem});
-            this.clienteBindingSource1BindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.clienteBindingSource1BindingNavigator.MoveFirstItem = this.toolStripButton1;
-            this.clienteBindingSource1BindingNavigator.MoveLastItem = this.toolStripButton4;
-            this.clienteBindingSource1BindingNavigator.MoveNextItem = this.toolStripButton3;
-            this.clienteBindingSource1BindingNavigator.MovePreviousItem = this.toolStripButton2;
-            this.clienteBindingSource1BindingNavigator.Name = "clienteBindingSource1BindingNavigator";
-            this.clienteBindingSource1BindingNavigator.PositionItem = this.toolStripTextBox1;
-            this.clienteBindingSource1BindingNavigator.Size = new System.Drawing.Size(1010, 25);
-            this.clienteBindingSource1BindingNavigator.TabIndex = 0;
-            this.clienteBindingSource1BindingNavigator.Text = "bindingNavigator1";
-            this.clienteBindingSource1BindingNavigator.Visible = false;
+            this.eventosBindingSource1BindingNavigatorSaveItem});
+            this.eventosBindingSource1BindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.eventosBindingSource1BindingNavigator.MoveFirstItem = this.toolStripButton1;
+            this.eventosBindingSource1BindingNavigator.MoveLastItem = this.toolStripButton4;
+            this.eventosBindingSource1BindingNavigator.MoveNextItem = this.toolStripButton3;
+            this.eventosBindingSource1BindingNavigator.MovePreviousItem = this.toolStripButton2;
+            this.eventosBindingSource1BindingNavigator.Name = "eventosBindingSource1BindingNavigator";
+            this.eventosBindingSource1BindingNavigator.PositionItem = this.toolStripTextBox1;
+            this.eventosBindingSource1BindingNavigator.Size = new System.Drawing.Size(843, 25);
+            this.eventosBindingSource1BindingNavigator.TabIndex = 0;
+            this.eventosBindingSource1BindingNavigator.Text = "bindingNavigator1";
+            this.eventosBindingSource1BindingNavigator.Visible = false;
             // 
             // toolStripButton5
             // 
@@ -222,20 +220,25 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // clienteBindingSource1BindingNavigatorSaveItem
+            // eventosBindingSource1BindingNavigatorSaveItem
             // 
-            this.clienteBindingSource1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.clienteBindingSource1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("clienteBindingSource1BindingNavigatorSaveItem.Image")));
-            this.clienteBindingSource1BindingNavigatorSaveItem.Name = "clienteBindingSource1BindingNavigatorSaveItem";
-            this.clienteBindingSource1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.clienteBindingSource1BindingNavigatorSaveItem.Text = "Salvar Dados";
-            this.clienteBindingSource1BindingNavigatorSaveItem.Click += new System.EventHandler(this.clienteBindingSource1BindingNavigatorSaveItem_Click);
+            this.eventosBindingSource1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.eventosBindingSource1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("eventosBindingSource1BindingNavigatorSaveItem.Image")));
+            this.eventosBindingSource1BindingNavigatorSaveItem.Name = "eventosBindingSource1BindingNavigatorSaveItem";
+            this.eventosBindingSource1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.eventosBindingSource1BindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.eventosBindingSource1BindingNavigatorSaveItem.Click += new System.EventHandler(this.eventosBindingSource1BindingNavigatorSaveItem_Click);
             // 
-            // clienteDataGridView1
+            // eventosDataGridView1
             // 
-            this.clienteDataGridView1.AutoGenerateColumns = false;
-            this.clienteDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clienteDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.eventosDataGridView1.AutoGenerateColumns = false;
+            this.eventosDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.eventosDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
@@ -243,133 +246,116 @@
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26});
-            this.clienteDataGridView1.DataSource = this.clienteBindingSource1;
-            this.clienteDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.clienteDataGridView1.Location = new System.Drawing.Point(0, 121);
-            this.clienteDataGridView1.Name = "clienteDataGridView1";
-            this.clienteDataGridView1.Size = new System.Drawing.Size(1010, 318);
-            this.clienteDataGridView1.TabIndex = 1;
+            this.dataGridViewTextBoxColumn21});
+            this.eventosDataGridView1.DataSource = this.eventosBindingSource1;
+            this.eventosDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.eventosDataGridView1.Location = new System.Drawing.Point(0, 64);
+            this.eventosDataGridView1.Name = "eventosDataGridView1";
+            this.eventosDataGridView1.Size = new System.Drawing.Size(851, 298);
+            this.eventosDataGridView1.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "id_evento";
+            this.dataGridViewTextBoxColumn9.HeaderText = "id_evento";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "FKid_cliente";
+            this.dataGridViewTextBoxColumn10.HeaderText = "FKid_cliente";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "tipo_evento";
+            this.dataGridViewTextBoxColumn11.HeaderText = "tipo_evento";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "data_evento";
+            this.dataGridViewTextBoxColumn12.HeaderText = "data_evento";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "horário_evento";
+            this.dataGridViewTextBoxColumn13.HeaderText = "horário_evento";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
             // dataGridViewTextBoxColumn14
             // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "id_cliente";
-            this.dataGridViewTextBoxColumn14.HeaderText = "id_cliente";
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "num_convidados";
+            this.dataGridViewTextBoxColumn14.HeaderText = "num_convidados";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
             // dataGridViewTextBoxColumn15
             // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "nome_cliente";
-            this.dataGridViewTextBoxColumn15.HeaderText = "nome_cliente";
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "valor_evento";
+            this.dataGridViewTextBoxColumn15.HeaderText = "valor_evento";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
             // dataGridViewTextBoxColumn16
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "cpf";
-            this.dataGridViewTextBoxColumn16.HeaderText = "cpf";
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "cep_evento";
+            this.dataGridViewTextBoxColumn16.HeaderText = "cep_evento";
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // dataGridViewTextBoxColumn17
             // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "cnpj";
-            this.dataGridViewTextBoxColumn17.HeaderText = "cnpj";
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "rua_evento";
+            this.dataGridViewTextBoxColumn17.HeaderText = "rua_evento";
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
             // dataGridViewTextBoxColumn18
             // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "celular_cliente";
-            this.dataGridViewTextBoxColumn18.HeaderText = "celular_cliente";
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "num_residencia_evento";
+            this.dataGridViewTextBoxColumn18.HeaderText = "num_residencia_evento";
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             // 
             // dataGridViewTextBoxColumn19
             // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "email_cliente";
-            this.dataGridViewTextBoxColumn19.HeaderText = "email_cliente";
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "bairr_evento";
+            this.dataGridViewTextBoxColumn19.HeaderText = "bairr_evento";
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             // 
             // dataGridViewTextBoxColumn20
             // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "data_nascimento";
-            this.dataGridViewTextBoxColumn20.HeaderText = "data_nascimento";
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "cidade_evento";
+            this.dataGridViewTextBoxColumn20.HeaderText = "cidade_evento";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
             // dataGridViewTextBoxColumn21
             // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "rua_cliente";
-            this.dataGridViewTextBoxColumn21.HeaderText = "rua_cliente";
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "estado_evento";
+            this.dataGridViewTextBoxColumn21.HeaderText = "estado_evento";
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "numero_da_residencia_cliente";
-            this.dataGridViewTextBoxColumn22.HeaderText = "numero_da_residencia_cliente";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "bairro_cliente";
-            this.dataGridViewTextBoxColumn23.HeaderText = "bairro_cliente";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "cidade_cliente";
-            this.dataGridViewTextBoxColumn24.HeaderText = "cidade_cliente";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "estado_cliente";
-            this.dataGridViewTextBoxColumn25.HeaderText = "estado_cliente";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "cep";
-            this.dataGridViewTextBoxColumn26.HeaderText = "cep";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btn_Pesquisar);
-            this.groupBox2.Controls.Add(this.txt_Pesquisar);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cbm_Filtrar);
-            this.groupBox2.Location = new System.Drawing.Point(196, 67);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(622, 48);
-            this.groupBox2.TabIndex = 33;
-            this.groupBox2.TabStop = false;
             // 
             // btn_Pesquisar
             // 
-            this.btn_Pesquisar.Location = new System.Drawing.Point(417, 18);
+            this.btn_Pesquisar.Location = new System.Drawing.Point(545, 13);
             this.btn_Pesquisar.Name = "btn_Pesquisar";
             this.btn_Pesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Pesquisar.TabIndex = 3;
+            this.btn_Pesquisar.TabIndex = 7;
             this.btn_Pesquisar.Text = "Pesquisar";
             this.btn_Pesquisar.UseVisualStyleBackColor = true;
             this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
             // 
             // txt_Pesquisar
             // 
-            this.txt_Pesquisar.Location = new System.Drawing.Point(210, 19);
+            this.txt_Pesquisar.Location = new System.Drawing.Point(338, 14);
             this.txt_Pesquisar.Name = "txt_Pesquisar";
             this.txt_Pesquisar.Size = new System.Drawing.Size(193, 20);
-            this.txt_Pesquisar.TabIndex = 2;
+            this.txt_Pesquisar.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(191, 21);
+            this.label2.Location = new System.Drawing.Point(319, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 13);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 5;
             this.label2.Text = "=";
             // 
             // cbm_Filtrar
@@ -379,27 +365,28 @@
             "",
             "Código",
             "Categoria"});
-            this.cbm_Filtrar.Location = new System.Drawing.Point(58, 18);
+            this.cbm_Filtrar.Location = new System.Drawing.Point(186, 13);
             this.cbm_Filtrar.Name = "cbm_Filtrar";
             this.cbm_Filtrar.Size = new System.Drawing.Size(121, 21);
-            this.cbm_Filtrar.TabIndex = 0;
+            this.cbm_Filtrar.TabIndex = 4;
             // 
-            // CSTcliente
+            // frmEvento
             // 
-            this.ClientSize = new System.Drawing.Size(1010, 439);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.clienteDataGridView1);
-            this.Controls.Add(this.clienteBindingSource1BindingNavigator);
-            this.Name = "CSTcliente";
-            this.Load += new System.EventHandler(this.CSTcliente_Load_1);
+            this.ClientSize = new System.Drawing.Size(851, 362);
+            this.Controls.Add(this.btn_Pesquisar);
+            this.Controls.Add(this.txt_Pesquisar);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbm_Filtrar);
+            this.Controls.Add(this.eventosDataGridView1);
+            this.Controls.Add(this.eventosBindingSource1BindingNavigator);
+            this.Name = "frmEvento";
+            this.Load += new System.EventHandler(this.frmEvento_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1BindingNavigator)).EndInit();
-            this.clienteBindingSource1BindingNavigator.ResumeLayout(false);
-            this.clienteBindingSource1BindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource1BindingNavigator)).EndInit();
+            this.eventosBindingSource1BindingNavigator.ResumeLayout(false);
+            this.eventosBindingSource1BindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventosDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,16 +394,11 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.ComboBox cbmFiltrar;
         private RenataDBDataSet renataDBDataSet;
-        private System.Windows.Forms.BindingSource clienteBindingSource;
-        private RenataDBDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
+        private System.Windows.Forms.BindingSource eventosBindingSource;
+        private RenataDBDataSetTableAdapters.eventosTableAdapter eventosTableAdapter;
         private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator clienteBindingNavigator;
+        private System.Windows.Forms.BindingNavigator eventosBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -428,28 +410,52 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton clienteBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView clienteDataGridView;
+        private System.Windows.Forms.ToolStripButton eventosBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.TextBox id_eventoTextBox;
+        private System.Windows.Forms.TextBox tipo_eventoTextBox;
+        private System.Windows.Forms.DateTimePicker data_eventoDateTimePicker;
+        private System.Windows.Forms.TextBox horário_eventoTextBox;
+        private System.Windows.Forms.TextBox num_convidadosTextBox;
+        private System.Windows.Forms.TextBox valor_eventoTextBox;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.ComboBox cbmFiltrar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.BindingSource clienteBindingSource;
+        private RenataDBDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
+        private System.Windows.Forms.TextBox cep_eventoTextBox;
+        private System.Windows.Forms.TextBox rua_eventoTextBox;
+        private System.Windows.Forms.TextBox num_residencia_eventoTextBox;
+        private System.Windows.Forms.TextBox bairr_eventoTextBox;
+        private System.Windows.Forms.TextBox cidade_eventoTextBox;
+        private System.Windows.Forms.TextBox estado_eventoTextBox;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.DataGridView eventosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button bntIncluir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cep_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rua_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num_residencia_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bairr_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidade_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado_evento;
+        private System.Windows.Forms.TextBox fKid_clienteTextBox;
         private RenataDBDataSet renataDBDataSet1;
-        private System.Windows.Forms.BindingSource clienteBindingSource1;
-        private RenataDBDataSetTableAdapters.clienteTableAdapter clienteTableAdapter1;
+        private System.Windows.Forms.BindingSource eventosBindingSource1;
+        private RenataDBDataSetTableAdapters.eventosTableAdapter eventosTableAdapter1;
         private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.BindingNavigator clienteBindingSource1BindingNavigator;
+        private System.Windows.Forms.BindingNavigator eventosBindingSource1BindingNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
@@ -461,8 +467,13 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton clienteBindingSource1BindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView clienteDataGridView1;
+        private System.Windows.Forms.ToolStripButton eventosBindingSource1BindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView eventosDataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
@@ -471,12 +482,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_Pesquisar;
         private System.Windows.Forms.TextBox txt_Pesquisar;
         private System.Windows.Forms.Label label2;

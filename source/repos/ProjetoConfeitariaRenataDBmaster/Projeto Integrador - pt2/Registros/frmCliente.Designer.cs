@@ -30,659 +30,544 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label id_clienteLabel;
+            System.Windows.Forms.Label nome_clienteLabel;
             System.Windows.Forms.Label cpfLabel;
             System.Windows.Forms.Label cnpjLabel;
+            System.Windows.Forms.Label celular_clienteLabel;
+            System.Windows.Forms.Label email_clienteLabel;
+            System.Windows.Forms.Label data_nascimentoLabel;
             System.Windows.Forms.Label rua_clienteLabel;
             System.Windows.Forms.Label numero_da_residencia_clienteLabel;
             System.Windows.Forms.Label bairro_clienteLabel;
             System.Windows.Forms.Label cidade_clienteLabel;
             System.Windows.Forms.Label estado_clienteLabel;
             System.Windows.Forms.Label cepLabel;
-            System.Windows.Forms.Label data_nascimentoLabel;
-            System.Windows.Forms.Label email_clienteLabel;
-            System.Windows.Forms.Label celular_clienteLabel;
-            System.Windows.Forms.Label nome_clienteLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clienteTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.clienteTableAdapter();
-            this.tableAdapterManager = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
-            this.id_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.rua_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.numero_da_residencia_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.bairro_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.cidade_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.estado_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.cepTextBox = new System.Windows.Forms.TextBox();
-            this.data_nascimentoDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.email_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.celular_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.cnpjTextBox = new System.Windows.Forms.TextBox();
-            this.cpfTextBox = new System.Windows.Forms.TextBox();
-            this.nome_clienteTextBox = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnIncluir = new System.Windows.Forms.Button();
-            this.clienteDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.renataDBDataSet1 = new Projeto_Integrador___pt2.RenataDBDataSet();
+            this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteTableAdapter1 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.clienteTableAdapter();
+            this.tableAdapterManager1 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
+            this.clienteBindingSource1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.clienteBindingSource1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.id_clienteTextBox1 = new System.Windows.Forms.TextBox();
+            this.nome_clienteTextBox1 = new System.Windows.Forms.TextBox();
+            this.cpfTextBox1 = new System.Windows.Forms.TextBox();
+            this.cnpjTextBox1 = new System.Windows.Forms.TextBox();
+            this.celular_clienteTextBox1 = new System.Windows.Forms.TextBox();
+            this.email_clienteTextBox1 = new System.Windows.Forms.TextBox();
+            this.data_nascimentoDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.rua_clienteTextBox1 = new System.Windows.Forms.TextBox();
+            this.numero_da_residencia_clienteTextBox1 = new System.Windows.Forms.TextBox();
+            this.bairro_clienteTextBox1 = new System.Windows.Forms.TextBox();
+            this.cidade_clienteTextBox1 = new System.Windows.Forms.TextBox();
+            this.estado_clienteTextBox1 = new System.Windows.Forms.TextBox();
+            this.cepTextBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             id_clienteLabel = new System.Windows.Forms.Label();
+            nome_clienteLabel = new System.Windows.Forms.Label();
             cpfLabel = new System.Windows.Forms.Label();
             cnpjLabel = new System.Windows.Forms.Label();
+            celular_clienteLabel = new System.Windows.Forms.Label();
+            email_clienteLabel = new System.Windows.Forms.Label();
+            data_nascimentoLabel = new System.Windows.Forms.Label();
             rua_clienteLabel = new System.Windows.Forms.Label();
             numero_da_residencia_clienteLabel = new System.Windows.Forms.Label();
             bairro_clienteLabel = new System.Windows.Forms.Label();
             cidade_clienteLabel = new System.Windows.Forms.Label();
             estado_clienteLabel = new System.Windows.Forms.Label();
             cepLabel = new System.Windows.Forms.Label();
-            data_nascimentoLabel = new System.Windows.Forms.Label();
-            email_clienteLabel = new System.Windows.Forms.Label();
-            celular_clienteLabel = new System.Windows.Forms.Label();
-            nome_clienteLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1BindingNavigator)).BeginInit();
+            this.clienteBindingSource1BindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // id_clienteLabel
             // 
             id_clienteLabel.AutoSize = true;
-            id_clienteLabel.Location = new System.Drawing.Point(6, 35);
+            id_clienteLabel.Location = new System.Drawing.Point(133, 104);
             id_clienteLabel.Name = "id_clienteLabel";
-            id_clienteLabel.Size = new System.Drawing.Size(40, 13);
-            id_clienteLabel.TabIndex = 23;
-            id_clienteLabel.Text = "Código";
+            id_clienteLabel.Size = new System.Drawing.Size(43, 13);
+            id_clienteLabel.TabIndex = 1;
+            id_clienteLabel.Text = "Código:";
+            // 
+            // nome_clienteLabel
+            // 
+            nome_clienteLabel.AutoSize = true;
+            nome_clienteLabel.Location = new System.Drawing.Point(133, 130);
+            nome_clienteLabel.Name = "nome_clienteLabel";
+            nome_clienteLabel.Size = new System.Drawing.Size(42, 13);
+            nome_clienteLabel.TabIndex = 3;
+            nome_clienteLabel.Text = "Cliente:";
             // 
             // cpfLabel
             // 
             cpfLabel.AutoSize = true;
-            cpfLabel.Location = new System.Drawing.Point(386, 91);
+            cpfLabel.Location = new System.Drawing.Point(133, 156);
             cpfLabel.Name = "cpfLabel";
             cpfLabel.Size = new System.Drawing.Size(30, 13);
-            cpfLabel.TabIndex = 27;
+            cpfLabel.TabIndex = 5;
             cpfLabel.Text = "CPF:";
             // 
             // cnpjLabel
             // 
             cnpjLabel.AutoSize = true;
-            cnpjLabel.Location = new System.Drawing.Point(386, 117);
+            cnpjLabel.Location = new System.Drawing.Point(133, 182);
             cnpjLabel.Name = "cnpjLabel";
             cnpjLabel.Size = new System.Drawing.Size(37, 13);
-            cnpjLabel.TabIndex = 29;
+            cnpjLabel.TabIndex = 7;
             cnpjLabel.Text = "CNPJ:";
+            // 
+            // celular_clienteLabel
+            // 
+            celular_clienteLabel.AutoSize = true;
+            celular_clienteLabel.Location = new System.Drawing.Point(133, 208);
+            celular_clienteLabel.Name = "celular_clienteLabel";
+            celular_clienteLabel.Size = new System.Drawing.Size(42, 13);
+            celular_clienteLabel.TabIndex = 9;
+            celular_clienteLabel.Text = "Celular:";
+            // 
+            // email_clienteLabel
+            // 
+            email_clienteLabel.AutoSize = true;
+            email_clienteLabel.Location = new System.Drawing.Point(133, 234);
+            email_clienteLabel.Name = "email_clienteLabel";
+            email_clienteLabel.Size = new System.Drawing.Size(35, 13);
+            email_clienteLabel.TabIndex = 11;
+            email_clienteLabel.Text = "Email:";
+            // 
+            // data_nascimentoLabel
+            // 
+            data_nascimentoLabel.AutoSize = true;
+            data_nascimentoLabel.Location = new System.Drawing.Point(133, 261);
+            data_nascimentoLabel.Name = "data_nascimentoLabel";
+            data_nascimentoLabel.Size = new System.Drawing.Size(105, 13);
+            data_nascimentoLabel.TabIndex = 13;
+            data_nascimentoLabel.Text = "Data de nascimento:";
             // 
             // rua_clienteLabel
             // 
             rua_clienteLabel.AutoSize = true;
-            rua_clienteLabel.Location = new System.Drawing.Point(6, 92);
+            rua_clienteLabel.Location = new System.Drawing.Point(133, 286);
             rua_clienteLabel.Name = "rua_clienteLabel";
             rua_clienteLabel.Size = new System.Drawing.Size(30, 13);
-            rua_clienteLabel.TabIndex = 37;
+            rua_clienteLabel.TabIndex = 15;
             rua_clienteLabel.Text = "Rua:";
             // 
             // numero_da_residencia_clienteLabel
             // 
             numero_da_residencia_clienteLabel.AutoSize = true;
-            numero_da_residencia_clienteLabel.Location = new System.Drawing.Point(6, 118);
+            numero_da_residencia_clienteLabel.Location = new System.Drawing.Point(133, 312);
             numero_da_residencia_clienteLabel.Name = "numero_da_residencia_clienteLabel";
             numero_da_residencia_clienteLabel.Size = new System.Drawing.Size(113, 13);
-            numero_da_residencia_clienteLabel.TabIndex = 39;
+            numero_da_residencia_clienteLabel.TabIndex = 17;
             numero_da_residencia_clienteLabel.Text = "Número da residencia:";
             // 
             // bairro_clienteLabel
             // 
             bairro_clienteLabel.AutoSize = true;
-            bairro_clienteLabel.Location = new System.Drawing.Point(6, 144);
+            bairro_clienteLabel.Location = new System.Drawing.Point(133, 338);
             bairro_clienteLabel.Name = "bairro_clienteLabel";
             bairro_clienteLabel.Size = new System.Drawing.Size(37, 13);
-            bairro_clienteLabel.TabIndex = 41;
+            bairro_clienteLabel.TabIndex = 19;
             bairro_clienteLabel.Text = "Bairro:";
             // 
             // cidade_clienteLabel
             // 
             cidade_clienteLabel.AutoSize = true;
-            cidade_clienteLabel.Location = new System.Drawing.Point(6, 170);
+            cidade_clienteLabel.Location = new System.Drawing.Point(133, 364);
             cidade_clienteLabel.Name = "cidade_clienteLabel";
             cidade_clienteLabel.Size = new System.Drawing.Size(43, 13);
-            cidade_clienteLabel.TabIndex = 43;
+            cidade_clienteLabel.TabIndex = 21;
             cidade_clienteLabel.Text = "Cidade:";
             // 
             // estado_clienteLabel
             // 
             estado_clienteLabel.AutoSize = true;
-            estado_clienteLabel.Location = new System.Drawing.Point(6, 196);
+            estado_clienteLabel.Location = new System.Drawing.Point(133, 390);
             estado_clienteLabel.Name = "estado_clienteLabel";
             estado_clienteLabel.Size = new System.Drawing.Size(43, 13);
-            estado_clienteLabel.TabIndex = 45;
+            estado_clienteLabel.TabIndex = 23;
             estado_clienteLabel.Text = "Estado:";
             // 
             // cepLabel
             // 
             cepLabel.AutoSize = true;
-            cepLabel.Location = new System.Drawing.Point(6, 63);
+            cepLabel.Location = new System.Drawing.Point(133, 416);
             cepLabel.Name = "cepLabel";
             cepLabel.Size = new System.Drawing.Size(31, 13);
-            cepLabel.TabIndex = 47;
+            cepLabel.TabIndex = 25;
             cepLabel.Text = "CEP:";
             // 
-            // data_nascimentoLabel
-            // 
-            data_nascimentoLabel.AutoSize = true;
-            data_nascimentoLabel.Location = new System.Drawing.Point(386, 196);
-            data_nascimentoLabel.Name = "data_nascimentoLabel";
-            data_nascimentoLabel.Size = new System.Drawing.Size(90, 13);
-            data_nascimentoLabel.TabIndex = 35;
-            data_nascimentoLabel.Text = "Data nascimento:";
-            // 
-            // email_clienteLabel
-            // 
-            email_clienteLabel.AutoSize = true;
-            email_clienteLabel.Location = new System.Drawing.Point(386, 169);
-            email_clienteLabel.Name = "email_clienteLabel";
-            email_clienteLabel.Size = new System.Drawing.Size(35, 13);
-            email_clienteLabel.TabIndex = 33;
-            email_clienteLabel.Text = "Email:";
-            // 
-            // celular_clienteLabel
-            // 
-            celular_clienteLabel.AutoSize = true;
-            celular_clienteLabel.Location = new System.Drawing.Point(386, 143);
-            celular_clienteLabel.Name = "celular_clienteLabel";
-            celular_clienteLabel.Size = new System.Drawing.Size(42, 13);
-            celular_clienteLabel.TabIndex = 31;
-            celular_clienteLabel.Text = "Celular:";
-            // 
-            // nome_clienteLabel
-            // 
-            nome_clienteLabel.AutoSize = true;
-            nome_clienteLabel.Location = new System.Drawing.Point(386, 67);
-            nome_clienteLabel.Name = "nome_clienteLabel";
-            nome_clienteLabel.Size = new System.Drawing.Size(42, 13);
-            nome_clienteLabel.TabIndex = 25;
-            nome_clienteLabel.Text = "Cliente:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Plum;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(807, 49);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.Text = "Gerenciamento de clientes";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // renataDBDataSet
-            // 
-            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
-            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "cliente";
-            this.clienteBindingSource.DataSource = this.renataDBDataSet;
-            // 
-            // clienteTableAdapter
-            // 
-            this.clienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.avaliacaoTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.categoriaTableAdapter = null;
-            this.tableAdapterManager.clienteTableAdapter = this.clienteTableAdapter;
-            this.tableAdapterManager.estoqueTableAdapter = null;
-            this.tableAdapterManager.eventosTableAdapter = null;
-            this.tableAdapterManager.ingredientesTableAdapter = null;
-            this.tableAdapterManager.item_pedidoTableAdapter = null;
-            this.tableAdapterManager.pagamentoTableAdapter = null;
-            this.tableAdapterManager.pedidoTableAdapter = null;
-            this.tableAdapterManager.produtoTableAdapter = null;
-            this.tableAdapterManager.receitaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usuarioTableAdapter = null;
-            // 
-            // id_clienteTextBox
-            // 
-            this.id_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "id_cliente", true));
-            this.id_clienteTextBox.Location = new System.Drawing.Point(157, 32);
-            this.id_clienteTextBox.Name = "id_clienteTextBox";
-            this.id_clienteTextBox.Size = new System.Drawing.Size(200, 20);
-            this.id_clienteTextBox.TabIndex = 24;
-            // 
-            // rua_clienteTextBox
-            // 
-            this.rua_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "rua_cliente", true));
-            this.rua_clienteTextBox.Location = new System.Drawing.Point(157, 89);
-            this.rua_clienteTextBox.Name = "rua_clienteTextBox";
-            this.rua_clienteTextBox.Size = new System.Drawing.Size(200, 20);
-            this.rua_clienteTextBox.TabIndex = 38;
-            // 
-            // numero_da_residencia_clienteTextBox
-            // 
-            this.numero_da_residencia_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "numero_da_residencia_cliente", true));
-            this.numero_da_residencia_clienteTextBox.Location = new System.Drawing.Point(157, 115);
-            this.numero_da_residencia_clienteTextBox.Name = "numero_da_residencia_clienteTextBox";
-            this.numero_da_residencia_clienteTextBox.Size = new System.Drawing.Size(200, 20);
-            this.numero_da_residencia_clienteTextBox.TabIndex = 40;
-            // 
-            // bairro_clienteTextBox
-            // 
-            this.bairro_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "bairro_cliente", true));
-            this.bairro_clienteTextBox.Location = new System.Drawing.Point(157, 141);
-            this.bairro_clienteTextBox.Name = "bairro_clienteTextBox";
-            this.bairro_clienteTextBox.Size = new System.Drawing.Size(200, 20);
-            this.bairro_clienteTextBox.TabIndex = 42;
-            // 
-            // cidade_clienteTextBox
-            // 
-            this.cidade_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cidade_cliente", true));
-            this.cidade_clienteTextBox.Location = new System.Drawing.Point(157, 167);
-            this.cidade_clienteTextBox.Name = "cidade_clienteTextBox";
-            this.cidade_clienteTextBox.Size = new System.Drawing.Size(200, 20);
-            this.cidade_clienteTextBox.TabIndex = 44;
-            // 
-            // estado_clienteTextBox
-            // 
-            this.estado_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "estado_cliente", true));
-            this.estado_clienteTextBox.Location = new System.Drawing.Point(157, 193);
-            this.estado_clienteTextBox.Name = "estado_clienteTextBox";
-            this.estado_clienteTextBox.Size = new System.Drawing.Size(200, 20);
-            this.estado_clienteTextBox.TabIndex = 46;
-            // 
-            // cepTextBox
-            // 
-            this.cepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cep", true));
-            this.cepTextBox.Location = new System.Drawing.Point(157, 60);
-            this.cepTextBox.Name = "cepTextBox";
-            this.cepTextBox.Size = new System.Drawing.Size(200, 20);
-            this.cepTextBox.TabIndex = 48;
-            // 
-            // data_nascimentoDateTimePicker
-            // 
-            this.data_nascimentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clienteBindingSource, "data_nascimento", true));
-            this.data_nascimentoDateTimePicker.Location = new System.Drawing.Point(537, 192);
-            this.data_nascimentoDateTimePicker.Name = "data_nascimentoDateTimePicker";
-            this.data_nascimentoDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.data_nascimentoDateTimePicker.TabIndex = 36;
-            // 
-            // email_clienteTextBox
-            // 
-            this.email_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "email_cliente", true));
-            this.email_clienteTextBox.Location = new System.Drawing.Point(537, 166);
-            this.email_clienteTextBox.Name = "email_clienteTextBox";
-            this.email_clienteTextBox.Size = new System.Drawing.Size(200, 20);
-            this.email_clienteTextBox.TabIndex = 34;
-            // 
-            // celular_clienteTextBox
-            // 
-            this.celular_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "celular_cliente", true));
-            this.celular_clienteTextBox.Location = new System.Drawing.Point(537, 140);
-            this.celular_clienteTextBox.Name = "celular_clienteTextBox";
-            this.celular_clienteTextBox.Size = new System.Drawing.Size(200, 20);
-            this.celular_clienteTextBox.TabIndex = 32;
-            // 
-            // cnpjTextBox
-            // 
-            this.cnpjTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cnpj", true));
-            this.cnpjTextBox.Location = new System.Drawing.Point(537, 114);
-            this.cnpjTextBox.Name = "cnpjTextBox";
-            this.cnpjTextBox.Size = new System.Drawing.Size(200, 20);
-            this.cnpjTextBox.TabIndex = 30;
-            // 
-            // cpfTextBox
-            // 
-            this.cpfTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "cpf", true));
-            this.cpfTextBox.Location = new System.Drawing.Point(537, 88);
-            this.cpfTextBox.Name = "cpfTextBox";
-            this.cpfTextBox.Size = new System.Drawing.Size(200, 20);
-            this.cpfTextBox.TabIndex = 28;
-            // 
-            // nome_clienteTextBox
-            // 
-            this.nome_clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "nome_cliente", true));
-            this.nome_clienteTextBox.Location = new System.Drawing.Point(537, 64);
-            this.nome_clienteTextBox.Name = "nome_clienteTextBox";
-            this.nome_clienteTextBox.Size = new System.Drawing.Size(200, 20);
-            this.nome_clienteTextBox.TabIndex = 26;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnSalvar);
-            this.groupBox1.Controls.Add(this.btnExcluir);
-            this.groupBox1.Controls.Add(this.btnIncluir);
-            this.groupBox1.Controls.Add(id_clienteLabel);
-            this.groupBox1.Controls.Add(this.cepTextBox);
-            this.groupBox1.Controls.Add(this.id_clienteTextBox);
-            this.groupBox1.Controls.Add(cepLabel);
-            this.groupBox1.Controls.Add(nome_clienteLabel);
-            this.groupBox1.Controls.Add(this.estado_clienteTextBox);
-            this.groupBox1.Controls.Add(this.nome_clienteTextBox);
-            this.groupBox1.Controls.Add(estado_clienteLabel);
-            this.groupBox1.Controls.Add(cpfLabel);
-            this.groupBox1.Controls.Add(this.cidade_clienteTextBox);
-            this.groupBox1.Controls.Add(this.cpfTextBox);
-            this.groupBox1.Controls.Add(cidade_clienteLabel);
-            this.groupBox1.Controls.Add(cnpjLabel);
-            this.groupBox1.Controls.Add(this.bairro_clienteTextBox);
-            this.groupBox1.Controls.Add(this.cnpjTextBox);
-            this.groupBox1.Controls.Add(bairro_clienteLabel);
-            this.groupBox1.Controls.Add(celular_clienteLabel);
-            this.groupBox1.Controls.Add(this.numero_da_residencia_clienteTextBox);
-            this.groupBox1.Controls.Add(this.celular_clienteTextBox);
-            this.groupBox1.Controls.Add(numero_da_residencia_clienteLabel);
-            this.groupBox1.Controls.Add(email_clienteLabel);
-            this.groupBox1.Controls.Add(this.rua_clienteTextBox);
-            this.groupBox1.Controls.Add(this.email_clienteTextBox);
-            this.groupBox1.Controls.Add(rua_clienteLabel);
-            this.groupBox1.Controls.Add(data_nascimentoLabel);
-            this.groupBox1.Controls.Add(this.data_nascimentoDateTimePicker);
-            this.groupBox1.Location = new System.Drawing.Point(36, 67);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(744, 248);
-            this.groupBox1.TabIndex = 49;
-            this.groupBox1.TabStop = false;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Location = new System.Drawing.Point(612, 24);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 51;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(515, 24);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 50;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnIncluir
-            // 
-            this.btnIncluir.Location = new System.Drawing.Point(415, 24);
-            this.btnIncluir.Name = "btnIncluir";
-            this.btnIncluir.Size = new System.Drawing.Size(75, 23);
-            this.btnIncluir.TabIndex = 49;
-            this.btnIncluir.Text = "Incluir";
-            this.btnIncluir.UseVisualStyleBackColor = true;
-            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
-            // 
-            // clienteDataGridView
-            // 
-            this.clienteDataGridView.AutoGenerateColumns = false;
-            this.clienteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clienteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
-            this.clienteDataGridView.DataSource = this.clienteBindingSource;
-            this.clienteDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.clienteDataGridView.Location = new System.Drawing.Point(0, 333);
-            this.clienteDataGridView.Name = "clienteDataGridView";
-            this.clienteDataGridView.Size = new System.Drawing.Size(807, 260);
-            this.clienteDataGridView.TabIndex = 49;
-            this.clienteDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clienteDataGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_cliente";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_cliente";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome_cliente";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nome_cliente";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "cpf";
-            this.dataGridViewTextBoxColumn3.HeaderText = "cpf";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "cnpj";
-            this.dataGridViewTextBoxColumn4.HeaderText = "cnpj";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "celular_cliente";
-            this.dataGridViewTextBoxColumn5.HeaderText = "celular_cliente";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "email_cliente";
-            this.dataGridViewTextBoxColumn6.HeaderText = "email_cliente";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "data_nascimento";
-            this.dataGridViewTextBoxColumn7.HeaderText = "data_nascimento";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "rua_cliente";
-            this.dataGridViewTextBoxColumn8.HeaderText = "rua_cliente";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "numero_da_residencia_cliente";
-            this.dataGridViewTextBoxColumn9.HeaderText = "numero_da_residencia_cliente";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "bairro_cliente";
-            this.dataGridViewTextBoxColumn10.HeaderText = "bairro_cliente";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "cidade_cliente";
-            this.dataGridViewTextBoxColumn11.HeaderText = "cidade_cliente";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "estado_cliente";
-            this.dataGridViewTextBoxColumn12.HeaderText = "estado_cliente";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "cep";
-            this.dataGridViewTextBoxColumn13.HeaderText = "cep";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // bindingNavigator1
-            // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 49);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(807, 25);
-            this.bindingNavigator1.TabIndex = 50;
-            this.bindingNavigator1.Text = "bindingNavigator1";
-            this.bindingNavigator1.Visible = false;
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // renataDBDataSet1
+            // 
+            this.renataDBDataSet1.DataSetName = "RenataDBDataSet";
+            this.renataDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clienteBindingSource1
+            // 
+            this.clienteBindingSource1.DataMember = "cliente";
+            this.clienteBindingSource1.DataSource = this.renataDBDataSet1;
+            // 
+            // clienteTableAdapter1
+            // 
+            this.clienteTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.avaliacaoTableAdapter = null;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.categoriaTableAdapter = null;
+            this.tableAdapterManager1.clienteTableAdapter = this.clienteTableAdapter1;
+            this.tableAdapterManager1.estoqueTableAdapter = null;
+            this.tableAdapterManager1.eventosTableAdapter = null;
+            this.tableAdapterManager1.fornecedoresTableAdapter = null;
+            this.tableAdapterManager1.ingredientesTableAdapter = null;
+            this.tableAdapterManager1.item_pedidoTableAdapter = null;
+            this.tableAdapterManager1.pagamentoTableAdapter = null;
+            this.tableAdapterManager1.pedidoTableAdapter = null;
+            this.tableAdapterManager1.produtoTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.usuarioTableAdapter = null;
+            // 
+            // clienteBindingSource1BindingNavigator
+            // 
+            this.clienteBindingSource1BindingNavigator.AddNewItem = this.toolStripButton5;
+            this.clienteBindingSource1BindingNavigator.BindingSource = this.clienteBindingSource1;
+            this.clienteBindingSource1BindingNavigator.CountItem = this.toolStripLabel1;
+            this.clienteBindingSource1BindingNavigator.DeleteItem = this.toolStripButton6;
+            this.clienteBindingSource1BindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripSeparator1,
+            this.toolStripTextBox1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripSeparator3,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.clienteBindingSource1BindingNavigatorSaveItem});
+            this.clienteBindingSource1BindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.clienteBindingSource1BindingNavigator.MoveFirstItem = this.toolStripButton1;
+            this.clienteBindingSource1BindingNavigator.MoveLastItem = this.toolStripButton4;
+            this.clienteBindingSource1BindingNavigator.MoveNextItem = this.toolStripButton3;
+            this.clienteBindingSource1BindingNavigator.MovePreviousItem = this.toolStripButton2;
+            this.clienteBindingSource1BindingNavigator.Name = "clienteBindingSource1BindingNavigator";
+            this.clienteBindingSource1BindingNavigator.PositionItem = this.toolStripTextBox1;
+            this.clienteBindingSource1BindingNavigator.Size = new System.Drawing.Size(818, 25);
+            this.clienteBindingSource1BindingNavigator.TabIndex = 0;
+            this.clienteBindingSource1BindingNavigator.Text = "bindingNavigator2";
+            this.clienteBindingSource1BindingNavigator.Visible = false;
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton5.Text = "Adicionar novo";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(37, 22);
+            this.toolStripLabel1.Text = "de {0}";
+            this.toolStripLabel1.ToolTipText = "Número total de itens";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton6.Text = "Excluir";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Mover primeiro";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "Mover anterior";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.AccessibleName = "Posição";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.ToolTipText = "Posição atual";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "Mover próximo";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "Mover último";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // clienteBindingSource1BindingNavigatorSaveItem
+            // 
+            this.clienteBindingSource1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.clienteBindingSource1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("clienteBindingSource1BindingNavigatorSaveItem.Image")));
+            this.clienteBindingSource1BindingNavigatorSaveItem.Name = "clienteBindingSource1BindingNavigatorSaveItem";
+            this.clienteBindingSource1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.clienteBindingSource1BindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.clienteBindingSource1BindingNavigatorSaveItem.Click += new System.EventHandler(this.clienteBindingSource1BindingNavigatorSaveItem_Click);
+            // 
+            // id_clienteTextBox1
+            // 
+            this.id_clienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "id_cliente", true));
+            this.id_clienteTextBox1.Location = new System.Drawing.Point(284, 101);
+            this.id_clienteTextBox1.Name = "id_clienteTextBox1";
+            this.id_clienteTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.id_clienteTextBox1.TabIndex = 2;
+            // 
+            // nome_clienteTextBox1
+            // 
+            this.nome_clienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "nome_cliente", true));
+            this.nome_clienteTextBox1.Location = new System.Drawing.Point(284, 127);
+            this.nome_clienteTextBox1.Name = "nome_clienteTextBox1";
+            this.nome_clienteTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.nome_clienteTextBox1.TabIndex = 4;
+            // 
+            // cpfTextBox1
+            // 
+            this.cpfTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "cpf", true));
+            this.cpfTextBox1.Location = new System.Drawing.Point(284, 153);
+            this.cpfTextBox1.Name = "cpfTextBox1";
+            this.cpfTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.cpfTextBox1.TabIndex = 6;
+            // 
+            // cnpjTextBox1
+            // 
+            this.cnpjTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "cnpj", true));
+            this.cnpjTextBox1.Location = new System.Drawing.Point(284, 179);
+            this.cnpjTextBox1.Name = "cnpjTextBox1";
+            this.cnpjTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.cnpjTextBox1.TabIndex = 8;
+            // 
+            // celular_clienteTextBox1
+            // 
+            this.celular_clienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "celular_cliente", true));
+            this.celular_clienteTextBox1.Location = new System.Drawing.Point(284, 205);
+            this.celular_clienteTextBox1.Name = "celular_clienteTextBox1";
+            this.celular_clienteTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.celular_clienteTextBox1.TabIndex = 10;
+            // 
+            // email_clienteTextBox1
+            // 
+            this.email_clienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "email_cliente", true));
+            this.email_clienteTextBox1.Location = new System.Drawing.Point(284, 231);
+            this.email_clienteTextBox1.Name = "email_clienteTextBox1";
+            this.email_clienteTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.email_clienteTextBox1.TabIndex = 12;
+            // 
+            // data_nascimentoDateTimePicker1
+            // 
+            this.data_nascimentoDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clienteBindingSource1, "data_nascimento", true));
+            this.data_nascimentoDateTimePicker1.Location = new System.Drawing.Point(284, 257);
+            this.data_nascimentoDateTimePicker1.Name = "data_nascimentoDateTimePicker1";
+            this.data_nascimentoDateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.data_nascimentoDateTimePicker1.TabIndex = 14;
+            // 
+            // rua_clienteTextBox1
+            // 
+            this.rua_clienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "rua_cliente", true));
+            this.rua_clienteTextBox1.Location = new System.Drawing.Point(284, 283);
+            this.rua_clienteTextBox1.Name = "rua_clienteTextBox1";
+            this.rua_clienteTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.rua_clienteTextBox1.TabIndex = 16;
+            // 
+            // numero_da_residencia_clienteTextBox1
+            // 
+            this.numero_da_residencia_clienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "numero_da_residencia_cliente", true));
+            this.numero_da_residencia_clienteTextBox1.Location = new System.Drawing.Point(284, 309);
+            this.numero_da_residencia_clienteTextBox1.Name = "numero_da_residencia_clienteTextBox1";
+            this.numero_da_residencia_clienteTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.numero_da_residencia_clienteTextBox1.TabIndex = 18;
+            // 
+            // bairro_clienteTextBox1
+            // 
+            this.bairro_clienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "bairro_cliente", true));
+            this.bairro_clienteTextBox1.Location = new System.Drawing.Point(284, 335);
+            this.bairro_clienteTextBox1.Name = "bairro_clienteTextBox1";
+            this.bairro_clienteTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.bairro_clienteTextBox1.TabIndex = 20;
+            // 
+            // cidade_clienteTextBox1
+            // 
+            this.cidade_clienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "cidade_cliente", true));
+            this.cidade_clienteTextBox1.Location = new System.Drawing.Point(284, 361);
+            this.cidade_clienteTextBox1.Name = "cidade_clienteTextBox1";
+            this.cidade_clienteTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.cidade_clienteTextBox1.TabIndex = 22;
+            // 
+            // estado_clienteTextBox1
+            // 
+            this.estado_clienteTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "estado_cliente", true));
+            this.estado_clienteTextBox1.Location = new System.Drawing.Point(284, 387);
+            this.estado_clienteTextBox1.Name = "estado_clienteTextBox1";
+            this.estado_clienteTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.estado_clienteTextBox1.TabIndex = 24;
+            // 
+            // cepTextBox1
+            // 
+            this.cepTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource1, "cep", true));
+            this.cepTextBox1.Location = new System.Drawing.Point(284, 413);
+            this.cepTextBox1.Name = "cepTextBox1";
+            this.cepTextBox1.Size = new System.Drawing.Size(200, 20);
+            this.cepTextBox1.TabIndex = 26;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(133, 72);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Incluir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(227, 72);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Excluir";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(321, 72);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "Salvar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(418, 72);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 30;
+            this.button4.Text = "Visualizar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(671, 47);
+            this.textBox2.TabIndex = 31;
+            this.textBox2.Text = "Cadastro de clientes";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(807, 593);
-            this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.clienteDataGridView);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ClientSize = new System.Drawing.Size(671, 460);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(id_clienteLabel);
+            this.Controls.Add(this.id_clienteTextBox1);
+            this.Controls.Add(nome_clienteLabel);
+            this.Controls.Add(this.nome_clienteTextBox1);
+            this.Controls.Add(cpfLabel);
+            this.Controls.Add(this.cpfTextBox1);
+            this.Controls.Add(cnpjLabel);
+            this.Controls.Add(this.cnpjTextBox1);
+            this.Controls.Add(celular_clienteLabel);
+            this.Controls.Add(this.celular_clienteTextBox1);
+            this.Controls.Add(email_clienteLabel);
+            this.Controls.Add(this.email_clienteTextBox1);
+            this.Controls.Add(data_nascimentoLabel);
+            this.Controls.Add(this.data_nascimentoDateTimePicker1);
+            this.Controls.Add(rua_clienteLabel);
+            this.Controls.Add(this.rua_clienteTextBox1);
+            this.Controls.Add(numero_da_residencia_clienteLabel);
+            this.Controls.Add(this.numero_da_residencia_clienteTextBox1);
+            this.Controls.Add(bairro_clienteLabel);
+            this.Controls.Add(this.bairro_clienteTextBox1);
+            this.Controls.Add(cidade_clienteLabel);
+            this.Controls.Add(this.cidade_clienteTextBox1);
+            this.Controls.Add(estado_clienteLabel);
+            this.Controls.Add(this.estado_clienteTextBox1);
+            this.Controls.Add(cepLabel);
+            this.Controls.Add(this.cepTextBox1);
+            this.Controls.Add(this.clienteBindingSource1BindingNavigator);
             this.Name = "frmCliente";
-            this.Load += new System.EventHandler(this.frmCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmCliente_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1BindingNavigator)).EndInit();
+            this.clienteBindingSource1BindingNavigator.ResumeLayout(false);
+            this.clienteBindingSource1BindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -738,5 +623,40 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private RenataDBDataSet renataDBDataSet1;
+        private System.Windows.Forms.BindingSource clienteBindingSource1;
+        private RenataDBDataSetTableAdapters.clienteTableAdapter clienteTableAdapter1;
+        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.BindingNavigator clienteBindingSource1BindingNavigator;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton clienteBindingSource1BindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox id_clienteTextBox1;
+        private System.Windows.Forms.TextBox nome_clienteTextBox1;
+        private System.Windows.Forms.TextBox cpfTextBox1;
+        private System.Windows.Forms.TextBox cnpjTextBox1;
+        private System.Windows.Forms.TextBox celular_clienteTextBox1;
+        private System.Windows.Forms.TextBox email_clienteTextBox1;
+        private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker1;
+        private System.Windows.Forms.TextBox rua_clienteTextBox1;
+        private System.Windows.Forms.TextBox numero_da_residencia_clienteTextBox1;
+        private System.Windows.Forms.TextBox bairro_clienteTextBox1;
+        private System.Windows.Forms.TextBox cidade_clienteTextBox1;
+        private System.Windows.Forms.TextBox estado_clienteTextBox1;
+        private System.Windows.Forms.TextBox cepTextBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

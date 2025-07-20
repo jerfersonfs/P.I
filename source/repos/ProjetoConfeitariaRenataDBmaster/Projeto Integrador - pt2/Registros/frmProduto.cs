@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_Integrador___pt2.Consultas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,29 +46,6 @@ namespace Projeto_Integrador___pt2.Formulários
 
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-           
-        }
-        
- 
-        private void btnIncluir_Click(object sender, EventArgs e)
-        {
-            this.bindingNavigatorAddNewItem.PerformClick();
-        }
-
-        private void btnDeletar_Click(object sender, EventArgs e)
-        {
-            this.bindingNavigatorDeleteItem.PerformClick();
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            this.produtoBindingNavigatorSaveItem.PerformClick();
-            frmProduto produto = new frmProduto();
-            produto.Close();
-        }
-
         private void fKid_categoriaTextBox_TextChanged(object sender, EventArgs e)
         {
             try 
@@ -94,6 +72,46 @@ namespace Projeto_Integrador___pt2.Formulários
             {
                 MessageBox.Show("Não foi possível inserir valor da categoria" + ex);
             }
+        }
+
+        private void produtoBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.produtoBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+
+        }
+
+        private void frmProduto_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.produto'. Você pode movê-la ou removê-la conforme necessário.
+            this.produtoTableAdapter1.Fill(this.renataDBDataSet1.produto);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorAddNewItem.PerformClick();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorDeleteItem.PerformClick();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.produtoBindingNavigatorSaveItem.PerformClick();
+        }
+
+        public void exibirConsulta() 
+        { 
+            CSTproduto cSTproduto = new CSTproduto();
+            cSTproduto.ShowDialog();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.exibirConsulta();
         }
     }
 }

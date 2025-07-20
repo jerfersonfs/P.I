@@ -24,73 +24,6 @@ namespace Projeto_Integrador___pt2.Formulários
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void eventosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.eventosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
-
-        }
-
-        private void frmEvento_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.
-            this.clienteTableAdapter.Fill(this.renataDBDataSet.cliente);
-            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.eventos'. Você pode movê-la ou removê-la conforme necessário.
-            this.eventosTableAdapter.Fill(this.renataDBDataSet.eventos);
-
-        }
-
-        private void eventosDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void data_eventoLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cbmFiltrar.Text == "Código")
-                {
-                    string sql = "SELECT * FROM Eventos WHERE id_evento = " + txtPesquisar.Text + "";
-                    SqlCommand cmd = new SqlCommand(sql);
-                    cntn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable evento = new DataTable();
-                    adapter.Fill(evento);
-                    eventosDataGridView.DataSource = evento;
-                }
-                if (cbmFiltrar.Text == "Eventos")
-                {
-                    string sql = "SELECT * FROM Eventos WHERE tipo_evento LIKE '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable evento = new DataTable();
-                    adapter.Fill(evento);
-                    eventosDataGridView.DataSource = evento;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                cntn.Close();
-            }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         public async Task BuscarCep()
         {
             if (cep_evento.MaxInputLength == 9)
@@ -155,6 +88,75 @@ namespace Projeto_Integrador___pt2.Formulários
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void fKid_clienteTextBox_TextChanged(object sender, EventArgs e)
+        {
+            try 
+            { 
+                string sql = "SELECT nome FROM cliente WHERE id_cliente = @id_cliente";
+                SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
+                cmd.Parameters.AddWithValue("@id_cliente", fKid_clienteTextBox.Text);
+                cntn.Open();
+            }
+            catch (Exception ex) 
+            { 
+                MessageBox.Show("Erro ao buscar o nome do cliente: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                cntn.Close();
+            }
+        }
+
+        private void eventosBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.eventosBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+
+        }
+
+        private void frmEvento_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.eventos'. Você pode movê-la ou removê-la conforme necessário.
+            this.eventosTableAdapter1.Fill(this.renataDBDataSet1.eventos);
+
+        }
+
+        private void btn_Pesquisar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbmFiltrar.Text == "Código")
+                {
+                    string sql = "SELECT * FROM Eventos WHERE id_evento = " + txtPesquisar.Text + "";
+                    SqlCommand cmd = new SqlCommand(sql);
+                    cntn.Open();
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable evento = new DataTable();
+                    adapter.Fill(evento);
+                    eventosDataGridView.DataSource = evento;
+                }
+                if (cbmFiltrar.Text == "Eventos")
+                {
+                    string sql = "SELECT * FROM Eventos WHERE tipo_evento LIKE '%" + txtPesquisar.Text + "%'";
+                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable evento = new DataTable();
+                    adapter.Fill(evento);
+                    eventosDataGridView.DataSource = evento;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cntn.Close();
+            }
         }
     }
 }

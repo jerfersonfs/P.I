@@ -35,13 +35,38 @@ namespace Projeto_Integrador___pt2.Consultas
 
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        public void showfrmProduto() 
+        {
+            frmProduto frm = new frmProduto();
+            frm.ShowDialog();
+        }
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            this.showfrmProduto();
+        }
+
+        private void produtoBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.produtoBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+
+        }
+
+        private void CSTproduto_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.produto'. Você pode movê-la ou removê-la conforme necessário.
+            this.produtoTableAdapter1.Fill(this.renataDBDataSet1.produto);
+
+        }
+
+        private void btn_Pesquisar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (cbmFiltrar.Text == "Código")
+                if (cbm_Filtrar.Text == "Código")
                 {
-                    string sql = "SELECT * FROM Produto WHERE id_produto = " + txtPesquisar.Text + "";
+                    string sql = "SELECT * FROM Produto WHERE id_produto = " + txt_Pesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql);
                     cntn.Open();
                     cmd.CommandType = CommandType.Text;
@@ -50,9 +75,9 @@ namespace Projeto_Integrador___pt2.Consultas
                     adapter.Fill(produto);
                     produtoDataGridView.DataSource = produto;
                 }
-                if (cbmFiltrar.Text == "Produto")
+                if (cbm_Filtrar.Text == "Produto")
                 {
-                    string sql = "SELECT * FROM Produto WHERE nome_produto LIKE '%" + txtPesquisar.Text + "%'";
+                    string sql = "SELECT * FROM Produto WHERE nome_produto LIKE '%" + txt_Pesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable produto = new DataTable();
@@ -68,16 +93,6 @@ namespace Projeto_Integrador___pt2.Consultas
             {
                 cntn.Close();
             }
-        }
-
-        public void showfrmProduto() 
-        {
-            frmProduto frm = new frmProduto();
-            frm.ShowDialog();
-        }
-        private void btnIncluir_Click(object sender, EventArgs e)
-        {
-            this.showfrmProduto();
         }
     }
 }

@@ -82,77 +82,42 @@ namespace Projeto_Integrador___pt2.Formulários
             this.usuarioTableAdapter.Fill(this.renataDBDataSet.usuario);
 
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void id_usuLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fKid_clienteLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-
-        private void usuarioDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-       
-
-        private void telefone_usuTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void id_clienteTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void id_clienteLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.bindingNavigatorAddNewItem.PerformClick();
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            this.bindingNavigatorDeleteItem.PerformClick();
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            this.usuarioBindingNavigatorSaveItem.PerformClick();
-            frmUsuario usu = new frmUsuario();
-            usu.Close();
-        }
         public void exibirConsulta() 
         {
             CSTusuario cst = new CSTusuario();
             cst.ShowDialog();
         }
-        private void btnVisualizar_Click(object sender, EventArgs e)
+        private void usuarioBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuarioBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+
+        }
+
+        private void frmUsuario_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.usuario'. Você pode movê-la ou removê-la conforme necessário.
+            this.usuarioTableAdapter1.Fill(this.renataDBDataSet1.usuario);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorAddNewItem.PerformClick();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorDeleteItem.PerformClick();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.usuarioBindingNavigatorSaveItem.PerformClick();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
         {
             exibirConsulta();
         }

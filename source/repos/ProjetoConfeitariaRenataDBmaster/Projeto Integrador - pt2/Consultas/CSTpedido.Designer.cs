@@ -30,346 +30,335 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CSTpedido));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.cbmFiltrar = new System.Windows.Forms.ComboBox();
-            this.pedidoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.pedidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.pedidoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.pedidoTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.pedidoTableAdapter();
-            this.tableAdapterManager = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
-            this.pedidoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnIncluir = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingNavigator)).BeginInit();
-            this.pedidoBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoDataGridView)).BeginInit();
+            this.renataDBDataSet1 = new Projeto_Integrador___pt2.RenataDBDataSet();
+            this.pedidoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pedidoTableAdapter1 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.pedidoTableAdapter();
+            this.tableAdapterManager1 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
+            this.pedidoBindingSource1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.pedidoBindingSource1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.pedidoDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Pesquisar = new System.Windows.Forms.Button();
+            this.txt_Pesquisar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbm_Filtrar = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource1BindingNavigator)).BeginInit();
+            this.pedidoBindingSource1BindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoDataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // renataDBDataSet1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Plum;
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnPesquisar);
-            this.groupBox1.Controls.Add(this.txtPesquisar);
-            this.groupBox1.Controls.Add(this.cbmFiltrar);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(109, 102);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(375, 52);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filtrar";
+            this.renataDBDataSet1.DataSetName = "RenataDBDataSet";
+            this.renataDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label1
+            // pedidoBindingSource1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(14, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "=";
+            this.pedidoBindingSource1.DataMember = "pedido";
+            this.pedidoBindingSource1.DataSource = this.renataDBDataSet1;
             // 
-            // btnPesquisar
+            // pedidoTableAdapter1
             // 
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Location = new System.Drawing.Point(278, 19);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(71, 24);
-            this.btnPesquisar.TabIndex = 2;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            this.pedidoTableAdapter1.ClearBeforeFill = true;
             // 
-            // txtPesquisar
+            // tableAdapterManager1
             // 
-            this.txtPesquisar.Location = new System.Drawing.Point(132, 20);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(131, 20);
-            this.txtPesquisar.TabIndex = 1;
+            this.tableAdapterManager1.avaliacaoTableAdapter = null;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.categoriaTableAdapter = null;
+            this.tableAdapterManager1.clienteTableAdapter = null;
+            this.tableAdapterManager1.estoqueTableAdapter = null;
+            this.tableAdapterManager1.eventosTableAdapter = null;
+            this.tableAdapterManager1.fornecedoresTableAdapter = null;
+            this.tableAdapterManager1.ingredientesTableAdapter = null;
+            this.tableAdapterManager1.item_pedidoTableAdapter = null;
+            this.tableAdapterManager1.pagamentoTableAdapter = null;
+            this.tableAdapterManager1.pedidoTableAdapter = this.pedidoTableAdapter1;
+            this.tableAdapterManager1.produtoTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.usuarioTableAdapter = null;
             // 
-            // cbmFiltrar
+            // pedidoBindingSource1BindingNavigator
             // 
-            this.cbmFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbmFiltrar.FormattingEnabled = true;
-            this.cbmFiltrar.Location = new System.Drawing.Point(10, 19);
-            this.cbmFiltrar.Name = "cbmFiltrar";
-            this.cbmFiltrar.Size = new System.Drawing.Size(100, 21);
-            this.cbmFiltrar.TabIndex = 0;
+            this.pedidoBindingSource1BindingNavigator.AddNewItem = this.toolStripButton5;
+            this.pedidoBindingSource1BindingNavigator.BindingSource = this.pedidoBindingSource1;
+            this.pedidoBindingSource1BindingNavigator.CountItem = this.toolStripLabel1;
+            this.pedidoBindingSource1BindingNavigator.DeleteItem = this.toolStripButton6;
+            this.pedidoBindingSource1BindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripSeparator1,
+            this.toolStripTextBox1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2,
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripSeparator3,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.pedidoBindingSource1BindingNavigatorSaveItem});
+            this.pedidoBindingSource1BindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.pedidoBindingSource1BindingNavigator.MoveFirstItem = this.toolStripButton1;
+            this.pedidoBindingSource1BindingNavigator.MoveLastItem = this.toolStripButton4;
+            this.pedidoBindingSource1BindingNavigator.MoveNextItem = this.toolStripButton3;
+            this.pedidoBindingSource1BindingNavigator.MovePreviousItem = this.toolStripButton2;
+            this.pedidoBindingSource1BindingNavigator.Name = "pedidoBindingSource1BindingNavigator";
+            this.pedidoBindingSource1BindingNavigator.PositionItem = this.toolStripTextBox1;
+            this.pedidoBindingSource1BindingNavigator.Size = new System.Drawing.Size(842, 25);
+            this.pedidoBindingSource1BindingNavigator.TabIndex = 0;
+            this.pedidoBindingSource1BindingNavigator.Text = "bindingNavigator1";
+            this.pedidoBindingSource1BindingNavigator.Visible = false;
             // 
-            // pedidoBindingNavigator
+            // toolStripButton5
             // 
-            this.pedidoBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.pedidoBindingNavigator.BindingSource = this.pedidoBindingSource;
-            this.pedidoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.pedidoBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.pedidoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.pedidoBindingNavigatorSaveItem});
-            this.pedidoBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pedidoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.pedidoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.pedidoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.pedidoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.pedidoBindingNavigator.Name = "pedidoBindingNavigator";
-            this.pedidoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.pedidoBindingNavigator.Size = new System.Drawing.Size(701, 25);
-            this.pedidoBindingNavigator.TabIndex = 21;
-            this.pedidoBindingNavigator.Text = "bindingNavigator1";
-            this.pedidoBindingNavigator.Visible = false;
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton5.Text = "Adicionar novo";
             // 
-            // bindingNavigatorAddNewItem
+            // toolStripLabel1
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(37, 22);
+            this.toolStripLabel1.Text = "de {0}";
+            this.toolStripLabel1.ToolTipText = "Número total de itens";
             // 
-            // pedidoBindingSource
+            // toolStripButton6
             // 
-            this.pedidoBindingSource.DataMember = "pedido";
-            this.pedidoBindingSource.DataSource = this.renataDBDataSet;
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton6.Text = "Excluir";
             // 
-            // renataDBDataSet
+            // toolStripButton1
             // 
-            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
-            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Mover primeiro";
             // 
-            // bindingNavigatorCountItem
+            // toolStripButton2
             // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "Mover anterior";
             // 
-            // bindingNavigatorDeleteItem
+            // toolStripSeparator1
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorMoveFirstItem
+            // toolStripTextBox1
             // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            this.toolStripTextBox1.AccessibleName = "Posição";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 23);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.ToolTipText = "Posição atual";
             // 
-            // bindingNavigatorMovePreviousItem
+            // toolStripSeparator2
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorSeparator
+            // toolStripButton3
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "Mover próximo";
             // 
-            // bindingNavigatorPositionItem
+            // toolStripButton4
             // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "Mover último";
             // 
-            // bindingNavigatorSeparator1
+            // toolStripSeparator3
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // bindingNavigatorMoveNextItem
+            // pedidoBindingSource1BindingNavigatorSaveItem
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            this.pedidoBindingSource1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pedidoBindingSource1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pedidoBindingSource1BindingNavigatorSaveItem.Image")));
+            this.pedidoBindingSource1BindingNavigatorSaveItem.Name = "pedidoBindingSource1BindingNavigatorSaveItem";
+            this.pedidoBindingSource1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.pedidoBindingSource1BindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.pedidoBindingSource1BindingNavigatorSaveItem.Click += new System.EventHandler(this.pedidoBindingSource1BindingNavigatorSaveItem_Click);
             // 
-            // bindingNavigatorMoveLastItem
+            // pedidoDataGridView1
             // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            this.pedidoDataGridView1.AutoGenerateColumns = false;
+            this.pedidoDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pedidoDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.pedidoDataGridView1.DataSource = this.pedidoBindingSource1;
+            this.pedidoDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pedidoDataGridView1.Location = new System.Drawing.Point(0, 172);
+            this.pedidoDataGridView1.Name = "pedidoDataGridView1";
+            this.pedidoDataGridView1.Size = new System.Drawing.Size(842, 293);
+            this.pedidoDataGridView1.TabIndex = 1;
             // 
-            // bindingNavigatorSeparator2
+            // dataGridViewTextBoxColumn6
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "id_pedido";
+            this.dataGridViewTextBoxColumn6.HeaderText = "id_pedido";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 130;
             // 
-            // pedidoBindingNavigatorSaveItem
+            // dataGridViewTextBoxColumn7
             // 
-            this.pedidoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pedidoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pedidoBindingNavigatorSaveItem.Image")));
-            this.pedidoBindingNavigatorSaveItem.Name = "pedidoBindingNavigatorSaveItem";
-            this.pedidoBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.pedidoBindingNavigatorSaveItem.Text = "Salvar Dados";
-            this.pedidoBindingNavigatorSaveItem.Click += new System.EventHandler(this.pedidoBindingNavigatorSaveItem_Click);
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "FKid_cliente";
+            this.dataGridViewTextBoxColumn7.HeaderText = "FKid_cliente";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 130;
             // 
-            // pedidoTableAdapter
+            // dataGridViewTextBoxColumn8
             // 
-            this.pedidoTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "data_pedido";
+            this.dataGridViewTextBoxColumn8.HeaderText = "data_pedido";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 130;
             // 
-            // tableAdapterManager
+            // dataGridViewTextBoxColumn9
             // 
-            this.tableAdapterManager.avaliacaoTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.categoriaTableAdapter = null;
-            this.tableAdapterManager.clienteTableAdapter = null;
-            this.tableAdapterManager.estoqueTableAdapter = null;
-            this.tableAdapterManager.eventosTableAdapter = null;
-            this.tableAdapterManager.ingredientesTableAdapter = null;
-            this.tableAdapterManager.item_pedidoTableAdapter = null;
-            this.tableAdapterManager.pagamentoTableAdapter = null;
-            this.tableAdapterManager.pedidoTableAdapter = this.pedidoTableAdapter;
-            this.tableAdapterManager.produtoTableAdapter = null;
-            this.tableAdapterManager.receitaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usuarioTableAdapter = null;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "data_entrega";
+            this.dataGridViewTextBoxColumn9.HeaderText = "data_entrega";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 130;
             // 
-            // pedidoDataGridView
+            // dataGridViewTextBoxColumn10
             // 
-            this.pedidoDataGridView.AutoGenerateColumns = false;
-            this.pedidoDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pedidoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pedidoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.pedidoDataGridView.DataSource = this.pedidoBindingSource;
-            this.pedidoDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pedidoDataGridView.Location = new System.Drawing.Point(0, 160);
-            this.pedidoDataGridView.Name = "pedidoDataGridView";
-            this.pedidoDataGridView.Size = new System.Drawing.Size(543, 302);
-            this.pedidoDataGridView.TabIndex = 21;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "status_pedido";
+            this.dataGridViewTextBoxColumn10.HeaderText = "status_pedido";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 130;
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn11
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_pedido";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_pedido";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "item_ped";
+            this.dataGridViewTextBoxColumn11.HeaderText = "item_ped";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 130;
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn12
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FKid_cliente";
-            this.dataGridViewTextBoxColumn2.HeaderText = "FKid_cliente";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "descricao_pedido";
+            this.dataGridViewTextBoxColumn12.HeaderText = "descricao_pedido";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 130;
             // 
-            // dataGridViewTextBoxColumn3
+            // groupBox2
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "data_pedido";
-            this.dataGridViewTextBoxColumn3.HeaderText = "data_pedido";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.groupBox2.Controls.Add(this.btn_Pesquisar);
+            this.groupBox2.Controls.Add(this.txt_Pesquisar);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.cbm_Filtrar);
+            this.groupBox2.Location = new System.Drawing.Point(103, 103);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(622, 48);
+            this.groupBox2.TabIndex = 32;
+            this.groupBox2.TabStop = false;
             // 
-            // dataGridViewTextBoxColumn4
+            // btn_Pesquisar
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "data_entrega";
-            this.dataGridViewTextBoxColumn4.HeaderText = "data_entrega";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.btn_Pesquisar.Location = new System.Drawing.Point(417, 18);
+            this.btn_Pesquisar.Name = "btn_Pesquisar";
+            this.btn_Pesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Pesquisar.TabIndex = 3;
+            this.btn_Pesquisar.Text = "Pesquisar";
+            this.btn_Pesquisar.UseVisualStyleBackColor = true;
+            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
             // 
-            // dataGridViewTextBoxColumn5
+            // txt_Pesquisar
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "status_pedido";
-            this.dataGridViewTextBoxColumn5.HeaderText = "status_pedido";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.txt_Pesquisar.Location = new System.Drawing.Point(210, 19);
+            this.txt_Pesquisar.Name = "txt_Pesquisar";
+            this.txt_Pesquisar.Size = new System.Drawing.Size(193, 20);
+            this.txt_Pesquisar.TabIndex = 2;
             // 
-            // textBox1
+            // label2
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Plum;
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(543, 49);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.Text = "Pedidos de vendas";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(191, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "=";
             // 
-            // btnIncluir
+            // cbm_Filtrar
             // 
-            this.btnIncluir.Location = new System.Drawing.Point(12, 115);
-            this.btnIncluir.Name = "btnIncluir";
-            this.btnIncluir.Size = new System.Drawing.Size(82, 30);
-            this.btnIncluir.TabIndex = 26;
-            this.btnIncluir.Text = "Incluir";
-            this.btnIncluir.UseVisualStyleBackColor = true;
-            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
+            this.cbm_Filtrar.FormattingEnabled = true;
+            this.cbm_Filtrar.Items.AddRange(new object[] {
+            "",
+            "Código",
+            "Categoria"});
+            this.cbm_Filtrar.Location = new System.Drawing.Point(58, 18);
+            this.cbm_Filtrar.Name = "cbm_Filtrar";
+            this.cbm_Filtrar.Size = new System.Drawing.Size(121, 21);
+            this.cbm_Filtrar.TabIndex = 0;
             // 
             // CSTpedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(543, 462);
-            this.Controls.Add(this.btnIncluir);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pedidoDataGridView);
-            this.Controls.Add(this.pedidoBindingNavigator);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ClientSize = new System.Drawing.Size(842, 465);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.pedidoDataGridView1);
+            this.Controls.Add(this.pedidoBindingSource1BindingNavigator);
             this.Name = "CSTpedido";
-            this.ShowIcon = false;
-            this.Text = "Consulta de pedidos";
-            this.Load += new System.EventHandler(this.CSTpedido_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingNavigator)).EndInit();
-            this.pedidoBindingNavigator.ResumeLayout(false);
-            this.pedidoBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoDataGridView)).EndInit();
+            this.Load += new System.EventHandler(this.CSTpedido_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource1BindingNavigator)).EndInit();
+            this.pedidoBindingSource1BindingNavigator.ResumeLayout(false);
+            this.pedidoBindingSource1BindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoDataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -407,5 +396,35 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnIncluir;
+        private RenataDBDataSet renataDBDataSet1;
+        private System.Windows.Forms.BindingSource pedidoBindingSource1;
+        private RenataDBDataSetTableAdapters.pedidoTableAdapter pedidoTableAdapter1;
+        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.BindingNavigator pedidoBindingSource1BindingNavigator;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton pedidoBindingSource1BindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView pedidoDataGridView1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btn_Pesquisar;
+        private System.Windows.Forms.TextBox txt_Pesquisar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbm_Filtrar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
     }
 }

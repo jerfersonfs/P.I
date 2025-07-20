@@ -35,8 +35,52 @@ namespace Projeto_Integrador___pt2.Formulários
             this.categoriaTableAdapter.Fill(this.renataDBDataSet.categoria);
 
         }
+        private void categoriaBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.categoriaBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        }
+
+        private void frmCategoria_Load_1(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.categoria'. Você pode movê-la ou removê-la conforme necessário.
+            this.categoriaTableAdapter1.Fill(this.renataDBDataSet1.categoria);
+
+        }
+
+        private void categoriaBindingSource2BindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.categoriaBindingSource2.EndEdit();
+            this.tableAdapterManager2.UpdateAll(this.renataDBDataSet2);
+
+        }
+
+        private void frmCategoria_Load_2(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet2.categoria'. Você pode movê-la ou removê-la conforme necessário.
+            this.categoriaTableAdapter2.Fill(this.renataDBDataSet2.categoria);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorAddNewItem.PerformClick();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.bindingNavigatorDeleteItem.PerformClick();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.categoriaBindingNavigatorSaveItem.PerformClick();
+        }
+
+        private void btn_Pesquisar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -69,41 +113,6 @@ namespace Projeto_Integrador___pt2.Formulários
             {
                 cntn.Close();
             }
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void categoriaDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnIncluir_Click(object sender, EventArgs e)
-        {
-            this.bindingNavigatorAddNewItem.PerformClick();
-        }
-
-        private void btn_Salvar_Click(object sender, EventArgs e)
-        {
-            this.categoriaBindingNavigatorSaveItem.PerformClick();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_excluir_Click(object sender, EventArgs e)
-        {
-            this.bindingNavigatorDeleteItem.PerformClick();
-        }
-
-        private void cabecalhoBox_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

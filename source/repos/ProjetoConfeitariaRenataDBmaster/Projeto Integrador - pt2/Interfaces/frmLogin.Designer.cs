@@ -30,123 +30,262 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.renataDBDataSet = new Projeto_Integrador___pt2.RenataDBDataSet();
-            this.btn_Entrar = new System.Windows.Forms.Button();
-            this.btn_Sair = new System.Windows.Forms.Button();
-            this.usuarioTableAdapter = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.usuarioTableAdapter();
-            this.tableAdapterManager = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
-            this.label1 = new System.Windows.Forms.Label();
-            this.senha_usuTextBox = new System.Windows.Forms.TextBox();
-            this.nome_usuTextBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
+            this.renataDBDataSet1 = new Projeto_Integrador___pt2.RenataDBDataSet();
+            this.usuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usuarioTableAdapter1 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.usuarioTableAdapter();
+            this.tableAdapterManager1 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
+            this.usuarioBindingSource1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.usuarioBindingSource1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.nome_usuTextBox1 = new System.Windows.Forms.TextBox();
+            this.senha_usuTextBox1 = new System.Windows.Forms.TextBox();
+            this.btn_Entrarr = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1BindingNavigator)).BeginInit();
+            this.usuarioBindingSource1BindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
-            // usuarioBindingSource
+            // renataDBDataSet1
             // 
-            this.usuarioBindingSource.DataMember = "usuario";
-            this.usuarioBindingSource.DataSource = this.renataDBDataSet;
+            this.renataDBDataSet1.DataSetName = "RenataDBDataSet";
+            this.renataDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // renataDBDataSet
+            // usuarioBindingSource1
             // 
-            this.renataDBDataSet.DataSetName = "RenataDBDataSet";
-            this.renataDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.usuarioBindingSource1.DataMember = "usuario";
+            this.usuarioBindingSource1.DataSource = this.renataDBDataSet1;
             // 
-            // btn_Entrar
+            // usuarioTableAdapter1
             // 
-            this.btn_Entrar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_Entrar.Location = new System.Drawing.Point(200, 276);
-            this.btn_Entrar.Name = "btn_Entrar";
-            this.btn_Entrar.Size = new System.Drawing.Size(130, 40);
-            this.btn_Entrar.TabIndex = 5;
-            this.btn_Entrar.Text = "Entrar";
-            this.btn_Entrar.UseVisualStyleBackColor = false;
-            this.btn_Entrar.Click += new System.EventHandler(this.btn_Entrar_Click);
-            this.btn_Entrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btn_Entrar_KeyDown);
+            this.usuarioTableAdapter1.ClearBeforeFill = true;
             // 
-            // btn_Sair
+            // tableAdapterManager1
             // 
-            this.btn_Sair.BackColor = System.Drawing.Color.Brown;
-            this.btn_Sair.Location = new System.Drawing.Point(222, 322);
-            this.btn_Sair.Name = "btn_Sair";
-            this.btn_Sair.Size = new System.Drawing.Size(86, 28);
-            this.btn_Sair.TabIndex = 6;
-            this.btn_Sair.Text = "Sair";
-            this.btn_Sair.UseVisualStyleBackColor = false;
-            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
-            this.btn_Sair.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btn_Sair_KeyDown);
+            this.tableAdapterManager1.avaliacaoTableAdapter = null;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.categoriaTableAdapter = null;
+            this.tableAdapterManager1.clienteTableAdapter = null;
+            this.tableAdapterManager1.estoqueTableAdapter = null;
+            this.tableAdapterManager1.eventosTableAdapter = null;
+            this.tableAdapterManager1.fornecedoresTableAdapter = null;
+            this.tableAdapterManager1.ingredientesTableAdapter = null;
+            this.tableAdapterManager1.item_pedidoTableAdapter = null;
+            this.tableAdapterManager1.pagamentoTableAdapter = null;
+            this.tableAdapterManager1.pedidoTableAdapter = null;
+            this.tableAdapterManager1.produtoTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.usuarioTableAdapter = this.usuarioTableAdapter1;
             // 
-            // usuarioTableAdapter
+            // usuarioBindingSource1BindingNavigator
             // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
+            this.usuarioBindingSource1BindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.usuarioBindingSource1BindingNavigator.BindingSource = this.usuarioBindingSource1;
+            this.usuarioBindingSource1BindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.usuarioBindingSource1BindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.usuarioBindingSource1BindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.usuarioBindingSource1BindingNavigatorSaveItem});
+            this.usuarioBindingSource1BindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.usuarioBindingSource1BindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.usuarioBindingSource1BindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.usuarioBindingSource1BindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.usuarioBindingSource1BindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.usuarioBindingSource1BindingNavigator.Name = "usuarioBindingSource1BindingNavigator";
+            this.usuarioBindingSource1BindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.usuarioBindingSource1BindingNavigator.Size = new System.Drawing.Size(675, 25);
+            this.usuarioBindingSource1BindingNavigator.TabIndex = 0;
+            this.usuarioBindingSource1BindingNavigator.Text = "bindingNavigator1";
+            this.usuarioBindingSource1BindingNavigator.Visible = false;
             // 
-            // tableAdapterManager
+            // bindingNavigatorAddNewItem
             // 
-            this.tableAdapterManager.avaliacaoTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.categoriaTableAdapter = null;
-            this.tableAdapterManager.clienteTableAdapter = null;
-            this.tableAdapterManager.estoqueTableAdapter = null;
-            this.tableAdapterManager.eventosTableAdapter = null;
-            this.tableAdapterManager.ingredientesTableAdapter = null;
-            this.tableAdapterManager.item_pedidoTableAdapter = null;
-            this.tableAdapterManager.pagamentoTableAdapter = null;
-            this.tableAdapterManager.pedidoTableAdapter = null;
-            this.tableAdapterManager.produtoTableAdapter = null;
-            this.tableAdapterManager.receitaTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usuarioTableAdapter = this.usuarioTableAdapter;
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
             // 
-            // label1
+            // bindingNavigatorCountItem
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Monotype Corsiva", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(32, 117);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(458, 45);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Renata - Confeitaria Artesanal";
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
             // 
-            // senha_usuTextBox
+            // bindingNavigatorDeleteItem
             // 
-            this.senha_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "senha_usu", true));
-            this.senha_usuTextBox.Location = new System.Drawing.Point(212, 216);
-            this.senha_usuTextBox.Name = "senha_usuTextBox";
-            this.senha_usuTextBox.Size = new System.Drawing.Size(100, 20);
-            this.senha_usuTextBox.TabIndex = 10;
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Excluir";
             // 
-            // nome_usuTextBox
+            // bindingNavigatorMoveFirstItem
             // 
-            this.nome_usuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "nome_usu", true));
-            this.nome_usuTextBox.Location = new System.Drawing.Point(184, 181);
-            this.nome_usuTextBox.Name = "nome_usuTextBox";
-            this.nome_usuTextBox.Size = new System.Drawing.Size(159, 20);
-            this.nome_usuTextBox.TabIndex = 11;
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // usuarioBindingSource1BindingNavigatorSaveItem
+            // 
+            this.usuarioBindingSource1BindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.usuarioBindingSource1BindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("usuarioBindingSource1BindingNavigatorSaveItem.Image")));
+            this.usuarioBindingSource1BindingNavigatorSaveItem.Name = "usuarioBindingSource1BindingNavigatorSaveItem";
+            this.usuarioBindingSource1BindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.usuarioBindingSource1BindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.usuarioBindingSource1BindingNavigatorSaveItem.Click += new System.EventHandler(this.usuarioBindingSource1BindingNavigatorSaveItem_Click);
+            // 
+            // nome_usuTextBox1
+            // 
+            //this.nome_usuTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource1, "nome_usu", true));
+            this.nome_usuTextBox1.Location = new System.Drawing.Point(164, 134);
+            this.nome_usuTextBox1.Name = "nome_usuTextBox1";
+            this.nome_usuTextBox1.Size = new System.Drawing.Size(151, 20);
+            this.nome_usuTextBox1.TabIndex = 2;
+            this.nome_usuTextBox1.Text = "Usuário";
+            this.nome_usuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // senha_usuTextBox1
+            // 
+            //this.senha_usuTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource1, "senha_usu", true));
+            this.senha_usuTextBox1.Location = new System.Drawing.Point(184, 169);
+            this.senha_usuTextBox1.Name = "senha_usuTextBox1";
+            this.senha_usuTextBox1.Size = new System.Drawing.Size(113, 20);
+            this.senha_usuTextBox1.TabIndex = 4;
+            this.senha_usuTextBox1.Text = "Senha";
+            this.senha_usuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btn_Entrarr
+            // 
+            this.btn_Entrarr.Location = new System.Drawing.Point(193, 217);
+            this.btn_Entrarr.Name = "btn_Entrarr";
+            this.btn_Entrarr.Size = new System.Drawing.Size(94, 29);
+            this.btn_Entrarr.TabIndex = 5;
+            this.btn_Entrarr.Text = "Entrar";
+            this.btn_Entrarr.UseVisualStyleBackColor = true;
+            this.btn_Entrarr.Click += new System.EventHandler(this.btn_Entrarr_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(435, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(58, 24);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Sair";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(45, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(407, 31);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Renata - Confeitaria Artezanal";
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(546, 389);
-            this.Controls.Add(this.nome_usuTextBox);
-            this.Controls.Add(this.senha_usuTextBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_Sair);
-            this.Controls.Add(this.btn_Entrar);
+            this.ClientSize = new System.Drawing.Size(503, 324);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Entrarr);
+            this.Controls.Add(this.senha_usuTextBox1);
+            this.Controls.Add(this.nome_usuTextBox1);
+            this.Controls.Add(this.usuarioBindingSource1BindingNavigator);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLogin";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmLogin_FormClosed);
-            this.Load += new System.EventHandler(this.frmLogin_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLogin_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
+            this.Load += new System.EventHandler(this.frmLogin_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1BindingNavigator)).EndInit();
+            this.usuarioBindingSource1BindingNavigator.ResumeLayout(false);
+            this.usuarioBindingSource1BindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +302,27 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox senha_usuTextBox;
         private System.Windows.Forms.TextBox nome_usuTextBox;
+        private RenataDBDataSet renataDBDataSet1;
+        private System.Windows.Forms.BindingSource usuarioBindingSource1;
+        private RenataDBDataSetTableAdapters.usuarioTableAdapter usuarioTableAdapter1;
+        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.BindingNavigator usuarioBindingSource1BindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton usuarioBindingSource1BindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox nome_usuTextBox1;
+        private System.Windows.Forms.TextBox senha_usuTextBox1;
+        private System.Windows.Forms.Button btn_Entrarr;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label2;
     }
 }

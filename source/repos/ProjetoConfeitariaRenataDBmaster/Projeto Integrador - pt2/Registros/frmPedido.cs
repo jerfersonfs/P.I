@@ -132,5 +132,22 @@ namespace Projeto_Integrador___pt2.Registros
         {
 
         }
+
+        private void pedidoBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.pedidoBindingSource.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+
+        }
+
+        private void frmPedido_Load_2(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.item_pedido'. Você pode movê-la ou removê-la conforme necessário.
+            this.item_pedidoTableAdapter1.Fill(this.renataDBDataSet1.item_pedido);
+            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.pedido'. Você pode movê-la ou removê-la conforme necessário.
+            this.pedidoTableAdapter.Fill(this.renataDBDataSet1.pedido);
+
+        }
     }
 }
