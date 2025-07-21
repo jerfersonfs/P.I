@@ -25,164 +25,80 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             try
             {
-                CSTcliente cliente = null;
-
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is CSTcliente)
-                    {
-                        cliente = (CSTcliente)frm;
-                        break;
-                    }
-                }
-                if (cliente == null)
-                {
-                    cliente = new CSTcliente();
-                    cliente.MdiParent = this;
-                    cliente.Show();
-                }
-
+                CSTcliente cliente = new CSTcliente();
+                cliente.ShowDialog();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
             }
         }
+
         public void showcsltusu()
         {
             try
             {
-                CSTusuario usu = null;
-
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is CSTusuario)
-                    {
-                        usu = (CSTusuario)frm;
-                        break;
-                    }
-                }
-                if (usu == null)
-                {
-                    usu = new CSTusuario();
-                    usu.MdiParent = this;
-                    usu.Show();
-                }
-
+                CSTusuario usu = new CSTusuario();
+                usu.ShowDialog();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
             }
         }
+
         public void showcslproduto()
         {
             try
             {
-                CSTproduto prod = null;
-
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is CSTproduto)
-                    {
-                        prod = (CSTproduto)frm;
-                        break;
-                    }
-                }
-                if (prod == null)
-                {
-                    prod = new CSTproduto();
-                    prod.MdiParent = this;
-                    prod.Show();
-                }
-
+                CSTproduto prod = new CSTproduto();
+                prod.ShowDialog();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
             }
         }
+
         public void showcsltpedido()
         {
             try
             {
-                CSTpedido pedido = null;
-
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is CSTpedido)
-                    {
-                        pedido = (CSTpedido)frm;
-                        break;
-                    }
-                }
-                if (pedido == null)
-                {
-                    pedido = new CSTpedido();
-                    pedido.MdiParent = this;
-                    pedido.Show();
-                }
-
+                CSTpedido pedido = new CSTpedido();
+                pedido.ShowDialog();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
             }
         }
+
         public void showcsltavaliacao()
         {
             try
             {
-                CSTavalicao ava = null;
-
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is CSTavalicao)
-                    {
-                        ava = (CSTavalicao)frm;
-                        break;
-                    }
-                }
-                if (ava == null)
-                {
-                    ava = new CSTavalicao();
-                    ava.MdiParent = this;
-                    ava.Show();
-                }
-
+                CSTavalicao ava = new CSTavalicao();
+                ava.ShowDialog();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
             }
         }
+
         public void showcsltingredi()
         {
             try
             {
-                CSTingrediente ing = null;
-
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is CSTingrediente)
-                    {
-                        ing = (CSTingrediente)frm;
-                        break;
-                    }
-                }
-                if (ing == null)
-                {
-                    ing = new CSTingrediente();
-                    ing.MdiParent = this;
-                    ing.Show();
-                }
-
+                CSTingrediente ing = new CSTingrediente();
+                ing.ShowDialog();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
             }
         }
+
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showcsltcliente();
@@ -195,17 +111,9 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             showcsltpedido();
         }
-        private void receitasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-          
-        }
         private void ingredientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             showcsltingredi();
-        }
-        private void pagamentosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
         }
         private void avaliaçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -216,21 +124,8 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             try
             {
-                frmProduto produto = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmProduto)
-                    {
-                        produto = (frmProduto)frm;
-                        break;
-                    }
-                }
-                if (produto == null)
-                {
-                    produto = new frmProduto();
-                    produto.MdiParent = this;
-                    produto.Show();
-                }
+                frmProduto produto = new frmProduto();
+                produto.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -241,21 +136,8 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             try
             {
-                frmCliente cliente = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmCliente)
-                    {
-                        cliente = (frmCliente)frm;
-                        break;
-                    }
-                }
-                if (cliente == null)
-                {
-                    cliente = new frmCliente();
-                    cliente.MdiParent = this;
-                    cliente.Show();
-                }
+                frmCliente cliente = new frmCliente();
+                cliente.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -266,47 +148,20 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             try
             {
-                frmPedido pedido = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmPedido)
-                    {
-                        pedido = (frmPedido)frm;
-                        break;
-                    }
-                }
-                if (pedido == null)
-                {
-                    pedido = new frmPedido();
-                    pedido.MdiParent = this;
-                    pedido.Show();
-                }
+                frmPedido pedido = new frmPedido();
+                pedido.ShowDialog();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
             }
-
         }
         public void exibeFrmEventos()
         {
             try
             {
-                frmEvento eventos = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (eventos is frmEvento)
-                    {
-                        eventos = (frmEvento)frm;
-                        break;
-                    }
-                }
-                if (eventos == null)
-                {
-                    eventos = new frmEvento();
-                    eventos.MdiParent = this;
-                    eventos.Show();
-                }
+                frmEvento eventos = new frmEvento();
+                eventos.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -317,21 +172,8 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             try
             {
-                frmIngrediente ingrediente = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmIngrediente)
-                    {
-                        ingrediente = (frmIngrediente)frm;
-                        break;
-                    }
-                }
-                if (ingrediente == null)
-                {
-                    ingrediente = new frmIngrediente();
-                    ingrediente.MdiParent = this;
-                    ingrediente.Show();
-                }
+                frmIngrediente ingrediente = new frmIngrediente();
+                ingrediente.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -342,21 +184,8 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             try
             {
-                frmEstoque estq = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmEstoque)
-                    {
-                        estq = (frmEstoque)frm;
-                        break;
-                    }
-                }
-                if (estq == null)
-                {
-                    estq = new frmEstoque();
-                    estq.MdiParent = this;
-                    estq.Show();
-                }
+                frmEstoque estq = new frmEstoque();
+                estq.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -367,21 +196,8 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             try
             {
-                frmCategoria cat = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmCategoria)
-                    {
-                        cat = (frmCategoria)frm;
-                        break;
-                    }
-                }
-                if (cat == null)
-                {
-                    cat = new frmCategoria();
-                    cat.MdiParent = this;
-                    cat.Show();
-                }
+                frmCategoria cat = new frmCategoria();
+                cat.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -390,16 +206,8 @@ namespace Projeto_Integrador___pt2.Interfaces
         }
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-            tsslUsu.Text = "Usuário: " + frmLogin.usuarioLogado;
-            string myHostname = System.Net.Dns.GetHostName();
-            tsslNomePC.Text = "Nome do PC: " + myHostname;
-            System.Net.IPHostEntry myIPs = System.Net.Dns.GetHostEntry(myHostname);
-            foreach (System.Net.IPAddress myIP in myIPs.AddressList)
-            {
-                tsslIP.Text = "IP: " + myIP;
-            }
+           
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             tsslData.Text = DateTime.Now.ToString("dd/MM/yyyy");
@@ -459,21 +267,8 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             try
             {
-                frmLogin login = null;
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is frmLogin)
-                    {
-                        login = (frmLogin)frm;
-                        break;
-                    }
-                }
-                if (login == null)
-                {
-                    login = new frmLogin();
-                    login.MdiParent = this;
-                    login.Show();
-                }
+                frmLogin login = new frmLogin();
+                login.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -484,7 +279,14 @@ namespace Projeto_Integrador___pt2.Interfaces
 
         private void TelaDoSistema_Load(object sender, EventArgs e)
         {
-
+            tsslUsu.Text = "Usuário: " + frmLogin.usuarioLogado;
+            string myHostname = System.Net.Dns.GetHostName();
+            tsslNomePC.Text = "Nome do PC: " + myHostname;
+            System.Net.IPHostEntry myIPs = System.Net.Dns.GetHostEntry(myHostname);
+            foreach (System.Net.IPAddress myIP in myIPs.AddressList)
+            {
+                tsslIP.Text = "IP: " + myIP;
+            }
         }
 
         private void configuraçõesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -494,7 +296,7 @@ namespace Projeto_Integrador___pt2.Interfaces
 
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-
+          
         }
     }
 }

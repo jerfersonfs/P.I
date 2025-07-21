@@ -60,6 +60,7 @@
             this.txt_Pesquisar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbm_Filtrar = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource1BindingNavigator)).BeginInit();
@@ -337,19 +338,33 @@
             this.cbm_Filtrar.Items.AddRange(new object[] {
             "",
             "Código",
-            "Categoria"});
+            "Pedido"});
             this.cbm_Filtrar.Location = new System.Drawing.Point(58, 18);
             this.cbm_Filtrar.Name = "cbm_Filtrar";
             this.cbm_Filtrar.Size = new System.Drawing.Size(121, 21);
             this.cbm_Filtrar.TabIndex = 0;
             // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(842, 47);
+            this.textBox2.TabIndex = 33;
+            this.textBox2.Text = "Consulta de pedidos";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // CSTpedido
             // 
             this.ClientSize = new System.Drawing.Size(842, 465);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pedidoDataGridView1);
             this.Controls.Add(this.pedidoBindingSource1BindingNavigator);
             this.Name = "CSTpedido";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.CSTpedido_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource1)).EndInit();
@@ -426,5 +441,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

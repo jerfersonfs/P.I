@@ -42,50 +42,13 @@ namespace Projeto_Integrador___pt2.Registros
             //this.pedidoTableAdapter.Fill(this.renataDBDataSet.pedido);
 
         }
-       /* private void id_clienteTextBox_TextChanged(object sender, EventArgs e)
-        {
-            SqlTransaction transaction = cntn.Connection.BeginTransaction();
-            try
-            {
-                using (SqlConnection cntn = new SqlConnection())
-                {
-                    cntn.Open();
-                    string query = "INSERT INTO Pedido(FKid_cliente) WHERE VALUES Cliente(id_cliente) ";
-                    using (SqlCommand cmd = new SqlCommand(query, cntn, transaction))
-                    {
-                        cmd.Parameters.AddWithValue("id_cliente", id_clienteTextBox.Text);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                transaction.Commit();
-                MessageBox.Show("ID do cliente inserido com sucesso!");
-            }
-            catch (Exception ex)
-            {
-                transaction.Rollback();
-                MessageBox.Show("Erro ao inserir ID do cliente: " + ex.Message);
-            }
-        }*/
 
         public void exibeConsulta()
         {
             try
             {
                 CSTpedido cst = new CSTpedido();
-                foreach (Form frm in this.MdiChildren)
-                {
-                    if (frm is CSTpedido)
-                    {
-                        cst = (CSTpedido)frm;
-                        break;
-                    }
-                }
-                if (cst.IsDisposed)
-                {
-                    cst = new CSTpedido();
-                    cst.MdiParent = this;
-                    cst.Show();
-                }
+                cst.ShowDialog();
             }
             catch (Exception ex)
             {
@@ -117,21 +80,7 @@ namespace Projeto_Integrador___pt2.Registros
         {
             
         }
-
-        private void btn_consultaP_Click(object sender, EventArgs e)
-        {
-            exibeConsulta();
-        }
-
-        private void btn_sair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void pedidoBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
@@ -148,6 +97,46 @@ namespace Projeto_Integrador___pt2.Registros
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.pedido'. Você pode movê-la ou removê-la conforme necessário.
             this.pedidoTableAdapter.Fill(this.renataDBDataSet1.pedido);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.exibeConsulta();
+        }
+
+        private void btn_Pesquisar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBox1.Text == "Código")
+                {
+                    string sql = "SELECT * FROM item_pedido WHERE id_item_pedido = " + txt_Pesquisar.Text + "";
+                    SqlCommand cmd = new SqlCommand(sql);
+                    cntn.Open();
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable ip = new DataTable();
+                    adapter.Fill(ip);
+                    item_pedidoDataGridView.DataSource = ip;
+                }
+                if (cbmFiltrar.Text == "Item")
+                {
+                    string sql = "SELECT * FROM item_pedido WHERE FKid_produto LIKE '%" + txt_Pesquisar.Text + "%'";
+                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable ip = new DataTable();
+                    adapter.Fill(ip);
+                    item_pedidoDataGridView.DataSource = ip;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                cntn.Close();
+            }
         }
     }
 }

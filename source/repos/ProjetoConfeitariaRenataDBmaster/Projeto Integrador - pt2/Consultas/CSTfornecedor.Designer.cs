@@ -63,6 +63,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
@@ -115,7 +116,8 @@
             this.cbm_Filtrar.Items.AddRange(new object[] {
             "",
             "Código",
-            "Categoria"});
+            "Fornecedor",
+            "CNPJ"});
             this.cbm_Filtrar.Location = new System.Drawing.Point(58, 18);
             this.cbm_Filtrar.Name = "cbm_Filtrar";
             this.cbm_Filtrar.Size = new System.Drawing.Size(121, 21);
@@ -360,16 +362,29 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "estado_forn";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(958, 47);
+            this.textBox2.TabIndex = 34;
+            this.textBox2.Text = "Consulta de fornecedores";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // CSTfornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 450);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.fornecedoresDataGridView);
             this.Controls.Add(this.fornecedoresBindingNavigator);
             this.Controls.Add(this.groupBox2);
             this.Name = "CSTfornecedor";
-            this.Text = "CSTfornecedor";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.CSTfornecedor_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -419,5 +434,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

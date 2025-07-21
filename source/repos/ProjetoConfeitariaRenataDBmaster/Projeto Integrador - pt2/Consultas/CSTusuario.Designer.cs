@@ -48,11 +48,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.usuarioBindingSource1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.usuarioDataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_Pesquisar = new System.Windows.Forms.Button();
-            this.txt_Pesquisar = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbm_Filtrar = new System.Windows.Forms.ComboBox();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +55,12 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Pesquisar = new System.Windows.Forms.Button();
+            this.txt_Pesquisar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbm_Filtrar = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1BindingNavigator)).BeginInit();
@@ -244,56 +245,6 @@
             this.usuarioDataGridView1.Size = new System.Drawing.Size(822, 314);
             this.usuarioDataGridView1.TabIndex = 1;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btn_Pesquisar);
-            this.groupBox2.Controls.Add(this.txt_Pesquisar);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cbm_Filtrar);
-            this.groupBox2.Location = new System.Drawing.Point(106, 49);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(622, 48);
-            this.groupBox2.TabIndex = 32;
-            this.groupBox2.TabStop = false;
-            // 
-            // btn_Pesquisar
-            // 
-            this.btn_Pesquisar.Location = new System.Drawing.Point(417, 18);
-            this.btn_Pesquisar.Name = "btn_Pesquisar";
-            this.btn_Pesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Pesquisar.TabIndex = 3;
-            this.btn_Pesquisar.Text = "Pesquisar";
-            this.btn_Pesquisar.UseVisualStyleBackColor = true;
-            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
-            // 
-            // txt_Pesquisar
-            // 
-            this.txt_Pesquisar.Location = new System.Drawing.Point(210, 19);
-            this.txt_Pesquisar.Name = "txt_Pesquisar";
-            this.txt_Pesquisar.Size = new System.Drawing.Size(193, 20);
-            this.txt_Pesquisar.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(191, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "=";
-            // 
-            // cbm_Filtrar
-            // 
-            this.cbm_Filtrar.FormattingEnabled = true;
-            this.cbm_Filtrar.Items.AddRange(new object[] {
-            "",
-            "Código",
-            "Categoria"});
-            this.cbm_Filtrar.Location = new System.Drawing.Point(58, 18);
-            this.cbm_Filtrar.Name = "cbm_Filtrar";
-            this.cbm_Filtrar.Size = new System.Drawing.Size(121, 21);
-            this.cbm_Filtrar.TabIndex = 0;
-            // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "id_usu";
@@ -343,13 +294,77 @@
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.Width = 130;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btn_Pesquisar);
+            this.groupBox2.Controls.Add(this.txt_Pesquisar);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.cbm_Filtrar);
+            this.groupBox2.Location = new System.Drawing.Point(106, 74);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(622, 48);
+            this.groupBox2.TabIndex = 32;
+            this.groupBox2.TabStop = false;
+            // 
+            // btn_Pesquisar
+            // 
+            this.btn_Pesquisar.Location = new System.Drawing.Point(417, 18);
+            this.btn_Pesquisar.Name = "btn_Pesquisar";
+            this.btn_Pesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Pesquisar.TabIndex = 3;
+            this.btn_Pesquisar.Text = "Pesquisar";
+            this.btn_Pesquisar.UseVisualStyleBackColor = true;
+            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
+            // 
+            // txt_Pesquisar
+            // 
+            this.txt_Pesquisar.Location = new System.Drawing.Point(210, 19);
+            this.txt_Pesquisar.Name = "txt_Pesquisar";
+            this.txt_Pesquisar.Size = new System.Drawing.Size(193, 20);
+            this.txt_Pesquisar.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(191, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "=";
+            // 
+            // cbm_Filtrar
+            // 
+            this.cbm_Filtrar.FormattingEnabled = true;
+            this.cbm_Filtrar.Items.AddRange(new object[] {
+            "",
+            "Código",
+            "Usuário"});
+            this.cbm_Filtrar.Location = new System.Drawing.Point(58, 18);
+            this.cbm_Filtrar.Name = "cbm_Filtrar";
+            this.cbm_Filtrar.Size = new System.Drawing.Size(121, 21);
+            this.cbm_Filtrar.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(822, 47);
+            this.textBox2.TabIndex = 33;
+            this.textBox2.Text = "Consulta de usuários";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // CSTusuario
             // 
             this.ClientSize = new System.Drawing.Size(822, 442);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.usuarioDataGridView1);
             this.Controls.Add(this.usuarioBindingSource1BindingNavigator);
             this.Name = "CSTusuario";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.CSTusuario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource1)).EndInit();
@@ -413,5 +428,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

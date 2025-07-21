@@ -29,29 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoria));
             System.Windows.Forms.Label id_categoriaLabel;
             System.Windows.Forms.Label nome_categoriaLabel;
             System.Windows.Forms.Label personalizacaoLabel;
             System.Windows.Forms.Label status_catLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoria));
             this.renataDBDataSet2 = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.categoriaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.categoriaTableAdapter2 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.categoriaTableAdapter();
             this.tableAdapterManager2 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.TableAdapterManager();
             this.categoriaBindingSource2BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.categoriaBindingSource2BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.categoriaDataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_categoriaTextBox2 = new System.Windows.Forms.TextBox();
             this.nome_categoriaTextBox2 = new System.Windows.Forms.TextBox();
             this.personalizacaoTextBox2 = new System.Windows.Forms.TextBox();
@@ -61,15 +65,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.btn_Pesquisar = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             id_categoriaLabel = new System.Windows.Forms.Label();
             nome_categoriaLabel = new System.Windows.Forms.Label();
             personalizacaoLabel = new System.Windows.Forms.Label();
@@ -81,6 +81,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoriaDataGridView2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // id_categoriaLabel
+            // 
+            id_categoriaLabel.AutoSize = true;
+            id_categoriaLabel.Location = new System.Drawing.Point(169, 90);
+            id_categoriaLabel.Name = "id_categoriaLabel";
+            id_categoriaLabel.Size = new System.Drawing.Size(43, 13);
+            id_categoriaLabel.TabIndex = 2;
+            id_categoriaLabel.Text = "Código:";
+            // 
+            // nome_categoriaLabel
+            // 
+            nome_categoriaLabel.AutoSize = true;
+            nome_categoriaLabel.Location = new System.Drawing.Point(169, 116);
+            nome_categoriaLabel.Name = "nome_categoriaLabel";
+            nome_categoriaLabel.Size = new System.Drawing.Size(55, 13);
+            nome_categoriaLabel.TabIndex = 4;
+            nome_categoriaLabel.Text = "Categoria:";
+            // 
+            // personalizacaoLabel
+            // 
+            personalizacaoLabel.AutoSize = true;
+            personalizacaoLabel.Location = new System.Drawing.Point(169, 142);
+            personalizacaoLabel.Name = "personalizacaoLabel";
+            personalizacaoLabel.Size = new System.Drawing.Size(82, 13);
+            personalizacaoLabel.TabIndex = 6;
+            personalizacaoLabel.Text = "Personalizacao:";
+            // 
+            // status_catLabel
+            // 
+            status_catLabel.AutoSize = true;
+            status_catLabel.Location = new System.Drawing.Point(169, 168);
+            status_catLabel.Name = "status_catLabel";
+            status_catLabel.Size = new System.Drawing.Size(40, 13);
+            status_catLabel.TabIndex = 8;
+            status_catLabel.Text = "Status:";
             // 
             // renataDBDataSet2
             // 
@@ -144,11 +180,36 @@
             this.categoriaBindingSource2BindingNavigator.Text = "bindingNavigator1";
             this.categoriaBindingSource2BindingNavigator.Visible = false;
             // 
+            // toolStripButton11
+            // 
+            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton11.Text = "Adicionar novo";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(37, 22);
+            this.toolStripLabel2.Text = "de {0}";
+            this.toolStripLabel2.ToolTipText = "Número total de itens";
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton12.Text = "Excluir";
+            // 
             // toolStripButton7
             // 
             this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.Name = "bindingNavigatorMoveFirstItem";
+            this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.RightToLeftAutoMirrorImage = true;
             this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton7.Text = "Mover primeiro";
@@ -157,14 +218,14 @@
             // 
             this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.Name = "bindingNavigatorMovePreviousItem";
+            this.toolStripButton8.Name = "toolStripButton8";
             this.toolStripButton8.RightToLeftAutoMirrorImage = true;
             this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton8.Text = "Mover anterior";
             // 
             // toolStripSeparator4
             // 
-            this.toolStripSeparator4.Name = "bindingNavigatorSeparator";
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripTextBox2
@@ -172,28 +233,21 @@
             this.toolStripTextBox2.AccessibleName = "Posição";
             this.toolStripTextBox2.AutoSize = false;
             this.toolStripTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox2.Name = "bindingNavigatorPositionItem";
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
             this.toolStripTextBox2.Size = new System.Drawing.Size(50, 23);
             this.toolStripTextBox2.Text = "0";
             this.toolStripTextBox2.ToolTipText = "Posição atual";
             // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "bindingNavigatorCountItem";
-            this.toolStripLabel2.Size = new System.Drawing.Size(37, 22);
-            this.toolStripLabel2.Text = "de {0}";
-            this.toolStripLabel2.ToolTipText = "Número total de itens";
-            // 
             // toolStripSeparator5
             // 
-            this.toolStripSeparator5.Name = "bindingNavigatorSeparator";
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripButton9
             // 
             this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.Name = "bindingNavigatorMoveNextItem";
+            this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.RightToLeftAutoMirrorImage = true;
             this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton9.Text = "Mover próximo";
@@ -202,33 +256,15 @@
             // 
             this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.Name = "bindingNavigatorMoveLastItem";
+            this.toolStripButton10.Name = "toolStripButton10";
             this.toolStripButton10.RightToLeftAutoMirrorImage = true;
             this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton10.Text = "Mover último";
             // 
             // toolStripSeparator6
             // 
-            this.toolStripSeparator6.Name = "bindingNavigatorSeparator";
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton11
-            // 
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
-            this.toolStripButton11.Name = "bindingNavigatorAddNewItem";
-            this.toolStripButton11.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton11.Text = "Adicionar novo";
-            // 
-            // toolStripButton12
-            // 
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
-            this.toolStripButton12.Name = "bindingNavigatorDeleteItem";
-            this.toolStripButton12.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton12.Text = "Excluir";
             // 
             // categoriaBindingSource2BindingNavigatorSaveItem
             // 
@@ -255,14 +291,33 @@
             this.categoriaDataGridView2.Size = new System.Drawing.Size(622, 293);
             this.categoriaDataGridView2.TabIndex = 1;
             // 
-            // id_categoriaLabel
+            // dataGridViewTextBoxColumn9
             // 
-            id_categoriaLabel.AutoSize = true;
-            id_categoriaLabel.Location = new System.Drawing.Point(169, 90);
-            id_categoriaLabel.Name = "id_categoriaLabel";
-            id_categoriaLabel.Size = new System.Drawing.Size(43, 13);
-            id_categoriaLabel.TabIndex = 2;
-            id_categoriaLabel.Text = "Código:";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "id_categoria";
+            this.dataGridViewTextBoxColumn9.HeaderText = "id_categoria";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "nome_categoria";
+            this.dataGridViewTextBoxColumn10.HeaderText = "nome_categoria";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "personalizacao";
+            this.dataGridViewTextBoxColumn11.HeaderText = "personalizacao";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "status_cat";
+            this.dataGridViewTextBoxColumn12.HeaderText = "status_cat";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 150;
             // 
             // id_categoriaTextBox2
             // 
@@ -272,15 +327,6 @@
             this.id_categoriaTextBox2.Size = new System.Drawing.Size(173, 20);
             this.id_categoriaTextBox2.TabIndex = 3;
             // 
-            // nome_categoriaLabel
-            // 
-            nome_categoriaLabel.AutoSize = true;
-            nome_categoriaLabel.Location = new System.Drawing.Point(169, 116);
-            nome_categoriaLabel.Name = "nome_categoriaLabel";
-            nome_categoriaLabel.Size = new System.Drawing.Size(55, 13);
-            nome_categoriaLabel.TabIndex = 4;
-            nome_categoriaLabel.Text = "Categoria:";
-            // 
             // nome_categoriaTextBox2
             // 
             this.nome_categoriaTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource2, "nome_categoria", true));
@@ -289,15 +335,6 @@
             this.nome_categoriaTextBox2.Size = new System.Drawing.Size(173, 20);
             this.nome_categoriaTextBox2.TabIndex = 5;
             // 
-            // personalizacaoLabel
-            // 
-            personalizacaoLabel.AutoSize = true;
-            personalizacaoLabel.Location = new System.Drawing.Point(169, 142);
-            personalizacaoLabel.Name = "personalizacaoLabel";
-            personalizacaoLabel.Size = new System.Drawing.Size(82, 13);
-            personalizacaoLabel.TabIndex = 6;
-            personalizacaoLabel.Text = "Personalizacao:";
-            // 
             // personalizacaoTextBox2
             // 
             this.personalizacaoTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource2, "personalizacao", true));
@@ -305,15 +342,6 @@
             this.personalizacaoTextBox2.Name = "personalizacaoTextBox2";
             this.personalizacaoTextBox2.Size = new System.Drawing.Size(173, 20);
             this.personalizacaoTextBox2.TabIndex = 7;
-            // 
-            // status_catLabel
-            // 
-            status_catLabel.AutoSize = true;
-            status_catLabel.Location = new System.Drawing.Point(169, 168);
-            status_catLabel.Name = "status_catLabel";
-            status_catLabel.Size = new System.Drawing.Size(40, 13);
-            status_catLabel.TabIndex = 8;
-            status_catLabel.Text = "Status:";
             // 
             // status_catTextBox2
             // 
@@ -374,34 +402,6 @@
             this.button5.Text = "Visualizar";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "id_categoria";
-            this.dataGridViewTextBoxColumn9.HeaderText = "id_categoria";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "nome_categoria";
-            this.dataGridViewTextBoxColumn10.HeaderText = "nome_categoria";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "personalizacao";
-            this.dataGridViewTextBoxColumn11.HeaderText = "personalizacao";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.Width = 170;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "status_cat";
-            this.dataGridViewTextBoxColumn12.HeaderText = "status_cat";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 150;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btn_Pesquisar);
@@ -414,6 +414,32 @@
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             // 
+            // btn_Pesquisar
+            // 
+            this.btn_Pesquisar.Location = new System.Drawing.Point(417, 18);
+            this.btn_Pesquisar.Name = "btn_Pesquisar";
+            this.btn_Pesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Pesquisar.TabIndex = 3;
+            this.btn_Pesquisar.Text = "Pesquisar";
+            this.btn_Pesquisar.UseVisualStyleBackColor = true;
+            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(210, 19);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(193, 20);
+            this.textBox3.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(191, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "=";
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -425,32 +451,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(191, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "=";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(210, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(193, 20);
-            this.textBox3.TabIndex = 2;
-            // 
-            // btn_Pesquisar
-            // 
-            this.btn_Pesquisar.Location = new System.Drawing.Point(417, 18);
-            this.btn_Pesquisar.Name = "btn_Pesquisar";
-            this.btn_Pesquisar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Pesquisar.TabIndex = 3;
-            this.btn_Pesquisar.Text = "Pesquisar";
-            this.btn_Pesquisar.UseVisualStyleBackColor = true;
-            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
             // 
             // frmCategoria
             // 
@@ -472,6 +472,7 @@
             this.Controls.Add(this.categoriaDataGridView2);
             this.Controls.Add(this.categoriaBindingSource2BindingNavigator);
             this.Name = "frmCategoria";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.frmCategoria_Load_2);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource2)).EndInit();

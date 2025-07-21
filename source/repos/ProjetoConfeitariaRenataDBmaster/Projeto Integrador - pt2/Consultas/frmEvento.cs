@@ -90,25 +90,6 @@ namespace Projeto_Integrador___pt2.Formulários
 
         }
 
-        private void fKid_clienteTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try 
-            { 
-                string sql = "SELECT nome FROM cliente WHERE id_cliente = @id_cliente";
-                SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                cmd.Parameters.AddWithValue("@id_cliente", fKid_clienteTextBox.Text);
-                cntn.Open();
-            }
-            catch (Exception ex) 
-            { 
-                MessageBox.Show("Erro ao buscar o nome do cliente: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                cntn.Close();
-            }
-        }
-
         private void eventosBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();

@@ -431,6 +431,7 @@
             this.Controls.Add(this.data_fim_promocaoDateTimePicker1);
             this.Controls.Add(this.produtoBindingSource1BindingNavigator);
             this.Name = "frmProduto";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.frmProduto_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource1)).EndInit();

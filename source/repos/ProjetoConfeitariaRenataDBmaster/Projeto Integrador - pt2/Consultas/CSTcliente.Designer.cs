@@ -66,6 +66,7 @@
             this.txt_Pesquisar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbm_Filtrar = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1BindingNavigator)).BeginInit();
@@ -340,7 +341,7 @@
             this.groupBox2.Controls.Add(this.txt_Pesquisar);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cbm_Filtrar);
-            this.groupBox2.Location = new System.Drawing.Point(196, 67);
+            this.groupBox2.Location = new System.Drawing.Point(196, 66);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(622, 48);
             this.groupBox2.TabIndex = 33;
@@ -378,19 +379,35 @@
             this.cbm_Filtrar.Items.AddRange(new object[] {
             "",
             "Código",
-            "Categoria"});
+            "Cliente",
+            "CPF",
+            "CNPJ"});
             this.cbm_Filtrar.Location = new System.Drawing.Point(58, 18);
             this.cbm_Filtrar.Name = "cbm_Filtrar";
             this.cbm_Filtrar.Size = new System.Drawing.Size(121, 21);
             this.cbm_Filtrar.TabIndex = 0;
             // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(1010, 47);
+            this.textBox2.TabIndex = 34;
+            this.textBox2.Text = "Consulta de clientes";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // CSTcliente
             // 
             this.ClientSize = new System.Drawing.Size(1010, 439);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.clienteDataGridView1);
             this.Controls.Add(this.clienteBindingSource1BindingNavigator);
             this.Name = "CSTcliente";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.CSTcliente_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
@@ -481,5 +498,6 @@
         private System.Windows.Forms.TextBox txt_Pesquisar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbm_Filtrar;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

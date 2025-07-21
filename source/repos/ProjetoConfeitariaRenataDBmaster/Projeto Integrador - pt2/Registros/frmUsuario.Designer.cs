@@ -443,6 +443,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.usuarioBindingSource1BindingNavigator);
             this.Name = "frmUsuario";
+            this.ShowIcon = false;
             this.Text = " ";
             this.Load += new System.EventHandler(this.frmUsuario_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();

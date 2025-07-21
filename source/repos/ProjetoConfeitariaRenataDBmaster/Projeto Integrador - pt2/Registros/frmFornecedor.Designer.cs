@@ -499,7 +499,7 @@
             this.Controls.Add(this.estado_fornTextBox);
             this.Controls.Add(this.fornecedoresBindingNavigator);
             this.Name = "frmFornecedor";
-            this.Text = "frmFornecedor";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.frmFornecedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();

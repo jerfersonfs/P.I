@@ -562,6 +562,7 @@
             this.Controls.Add(this.cepTextBox1);
             this.Controls.Add(this.clienteBindingSource1BindingNavigator);
             this.Name = "frmCliente";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.frmCliente_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
