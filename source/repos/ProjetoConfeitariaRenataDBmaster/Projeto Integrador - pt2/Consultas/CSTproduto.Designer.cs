@@ -240,9 +240,10 @@
             this.dataGridViewTextBoxColumn14});
             this.produtoDataGridView1.DataSource = this.produtoBindingSource1;
             this.produtoDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.produtoDataGridView1.Location = new System.Drawing.Point(0, 184);
+            this.produtoDataGridView1.Enabled = false;
+            this.produtoDataGridView1.Location = new System.Drawing.Point(0, 162);
             this.produtoDataGridView1.Name = "produtoDataGridView1";
-            this.produtoDataGridView1.Size = new System.Drawing.Size(957, 270);
+            this.produtoDataGridView1.Size = new System.Drawing.Size(957, 292);
             this.produtoDataGridView1.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn8
@@ -300,7 +301,7 @@
             this.groupBox2.Controls.Add(this.txt_Pesquisar);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.cbm_Filtrar);
-            this.groupBox2.Location = new System.Drawing.Point(162, 130);
+            this.groupBox2.Location = new System.Drawing.Point(166, 90);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(622, 48);
             this.groupBox2.TabIndex = 33;

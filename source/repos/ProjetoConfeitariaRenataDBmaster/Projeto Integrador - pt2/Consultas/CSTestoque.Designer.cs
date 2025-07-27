@@ -236,6 +236,7 @@
             this.dataGridViewTextBoxColumn12});
             this.estoqueDataGridView1.DataSource = this.estoqueBindingSource1;
             this.estoqueDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.estoqueDataGridView1.Enabled = false;
             this.estoqueDataGridView1.Location = new System.Drawing.Point(0, 152);
             this.estoqueDataGridView1.Name = "estoqueDataGridView1";
             this.estoqueDataGridView1.Size = new System.Drawing.Size(739, 309);
@@ -287,6 +288,7 @@
             this.groupBox2.Size = new System.Drawing.Size(622, 48);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // btn_Pesquisar
             // 

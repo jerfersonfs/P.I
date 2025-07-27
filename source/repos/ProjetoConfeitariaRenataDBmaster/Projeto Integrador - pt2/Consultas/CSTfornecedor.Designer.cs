@@ -297,6 +297,7 @@
             this.dataGridViewTextBoxColumn10});
             this.fornecedoresDataGridView.DataSource = this.fornecedoresBindingSource;
             this.fornecedoresDataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.fornecedoresDataGridView.Enabled = false;
             this.fornecedoresDataGridView.Location = new System.Drawing.Point(0, 139);
             this.fornecedoresDataGridView.Name = "fornecedoresDataGridView";
             this.fornecedoresDataGridView.Size = new System.Drawing.Size(958, 311);

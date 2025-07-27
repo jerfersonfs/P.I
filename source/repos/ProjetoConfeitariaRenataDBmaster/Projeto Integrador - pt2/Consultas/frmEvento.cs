@@ -111,7 +111,7 @@ namespace Projeto_Integrador___pt2.Formulários
             {
                 if (cbmFiltrar.Text == "Código")
                 {
-                    string sql = "SELECT * FROM Eventos WHERE id_evento = " + txtPesquisar.Text + "";
+                    string sql = "SELECT * FROM eventos WHERE id_evento = " + txtPesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql);
                     cntn.Open();
                     cmd.CommandType = CommandType.Text;
@@ -122,7 +122,7 @@ namespace Projeto_Integrador___pt2.Formulários
                 }
                 if (cbmFiltrar.Text == "Eventos")
                 {
-                    string sql = "SELECT * FROM Eventos WHERE tipo_evento LIKE '%" + txtPesquisar.Text + "%'";
+                    string sql = "SELECT * FROM eventos WHERE tipo_evento LIKE '%" + txtPesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable evento = new DataTable();

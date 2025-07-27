@@ -87,12 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conection.cs" />
-    <Compile Include="-Futuras implemetações\CSTavalicao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="-Futuras implemetações\CSTavalicao.Designer.cs">
-      <DependentUpon>CSTavalicao.cs</DependentUpon>
-    </Compile>
     <Compile Include="Consultas\CSTcliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,10 +99,10 @@
     <Compile Include="Consultas\CSTestoque.Designer.cs">
       <DependentUpon>CSTestoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="-Futuras implemetações\CSTingrediente.cs">
+    <Compile Include="Consultas\CSTingrediente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="-Futuras implemetações\CSTingrediente.Designer.cs">
+    <Compile Include="Consultas\CSTingrediente.Designer.cs">
       <DependentUpon>CSTingrediente.cs</DependentUpon>
     </Compile>
     <Compile Include="Consultas\CSTfornecedor.cs">
@@ -135,11 +129,12 @@
     <Compile Include="Consultas\CSTusuario.Designer.cs">
       <DependentUpon>CSTusuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\frmAtalhos.cs">
+    <Compile Include="Formulários\frmEstoque.cs" />
+    <Compile Include="Interfaces\frmImagens.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaces\frmAtalhos.Designer.cs">
-      <DependentUpon>frmAtalhos.cs</DependentUpon>
+    <Compile Include="Interfaces\frmImagens.Designer.cs">
+      <DependentUpon>frmImagens.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\frmLogin.cs">
       <SubType>Form</SubType>
@@ -194,10 +189,10 @@
     <Compile Include="Consultas\frmEvento.Designer.cs">
       <DependentUpon>frmEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="-Futuras implemetações\frmIngrediente.cs">
+    <Compile Include="Registros\frmIngrediente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="-Futuras implemetações\frmIngrediente.Designer.cs">
+    <Compile Include="Registros\frmIngrediente.Designer.cs">
       <DependentUpon>frmIngrediente.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\frmFornecedor.cs">
@@ -244,13 +239,10 @@
     <EmbeddedResource Include="Consultas\CSTestoque.resx">
       <DependentUpon>CSTestoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="-Futuras implemetações\CSTavalicao.resx">
-      <DependentUpon>CSTavalicao.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTcliente.resx">
       <DependentUpon>CSTcliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="-Futuras implemetações\CSTingrediente.resx">
+    <EmbeddedResource Include="Consultas\CSTingrediente.resx">
       <DependentUpon>CSTingrediente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\CSTfornecedor.resx">
@@ -265,8 +257,8 @@
     <EmbeddedResource Include="Consultas\CSTusuario.resx">
       <DependentUpon>CSTusuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaces\frmAtalhos.resx">
-      <DependentUpon>frmAtalhos.cs</DependentUpon>
+    <EmbeddedResource Include="Interfaces\frmImagens.resx">
+      <DependentUpon>frmImagens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -292,7 +284,7 @@
     <EmbeddedResource Include="Consultas\frmEvento.resx">
       <DependentUpon>frmEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="-Futuras implemetações\frmIngrediente.resx">
+    <EmbeddedResource Include="Registros\frmIngrediente.resx">
       <DependentUpon>frmIngrediente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\frmFornecedor.resx">
@@ -311,6 +303,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorios\RLTPedido.resx">
+      <DependentUpon>RLTPedido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -364,7 +359,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="-Futuras implemetações\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

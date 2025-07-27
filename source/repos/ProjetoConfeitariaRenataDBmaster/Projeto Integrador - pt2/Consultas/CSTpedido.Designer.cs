@@ -240,6 +240,7 @@
             this.dataGridViewTextBoxColumn12});
             this.pedidoDataGridView1.DataSource = this.pedidoBindingSource1;
             this.pedidoDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pedidoDataGridView1.Enabled = false;
             this.pedidoDataGridView1.Location = new System.Drawing.Point(0, 172);
             this.pedidoDataGridView1.Name = "pedidoDataGridView1";
             this.pedidoDataGridView1.Size = new System.Drawing.Size(842, 293);

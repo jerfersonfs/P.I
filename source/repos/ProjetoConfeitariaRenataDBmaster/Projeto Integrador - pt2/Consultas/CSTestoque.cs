@@ -86,5 +86,10 @@ namespace Projeto_Integrador___pt2.Consultas
                 cntn.Close();
             }
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

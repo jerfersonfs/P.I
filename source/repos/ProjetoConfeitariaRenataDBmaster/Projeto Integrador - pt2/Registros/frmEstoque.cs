@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Projeto_Integrador___pt2.Formulários
 {
-    public partial class frmEstoque: Form
+    public partial class frmEstoque : Form
     {
         Conection cntn = new Conection();
         public frmEstoque()
@@ -22,13 +22,7 @@ namespace Projeto_Integrador___pt2.Formulários
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void estoqueBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.estoqueBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
-
-        }
+      
 
         private void frmEstoque_Load(object sender, EventArgs e)
         {
@@ -37,59 +31,6 @@ namespace Projeto_Integrador___pt2.Formulários
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.estoque'. Você pode movê-la ou removê-la conforme necessário.
             this.estoqueTableAdapter.Fill(this.renataDBDataSet.estoque);
 
-        }
-
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cbmFiltrar.Text == "Código")
-                {
-                    string sql = "SELECT * FROM Estoque WHERE id_estoque = " + txtPesquisar.Text + "";
-                    SqlCommand cmd = new SqlCommand(sql);
-                    cntn.Open();
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable estoque = new DataTable();
-                    adapter.Fill(estoque);
-                    estoqueDataGridView.DataSource = estoque;
-                }
-                if (cbmFiltrar.Text == "Usuário")
-                {
-                    string sql = "SELECT * FROM Estoque WHERE nome_estoque LIKE '%" + txtPesquisar.Text + "%'";
-                    SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable  estoque = new DataTable();
-                    adapter.Fill(estoque);
-                    estoqueDataGridView.DataSource = estoque;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                cntn.Close();
-            }
-        }
-        private void id_ingredienteTextBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                string sql = "SELECT*FROM ingrediente WHERE id_ingrediente = @id_ingrediente";
-                SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
-                cmd.Parameters.AddWithValue("@id_ingrediente", fKid_ingredienteTextBox.Text);
-                cntn.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao buscar o nome do ingrediente: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                cntn.Close();
-            }
         }
         private void frmEstoque_Load_1(object sender, EventArgs e)
         {
@@ -113,26 +54,57 @@ namespace Projeto_Integrador___pt2.Formulários
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorAddNewItem.PerformClick();
+            try
+            {
+                this.bindingNavigatorAddNewItem.PerformClick();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao incluir novo registro: " + ex.Message);
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorDeleteItem.PerformClick();
+            try 
+            { 
+                this.bindingNavigatorDeleteItem.PerformClick();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao excluir registro: " + ex.Message);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.estoqueBindingNavigatorSaveItem_Click(sender, e);
+            try
+            {
+                this.estoqueBindingSource1BindingNavigatorSaveItem_Click(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar registro: " + ex.Message);
+            }
         }
         public void exibirConsulta()
         {
             CSTestoque cst = new CSTestoque();
             cst.ShowDialog();
-        }   
+        }
         private void button6_Click(object sender, EventArgs e)
         {
-           this.exibirConsulta();
+            this.exibirConsulta();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void fKid_ingredienteTextBox1_TextChanged(object sender, EventArgs e)
+        {
+  
         }
     }
 }

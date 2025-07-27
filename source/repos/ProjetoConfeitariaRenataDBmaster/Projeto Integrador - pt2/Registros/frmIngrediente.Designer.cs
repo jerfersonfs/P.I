@@ -56,6 +56,10 @@
             this.unidade_medida_ingredienteTextBox = new System.Windows.Forms.TextBox();
             this.preco_custo_ingredienteTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_Incluir = new System.Windows.Forms.Button();
+            this.btn_Excluir = new System.Windows.Forms.Button();
+            this.btn_Salvar = new System.Windows.Forms.Button();
+            this.btn_Visualizar = new System.Windows.Forms.Button();
             id_ingredienteLabel = new System.Windows.Forms.Label();
             nome_ingredienteLabel = new System.Windows.Forms.Label();
             unidade_medida_ingredienteLabel = new System.Windows.Forms.Label();
@@ -70,7 +74,7 @@
             // 
             id_ingredienteLabel.AutoSize = true;
             id_ingredienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            id_ingredienteLabel.Location = new System.Drawing.Point(29, 139);
+            id_ingredienteLabel.Location = new System.Drawing.Point(96, 121);
             id_ingredienteLabel.Name = "id_ingredienteLabel";
             id_ingredienteLabel.Size = new System.Drawing.Size(50, 13);
             id_ingredienteLabel.TabIndex = 2;
@@ -80,7 +84,7 @@
             // 
             nome_ingredienteLabel.AutoSize = true;
             nome_ingredienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nome_ingredienteLabel.Location = new System.Drawing.Point(29, 161);
+            nome_ingredienteLabel.Location = new System.Drawing.Point(96, 143);
             nome_ingredienteLabel.Name = "nome_ingredienteLabel";
             nome_ingredienteLabel.Size = new System.Drawing.Size(75, 13);
             nome_ingredienteLabel.TabIndex = 4;
@@ -90,7 +94,7 @@
             // 
             unidade_medida_ingredienteLabel.AutoSize = true;
             unidade_medida_ingredienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            unidade_medida_ingredienteLabel.Location = new System.Drawing.Point(29, 187);
+            unidade_medida_ingredienteLabel.Location = new System.Drawing.Point(96, 169);
             unidade_medida_ingredienteLabel.Name = "unidade_medida_ingredienteLabel";
             unidade_medida_ingredienteLabel.Size = new System.Drawing.Size(120, 13);
             unidade_medida_ingredienteLabel.TabIndex = 6;
@@ -100,7 +104,7 @@
             // 
             preco_custo_ingredienteLabel.AutoSize = true;
             preco_custo_ingredienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            preco_custo_ingredienteLabel.Location = new System.Drawing.Point(29, 217);
+            preco_custo_ingredienteLabel.Location = new System.Drawing.Point(96, 199);
             preco_custo_ingredienteLabel.Name = "preco_custo_ingredienteLabel";
             preco_custo_ingredienteLabel.Size = new System.Drawing.Size(128, 13);
             preco_custo_ingredienteLabel.TabIndex = 8;
@@ -128,6 +132,7 @@
             this.tableAdapterManager.clienteTableAdapter = null;
             this.tableAdapterManager.estoqueTableAdapter = null;
             this.tableAdapterManager.eventosTableAdapter = null;
+            this.tableAdapterManager.fornecedoresTableAdapter = null;
             this.tableAdapterManager.ingredientesTableAdapter = this.ingredientesTableAdapter;
             this.tableAdapterManager.item_pedidoTableAdapter = null;
             this.tableAdapterManager.pagamentoTableAdapter = null;
@@ -165,6 +170,7 @@
             this.ingredientesBindingNavigator.Size = new System.Drawing.Size(450, 25);
             this.ingredientesBindingNavigator.TabIndex = 0;
             this.ingredientesBindingNavigator.Text = "bindingNavigator1";
+            this.ingredientesBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -264,7 +270,7 @@
             // id_ingredienteTextBox
             // 
             this.id_ingredienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientesBindingSource, "id_ingrediente", true));
-            this.id_ingredienteTextBox.Location = new System.Drawing.Point(161, 136);
+            this.id_ingredienteTextBox.Location = new System.Drawing.Point(228, 118);
             this.id_ingredienteTextBox.Name = "id_ingredienteTextBox";
             this.id_ingredienteTextBox.Size = new System.Drawing.Size(100, 20);
             this.id_ingredienteTextBox.TabIndex = 3;
@@ -272,7 +278,7 @@
             // nome_ingredienteTextBox
             // 
             this.nome_ingredienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientesBindingSource, "nome_ingrediente", true));
-            this.nome_ingredienteTextBox.Location = new System.Drawing.Point(161, 162);
+            this.nome_ingredienteTextBox.Location = new System.Drawing.Point(228, 144);
             this.nome_ingredienteTextBox.Name = "nome_ingredienteTextBox";
             this.nome_ingredienteTextBox.Size = new System.Drawing.Size(100, 20);
             this.nome_ingredienteTextBox.TabIndex = 5;
@@ -280,7 +286,7 @@
             // unidade_medida_ingredienteTextBox
             // 
             this.unidade_medida_ingredienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientesBindingSource, "unidade_medida_ingrediente", true));
-            this.unidade_medida_ingredienteTextBox.Location = new System.Drawing.Point(161, 188);
+            this.unidade_medida_ingredienteTextBox.Location = new System.Drawing.Point(228, 170);
             this.unidade_medida_ingredienteTextBox.Name = "unidade_medida_ingredienteTextBox";
             this.unidade_medida_ingredienteTextBox.Size = new System.Drawing.Size(100, 20);
             this.unidade_medida_ingredienteTextBox.TabIndex = 7;
@@ -288,7 +294,7 @@
             // preco_custo_ingredienteTextBox
             // 
             this.preco_custo_ingredienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ingredientesBindingSource, "preco_custo_ingrediente", true));
-            this.preco_custo_ingredienteTextBox.Location = new System.Drawing.Point(161, 214);
+            this.preco_custo_ingredienteTextBox.Location = new System.Drawing.Point(228, 196);
             this.preco_custo_ingredienteTextBox.Name = "preco_custo_ingredienteTextBox";
             this.preco_custo_ingredienteTextBox.Size = new System.Drawing.Size(100, 20);
             this.preco_custo_ingredienteTextBox.TabIndex = 9;
@@ -296,12 +302,54 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Plum;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(144, 50);
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 49);
+            this.textBox1.Size = new System.Drawing.Size(450, 49);
             this.textBox1.TabIndex = 20;
             this.textBox1.Text = "Ingredientes";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btn_Incluir
+            // 
+            this.btn_Incluir.Location = new System.Drawing.Point(44, 66);
+            this.btn_Incluir.Name = "btn_Incluir";
+            this.btn_Incluir.Size = new System.Drawing.Size(75, 23);
+            this.btn_Incluir.TabIndex = 21;
+            this.btn_Incluir.Text = "Incluir";
+            this.btn_Incluir.UseVisualStyleBackColor = true;
+            this.btn_Incluir.Click += new System.EventHandler(this.btn_Incluir_Click);
+            // 
+            // btn_Excluir
+            // 
+            this.btn_Excluir.Location = new System.Drawing.Point(125, 66);
+            this.btn_Excluir.Name = "btn_Excluir";
+            this.btn_Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn_Excluir.TabIndex = 22;
+            this.btn_Excluir.Text = "Excluir";
+            this.btn_Excluir.UseVisualStyleBackColor = true;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
+            // 
+            // btn_Salvar
+            // 
+            this.btn_Salvar.Location = new System.Drawing.Point(218, 66);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Salvar.TabIndex = 23;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseVisualStyleBackColor = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
+            // 
+            // btn_Visualizar
+            // 
+            this.btn_Visualizar.Location = new System.Drawing.Point(309, 66);
+            this.btn_Visualizar.Name = "btn_Visualizar";
+            this.btn_Visualizar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Visualizar.TabIndex = 24;
+            this.btn_Visualizar.Text = "Visualizar";
+            this.btn_Visualizar.UseVisualStyleBackColor = true;
+            this.btn_Visualizar.Click += new System.EventHandler(this.btn_Visualizar_Click);
             // 
             // frmIngrediente
             // 
@@ -309,6 +357,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(450, 262);
+            this.Controls.Add(this.btn_Visualizar);
+            this.Controls.Add(this.btn_Salvar);
+            this.Controls.Add(this.btn_Excluir);
+            this.Controls.Add(this.btn_Incluir);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(id_ingredienteLabel);
             this.Controls.Add(this.id_ingredienteTextBox);
@@ -357,5 +409,9 @@
         private System.Windows.Forms.TextBox unidade_medida_ingredienteTextBox;
         private System.Windows.Forms.TextBox preco_custo_ingredienteTextBox;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_Incluir;
+        private System.Windows.Forms.Button btn_Excluir;
+        private System.Windows.Forms.Button btn_Salvar;
+        private System.Windows.Forms.Button btn_Visualizar;
     }
 }

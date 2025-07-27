@@ -73,19 +73,6 @@ namespace Projeto_Integrador___pt2.Interfaces
             }
         }
 
-        public void showcsltavaliacao()
-        {
-            try
-            {
-                CSTavalicao ava = new CSTavalicao();
-                ava.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao abrir formulário: " + ex.Message);
-            }
-        }
-
         public void showcsltingredi()
         {
             try
@@ -115,11 +102,7 @@ namespace Projeto_Integrador___pt2.Interfaces
         {
             showcsltingredi();
         }
-        private void avaliaçõesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            showcsltavaliacao();
-        }
-
+       
         public void exibeFrmProd()
         {
             try
@@ -189,7 +172,7 @@ namespace Projeto_Integrador___pt2.Interfaces
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
+                MessageBox.Show("Erro ao conectar ao formulário: " + ex.ToString());
             }
         }
         public void exibeFrmCategoria()
@@ -202,11 +185,11 @@ namespace Projeto_Integrador___pt2.Interfaces
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
-             }
+            }
         }
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
-           
+
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -220,7 +203,7 @@ namespace Projeto_Integrador___pt2.Interfaces
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           exibeFrmCli();
+            exibeFrmCli();
         }
 
         private void produtoToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -255,7 +238,7 @@ namespace Projeto_Integrador___pt2.Interfaces
 
         private void tsslUsu_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void verToolStripMenuItem_Click(object sender, EventArgs e)
@@ -291,12 +274,72 @@ namespace Projeto_Integrador___pt2.Interfaces
 
         private void configuraçõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            /*notificação*/
         }
 
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-          
+
         }
+        public void exibeFrmFornecedores()
+        {
+            try
+            {
+                frmFornecedor fornecedor = new frmFornecedor();
+                fornecedor.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao conectar ao formulário: " + ex.Message);
+            }
+        }
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.exibeFrmFornecedores();
+        }
+
+        private void reiniciarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Application.Restart();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao reiniciar o aplicativo: " + ex.Message);
+            }
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TelaDoSistema.ActiveForm.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao sair do aplicativo: " + ex.Message);
+            }
+        }
+
+        public void exibeImagens()
+        {
+            try 
+            { 
+                frmImagens imagens = new frmImagens();
+                imagens.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao abrir formulário de imagens: " + ex.Message);
+            }
+        }
+
+
+        private void temasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           this.exibeImagens();
+        }
+
     }
 }

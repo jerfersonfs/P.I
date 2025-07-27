@@ -66,7 +66,7 @@ namespace Projeto_Integrador___pt2.Consultas
             {
                 if (cbm_Filtrar.Text == "Código")
                 {
-                    string sql = "SELECT * FROM Produto WHERE id_produto = " + txt_Pesquisar.Text + "";
+                    string sql = "SELECT * FROM produto WHERE id_produto = " + txt_Pesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql);
                     cntn.Open();
                     cmd.CommandType = CommandType.Text;
@@ -77,7 +77,7 @@ namespace Projeto_Integrador___pt2.Consultas
                 }
                 if (cbm_Filtrar.Text == "Produto")
                 {
-                    string sql = "SELECT * FROM Produto WHERE nome_produto LIKE '%" + txt_Pesquisar.Text + "%'";
+                    string sql = "SELECT * FROM produto WHERE nome_produto LIKE '%" + txt_Pesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable produto = new DataTable();

@@ -34,6 +34,7 @@
             System.Windows.Forms.Label data_movimentacaoLabel;
             System.Windows.Forms.Label quantidade_movimentadaLabel;
             System.Windows.Forms.Label tipo_movimentacaoLabel;
+            System.Windows.Forms.Label lbl_nomeingrediente;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstoque));
             this.renataDBDataSet1 = new Projeto_Integrador___pt2.RenataDBDataSet();
             this.estoqueBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -62,11 +63,13 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             id_estoqueLabel = new System.Windows.Forms.Label();
             fKid_ingredienteLabel = new System.Windows.Forms.Label();
             data_movimentacaoLabel = new System.Windows.Forms.Label();
             quantidade_movimentadaLabel = new System.Windows.Forms.Label();
             tipo_movimentacaoLabel = new System.Windows.Forms.Label();
+            lbl_nomeingrediente = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource1BindingNavigator)).BeginInit();
@@ -87,14 +90,14 @@
             fKid_ingredienteLabel.AutoSize = true;
             fKid_ingredienteLabel.Location = new System.Drawing.Point(125, 173);
             fKid_ingredienteLabel.Name = "fKid_ingredienteLabel";
-            fKid_ingredienteLabel.Size = new System.Drawing.Size(86, 13);
+            fKid_ingredienteLabel.Size = new System.Drawing.Size(88, 13);
             fKid_ingredienteLabel.TabIndex = 4;
-            fKid_ingredienteLabel.Text = "FKid ingrediente:";
+            fKid_ingredienteLabel.Text = "Cód. Ingrediente:";
             // 
             // data_movimentacaoLabel
             // 
             data_movimentacaoLabel.AutoSize = true;
-            data_movimentacaoLabel.Location = new System.Drawing.Point(125, 200);
+            data_movimentacaoLabel.Location = new System.Drawing.Point(125, 231);
             data_movimentacaoLabel.Name = "data_movimentacaoLabel";
             data_movimentacaoLabel.Size = new System.Drawing.Size(120, 13);
             data_movimentacaoLabel.TabIndex = 6;
@@ -103,7 +106,7 @@
             // quantidade_movimentadaLabel
             // 
             quantidade_movimentadaLabel.AutoSize = true;
-            quantidade_movimentadaLabel.Location = new System.Drawing.Point(125, 225);
+            quantidade_movimentadaLabel.Location = new System.Drawing.Point(125, 256);
             quantidade_movimentadaLabel.Name = "quantidade_movimentadaLabel";
             quantidade_movimentadaLabel.Size = new System.Drawing.Size(131, 13);
             quantidade_movimentadaLabel.TabIndex = 8;
@@ -112,11 +115,20 @@
             // tipo_movimentacaoLabel
             // 
             tipo_movimentacaoLabel.AutoSize = true;
-            tipo_movimentacaoLabel.Location = new System.Drawing.Point(125, 251);
+            tipo_movimentacaoLabel.Location = new System.Drawing.Point(125, 282);
             tipo_movimentacaoLabel.Name = "tipo_movimentacaoLabel";
             tipo_movimentacaoLabel.Size = new System.Drawing.Size(118, 13);
             tipo_movimentacaoLabel.TabIndex = 10;
             tipo_movimentacaoLabel.Text = "Tipo de movimentacao:";
+            // 
+            // lbl_nomeingrediente
+            // 
+            lbl_nomeingrediente.AutoSize = true;
+            lbl_nomeingrediente.Location = new System.Drawing.Point(125, 201);
+            lbl_nomeingrediente.Name = "lbl_nomeingrediente";
+            lbl_nomeingrediente.Size = new System.Drawing.Size(63, 13);
+            lbl_nomeingrediente.TabIndex = 28;
+            lbl_nomeingrediente.Text = "Ingrediente:";
             // 
             // renataDBDataSet1
             // 
@@ -290,11 +302,12 @@
             this.fKid_ingredienteTextBox1.Name = "fKid_ingredienteTextBox1";
             this.fKid_ingredienteTextBox1.Size = new System.Drawing.Size(200, 20);
             this.fKid_ingredienteTextBox1.TabIndex = 5;
+            this.fKid_ingredienteTextBox1.TextChanged += new System.EventHandler(this.fKid_ingredienteTextBox1_TextChanged);
             // 
             // data_movimentacaoDateTimePicker1
             // 
             this.data_movimentacaoDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.estoqueBindingSource1, "data_movimentacao", true));
-            this.data_movimentacaoDateTimePicker1.Location = new System.Drawing.Point(260, 196);
+            this.data_movimentacaoDateTimePicker1.Location = new System.Drawing.Point(260, 227);
             this.data_movimentacaoDateTimePicker1.Name = "data_movimentacaoDateTimePicker1";
             this.data_movimentacaoDateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.data_movimentacaoDateTimePicker1.TabIndex = 7;
@@ -302,7 +315,7 @@
             // quantidade_movimentadaTextBox1
             // 
             this.quantidade_movimentadaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.estoqueBindingSource1, "quantidade_movimentada", true));
-            this.quantidade_movimentadaTextBox1.Location = new System.Drawing.Point(260, 222);
+            this.quantidade_movimentadaTextBox1.Location = new System.Drawing.Point(260, 253);
             this.quantidade_movimentadaTextBox1.Name = "quantidade_movimentadaTextBox1";
             this.quantidade_movimentadaTextBox1.Size = new System.Drawing.Size(200, 20);
             this.quantidade_movimentadaTextBox1.TabIndex = 9;
@@ -310,14 +323,14 @@
             // tipo_movimentacaoTextBox1
             // 
             this.tipo_movimentacaoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.estoqueBindingSource1, "tipo_movimentacao", true));
-            this.tipo_movimentacaoTextBox1.Location = new System.Drawing.Point(260, 248);
+            this.tipo_movimentacaoTextBox1.Location = new System.Drawing.Point(260, 279);
             this.tipo_movimentacaoTextBox1.Name = "tipo_movimentacaoTextBox1";
             this.tipo_movimentacaoTextBox1.Size = new System.Drawing.Size(200, 20);
             this.tipo_movimentacaoTextBox1.TabIndex = 11;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(112, 84);
+            this.button2.Location = new System.Drawing.Point(114, 78);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 12;
@@ -327,7 +340,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(216, 84);
+            this.button4.Location = new System.Drawing.Point(218, 78);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 13;
@@ -337,7 +350,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(317, 84);
+            this.button5.Location = new System.Drawing.Point(319, 78);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 14;
@@ -347,7 +360,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(414, 84);
+            this.button6.Location = new System.Drawing.Point(416, 78);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 15;
@@ -367,9 +380,20 @@
             this.textBox2.Text = "Movimentações de estoque";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(260, 201);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(200, 20);
+            this.textBox3.TabIndex = 27;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
             // frmEstoque
             // 
             this.ClientSize = new System.Drawing.Size(623, 356);
+            this.Controls.Add(lbl_nomeingrediente);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -472,5 +496,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

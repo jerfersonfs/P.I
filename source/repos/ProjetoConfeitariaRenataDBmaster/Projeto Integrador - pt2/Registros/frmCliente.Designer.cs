@@ -474,6 +474,7 @@
             this.cepTextBox1.Name = "cepTextBox1";
             this.cepTextBox1.Size = new System.Drawing.Size(200, 20);
             this.cepTextBox1.TabIndex = 26;
+            this.cepTextBox1.TextChanged += new System.EventHandler(this.cepTextBox1_TextChanged);
             // 
             // button1
             // 

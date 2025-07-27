@@ -240,6 +240,7 @@
             this.dataGridViewTextBoxColumn14});
             this.usuarioDataGridView1.DataSource = this.usuarioBindingSource1;
             this.usuarioDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.usuarioDataGridView1.Enabled = false;
             this.usuarioDataGridView1.Location = new System.Drawing.Point(0, 128);
             this.usuarioDataGridView1.Name = "usuarioDataGridView1";
             this.usuarioDataGridView1.Size = new System.Drawing.Size(822, 314);

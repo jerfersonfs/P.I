@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto_Integrador___pt2.Interfaces
 {
-    public partial class frmAtalhos : Form
+    public partial class frmImagens : Form
     {
-        public frmAtalhos()
+        public frmImagens()
         {
             InitializeComponent();
         }

@@ -86,7 +86,7 @@ namespace Projeto_Integrador___pt2.Formulários
             {
                 if (cbmFiltrar.Text == "Código")
                 {
-                    string sql = "SELECT * FROM Categoria WHERE id_categoria = " + txtPesquisar.Text + "";
+                    string sql = "SELECT * FROM categoria WHERE id_categoria = " + txtPesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql);
                     cntn.Open();
                     cmd.CommandType = CommandType.Text;
@@ -97,7 +97,7 @@ namespace Projeto_Integrador___pt2.Formulários
                 }
                 if (cbmFiltrar.Text == "Categoria")
                 {
-                    string sql = "SELECT * FROM Categoria WHERE nome_categoria LIKE '%" + txtPesquisar.Text + "%'";
+                    string sql = "SELECT * FROM categoria WHERE nome_categoria LIKE '%" + txtPesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable cat = new DataTable();

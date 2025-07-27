@@ -54,13 +54,13 @@ namespace Projeto_Integrador___pt2.Registros
         }
         public async Task BuscarCep()
         {
-            if (cepTextBox.MaxLength == 9)
+            if (cepTextBox1.MaxLength == 9)
             {
                 try
                 {
                     using (HttpClient cliente = new HttpClient())
                     {
-                        string url = $"https://viacep.com.br/ws/{cepTextBox}/json/";
+                        string url = $"https://viacep.com.br/ws/{cepTextBox1.Text}/json/";
                         HttpResponseMessage response = await cliente.GetAsync(url);
 
                         if (response.IsSuccessStatusCode)
@@ -70,10 +70,10 @@ namespace Projeto_Integrador___pt2.Registros
 
                             if (dados.erro == null) // Verifica se o CEP existe
                             {
-                                rua_clienteTextBox.Text = dados.rua;
-                                bairro_clienteTextBox.Text = dados.bairro;
-                                cidade_clienteTextBox.Text = dados.cidade;
-                                estado_clienteTextBox.Text = dados.estado;
+                                rua_clienteTextBox1.Text = dados.rua;
+                                bairro_clienteTextBox1.Text = dados.bairro;
+                                cidade_clienteTextBox1.Text = dados.cidade;
+                                estado_clienteTextBox1.Text = dados.estado;
                             }
                             else
                             {
@@ -120,7 +120,7 @@ namespace Projeto_Integrador___pt2.Registros
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorDeleteItem.PerformClick();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -136,6 +136,18 @@ namespace Projeto_Integrador___pt2.Registros
         private void button4_Click(object sender, EventArgs e)
         {
             exibirConsulta();
+        }
+
+        private void cepTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (cepTextBox1.Text.Length == 9)
+            {
+                BuscarCep();
+            }
+            else
+            {
+                MessageBox.Show("CEP inválido! Digite um CEP com 8 dígitos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

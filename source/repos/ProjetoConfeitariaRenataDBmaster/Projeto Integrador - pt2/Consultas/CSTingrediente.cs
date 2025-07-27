@@ -40,7 +40,7 @@ namespace Projeto_Integrador___pt2.Consultas
             {
                 if (cbmFiltrar.Text == "Código")
                 {
-                    string sql = "SELECT * FROM Ingredientes WHERE id_ingrediente = " + txtPesquisar.Text + "";
+                    string sql = "SELECT * FROM ingredientes WHERE id_ingrediente = " + txtPesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql);
                     cntn.Open();
                     cmd.CommandType = CommandType.Text;
@@ -51,7 +51,7 @@ namespace Projeto_Integrador___pt2.Consultas
                 }
                 if (cbmFiltrar.Text == "Ingrediente")
                 {
-                    string sql = "SELECT * FROM Ingredientes WHERE nome_ingrediente LIKE '%" + txtPesquisar.Text + "%'";
+                    string sql = "SELECT * FROM ingredientes WHERE nome_ingrediente LIKE '%" + txtPesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable ingrediente = new DataTable();

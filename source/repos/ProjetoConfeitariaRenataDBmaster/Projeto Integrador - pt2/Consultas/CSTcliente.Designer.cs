@@ -252,6 +252,7 @@
             this.dataGridViewTextBoxColumn26});
             this.clienteDataGridView1.DataSource = this.clienteBindingSource1;
             this.clienteDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.clienteDataGridView1.Enabled = false;
             this.clienteDataGridView1.Location = new System.Drawing.Point(0, 121);
             this.clienteDataGridView1.Name = "clienteDataGridView1";
             this.clienteDataGridView1.Size = new System.Drawing.Size(1010, 318);

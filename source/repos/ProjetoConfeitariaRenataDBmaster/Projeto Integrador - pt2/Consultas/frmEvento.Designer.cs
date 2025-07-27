@@ -250,6 +250,7 @@
             this.dataGridViewTextBoxColumn21});
             this.eventosDataGridView1.DataSource = this.eventosBindingSource1;
             this.eventosDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.eventosDataGridView1.Enabled = false;
             this.eventosDataGridView1.Location = new System.Drawing.Point(0, 127);
             this.eventosDataGridView1.Name = "eventosDataGridView1";
             this.eventosDataGridView1.Size = new System.Drawing.Size(851, 235);

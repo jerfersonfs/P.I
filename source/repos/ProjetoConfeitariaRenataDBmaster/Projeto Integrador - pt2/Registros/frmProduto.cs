@@ -29,13 +29,7 @@ namespace Projeto_Integrador___pt2.Formulários
             fKid_categoriaTextBox.Text = "";
             promocaoTextBox.Text = "";
         }
-        private void produtoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.produtoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
-            this.LimparCampos();
-        }
+       
 
         private void frmProduto_Load(object sender, EventArgs e)
         {
@@ -91,7 +85,14 @@ namespace Projeto_Integrador___pt2.Formulários
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorAddNewItem.PerformClick();
+            try
+            {
+                this.toolStripButton5.PerformClick();
+            }
+            catch (Exception ex) 
+            { 
+                MessageBox.Show("Erro ao incluir produto: " + ex.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -103,7 +104,6 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             this.produtoBindingNavigatorSaveItem.PerformClick();
         }
-
         public void exibirConsulta() 
         { 
             CSTproduto cSTproduto = new CSTproduto();
