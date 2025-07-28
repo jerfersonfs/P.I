@@ -366,6 +366,7 @@
             this.Controls.Add(this.produtoBindingSource1BindingNavigator);
             this.Name = "CSTproduto";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CSTproduto_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource1)).EndInit();

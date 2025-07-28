@@ -30,7 +30,7 @@ namespace Projeto_Integrador___pt2.Registros
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.fornecedores'. Você pode movê-la ou removê-la conforme necessário.
             this.fornecedoresTableAdapter.Fill(this.renataDBDataSet.fornecedores);
-
+            this.fornecedoresBindingSource.DataSource = this.renataDBDataSet.fornecedores;
         }
 
         private void btn_Incluir_Click(object sender, EventArgs e)

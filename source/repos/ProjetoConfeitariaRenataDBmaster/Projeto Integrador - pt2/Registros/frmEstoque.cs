@@ -36,7 +36,7 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.estoque'. Você pode movê-la ou removê-la conforme necessário.
             this.estoqueTableAdapter1.Fill(this.renataDBDataSet1.estoque);
-
+            this.estoqueBindingSource1.DataSource = this.renataDBDataSet1.estoque;
         }
 
         private void estoqueBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)

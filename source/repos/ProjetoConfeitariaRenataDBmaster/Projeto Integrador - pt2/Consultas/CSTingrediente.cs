@@ -31,7 +31,7 @@ namespace Projeto_Integrador___pt2.Consultas
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.ingredientes'. Você pode movê-la ou removê-la conforme necessário.
             this.ingredientesTableAdapter.Fill(this.renataDBDataSet.ingredientes);
-
+            this.ingredientesDataGridView.DataSource = this.ingredientesBindingSource;
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)

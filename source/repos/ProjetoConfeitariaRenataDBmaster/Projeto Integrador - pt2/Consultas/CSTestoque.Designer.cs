@@ -348,6 +348,7 @@
             this.Controls.Add(this.estoqueBindingSource1BindingNavigator);
             this.Name = "CSTestoque";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CSTestoque_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource1)).EndInit();

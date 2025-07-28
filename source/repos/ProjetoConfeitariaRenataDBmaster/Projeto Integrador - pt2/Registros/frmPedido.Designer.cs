@@ -50,15 +50,15 @@
             this.item_pedidoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.item_pedidoTableAdapter1 = new Projeto_Integrador___pt2.RenataDBDataSetTableAdapters.item_pedidoTableAdapter();
             this.item_pedidoDataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btn_Pesquisar = new System.Windows.Forms.Button();
-            this.txt_Pesquisar = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Pesquisar = new System.Windows.Forms.Button();
+            this.txt_Pesquisar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).BeginInit();
@@ -252,6 +252,41 @@
             this.item_pedidoDataGridView1.Size = new System.Drawing.Size(788, 297);
             this.item_pedidoDataGridView1.TabIndex = 1;
             // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "id_item_pedido";
+            this.dataGridViewTextBoxColumn6.HeaderText = "id_item_pedido";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "FKid_pedido";
+            this.dataGridViewTextBoxColumn7.HeaderText = "FKid_pedido";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "FKid_produto";
+            this.dataGridViewTextBoxColumn8.HeaderText = "FKid_produto";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "quantidade_item_pedido";
+            this.dataGridViewTextBoxColumn9.HeaderText = "quantidade_item_pedido";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "valor_total_pedido";
+            this.dataGridViewTextBoxColumn10.HeaderText = "valor_total_pedido";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 150;
+            // 
             // btn_Pesquisar
             // 
             this.btn_Pesquisar.Location = new System.Drawing.Point(537, 103);
@@ -290,41 +325,6 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 4;
             // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "id_item_pedido";
-            this.dataGridViewTextBoxColumn6.HeaderText = "id_item_pedido";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "FKid_pedido";
-            this.dataGridViewTextBoxColumn7.HeaderText = "FKid_pedido";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "FKid_produto";
-            this.dataGridViewTextBoxColumn8.HeaderText = "FKid_produto";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "quantidade_item_pedido";
-            this.dataGridViewTextBoxColumn9.HeaderText = "quantidade_item_pedido";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "valor_total_pedido";
-            this.dataGridViewTextBoxColumn10.HeaderText = "valor_total_pedido";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Width = 150;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(29, 99);
@@ -360,6 +360,7 @@
             this.Controls.Add(this.pedidoBindingNavigator);
             this.Name = "frmPedido";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmPedido_Load_2);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource)).EndInit();

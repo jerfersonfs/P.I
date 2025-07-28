@@ -412,6 +412,7 @@
             this.Controls.Add(this.estoqueBindingSource1BindingNavigator);
             this.Name = "frmEstoque";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmEstoque_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estoqueBindingSource1)).EndInit();

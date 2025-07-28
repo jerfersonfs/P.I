@@ -386,6 +386,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "CSTfornecedor";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CSTfornecedor_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

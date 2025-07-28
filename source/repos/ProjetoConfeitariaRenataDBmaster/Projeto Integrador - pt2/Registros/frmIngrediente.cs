@@ -34,7 +34,7 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.ingredientes'. Você pode movê-la ou removê-la conforme necessário.
             this.ingredientesTableAdapter.Fill(this.renataDBDataSet.ingredientes);
-
+            this.ingredientesBindingSource.DataSource = this.renataDBDataSet.ingredientes;
         }
 
         private void btn_Incluir_Click(object sender, EventArgs e)
@@ -56,11 +56,22 @@ namespace Projeto_Integrador___pt2.Formulários
         private void btn_Excluir_Click(object sender, EventArgs e)
         {
             this.ingredientesBindingSource.RemoveCurrent();
+            this.ingredientesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
         }
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            this.Validate();
+            try 
+            {
+                this.Validate();
+                this.ingredientesBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            } 
+            catch (Exception ex)
+            { 
+                MessageBox.Show("Erro ao salvar ingrediente: " + ex.Message);
+            }
         }
         public void LimparCampos()
         {

@@ -80,7 +80,7 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.produto'. Você pode movê-la ou removê-la conforme necessário.
             this.produtoTableAdapter1.Fill(this.renataDBDataSet1.produto);
-
+            this.produtoBindingSource1.DataSource = this.renataDBDataSet1.produto;
         }
 
         private void button1_Click(object sender, EventArgs e)

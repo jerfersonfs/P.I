@@ -58,7 +58,7 @@ namespace Projeto_Integrador___pt2.Consultas
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.estoque'. Você pode movê-la ou removê-la conforme necessário.
             this.estoqueTableAdapter1.Fill(this.renataDBDataSet1.estoque);
-
+            this.estoqueDataGridView1.DataSource = this.estoqueBindingSource1;
         }
 
         private void btn_Pesquisar_Click(object sender, EventArgs e)

@@ -271,7 +271,7 @@
             this.clienteBindingSource1BindingNavigator.MovePreviousItem = this.toolStripButton2;
             this.clienteBindingSource1BindingNavigator.Name = "clienteBindingSource1BindingNavigator";
             this.clienteBindingSource1BindingNavigator.PositionItem = this.toolStripTextBox1;
-            this.clienteBindingSource1BindingNavigator.Size = new System.Drawing.Size(818, 25);
+            this.clienteBindingSource1BindingNavigator.Size = new System.Drawing.Size(671, 25);
             this.clienteBindingSource1BindingNavigator.TabIndex = 0;
             this.clienteBindingSource1BindingNavigator.Text = "bindingNavigator2";
             this.clienteBindingSource1BindingNavigator.Visible = false;
@@ -520,7 +520,7 @@
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(0, 0);
+            this.textBox2.Location = new System.Drawing.Point(0, 25);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(671, 47);
             this.textBox2.TabIndex = 31;
@@ -564,6 +564,7 @@
             this.Controls.Add(this.clienteBindingSource1BindingNavigator);
             this.Name = "frmCliente";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmCliente_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();

@@ -23,6 +23,7 @@ namespace Projeto_Integrador___pt2.Consultas
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.fornecedores'. Você pode movê-la ou removê-la conforme necessário.
             this.fornecedoresTableAdapter.Fill(this.renataDBDataSet.fornecedores);
+            this.fornecedoresDataGridView.DataSource = this.fornecedoresBindingSource;
 
         }
 

@@ -99,7 +99,7 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.usuario'. Você pode movê-la ou removê-la conforme necessário.
             this.usuarioTableAdapter1.Fill(this.renataDBDataSet1.usuario);
-
+            this.usuarioBindingSource1.DataSource = this.renataDBDataSet1.usuario;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -120,6 +120,11 @@ namespace Projeto_Integrador___pt2.Formulários
         private void button5_Click(object sender, EventArgs e)
         {
             exibirConsulta();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

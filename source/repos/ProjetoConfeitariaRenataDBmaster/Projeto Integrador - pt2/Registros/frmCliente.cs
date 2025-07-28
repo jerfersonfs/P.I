@@ -110,7 +110,7 @@ namespace Projeto_Integrador___pt2.Registros
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.cliente'. Você pode movê-la ou removê-la conforme necessário.
             this.clienteTableAdapter1.Fill(this.renataDBDataSet1.cliente);
-
+            this.clienteBindingSource1.DataSource = this.renataDBDataSet1.cliente;
         }
 
         private void button1_Click(object sender, EventArgs e)

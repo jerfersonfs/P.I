@@ -62,7 +62,8 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet2.categoria'. Você pode movê-la ou removê-la conforme necessário.
             this.categoriaTableAdapter2.Fill(this.renataDBDataSet2.categoria);
-
+            this.categoriaDataGridView.DataSource = this.categoriaBindingSource2;
+            this.categoriaBindingSource.DataSource = this.renataDBDataSet2.categoria;
         }
 
         private void button2_Click(object sender, EventArgs e)

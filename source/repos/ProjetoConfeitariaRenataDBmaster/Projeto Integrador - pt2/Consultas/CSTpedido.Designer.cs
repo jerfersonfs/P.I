@@ -366,6 +366,7 @@
             this.Controls.Add(this.pedidoBindingSource1BindingNavigator);
             this.Name = "CSTpedido";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.CSTpedido_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoBindingSource1)).EndInit();

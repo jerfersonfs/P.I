@@ -54,7 +54,7 @@ namespace Projeto_Integrador___pt2.Consultas
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.usuario'. Você pode movê-la ou removê-la conforme necessário.
             this.usuarioTableAdapter1.Fill(this.renataDBDataSet1.usuario);
-
+            this.usuarioDataGridView.DataSource = this.usuarioBindingSource1;
         }
 
         private void btn_Pesquisar_Click(object sender, EventArgs e)

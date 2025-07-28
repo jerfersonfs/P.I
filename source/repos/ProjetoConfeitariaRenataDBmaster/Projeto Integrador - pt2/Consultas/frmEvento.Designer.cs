@@ -396,6 +396,7 @@
             this.Controls.Add(this.eventosBindingSource1BindingNavigator);
             this.Name = "frmEvento";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmEvento_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosBindingSource1)).EndInit();

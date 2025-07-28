@@ -102,7 +102,7 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.eventos'. Você pode movê-la ou removê-la conforme necessário.
             this.eventosTableAdapter1.Fill(this.renataDBDataSet1.eventos);
-
+            this.eventosDataGridView.DataSource = this.eventosBindingSource1;
         }
 
         private void btn_Pesquisar_Click(object sender, EventArgs e)

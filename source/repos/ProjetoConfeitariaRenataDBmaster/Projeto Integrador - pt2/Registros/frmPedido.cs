@@ -96,7 +96,7 @@ namespace Projeto_Integrador___pt2.Registros
             this.item_pedidoTableAdapter1.Fill(this.renataDBDataSet1.item_pedido);
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.pedido'. Você pode movê-la ou removê-la conforme necessário.
             this.pedidoTableAdapter.Fill(this.renataDBDataSet1.pedido);
-
+            this.item_pedidoBindingSource1.DataSource = this.renataDBDataSet1.pedido;
         }
 
         private void button1_Click(object sender, EventArgs e)

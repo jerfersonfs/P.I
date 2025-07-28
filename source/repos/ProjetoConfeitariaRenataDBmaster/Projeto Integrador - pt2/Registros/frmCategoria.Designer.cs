@@ -473,6 +473,7 @@
             this.Controls.Add(this.categoriaBindingSource2BindingNavigator);
             this.Name = "frmCategoria";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmCategoria_Load_2);
             ((System.ComponentModel.ISupportInitialize)(this.renataDBDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource2)).EndInit();
