@@ -64,7 +64,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Pesquisar = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -85,7 +84,7 @@
             // id_categoriaLabel
             // 
             id_categoriaLabel.AutoSize = true;
-            id_categoriaLabel.Location = new System.Drawing.Point(169, 90);
+            id_categoriaLabel.Location = new System.Drawing.Point(158, 96);
             id_categoriaLabel.Name = "id_categoriaLabel";
             id_categoriaLabel.Size = new System.Drawing.Size(43, 13);
             id_categoriaLabel.TabIndex = 2;
@@ -94,7 +93,7 @@
             // nome_categoriaLabel
             // 
             nome_categoriaLabel.AutoSize = true;
-            nome_categoriaLabel.Location = new System.Drawing.Point(169, 116);
+            nome_categoriaLabel.Location = new System.Drawing.Point(158, 122);
             nome_categoriaLabel.Name = "nome_categoriaLabel";
             nome_categoriaLabel.Size = new System.Drawing.Size(55, 13);
             nome_categoriaLabel.TabIndex = 4;
@@ -103,7 +102,7 @@
             // personalizacaoLabel
             // 
             personalizacaoLabel.AutoSize = true;
-            personalizacaoLabel.Location = new System.Drawing.Point(169, 142);
+            personalizacaoLabel.Location = new System.Drawing.Point(158, 148);
             personalizacaoLabel.Name = "personalizacaoLabel";
             personalizacaoLabel.Size = new System.Drawing.Size(82, 13);
             personalizacaoLabel.TabIndex = 6;
@@ -112,7 +111,7 @@
             // status_catLabel
             // 
             status_catLabel.AutoSize = true;
-            status_catLabel.Location = new System.Drawing.Point(169, 168);
+            status_catLabel.Location = new System.Drawing.Point(158, 174);
             status_catLabel.Name = "status_catLabel";
             status_catLabel.Size = new System.Drawing.Size(40, 13);
             status_catLabel.TabIndex = 8;
@@ -175,7 +174,7 @@
             this.categoriaBindingSource2BindingNavigator.MovePreviousItem = this.toolStripButton8;
             this.categoriaBindingSource2BindingNavigator.Name = "categoriaBindingSource2BindingNavigator";
             this.categoriaBindingSource2BindingNavigator.PositionItem = this.toolStripTextBox2;
-            this.categoriaBindingSource2BindingNavigator.Size = new System.Drawing.Size(888, 25);
+            this.categoriaBindingSource2BindingNavigator.Size = new System.Drawing.Size(622, 25);
             this.categoriaBindingSource2BindingNavigator.TabIndex = 0;
             this.categoriaBindingSource2BindingNavigator.Text = "bindingNavigator1";
             this.categoriaBindingSource2BindingNavigator.Visible = false;
@@ -188,6 +187,7 @@
             this.toolStripButton11.RightToLeftAutoMirrorImage = true;
             this.toolStripButton11.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton11.Text = "Adicionar novo";
+            this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
             // 
             // toolStripLabel2
             // 
@@ -204,6 +204,7 @@
             this.toolStripButton12.RightToLeftAutoMirrorImage = true;
             this.toolStripButton12.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton12.Text = "Excluir";
+            this.toolStripButton12.Click += new System.EventHandler(this.toolStripButton12_Click);
             // 
             // toolStripButton7
             // 
@@ -322,7 +323,7 @@
             // id_categoriaTextBox2
             // 
             this.id_categoriaTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource2, "id_categoria", true));
-            this.id_categoriaTextBox2.Location = new System.Drawing.Point(258, 87);
+            this.id_categoriaTextBox2.Location = new System.Drawing.Point(247, 93);
             this.id_categoriaTextBox2.Name = "id_categoriaTextBox2";
             this.id_categoriaTextBox2.Size = new System.Drawing.Size(173, 20);
             this.id_categoriaTextBox2.TabIndex = 3;
@@ -330,7 +331,7 @@
             // nome_categoriaTextBox2
             // 
             this.nome_categoriaTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource2, "nome_categoria", true));
-            this.nome_categoriaTextBox2.Location = new System.Drawing.Point(258, 113);
+            this.nome_categoriaTextBox2.Location = new System.Drawing.Point(247, 119);
             this.nome_categoriaTextBox2.Name = "nome_categoriaTextBox2";
             this.nome_categoriaTextBox2.Size = new System.Drawing.Size(173, 20);
             this.nome_categoriaTextBox2.TabIndex = 5;
@@ -338,7 +339,7 @@
             // personalizacaoTextBox2
             // 
             this.personalizacaoTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource2, "personalizacao", true));
-            this.personalizacaoTextBox2.Location = new System.Drawing.Point(258, 139);
+            this.personalizacaoTextBox2.Location = new System.Drawing.Point(247, 145);
             this.personalizacaoTextBox2.Name = "personalizacaoTextBox2";
             this.personalizacaoTextBox2.Size = new System.Drawing.Size(173, 20);
             this.personalizacaoTextBox2.TabIndex = 7;
@@ -346,7 +347,7 @@
             // status_catTextBox2
             // 
             this.status_catTextBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.categoriaBindingSource2, "status_cat", true));
-            this.status_catTextBox2.Location = new System.Drawing.Point(258, 165);
+            this.status_catTextBox2.Location = new System.Drawing.Point(247, 171);
             this.status_catTextBox2.Name = "status_catTextBox2";
             this.status_catTextBox2.Size = new System.Drawing.Size(173, 20);
             this.status_catTextBox2.TabIndex = 9;
@@ -365,7 +366,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(118, 54);
+            this.button2.Location = new System.Drawing.Point(163, 60);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 27;
@@ -375,7 +376,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(211, 54);
+            this.button3.Location = new System.Drawing.Point(256, 60);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 28;
@@ -385,22 +386,13 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(306, 54);
+            this.button4.Location = new System.Drawing.Point(351, 60);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 29;
             this.button4.Text = "Salvar";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(403, 54);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "Visualizar";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -456,7 +448,6 @@
             // 
             this.ClientSize = new System.Drawing.Size(622, 551);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -490,70 +481,9 @@
 
         #endregion
 
-        private RenataDBDataSet renataDBDataSet;
-        private System.Windows.Forms.BindingSource categoriaBindingSource;
-        private RenataDBDataSetTableAdapters.categoriaTableAdapter categoriaTableAdapter;
-        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator categoriaBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton categoriaBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox id_categoriaTextBox;
-        private System.Windows.Forms.TextBox nome_categoriaTextBox;
-        private System.Windows.Forms.TextBox personalizacaoTextBox;
-        private System.Windows.Forms.TextBox status_catTextBox;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.ComboBox cbmFiltrar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox cabecalhoBox;
-        private System.Windows.Forms.Button btnIncluir;
-        private System.Windows.Forms.Button btn_Salvar;
-        private System.Windows.Forms.Button btn_excluir;
-        private System.Windows.Forms.DataGridView categoriaDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private RenataDBDataSet renataDBDataSet1;
-        private System.Windows.Forms.BindingSource categoriaBindingSource1;
-        private RenataDBDataSetTableAdapters.categoriaTableAdapter categoriaTableAdapter1;
-        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.BindingNavigator categoriaBindingSource1BindingNavigator;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton categoriaBindingSource1BindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView categoriaDataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.TextBox id_categoriaTextBox1;
-        private System.Windows.Forms.TextBox nome_categoriaTextBox1;
-        private System.Windows.Forms.TextBox personalizacaoTextBox1;
-        private System.Windows.Forms.TextBox status_catTextBox1;
-        private System.Windows.Forms.Button btn_Incluir;
-        private System.Windows.Forms.Button button1;
+       
+       
+       
         private RenataDBDataSet renataDBDataSet2;
         private System.Windows.Forms.BindingSource categoriaBindingSource2;
         private RenataDBDataSetTableAdapters.categoriaTableAdapter categoriaTableAdapter2;
@@ -580,7 +510,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;

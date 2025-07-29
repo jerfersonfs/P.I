@@ -20,13 +20,12 @@ namespace Projeto_Integrador___pt2.Formulários
 
         public void LimparCampo()
         {
-            id_usuTextBox.Text = "";
-            nome_usuTextBox.Text = "";
-            email_usuTextBox.Text = "";
-            celular_usuTextBox.Text = "";
-            telefone_usuTextBox.Text = "";
-            senha_usuTextBox.Text = "";
-            repitasenhatxtBox.Text = "";
+            id_usuTextBox1.Text = "";
+            nome_usuTextBox1.Text = "";
+            email_usuTextBox1.Text = "";
+            celular_usuTextBox1.Text = "";
+            telefone_usuTextBox1.Text = "";
+            senha_usuTextBox1.Text = "";
         }
         public frmUsuario()
         {
@@ -39,30 +38,27 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             try 
             {
-                if (nome_usuTextBox.Text == "")
+                if (nome_usuTextBox1.Text == "")
                     MessageBox.Show("O Usuário deve ser preenchido");
                 else
-                if (senha_usuTextBox.Text != repitasenhatxtBox.Text)
-                    MessageBox.Show("As senhas são diferentes! Por favor digite a senha correta");
-                else
-                if (email_usuTextBox.Text == "")
+                if (email_usuTextBox1.Text == "")
                     MessageBox.Show("O email deve ser preenchido");
                 else
-                if (senha_usuTextBox.Text == "")
+                if (senha_usuTextBox1.Text == "")
                     MessageBox.Show("A senha deve ser preenchido");
                 else
-                if (celular_usuTextBox.Text == "")
+                if (celular_usuTextBox1.Text == "")
                     MessageBox.Show("O celular deve ser preenchido");
                 else
-                if (telefone_usuTextBox.Text == "")
+                if (telefone_usuTextBox1.Text == "")
                     MessageBox.Show("O Telefone deve ser preenchido");
                 else
                 {
-                    data_cadastroDateTimePicker.Text = DateTime.Now.ToString();
+                    data_cadastroDateTimePicker1.Text = DateTime.Now.ToString();
                     this.Validate();
-                    this.usuarioBindingSource.EndEdit();
+                    this.usuarioBindingSource1.EndEdit();
                     MessageBox.Show("Cadastro efetuado com sucesso! Seja bem-vindo");
-                    this.usuarioTableAdapter.Update(this.renataDBDataSet.usuario);
+                    this.usuarioTableAdapter1.Update(this.renataDBDataSet1.usuario);
                 }
             }
             catch(Exception ex) 
@@ -70,18 +66,11 @@ namespace Projeto_Integrador___pt2.Formulários
                 MessageBox.Show("Não foi possível salvar" + "pelo seguinte motivo: "+ ex.Message);
             }
             this.Validate();
-            this.usuarioBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.usuarioBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
         }
 
-        private void frmUsuario_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.
-            this.clienteTableAdapter.Fill(this.renataDBDataSet.cliente);
-            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.usuario'. Você pode movê-la ou removê-la conforme necessário.
-            this.usuarioTableAdapter.Fill(this.renataDBDataSet.usuario);
-
-        }
+      
         public void exibirConsulta() 
         {
             CSTusuario cst = new CSTusuario();
@@ -100,21 +89,22 @@ namespace Projeto_Integrador___pt2.Formulários
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.usuario'. Você pode movê-la ou removê-la conforme necessário.
             this.usuarioTableAdapter1.Fill(this.renataDBDataSet1.usuario);
             this.usuarioBindingSource1.DataSource = this.renataDBDataSet1.usuario;
+            this.LimparCampo();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorAddNewItem.PerformClick();
+            this.toolStripButton5.PerformClick();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorDeleteItem.PerformClick();
+            this.toolStripButton6.PerformClick();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.usuarioBindingNavigatorSaveItem.PerformClick();
+            this.usuarioBindingSource1BindingNavigatorSaveItem.PerformClick();
         }
 
         private void button5_Click(object sender, EventArgs e)

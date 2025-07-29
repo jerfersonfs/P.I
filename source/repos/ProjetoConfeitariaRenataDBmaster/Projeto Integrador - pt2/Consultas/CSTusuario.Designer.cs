@@ -383,23 +383,7 @@
 
         #endregion
 
-        private RenataDBDataSet renataDBDataSet;
-        private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private RenataDBDataSetTableAdapters.usuarioTableAdapter usuarioTableAdapter;
-        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView usuarioDataGridView;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.ComboBox cbmFiltrar;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        
         private RenataDBDataSet renataDBDataSet1;
         private System.Windows.Forms.BindingSource usuarioBindingSource1;
         private RenataDBDataSetTableAdapters.usuarioTableAdapter usuarioTableAdapter1;

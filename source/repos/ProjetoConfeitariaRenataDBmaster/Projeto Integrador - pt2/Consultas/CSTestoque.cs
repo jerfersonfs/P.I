@@ -23,15 +23,15 @@ namespace Projeto_Integrador___pt2.Consultas
         private void estoqueBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.estoqueBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.estoqueBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
 
         }
 
         private void CSTestoque_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.estoque'. Você pode movê-la ou removê-la conforme necessário.
-            this.estoqueTableAdapter.Fill(this.renataDBDataSet.estoque);
+            this.estoqueTableAdapter1.Fill(this.renataDBDataSet1.estoque);
 
         }
         public void showfrmEstoque() 
@@ -74,7 +74,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable estoque = new DataTable();
                     adapter.Fill(estoque);
-                    estoqueDataGridView.DataSource = estoque;
+                    estoqueDataGridView1.DataSource = estoque;
                 }
             }
             catch (Exception ex)

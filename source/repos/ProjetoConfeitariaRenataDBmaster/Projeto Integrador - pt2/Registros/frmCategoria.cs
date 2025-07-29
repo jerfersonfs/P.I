@@ -24,29 +24,29 @@ namespace Projeto_Integrador___pt2.Formulários
         private void categoriaBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.categoriaBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.categoriaBindingSource2.EndEdit();
+            this.tableAdapterManager2.UpdateAll(this.renataDBDataSet2);
 
         }
 
         private void frmCategoria_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.categoria'. Você pode movê-la ou removê-la conforme necessário.
-            this.categoriaTableAdapter.Fill(this.renataDBDataSet.categoria);
+            this.categoriaTableAdapter2.Fill(this.renataDBDataSet2.categoria);
 
         }
         private void categoriaBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.categoriaBindingSource1.EndEdit();
-            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
+            this.categoriaBindingSource2.EndEdit();
+            this.tableAdapterManager2.UpdateAll(this.renataDBDataSet2);
 
         }
 
         private void frmCategoria_Load_1(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.categoria'. Você pode movê-la ou removê-la conforme necessário.
-            this.categoriaTableAdapter1.Fill(this.renataDBDataSet1.categoria);
+            this.categoriaTableAdapter2.Fill(this.renataDBDataSet2.categoria);
 
         }
 
@@ -62,48 +62,58 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet2.categoria'. Você pode movê-la ou removê-la conforme necessário.
             this.categoriaTableAdapter2.Fill(this.renataDBDataSet2.categoria);
-            this.categoriaDataGridView.DataSource = this.categoriaBindingSource2;
-            this.categoriaBindingSource.DataSource = this.renataDBDataSet2.categoria;
+            this.categoriaDataGridView2.DataSource = this.categoriaBindingSource2;
+            this.categoriaBindingSource2.DataSource = this.renataDBDataSet2.categoria;
+            this.LimparCampos();
+        }
+
+        public void LimparCampos()
+        {
+            id_categoriaTextBox2.Text = "";
+            nome_categoriaTextBox2.Text = "";
+            personalizacaoTextBox2.Text = "";
+            status_catTextBox2.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorAddNewItem.PerformClick();
+            this.toolStripButton11.PerformClick();
+            this.LimparCampos();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorDeleteItem.PerformClick();
+            this.toolStripButton12.PerformClick();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.categoriaBindingNavigatorSaveItem.PerformClick();
+            this.categoriaBindingSource2BindingNavigatorSaveItem.PerformClick();
         }
 
         private void btn_Pesquisar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (cbmFiltrar.Text == "Código")
+                if (comboBox1.Text == "Código")
                 {
-                    string sql = "SELECT * FROM categoria WHERE id_categoria = " + txtPesquisar.Text + "";
+                    string sql = "SELECT * FROM categoria WHERE id_categoria = " + textBox3.Text + "";
                     SqlCommand cmd = new SqlCommand(sql);
                     cntn.Open();
                     cmd.CommandType = CommandType.Text;
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable cat = new DataTable();
                     adapter.Fill(cat);
-                    categoriaDataGridView.DataSource = cat;
+                    categoriaDataGridView2.DataSource = cat;
                 }
-                if (cbmFiltrar.Text == "Categoria")
+                if (comboBox1.Text == "Categoria")
                 {
-                    string sql = "SELECT * FROM categoria WHERE nome_categoria LIKE '%" + txtPesquisar.Text + "%'";
+                    string sql = "SELECT * FROM categoria WHERE nome_categoria LIKE '%" + textBox3.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable cat = new DataTable();
                     adapter.Fill(cat);
-                    categoriaDataGridView.DataSource = cat;
+                    categoriaDataGridView2.DataSource = cat;
                 }
             }
             catch (Exception ex)
@@ -114,6 +124,21 @@ namespace Projeto_Integrador___pt2.Formulários
             {
                 cntn.Close();
             }
+        }
+
+        private void toolStripButton11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

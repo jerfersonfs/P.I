@@ -23,15 +23,15 @@ namespace Projeto_Integrador___pt2.Consultas
         private void pedidoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.pedidoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.pedidoBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
 
         }
 
         private void CSTpedido_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.pedido'. Você pode movê-la ou removê-la conforme necessário.
-            this.pedidoTableAdapter.Fill(this.renataDBDataSet.pedido);
+            this.pedidoTableAdapter1.Fill(this.renataDBDataSet1.pedido);
 
         }
 
@@ -57,7 +57,7 @@ namespace Projeto_Integrador___pt2.Consultas
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.pedido'. Você pode movê-la ou removê-la conforme necessário.
             this.pedidoTableAdapter1.Fill(this.renataDBDataSet1.pedido);
-            this.pedidoDataGridView.DataSource = this.pedidoBindingSource1;
+            this.pedidoDataGridView1.DataSource = this.pedidoBindingSource1;
         }
 
         private void btn_Pesquisar_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable pedido = new DataTable();
                     adapter.Fill(pedido);
-                    pedidoDataGridView.DataSource = pedido;
+                    pedidoDataGridView1.DataSource = pedido;
                 }
                 if (cbm_Filtrar.Text == "Pedido")
                 {
@@ -82,7 +82,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable pedido = new DataTable();
                     adapter.Fill(pedido);
-                    pedidoDataGridView.DataSource = pedido;
+                    pedidoDataGridView1.DataSource = pedido;
                 }
             }
             catch (Exception ex)

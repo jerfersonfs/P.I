@@ -82,7 +82,7 @@
             // id_produtoLabel
             // 
             id_produtoLabel.AutoSize = true;
-            id_produtoLabel.Location = new System.Drawing.Point(151, 150);
+            id_produtoLabel.Location = new System.Drawing.Point(120, 141);
             id_produtoLabel.Name = "id_produtoLabel";
             id_produtoLabel.Size = new System.Drawing.Size(43, 13);
             id_produtoLabel.TabIndex = 1;
@@ -91,7 +91,7 @@
             // nome_produtoLabel
             // 
             nome_produtoLabel.AutoSize = true;
-            nome_produtoLabel.Location = new System.Drawing.Point(151, 176);
+            nome_produtoLabel.Location = new System.Drawing.Point(120, 167);
             nome_produtoLabel.Name = "nome_produtoLabel";
             nome_produtoLabel.Size = new System.Drawing.Size(47, 13);
             nome_produtoLabel.TabIndex = 3;
@@ -100,7 +100,7 @@
             // preco_produtoLabel
             // 
             preco_produtoLabel.AutoSize = true;
-            preco_produtoLabel.Location = new System.Drawing.Point(151, 202);
+            preco_produtoLabel.Location = new System.Drawing.Point(120, 193);
             preco_produtoLabel.Name = "preco_produtoLabel";
             preco_produtoLabel.Size = new System.Drawing.Size(38, 13);
             preco_produtoLabel.TabIndex = 5;
@@ -109,7 +109,7 @@
             // fKid_categoriaLabel
             // 
             fKid_categoriaLabel.AutoSize = true;
-            fKid_categoriaLabel.Location = new System.Drawing.Point(151, 228);
+            fKid_categoriaLabel.Location = new System.Drawing.Point(120, 219);
             fKid_categoriaLabel.Name = "fKid_categoriaLabel";
             fKid_categoriaLabel.Size = new System.Drawing.Size(78, 13);
             fKid_categoriaLabel.TabIndex = 7;
@@ -118,7 +118,7 @@
             // promocaoLabel
             // 
             promocaoLabel.AutoSize = true;
-            promocaoLabel.Location = new System.Drawing.Point(151, 254);
+            promocaoLabel.Location = new System.Drawing.Point(120, 245);
             promocaoLabel.Name = "promocaoLabel";
             promocaoLabel.Size = new System.Drawing.Size(57, 13);
             promocaoLabel.TabIndex = 9;
@@ -127,7 +127,7 @@
             // data_inicio_promocaoLabel
             // 
             data_inicio_promocaoLabel.AutoSize = true;
-            data_inicio_promocaoLabel.Location = new System.Drawing.Point(151, 281);
+            data_inicio_promocaoLabel.Location = new System.Drawing.Point(120, 272);
             data_inicio_promocaoLabel.Name = "data_inicio_promocaoLabel";
             data_inicio_promocaoLabel.Size = new System.Drawing.Size(108, 13);
             data_inicio_promocaoLabel.TabIndex = 11;
@@ -136,7 +136,7 @@
             // data_fim_promocaoLabel
             // 
             data_fim_promocaoLabel.AutoSize = true;
-            data_fim_promocaoLabel.Location = new System.Drawing.Point(151, 307);
+            data_fim_promocaoLabel.Location = new System.Drawing.Point(120, 298);
             data_fim_promocaoLabel.Name = "data_fim_promocaoLabel";
             data_fim_promocaoLabel.Size = new System.Drawing.Size(97, 13);
             data_fim_promocaoLabel.TabIndex = 13;
@@ -199,7 +199,7 @@
             this.produtoBindingSource1BindingNavigator.MovePreviousItem = this.toolStripButton2;
             this.produtoBindingSource1BindingNavigator.Name = "produtoBindingSource1BindingNavigator";
             this.produtoBindingSource1BindingNavigator.PositionItem = this.toolStripTextBox1;
-            this.produtoBindingSource1BindingNavigator.Size = new System.Drawing.Size(1194, 25);
+            this.produtoBindingSource1BindingNavigator.Size = new System.Drawing.Size(611, 25);
             this.produtoBindingSource1BindingNavigator.TabIndex = 0;
             this.produtoBindingSource1BindingNavigator.Text = "bindingNavigator1";
             this.produtoBindingSource1BindingNavigator.Visible = false;
@@ -212,6 +212,7 @@
             this.toolStripButton5.RightToLeftAutoMirrorImage = true;
             this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton5.Text = "Adicionar novo";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripLabel1
             // 
@@ -228,6 +229,7 @@
             this.toolStripButton6.RightToLeftAutoMirrorImage = true;
             this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton6.Text = "Excluir";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // toolStripButton1
             // 
@@ -302,7 +304,7 @@
             // id_produtoTextBox1
             // 
             this.id_produtoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource1, "id_produto", true));
-            this.id_produtoTextBox1.Location = new System.Drawing.Point(265, 147);
+            this.id_produtoTextBox1.Location = new System.Drawing.Point(234, 138);
             this.id_produtoTextBox1.Name = "id_produtoTextBox1";
             this.id_produtoTextBox1.Size = new System.Drawing.Size(200, 20);
             this.id_produtoTextBox1.TabIndex = 2;
@@ -310,7 +312,7 @@
             // nome_produtoTextBox1
             // 
             this.nome_produtoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource1, "nome_produto", true));
-            this.nome_produtoTextBox1.Location = new System.Drawing.Point(265, 173);
+            this.nome_produtoTextBox1.Location = new System.Drawing.Point(234, 164);
             this.nome_produtoTextBox1.Name = "nome_produtoTextBox1";
             this.nome_produtoTextBox1.Size = new System.Drawing.Size(200, 20);
             this.nome_produtoTextBox1.TabIndex = 4;
@@ -318,7 +320,7 @@
             // preco_produtoTextBox1
             // 
             this.preco_produtoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource1, "preco_produto", true));
-            this.preco_produtoTextBox1.Location = new System.Drawing.Point(265, 199);
+            this.preco_produtoTextBox1.Location = new System.Drawing.Point(234, 190);
             this.preco_produtoTextBox1.Name = "preco_produtoTextBox1";
             this.preco_produtoTextBox1.Size = new System.Drawing.Size(200, 20);
             this.preco_produtoTextBox1.TabIndex = 6;
@@ -326,7 +328,7 @@
             // fKid_categoriaTextBox1
             // 
             this.fKid_categoriaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource1, "FKid_categoria", true));
-            this.fKid_categoriaTextBox1.Location = new System.Drawing.Point(265, 225);
+            this.fKid_categoriaTextBox1.Location = new System.Drawing.Point(234, 216);
             this.fKid_categoriaTextBox1.Name = "fKid_categoriaTextBox1";
             this.fKid_categoriaTextBox1.Size = new System.Drawing.Size(200, 20);
             this.fKid_categoriaTextBox1.TabIndex = 8;
@@ -334,7 +336,7 @@
             // promocaoTextBox1
             // 
             this.promocaoTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.produtoBindingSource1, "promocao", true));
-            this.promocaoTextBox1.Location = new System.Drawing.Point(265, 251);
+            this.promocaoTextBox1.Location = new System.Drawing.Point(234, 242);
             this.promocaoTextBox1.Name = "promocaoTextBox1";
             this.promocaoTextBox1.Size = new System.Drawing.Size(200, 20);
             this.promocaoTextBox1.TabIndex = 10;
@@ -342,7 +344,7 @@
             // data_inicio_promocaoDateTimePicker1
             // 
             this.data_inicio_promocaoDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.produtoBindingSource1, "data_inicio_promocao", true));
-            this.data_inicio_promocaoDateTimePicker1.Location = new System.Drawing.Point(265, 277);
+            this.data_inicio_promocaoDateTimePicker1.Location = new System.Drawing.Point(234, 268);
             this.data_inicio_promocaoDateTimePicker1.Name = "data_inicio_promocaoDateTimePicker1";
             this.data_inicio_promocaoDateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.data_inicio_promocaoDateTimePicker1.TabIndex = 12;
@@ -350,14 +352,14 @@
             // data_fim_promocaoDateTimePicker1
             // 
             this.data_fim_promocaoDateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.produtoBindingSource1, "data_fim_promocao", true));
-            this.data_fim_promocaoDateTimePicker1.Location = new System.Drawing.Point(265, 303);
+            this.data_fim_promocaoDateTimePicker1.Location = new System.Drawing.Point(234, 294);
             this.data_fim_promocaoDateTimePicker1.Name = "data_fim_promocaoDateTimePicker1";
             this.data_fim_promocaoDateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.data_fim_promocaoDateTimePicker1.TabIndex = 14;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(135, 87);
+            this.button1.Location = new System.Drawing.Point(101, 82);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 15;
@@ -367,7 +369,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(238, 87);
+            this.button2.Location = new System.Drawing.Point(204, 82);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 16;
@@ -377,7 +379,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(332, 87);
+            this.button3.Location = new System.Drawing.Point(298, 82);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 17;
@@ -387,7 +389,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(434, 87);
+            this.button4.Location = new System.Drawing.Point(400, 82);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 18;
@@ -402,14 +404,14 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(0, 0);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(611, 47);
+            this.textBox2.Size = new System.Drawing.Size(573, 47);
             this.textBox2.TabIndex = 21;
             this.textBox2.Text = "Cadastro de produtos";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmProduto
             // 
-            this.ClientSize = new System.Drawing.Size(611, 370);
+            this.ClientSize = new System.Drawing.Size(573, 360);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -445,37 +447,6 @@
         }
 
         #endregion
-
-        private RenataDBDataSet renataDBDataSet;
-        private System.Windows.Forms.BindingSource produtoBindingSource;
-        private RenataDBDataSetTableAdapters.produtoTableAdapter produtoTableAdapter;
-        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator produtoBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton produtoBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox id_produtoTextBox;
-        private System.Windows.Forms.TextBox nome_produtoTextBox;
-        private System.Windows.Forms.TextBox preco_produtoTextBox;
-        private System.Windows.Forms.TextBox promocaoTextBox;
-        private System.Windows.Forms.DateTimePicker data_inicio_promocaoDateTimePicker;
-        private System.Windows.Forms.DateTimePicker data_fim_promocaoDateTimePicker;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.BindingSource categoriaBindingSource;
-        private RenataDBDataSetTableAdapters.categoriaTableAdapter categoriaTableAdapter;
-        private System.Windows.Forms.Button btnIncluir;
-        private System.Windows.Forms.Button btnDeletar;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.TextBox fKid_categoriaTextBox;
         private RenataDBDataSet renataDBDataSet1;
         private System.Windows.Forms.BindingSource produtoBindingSource1;
         private RenataDBDataSetTableAdapters.produtoTableAdapter produtoTableAdapter1;

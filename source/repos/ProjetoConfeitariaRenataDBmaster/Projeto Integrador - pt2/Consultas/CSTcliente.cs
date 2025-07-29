@@ -22,15 +22,15 @@ namespace Projeto_Integrador___pt2.Consultas
         private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.clienteBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.clienteBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
 
         }
 
         private void CSTcliente_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.
-            this.clienteTableAdapter.Fill(this.renataDBDataSet.cliente);
+            this.clienteTableAdapter1.Fill(this.renataDBDataSet1.cliente);
 
         }
 
@@ -87,7 +87,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable cliente = new DataTable();
                     adapter.Fill(cliente);
-                    clienteDataGridView.DataSource = cliente;
+                    clienteDataGridView1.DataSource = cliente;
                 }
                 if (cbm_Filtrar.Text == "Cliente")
                 {
@@ -96,7 +96,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable cliente = new DataTable();
                     adapter.Fill(cliente);
-                    clienteDataGridView.DataSource = cliente;
+                    clienteDataGridView1.DataSource = cliente;
                 }
                 if (cbm_Filtrar.Text == "CPF")
                 {
@@ -105,7 +105,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable cliente = new DataTable();
                     adapter.Fill(cliente);
-                    clienteDataGridView.DataSource = cliente;
+                    clienteDataGridView1.DataSource = cliente;
                 }
                 if (cbm_Filtrar.Text == "CNPJ")
                 {
@@ -114,7 +114,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable cliente = new DataTable();
                     adapter.Fill(cliente);
-                    clienteDataGridView.DataSource = cliente;
+                    clienteDataGridView1.DataSource = cliente;
                 }
             }
             catch (Exception ex)

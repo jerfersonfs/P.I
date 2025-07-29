@@ -22,15 +22,15 @@ namespace Projeto_Integrador___pt2.Consultas
         private void usuarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.usuarioBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.usuarioBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
 
         }
 
         private void CSTusuario_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.usuario'. Você pode movê-la ou removê-la conforme necessário.
-            this.usuarioTableAdapter.Fill(this.renataDBDataSet.usuario);
+            this.usuarioTableAdapter1.Fill(this.renataDBDataSet1.usuario);
 
         }
 
@@ -54,7 +54,7 @@ namespace Projeto_Integrador___pt2.Consultas
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.usuario'. Você pode movê-la ou removê-la conforme necessário.
             this.usuarioTableAdapter1.Fill(this.renataDBDataSet1.usuario);
-            this.usuarioDataGridView.DataSource = this.usuarioBindingSource1;
+            this.usuarioDataGridView1.DataSource = this.usuarioBindingSource1;
         }
 
         private void btn_Pesquisar_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable usuario = new DataTable();
                     adapter.Fill(usuario);
-                    usuarioDataGridView.DataSource = usuario;
+                    usuarioDataGridView1.DataSource = usuario;
                 }
                 if (cbm_Filtrar.Text == "Usuario")
                 {
@@ -79,7 +79,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable usuario = new DataTable();
                     adapter.Fill(usuario);
-                    usuarioDataGridView.DataSource = usuario;
+                    usuarioDataGridView1.DataSource = usuario;
                 }
             }
             catch (Exception ex)

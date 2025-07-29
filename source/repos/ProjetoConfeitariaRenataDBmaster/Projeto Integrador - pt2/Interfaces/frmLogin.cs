@@ -44,8 +44,8 @@ namespace Projeto_Integrador___pt2.Interfaces
         private void usuarioBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.usuarioBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.usuarioBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
 
         }
         private void btn_Entrar_KeyDown(object sender, KeyEventArgs e)

@@ -170,6 +170,7 @@
             this.ingredientesBindingNavigator.Size = new System.Drawing.Size(450, 25);
             this.ingredientesBindingNavigator.TabIndex = 0;
             this.ingredientesBindingNavigator.Text = "bindingNavigator1";
+            this.ingredientesBindingNavigator.Visible = false;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -303,7 +304,7 @@
             this.textBox1.BackColor = System.Drawing.Color.Plum;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(0, 25);
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(450, 49);
             this.textBox1.TabIndex = 20;

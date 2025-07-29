@@ -520,7 +520,7 @@
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(0, 25);
+            this.textBox2.Location = new System.Drawing.Point(0, 0);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(671, 47);
             this.textBox2.TabIndex = 31;
@@ -578,54 +578,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private RenataDBDataSet renataDBDataSet;
-        private System.Windows.Forms.BindingSource clienteBindingSource;
-        private RenataDBDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
-        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox id_clienteTextBox;
-        private System.Windows.Forms.TextBox rua_clienteTextBox;
-        private System.Windows.Forms.TextBox numero_da_residencia_clienteTextBox;
-        private System.Windows.Forms.TextBox bairro_clienteTextBox;
-        private System.Windows.Forms.TextBox cidade_clienteTextBox;
-        private System.Windows.Forms.TextBox estado_clienteTextBox;
-        private System.Windows.Forms.TextBox cepTextBox;
-        private System.Windows.Forms.DateTimePicker data_nascimentoDateTimePicker;
-        private System.Windows.Forms.TextBox email_clienteTextBox;
-        private System.Windows.Forms.TextBox celular_clienteTextBox;
-        private System.Windows.Forms.TextBox cnpjTextBox;
-        private System.Windows.Forms.TextBox cpfTextBox;
-        private System.Windows.Forms.TextBox nome_clienteTextBox;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnIncluir;
-        private System.Windows.Forms.DataGridView clienteDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        
+        
         private RenataDBDataSet renataDBDataSet1;
         private System.Windows.Forms.BindingSource clienteBindingSource1;
         private RenataDBDataSetTableAdapters.clienteTableAdapter clienteTableAdapter1;

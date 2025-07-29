@@ -23,15 +23,15 @@ namespace Projeto_Integrador___pt2.Consultas
         private void produtoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.produtoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.produtoBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
 
         }
 
         private void CSTproduto_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.produto'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtoTableAdapter.Fill(this.renataDBDataSet.produto);
+            this.produtoTableAdapter1.Fill(this.renataDBDataSet1.produto);
 
         }
 
@@ -57,7 +57,7 @@ namespace Projeto_Integrador___pt2.Consultas
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.produto'. Você pode movê-la ou removê-la conforme necessário.
             this.produtoTableAdapter1.Fill(this.renataDBDataSet1.produto);
-            this.produtoDataGridView.DataSource = this.produtoBindingSource1;
+            this.produtoDataGridView1.DataSource = this.produtoBindingSource1;
         }
 
         private void btn_Pesquisar_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable produto = new DataTable();
                     adapter.Fill(produto);
-                    produtoDataGridView.DataSource = produto;
+                    produtoDataGridView1.DataSource = produto;
                 }
                 if (cbm_Filtrar.Text == "Produto")
                 {
@@ -82,7 +82,7 @@ namespace Projeto_Integrador___pt2.Consultas
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable produto = new DataTable();
                     adapter.Fill(produto);
-                    produtoDataGridView.DataSource = produto;
+                    produtoDataGridView1.DataSource = produto;
                 }
             }
             catch (Exception ex)

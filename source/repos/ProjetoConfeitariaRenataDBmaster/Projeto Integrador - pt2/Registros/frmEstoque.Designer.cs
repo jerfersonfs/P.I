@@ -187,7 +187,7 @@
             this.estoqueBindingSource1BindingNavigator.MovePreviousItem = this.toolStripButton2;
             this.estoqueBindingSource1BindingNavigator.Name = "estoqueBindingSource1BindingNavigator";
             this.estoqueBindingSource1BindingNavigator.PositionItem = this.toolStripTextBox1;
-            this.estoqueBindingSource1BindingNavigator.Size = new System.Drawing.Size(848, 25);
+            this.estoqueBindingSource1BindingNavigator.Size = new System.Drawing.Size(623, 25);
             this.estoqueBindingSource1BindingNavigator.TabIndex = 0;
             this.estoqueBindingSource1BindingNavigator.Text = "bindingNavigator1";
             this.estoqueBindingSource1BindingNavigator.Visible = false;
@@ -200,6 +200,7 @@
             this.toolStripButton5.RightToLeftAutoMirrorImage = true;
             this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton5.Text = "Adicionar novo";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
             // toolStripLabel1
             // 
@@ -426,50 +427,6 @@
 
         #endregion
 
-        private RenataDBDataSet renataDBDataSet;
-        private System.Windows.Forms.BindingSource estoqueBindingSource;
-        private RenataDBDataSetTableAdapters.estoqueTableAdapter estoqueTableAdapter;
-        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator estoqueBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton estoqueBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox id_estoqueTextBox;
-        private System.Windows.Forms.TextBox cat_estoqueTextBox;
-        private System.Windows.Forms.TextBox nome_estoqueTextBox;
-        private System.Windows.Forms.DateTimePicker data_movimentacaoDateTimePicker;
-        private System.Windows.Forms.TextBox quantidade_movimentadaTextBox;
-        private System.Windows.Forms.TextBox tipo_movimentacaoTextBox;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.ComboBox cbmFiltrar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.BindingSource ingredientesBindingSource;
-        private RenataDBDataSetTableAdapters.ingredientesTableAdapter ingredientesTableAdapter;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btn_excluir;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView estoqueDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.TextBox fKid_ingredienteTextBox;
         private RenataDBDataSet renataDBDataSet1;
         private System.Windows.Forms.BindingSource estoqueBindingSource1;
         private RenataDBDataSetTableAdapters.estoqueTableAdapter estoqueTableAdapter1;

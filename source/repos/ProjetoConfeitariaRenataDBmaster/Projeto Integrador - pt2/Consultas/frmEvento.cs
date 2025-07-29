@@ -24,67 +24,6 @@ namespace Projeto_Integrador___pt2.Formulários
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
-        public async Task BuscarCep()
-        {
-            if (cep_evento.MaxInputLength == 9)
-            {
-                try
-                {
-                    using (HttpClient cliente = new HttpClient())
-                    {
-                        string url = $"https://viacep.com.br/ws/{cep_evento}/json/";
-                        HttpResponseMessage response = await cliente.GetAsync(url);
-
-                        if (response.IsSuccessStatusCode)
-                        {
-                            string json = await response.Content.ReadAsStringAsync();
-                            dynamic dados = JsonConvert.DeserializeObject(json);
-
-                            if (dados.erro == null) // Verifica se o CEP existe
-                            {
-                                rua_eventoTextBox.Text = dados.rua;
-                                bairr_eventoTextBox.Text = dados.bairro;
-                                cidade_eventoTextBox.Text = dados.cidade;
-                                estado_eventoTextBox.Text = dados.estado;
-                            }
-                            else
-                            {
-                                MessageBox.Show("CEP não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Erro ao buscar o CEP. Tente novamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("CEP inválido! Digite um CEP com 8 dígitos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-        }
-
-        private void btnIncluir_Click(object sender, EventArgs e)
-        {
-            this.bindingNavigatorAddNewItem.PerformClick();
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            this.bindingNavigatorDeleteItem.PerformClick();
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            this.eventosBindingNavigatorSaveItem.PerformClick();
-        }
-
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
@@ -102,32 +41,32 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.eventos'. Você pode movê-la ou removê-la conforme necessário.
             this.eventosTableAdapter1.Fill(this.renataDBDataSet1.eventos);
-            this.eventosDataGridView.DataSource = this.eventosBindingSource1;
+            this.eventosDataGridView1.DataSource = this.eventosBindingSource1;
         }
 
         private void btn_Pesquisar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (cbmFiltrar.Text == "Código")
+                if (cbm_Filtrar.Text == "Código")
                 {
-                    string sql = "SELECT * FROM eventos WHERE id_evento = " + txtPesquisar.Text + "";
+                    string sql = "SELECT * FROM eventos WHERE id_evento = " + txt_Pesquisar.Text + "";
                     SqlCommand cmd = new SqlCommand(sql);
                     cntn.Open();
                     cmd.CommandType = CommandType.Text;
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable evento = new DataTable();
                     adapter.Fill(evento);
-                    eventosDataGridView.DataSource = evento;
+                    eventosDataGridView1.DataSource = evento;
                 }
-                if (cbmFiltrar.Text == "Eventos")
+                if (cbm_Filtrar.Text == "Eventos")
                 {
-                    string sql = "SELECT * FROM eventos WHERE tipo_evento LIKE '%" + txtPesquisar.Text + "%'";
+                    string sql = "SELECT * FROM eventos WHERE tipo_evento LIKE '%" + txt_Pesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable evento = new DataTable();
                     adapter.Fill(evento);
-                    eventosDataGridView.DataSource = evento;
+                    eventosDataGridView1.DataSource = evento;
                 }
             }
             catch (Exception ex)

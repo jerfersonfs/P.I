@@ -35,6 +35,7 @@ namespace Projeto_Integrador___pt2.Formulários
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.ingredientes'. Você pode movê-la ou removê-la conforme necessário.
             this.ingredientesTableAdapter.Fill(this.renataDBDataSet.ingredientes);
             this.ingredientesBindingSource.DataSource = this.renataDBDataSet.ingredientes;
+            this.LimparCampos();
         }
 
         private void btn_Incluir_Click(object sender, EventArgs e)
@@ -46,10 +47,6 @@ namespace Projeto_Integrador___pt2.Formulários
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao incluir ingrediente: " + ex.Message);
-            }
-            finally
-            {
-                this.LimparCampos();
             }
         }
 

@@ -20,23 +20,22 @@ namespace Projeto_Integrador___pt2.Formulários
             InitializeComponent();
             this.Size = base.Size;
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.limparCampos();
         }
-
-      
-
-        private void frmEstoque_Load(object sender, EventArgs e)
+        public void limparCampos()
         {
-            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.ingredientes'. Você pode movê-la ou removê-la conforme necessário.
-            this.ingredientesTableAdapter.Fill(this.renataDBDataSet.ingredientes);
-            // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.estoque'. Você pode movê-la ou removê-la conforme necessário.
-            this.estoqueTableAdapter.Fill(this.renataDBDataSet.estoque);
-
+            fKid_ingredienteTextBox1.Text = "";
+            tipo_movimentacaoTextBox1.Text = "";
+            id_estoqueTextBox1.Text = "";
+            data_movimentacaoDateTimePicker1.Text = "";
+            quantidade_movimentadaTextBox1.Text = "";
         }
         private void frmEstoque_Load_1(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.estoque'. Você pode movê-la ou removê-la conforme necessário.
             this.estoqueTableAdapter1.Fill(this.renataDBDataSet1.estoque);
             this.estoqueBindingSource1.DataSource = this.renataDBDataSet1.estoque;
+           
         }
 
         private void estoqueBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -44,7 +43,7 @@ namespace Projeto_Integrador___pt2.Formulários
             this.Validate();
             this.estoqueBindingSource1.EndEdit();
             this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
-
+            this.limparCampos();
         }
 
         private void estoqueDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,7 +55,8 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             try
             {
-                this.bindingNavigatorAddNewItem.PerformClick();
+                this.toolStripButton5.PerformClick();
+                this.limparCampos();
             }
             catch (Exception ex)
             {
@@ -68,7 +68,7 @@ namespace Projeto_Integrador___pt2.Formulários
         {
             try 
             { 
-                this.bindingNavigatorDeleteItem.PerformClick();
+                this.toolStripButton6.PerformClick();
             }
             catch (Exception ex)
             {
@@ -105,6 +105,11 @@ namespace Projeto_Integrador___pt2.Formulários
         private void fKid_ingredienteTextBox1_TextChanged(object sender, EventArgs e)
         {
   
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

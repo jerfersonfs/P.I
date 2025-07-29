@@ -461,39 +461,6 @@
 
         #endregion
 
-        private RenataDBDataSet renataDBDataSet;
-        private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private RenataDBDataSetTableAdapters.usuarioTableAdapter usuarioTableAdapter;
-        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator usuarioBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton usuarioBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox id_usuTextBox;
-        private System.Windows.Forms.TextBox nome_usuTextBox;
-        private System.Windows.Forms.TextBox senha_usuTextBox;
-        private System.Windows.Forms.TextBox celular_usuTextBox;
-        private System.Windows.Forms.TextBox telefone_usuTextBox;
-        private System.Windows.Forms.TextBox email_usuTextBox;
-        private System.Windows.Forms.DateTimePicker data_cadastroDateTimePicker;
-        private System.Windows.Forms.TextBox repitasenhatxtBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.BindingSource clienteBindingSource;
-        private RenataDBDataSetTableAdapters.clienteTableAdapter clienteTableAdapter;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnVisualizar;
         private RenataDBDataSet renataDBDataSet1;
         private System.Windows.Forms.BindingSource usuarioBindingSource1;
         private RenataDBDataSetTableAdapters.usuarioTableAdapter usuarioTableAdapter1;

@@ -26,14 +26,14 @@ namespace Projeto_Integrador___pt2.Registros
         {
             this.Validate();
             //this.pedidoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
 
         }
 
         private void frmPedido_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.item_pedido'. Você pode movê-la ou removê-la conforme necessário.
-            this.item_pedidoTableAdapter.Fill(this.renataDBDataSet.item_pedido);
+            this.item_pedidoTableAdapter1.Fill(this.renataDBDataSet1.item_pedido);
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.produto'. Você pode movê-la ou removê-la conforme necessário.
             //this.produtoTableAdapter.Fill(this.renataDBDataSet.produto);
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.
@@ -59,15 +59,15 @@ namespace Projeto_Integrador___pt2.Registros
         private void item_pedidoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.item_pedidoBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.item_pedidoBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
 
         }
 
         private void frmPedido_Load_1(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.item_pedido'. Você pode movê-la ou removê-la conforme necessário.
-            this.item_pedidoTableAdapter.Fill(this.renataDBDataSet.item_pedido);
+            this.item_pedidoTableAdapter1.Fill(this.renataDBDataSet1.item_pedido);
 
         }
 
@@ -117,16 +117,16 @@ namespace Projeto_Integrador___pt2.Registros
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable ip = new DataTable();
                     adapter.Fill(ip);
-                    item_pedidoDataGridView.DataSource = ip;
+                    item_pedidoDataGridView1.DataSource = ip;
                 }
-                if (cbmFiltrar.Text == "Item")
+                if (comboBox1.Text == "Item")
                 {
                     string sql = "SELECT * FROM item_pedido WHERE FKid_produto LIKE '%" + txt_Pesquisar.Text + "%'";
                     SqlCommand cmd = new SqlCommand(sql, cntn.Connection);
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable ip = new DataTable();
                     adapter.Fill(ip);
-                    item_pedidoDataGridView.DataSource = ip;
+                    item_pedidoDataGridView1.DataSource = ip;
                 }
             }
             catch (Exception ex)

@@ -19,40 +19,42 @@ namespace Projeto_Integrador___pt2.Registros
         Conection cntn = new Conection();
         public void ClearFields() 
         {
-            id_clienteTextBox.Text = "";
-            nome_clienteTextBox.Text = "";
-            celular_clienteTextBox.Text = "";
-            email_clienteTextBox.Text = "";
-            cpfTextBox.Text = "";
-            cnpjTextBox.Text = "";
-            data_nascimentoDateTimePicker.Text = "";
-            rua_clienteTextBox.Text = "";
-            numero_da_residencia_clienteTextBox.Text = "";
-            cidade_clienteTextBox.Text = "";
-            estado_clienteTextBox.Text = "";
+            id_clienteTextBox1.Text = "";
+            nome_clienteTextBox1.Text = "";
+            celular_clienteTextBox1.Text = "";
+            email_clienteTextBox1.Text = "";
+            cpfTextBox1.Text = "";
+            cnpjTextBox1.Text = "";
+            data_nascimentoDateTimePicker1.Text = "";
+            rua_clienteTextBox1.Text = "";
+            numero_da_residencia_clienteTextBox1.Text = "";
+            cidade_clienteTextBox1.Text = "";
+            estado_clienteTextBox1.Text = "";
+            bairro_clienteTextBox1.Text = "";
         }
         public frmCliente()
         {
             InitializeComponent();
             this.Size = base.Size;
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.ClearFields();
         }
 
         private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.clienteBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.renataDBDataSet);
+            this.clienteBindingSource1.EndEdit();
+            this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
             ClearFields();
         }
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet.cliente'. Você pode movê-la ou removê-la conforme necessário.
-            this.clienteTableAdapter.Fill(this.renataDBDataSet.cliente);
+            this.clienteTableAdapter1.Fill(this.renataDBDataSet1.cliente);
 
         }
-        public async Task BuscarCep()
+       /* public async Task BuscarCep()
         {
             if (cepTextBox1.MaxLength == 9)
             {
@@ -97,13 +99,13 @@ namespace Projeto_Integrador___pt2.Registros
             }
 
         }
-
+       */
         private void clienteBindingSource1BindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.clienteBindingSource1.EndEdit();
             this.tableAdapterManager1.UpdateAll(this.renataDBDataSet1);
-
+            this.ClearFields();
         }
 
         private void frmCliente_Load_1(object sender, EventArgs e)
@@ -111,21 +113,45 @@ namespace Projeto_Integrador___pt2.Registros
             // TODO: esta linha de código carrega dados na tabela 'renataDBDataSet1.cliente'. Você pode movê-la ou removê-la conforme necessário.
             this.clienteTableAdapter1.Fill(this.renataDBDataSet1.cliente);
             this.clienteBindingSource1.DataSource = this.renataDBDataSet1.cliente;
+            this.ClearFields();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorAddNewItem.PerformClick();
+            try 
+            {
+                this.toolStripButton5.PerformClick();
+                this.ClearFields();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Erro ao incluir cliente: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            try 
+            {
+                this.toolStripButton6.PerformClick();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Erro ao excluir cliente: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.clienteBindingNavigatorSaveItem_Click(sender, e);
+            try 
+            {
+                this.clienteBindingNavigatorSaveItem_Click(sender, e);
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Erro ao atualizar cliente: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public void exibirConsulta() 
         {
@@ -135,19 +161,19 @@ namespace Projeto_Integrador___pt2.Registros
 
         private void button4_Click(object sender, EventArgs e)
         {
-            exibirConsulta();
+            this.exibirConsulta();
         }
 
         private void cepTextBox1_TextChanged(object sender, EventArgs e)
         {
-            if (cepTextBox1.Text.Length == 9)
+           /* if (cepTextBox1.Text.Length == 9)
             {
                 BuscarCep();
             }
             else
             {
                 MessageBox.Show("CEP inválido! Digite um CEP com 8 dígitos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            }*/
         }
     }
 }

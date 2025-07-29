@@ -35,17 +35,41 @@ namespace Projeto_Integrador___pt2.Registros
 
         private void btn_Incluir_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorAddNewItem.PerformClick();
+
+            try 
+            {
+                this.bindingNavigatorAddNewItem.PerformClick();
+            }
+            catch (Exception ex) 
+            { 
+                MessageBox.Show("Erro ao incluir fornecedor: " + ex.Message);
+            }
+
         }
 
         private void btn_Excluir_Click(object sender, EventArgs e)
         {
-            this.bindingNavigatorDeleteItem.PerformClick();
+            try 
+            {
+                this.bindingNavigatorDeleteItem.PerformClick();
+            }
+            catch (Exception ex) 
+            { 
+                MessageBox.Show("Erro ao excluir fornecedor: " + ex.Message);
+            }
         }
 
         private void btn_Salvar_Click(object sender, EventArgs e)
         {
-            this.fornecedoresBindingNavigatorSaveItem_Click(sender, e);
+
+            try 
+            {
+                this.fornecedoresBindingNavigatorSaveItem_Click(sender, e);
+            }
+            catch (Exception ex) 
+            { 
+                MessageBox.Show("Erro ao salvar fornecedor: " + ex.Message);
+            }
         }
 
         public void exibirConsuta() 

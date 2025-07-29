@@ -292,16 +292,7 @@
         }
 
         #endregion
-
-        private RenataDBDataSet renataDBDataSet;
-        private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private RenataDBDataSetTableAdapters.usuarioTableAdapter usuarioTableAdapter;
-        private RenataDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Button btn_Entrar;
-        private System.Windows.Forms.Button btn_Sair;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox senha_usuTextBox;
-        private System.Windows.Forms.TextBox nome_usuTextBox;
+        
         private RenataDBDataSet renataDBDataSet1;
         private System.Windows.Forms.BindingSource usuarioBindingSource1;
         private RenataDBDataSetTableAdapters.usuarioTableAdapter usuarioTableAdapter1;
