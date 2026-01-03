@@ -1,38 +1,41 @@
-﻿using Projeto_Integrador___pt2.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Common;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.AxHost;
+using Npgsql;
+using System.Configuration;
+using System.Data;
 
 namespace Projeto_Integrador___pt2
 {
-    class Conection
+    class Conection : IDisposable
     {
-        private SqlConnection connection;
+        private NpgsqlConnection connection;
         private bool _disposed = false;
-        public String connectionString = Properties.Settings.Default.RenataDBConnectionString;
+
+        private string connectionString;
         public Conection()
         {
-            connection = new SqlConnection(connectionString);
+            connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            connection = new NpgsqlConnection(connectionString);
         }
         public void Open()
         {
-            if (connection.State != System.Data.ConnectionState.Open) 
+            if (connection.State != ConnectionState.Open) 
             { 
                 connection.Open();
             }
         }
         public void Close() 
         {
-            if (connection.State == System.Data.ConnectionState.Open)
+            if (connection.State == ConnectionState.Open)
             { connection.Close(); }
         }
 
-        public SqlConnection Connection => connection;
+        public NpgsqlConnection Connection => connection;
  
         public void Dispose()
         {
