@@ -341,39 +341,5 @@ namespace Projeto_Integrador___pt2.Interfaces
            this.exibeImagens();
         }
 
-        public void exibefrmUsuario()
-        {
-            try
-            {
-                frmUsuario usuario = new frmUsuario();
-                usuario.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao abrir formulário de usuário: " + ex.Message);
-            }
-        }
-        private void novoUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.exibefrmUsuario();
-        }
-        public void exibefrmPerfilUsu()
-        {
-            try 
-            {
-            
-                frmPerfilUsu perfilUsuario = new frmPerfilUsu();
-                perfilUsuario.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao abrir formulário de perfil de usuário: " + ex.Message);
-            }
-        }
-
-        private void novaSenhaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

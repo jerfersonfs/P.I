@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaDoSistema));
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingredientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosECadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,14 +43,10 @@
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pedidoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ingredientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.produtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingredientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.senhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.temasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reiniciarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -56,7 +57,6 @@
             this.tsslHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.novaSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,47 @@
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             this.menuStrip2.UseWaitCursor = true;
+            // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clientesToolStripMenuItem,
+            this.produtoToolStripMenuItem,
+            this.pedidoToolStripMenuItem,
+            this.ingredientesToolStripMenuItem});
+            this.consultasToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
+            // 
+            // produtoToolStripMenuItem
+            // 
+            this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
+            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.produtoToolStripMenuItem.Text = "Produtos";
+            this.produtoToolStripMenuItem.Click += new System.EventHandler(this.produtoToolStripMenuItem_Click);
+            // 
+            // pedidoToolStripMenuItem
+            // 
+            this.pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
+            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.pedidoToolStripMenuItem.Text = "Pedidos";
+            this.pedidoToolStripMenuItem.Click += new System.EventHandler(this.pedidoToolStripMenuItem_Click);
+            // 
+            // ingredientesToolStripMenuItem
+            // 
+            this.ingredientesToolStripMenuItem.Name = "ingredientesToolStripMenuItem";
+            this.ingredientesToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.ingredientesToolStripMenuItem.Text = "Ingredientes";
+            this.ingredientesToolStripMenuItem.Click += new System.EventHandler(this.ingredientesToolStripMenuItem_Click);
             // 
             // registrosECadastrosToolStripMenuItem
             // 
@@ -136,51 +177,12 @@
             this.ingredientesToolStripMenuItem1.Text = "Ingredientes";
             this.ingredientesToolStripMenuItem1.Click += new System.EventHandler(this.ingredientesToolStripMenuItem1_Click);
             // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem,
-            this.produtoToolStripMenuItem,
-            this.pedidoToolStripMenuItem,
-            this.ingredientesToolStripMenuItem});
-            this.consultasToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(137, 32);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(176, 32);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
-            // 
-            // produtoToolStripMenuItem
-            // 
-            this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(176, 32);
-            this.produtoToolStripMenuItem.Text = "Produtos";
-            this.produtoToolStripMenuItem.Click += new System.EventHandler(this.produtoToolStripMenuItem_Click);
-            // 
-            // pedidoToolStripMenuItem
-            // 
-            this.pedidoToolStripMenuItem.Name = "pedidoToolStripMenuItem";
-            this.pedidoToolStripMenuItem.Size = new System.Drawing.Size(176, 32);
-            this.pedidoToolStripMenuItem.Text = "Pedidos";
-            this.pedidoToolStripMenuItem.Click += new System.EventHandler(this.pedidoToolStripMenuItem_Click);
-            // 
-            // ingredientesToolStripMenuItem
-            // 
-            this.ingredientesToolStripMenuItem.Name = "ingredientesToolStripMenuItem";
-            this.ingredientesToolStripMenuItem.Size = new System.Drawing.Size(176, 32);
-            this.ingredientesToolStripMenuItem.Text = "Ingredientes";
-            this.ingredientesToolStripMenuItem.Click += new System.EventHandler(this.ingredientesToolStripMenuItem_Click);
-            // 
             // configuraçõesToolStripMenuItem
             // 
             this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuárioToolStripMenuItem,
+            this.senhaToolStripMenuItem,
+            this.temasToolStripMenuItem,
             this.reiniciarToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.configuraçõesToolStripMenuItem.Font = new System.Drawing.Font("Sitka Banner", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,19 +192,22 @@
             // 
             // usuárioToolStripMenuItem
             // 
-            this.usuárioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novoUsuárioToolStripMenuItem,
-            this.novaSenhaToolStripMenuItem});
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
             this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             // 
-            // novoUsuárioToolStripMenuItem
+            // senhaToolStripMenuItem
             // 
-            this.novoUsuárioToolStripMenuItem.Name = "novoUsuárioToolStripMenuItem";
-            this.novoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
-            this.novoUsuárioToolStripMenuItem.Text = "Novo usuário";
-            this.novoUsuárioToolStripMenuItem.Click += new System.EventHandler(this.novoUsuárioToolStripMenuItem_Click);
+            this.senhaToolStripMenuItem.Name = "senhaToolStripMenuItem";
+            this.senhaToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.senhaToolStripMenuItem.Text = "Senha";
+            // 
+            // temasToolStripMenuItem
+            // 
+            this.temasToolStripMenuItem.Name = "temasToolStripMenuItem";
+            this.temasToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.temasToolStripMenuItem.Text = "Temas";
+            this.temasToolStripMenuItem.Click += new System.EventHandler(this.temasToolStripMenuItem_Click);
             // 
             // reiniciarToolStripMenuItem
             // 
@@ -280,14 +285,6 @@
             this.timer2.Enabled = true;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // novaSenhaToolStripMenuItem
-            // 
-            this.novaSenhaToolStripMenuItem.Enabled = false;
-            this.novaSenhaToolStripMenuItem.Name = "novaSenhaToolStripMenuItem";
-            this.novaSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
-            this.novaSenhaToolStripMenuItem.Text = "Nova Senha";
-            this.novaSenhaToolStripMenuItem.Click += new System.EventHandler(this.novaSenhaToolStripMenuItem_Click);
-            // 
             // TelaDoSistema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,8 +333,8 @@
         private System.Windows.Forms.ToolStripMenuItem reiniciarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem temasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novoUsuárioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem novaSenhaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem senhaToolStripMenuItem;
     }
 }

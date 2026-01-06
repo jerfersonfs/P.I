@@ -217,6 +217,7 @@
             // 
             // nome_usuTextBox1
             // 
+            //this.nome_usuTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource1, "nome_usu", true));
             this.nome_usuTextBox1.Location = new System.Drawing.Point(164, 134);
             this.nome_usuTextBox1.Name = "nome_usuTextBox1";
             this.nome_usuTextBox1.Size = new System.Drawing.Size(151, 20);
@@ -226,6 +227,7 @@
             // 
             // senha_usuTextBox1
             // 
+            //this.senha_usuTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource1, "senha_usu", true));
             this.senha_usuTextBox1.Location = new System.Drawing.Point(184, 169);
             this.senha_usuTextBox1.Name = "senha_usuTextBox1";
             this.senha_usuTextBox1.Size = new System.Drawing.Size(113, 20);
@@ -235,40 +237,34 @@
             // 
             // btn_Entrarr
             // 
-            this.btn_Entrarr.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btn_Entrarr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Entrarr.ForeColor = System.Drawing.Color.Purple;
             this.btn_Entrarr.Location = new System.Drawing.Point(193, 217);
             this.btn_Entrarr.Name = "btn_Entrarr";
             this.btn_Entrarr.Size = new System.Drawing.Size(94, 29);
             this.btn_Entrarr.TabIndex = 5;
             this.btn_Entrarr.Text = "Entrar";
-            this.btn_Entrarr.UseVisualStyleBackColor = false;
+            this.btn_Entrarr.UseVisualStyleBackColor = true;
             this.btn_Entrarr.Click += new System.EventHandler(this.btn_Entrarr_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Location = new System.Drawing.Point(435, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(58, 24);
             this.button1.TabIndex = 6;
             this.button1.Text = "Sair";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
             this.label2.Location = new System.Drawing.Point(45, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(405, 31);
+            this.label2.Size = new System.Drawing.Size(407, 31);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Renata - Confeitaria Artesanal";
+            this.label2.Text = "Renata - Confeitaria Artezanal";
             // 
             // frmLogin
             // 

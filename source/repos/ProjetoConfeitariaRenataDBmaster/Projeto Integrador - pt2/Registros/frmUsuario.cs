@@ -109,7 +109,7 @@ namespace Projeto_Integrador___pt2.Formulários
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.exibirConsulta();
+            exibirConsulta();
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

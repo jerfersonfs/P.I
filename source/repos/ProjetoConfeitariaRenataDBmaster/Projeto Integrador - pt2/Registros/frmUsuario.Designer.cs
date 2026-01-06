@@ -399,7 +399,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(id_usuLabel);
             this.groupBox2.Controls.Add(data_cadastroLabel);
@@ -429,7 +428,6 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Plum;
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(0, 0);

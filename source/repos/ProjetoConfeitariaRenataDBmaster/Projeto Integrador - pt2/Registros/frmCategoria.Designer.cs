@@ -354,7 +354,6 @@
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Plum;
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -397,7 +396,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Plum;
             this.groupBox2.Controls.Add(this.btn_Pesquisar);
             this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.label2);
@@ -448,7 +446,6 @@
             // 
             // frmCategoria
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(191)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(622, 551);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button4);

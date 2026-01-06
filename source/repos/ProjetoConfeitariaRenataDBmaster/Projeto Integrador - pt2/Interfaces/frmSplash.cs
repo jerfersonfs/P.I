@@ -14,7 +14,7 @@ namespace Projeto_Integrador___pt2.Interfaces
     {
         public frmSplash()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
 
         private void timerSplash_Tick(object sender, EventArgs e)
